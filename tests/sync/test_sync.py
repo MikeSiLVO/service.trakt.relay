@@ -7,10 +7,11 @@ from tests.helpers import Text
 
 
 def _sync(manual, silent=False):
-    """A Sync with notifications on and its progress dialog mocked."""
+    """A Sync with notifications on, Kodi not exiting and its progress dialog mocked."""
     settings = {"sync_on_update": True, "show_sync_notifications": True}
+    monitor = mock.Mock(**{"abortRequested.return_value": False})
     with mock.patch.object(sync_module, "get_setting_bool", side_effect=settings.get):
-        sync = sync_module.Sync(manual=manual, silent=silent)
+        sync = sync_module.Sync(manual=manual, silent=silent, monitor=monitor)
     sync.progress = mock.Mock()
     return sync
 
@@ -66,6 +67,14 @@ def test_send_counts_what_trakt_took_and_what_failed(caplog):
     cast(mock.Mock, sync.progress).update.assert_called_with(
         60, "\nAdded 9\n50 couldn't be synced")
     assert "'tvdb': 55" in caplog.text
+
+
+def test_sync_counts_as_canceled_once_kodi_exits():
+    """A background sync with no dialog counts as canceled once Kodi starts exiting."""
+    sync = _sync(manual=False)
+    assert sync.is_canceled() is False
+    sync.monitor.abortRequested.return_value = True
+    assert sync.is_canceled() is True
 
 
 def test_manual_half_shows_the_dialog_unless_silent():

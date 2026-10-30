@@ -86,7 +86,7 @@ class EpisodeSync:
         return True
 
     def _load_kodi(self) -> Tuple[Optional[Dict], Optional[Dict]]:
-        """Load Kodi's shows with all episodes and watched only; None if empty or unreadable."""
+        """Load Kodi's shows, all and watched episodes; None if empty, unreadable or canceled."""
         self.sync.update_progress(1, line1=get_string(32079))
 
         logger.debug("[Episodes Sync] Getting show data from Kodi")
@@ -107,6 +107,8 @@ class EpisodeSync:
         i = 0
         logger.debug("[Episodes Sync] Getting episode data from Kodi")
         for kodi_show in tvshows:
+            if self.sync.is_canceled():
+                return None, None
             i += 1
             self.sync.update_count(i, len(tvshows), 2, 10, 32079)
 
@@ -172,21 +174,27 @@ class EpisodeSync:
         return result_collected, result_watched
 
     def _load_trakt(self) -> Optional[Tuple[Dict, Dict, Dict, Dict]]:
-        """Load collected, watched and, if ratings sync is on, rated Trakt shows; None on error."""
+        """Load collected, watched and, if synced, rated Trakt shows; None on error or cancel."""
         self.sync.update_progress(10, line1=get_string(32081))
 
         logger.debug(
             "[Episodes Sync] Getting episode collection/watched/rated from Trakt.tv"
         )
         trakt_shows_collected = self.sync.api.get_collected_shows({})
+        if self.sync.is_canceled():
+            return None
         self.sync.update_progress(15, line1=get_string(32082))
         trakt_shows_watched = self.sync.api.get_watched_shows({})
+        if self.sync.is_canceled():
+            return None
         trakt_shows_rated: Optional[Dict] = {}
         trakt_episodes_rated: Optional[Dict] = {}
         if get_setting_bool("sync_ratings_to_trakt") or get_setting_bool("sync_ratings_to_kodi"):
             self.sync.update_progress(20, line1=get_string(32216))
             trakt_shows_rated = self.sync.api.get_rated_shows({})
             trakt_episodes_rated = self.sync.api.get_rated_episodes({})
+        if self.sync.is_canceled():
+            return None
         if (
             trakt_shows_collected is None
             or trakt_shows_watched is None
@@ -450,6 +458,8 @@ class EpisodeSync:
             self.sync.update_progress(from_percent, line1=get_string(32206))
             episodes = []
             for show, season, episode in paused:
+                if self.sync.is_canceled():
+                    return
                 if not episode["runtime"]:
                     summary = self.sync.api.get_episode_summary(
                         show["ids"]["trakt"],

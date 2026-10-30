@@ -82,21 +82,21 @@ class MovieSync:
         return to_trakt_items(data)
 
     def _load_trakt(self) -> Optional[List[Dict]]:
-        """Load collected, watched and, if ratings sync is on, rated Trakt movies; None on error."""
+        """Load collected, watched and, if synced, rated Trakt movies; None on error or cancel."""
         self.sync.update_progress(10, line1=get_string(32081))
 
         logger.debug("[Movies Sync] Getting movie collection from Trakt.tv")
 
         trakt_movies = self.sync.api.get_collected_movies({})
-        if trakt_movies is not None:
+        if trakt_movies is not None and not self.sync.is_canceled():
             self.sync.update_progress(17, line1=get_string(32082))
             trakt_movies = self.sync.api.get_watched_movies(trakt_movies)
-        if trakt_movies is not None and (
+        if trakt_movies is not None and not self.sync.is_canceled() and (
             get_setting_bool("sync_ratings_to_trakt") or get_setting_bool("sync_ratings_to_kodi")
         ):
             self.sync.update_progress(21, line1=get_string(32216))
             trakt_movies = self.sync.api.get_rated_movies(trakt_movies)
-        if trakt_movies is None:
+        if trakt_movies is None or self.sync.is_canceled():
             return None
 
         return [movie.to_dict() for movie in trakt_movies.values()]
@@ -314,6 +314,8 @@ class MovieSync:
 
             self.sync.update_progress(from_percent, line1=get_string(32206))
             for movie in kodi_movies_to_update:
+                if self.sync.is_canceled():
+                    return
                 if not movie["runtime"]:
                     summary = self.sync.api.get_movie_summary(
                         movie["ids"]["trakt"], extended="full"

@@ -22,8 +22,9 @@ class Sync:
     """Kodi and Trakt sync of movies then episodes, skipped when not manual and nothing changed."""
 
     def __init__(self, manual: bool = False, silent: bool = False, library: str = "all",
-                 api: Any = None) -> None:
+                 api: Any = None, monitor: Any = None) -> None:
         self.api = api
+        self.monitor = monitor
         self.progress = xbmcgui.DialogProgress()
         self.manual = manual
         self.show_progress = manual and not silent
@@ -183,7 +184,10 @@ class Sync:
         set_setting("kodi_library_dirty", "false")
 
     def is_canceled(self) -> bool:
-        """True when the user canceled the progress dialog."""
+        """True when the user canceled the progress dialog or Kodi is exiting."""
+        if self.monitor is not None and self.monitor.abortRequested():
+            logger.debug("Sync stopped for Kodi exiting.")
+            return True
         if self.show_progress:
             try:
                 if self.progress.iscanceled():
@@ -242,12 +246,14 @@ class SyncThread(threading.Thread):
     _silent: bool = False
     _library: str = "all"
 
-    def __init__(self, manual: bool = False, silent: bool = False, library: str = "all") -> None:
+    def __init__(self, manual: bool = False, silent: bool = False, library: str = "all",
+                 monitor: Any = None) -> None:
         threading.Thread.__init__(self)
         self.name = "trakt-sync"
         self._manual = manual
         self._silent = silent
         self._library = library
+        self._monitor = monitor
 
     def run(self) -> None:
         """Run one sync with the options the thread was created with."""
@@ -256,5 +262,6 @@ class SyncThread(threading.Thread):
             silent=self._silent,
             library=self._library,
             api=shared.api,
+            monitor=self._monitor,
         )
         sync.run()

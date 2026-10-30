@@ -225,7 +225,7 @@ class Service:
         if self.sync_thread is not None and self.sync_thread.is_alive():
             logger.debug("There already is a sync in progress.")
             return
-        self.sync_thread = SyncThread(manual, silent, library)
+        self.sync_thread = SyncThread(manual, silent, library, self.monitor)
         self.sync_thread.start()
 
 

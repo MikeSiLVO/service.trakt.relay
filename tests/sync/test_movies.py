@@ -18,6 +18,7 @@ def test_movie_half_stops_before_trakt_when_kodi_has_no_movies():
 def test_failed_trakt_load_stops_the_movie_half_before_any_write():
     """A watched list that fails to load ends the movie half before anything is sent to Trakt."""
     sync = mock.Mock()
+    sync.is_canceled.return_value = False
     sync.api.get_collected_movies.return_value = {}
     sync.api.get_watched_movies.return_value = None
     kodi = [{"title": "Heat", "year": 1995, "ids": {"imdb": "tt0113277"}, "watched": 1}]
@@ -26,6 +27,18 @@ def test_failed_trakt_load_stops_the_movie_half_before_any_write():
         assert MovieSync(sync).run() is False
     sync.api.add_to_history.assert_not_called()
     sync.api.add_to_collection.assert_not_called()
+
+
+def test_cancel_between_trakt_loads_stops_the_rest():
+    """A cancel or Kodi exit after the collection loads skips the watched and rated loads."""
+    sync = mock.Mock()
+    sync.is_canceled.return_value = True
+    sync.api.get_collected_movies.return_value = {}
+    with mock.patch.object(movies_module, "get_setting_bool", return_value=True), \
+            mock.patch.object(movies_module, "get_string", return_value=Text()):
+        assert MovieSync(sync)._load_trakt() is None
+    sync.api.get_watched_movies.assert_not_called()
+    sync.api.get_rated_movies.assert_not_called()
 
 
 def test_history_step_sends_movies_watched_in_kodi():
