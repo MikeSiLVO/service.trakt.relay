@@ -67,8 +67,10 @@ class Player(xbmc.Player):
         if "script.trakt.exclude" in (result["item"].get("customproperties") or {}):
             logger.debug("'%s' has exclusion property, ignoring." % filename)
             return None
-        if is_excluded(filename):
-            logger.debug("'%s' is in exclusion settings, ignoring." % filename)
+        # a plugin item plays its resolved URL; only its listed path still says plugin://
+        path = xbmc.getInfoLabel("Player.FilenameAndPath")
+        if is_excluded(filename) or (path and path != filename and is_excluded(path)):
+            logger.debug("'%s' is in exclusion settings, ignoring." % (path or filename))
             return None
         return result
 

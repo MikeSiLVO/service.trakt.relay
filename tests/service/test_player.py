@@ -49,17 +49,18 @@ def test_start_is_dropped_when_playback_stops_first():
     queue_start.assert_not_called()
 
 
-def _start(item, replies=None, labels=None, api=None, playlist_size=1, playlist_index=None):
+def _start(item, replies=None, labels=None, api=None, playlist_size=1, playlist_index=None,
+           playing="file.mkv", excluded=lambda path: False):
     """Queue the start of a playing item with Kodi and Trakt stubbed; return the events queued."""
     player, action = _player()
-    player.getPlayingFile = mock.Mock(return_value="file.mkv")
+    player.getPlayingFile = mock.Mock(return_value=playing)
     player.playlist_index = playlist_index
     player._playing = playlist_index is not None
     answers = dict({"Player.GetActivePlayers": [{"playerid": 1}],
                     "Player.GetItem": {"item": item}}, **(replies or {}))
     with mock.patch.object(player_module, "request",
                            side_effect=lambda method, _=None: answers[method]), \
-            mock.patch.object(player_module, "is_excluded", return_value=False), \
+            mock.patch.object(player_module, "is_excluded", side_effect=excluded), \
             mock.patch.object(player_module.shared, "api", api or mock.Mock()), \
             mock.patch.object(player_module, "xbmc") as kodi:
         kodi.getInfoLabel.side_effect = lambda name: (labels or {}).get(name, "")
@@ -93,6 +94,14 @@ def test_excluded_item_starts_nothing():
     item = {"type": "movie", "id": 9, "label": "x",
             "customproperties": {"script.trakt.exclude": "1"}}
     assert _start(item) == []
+
+
+def test_excluded_plugin_starts_nothing_while_playing_its_resolved_url():
+    """A plugin item is excluded by its plugin:// path, though Kodi plays the URL it resolved to."""
+    item = {"type": "movie", "id": -1, "label": "x"}
+    labels = {"Player.FilenameAndPath": "plugin://plugin.video.x/play/1"}
+    assert _start(item, labels=labels, playing="https://cdn.example/x.m3u8",
+                  excluded=lambda path: path.startswith("plugin://")) == []
 
 
 def test_skipping_in_a_playlist_ends_the_previous_video():
