@@ -1,0 +1,14 @@
+name: Close Stale Issues
+
+on:
+  schedule:
+    - cron: '30 1 * * *'
+  workflow_dispatch:
+
+jobs:
+  stale:
+    if: github.repository == 'MikeSiLVO/service.trakt.relay'
+    permissions:
+      issues: write
+    uses: MikeSiLVO/workflows/.github/workflows/stale-issues.yml@v2.3.0
+    secrets: inherit
