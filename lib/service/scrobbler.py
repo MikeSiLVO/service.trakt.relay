@@ -140,7 +140,7 @@ class Scrobbler:
                         self._prefetch_rating(self._scrobble_start())
 
                 elif seek:
-                    self._scrobble("start")
+                    self._scrobble_restart()
 
     def _change_program(self, labels: Tuple[str, ...]) -> None:
         """Change to the live TV program now on: stop the old one, start the new if identified."""
@@ -331,14 +331,7 @@ class Scrobbler:
             self.paused = False
             self._record_active(playcount)
 
-            result = self._scrobble_start()
-            if result and "id" in self.video:
-                if utilities.is_movie(self.video["type"]) and "movie" in result:
-                    result["movie"]["movieid"] = self.video["id"]
-                elif utilities.is_episode(self.video["type"]) and "episode" in result:
-                    result["episode"]["episodeid"] = self.video["id"]
-
-            self._prefetch_rating(result)
+            self._prefetch_rating(self._scrobble_start(), self.video.get("id"))
 
     def _scrobble_start(self) -> Optional[Dict]:
         """Scrobble the start, or just fetch Trakt's item to rate when its type isn't scrobbled."""
@@ -375,8 +368,8 @@ class Scrobbler:
         episode["season"] = season
         return {"show": show, "episode": episode}
 
-    def _prefetch_rating(self, result: Optional[Dict]) -> None:
-        """Pre-fetch the user's rating, swapping in Trakt's item info, when rating is on."""
+    def _prefetch_rating(self, result: Optional[Dict], library_id: Optional[int] = None) -> None:
+        """Pre-fetch user's rating, swapping in Trakt's item with any Kodi id, when rating is on."""
         if result and self.video:
             if (
                 utilities.is_movie(self.video["type"])
@@ -387,6 +380,8 @@ class Scrobbler:
                     "Movie rating is enabled, pre-fetching summary information."
                 )
                 self.video_info = info = result["movie"]
+                if library_id is not None:
+                    info["movieid"] = library_id
                 info["user"] = {
                     "ratings": self.api.get_user_rating(
                         "movie", result["movie"]["ids"]["trakt"]
@@ -402,12 +397,20 @@ class Scrobbler:
                     "Episode rating is enabled, pre-fetching summary information."
                 )
                 self.video_info = info = result["episode"]
+                if library_id is not None:
+                    info["episodeid"] = library_id
                 info["user"] = {
                     "ratings": self.api.get_user_rating(
                         "episode", (info.get("ids") or {}).get("trakt")
                     )
                 }
             logger.debug("Pre-Fetch result: %s; Info: %s" % (result, self.video_info))
+
+    def _scrobble_restart(self) -> None:
+        """Scrobble a start after a pause or seek, pre-fetching the rating a failed start missed."""
+        reply = self._scrobble("start")
+        if self.video and not self.multi_part and "user" not in (self.video_info or {}):
+            self._prefetch_rating(reply, self.video.get("id"))
 
     def playback_resumed(self) -> None:
         """Scrobble a start on resume after a pause, except on PVR."""
@@ -420,7 +423,7 @@ class Scrobbler:
             logger.debug("Resumed after: %s" % str(paused_for))
             self.paused_at = 0
             self.paused = False
-            self._scrobble("start")
+            self._scrobble_restart()
 
     def playback_paused(self) -> None:
         """Scrobble a pause, except on PVR."""

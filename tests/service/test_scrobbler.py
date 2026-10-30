@@ -43,6 +43,19 @@ def test_duplicate_stop_is_not_queued():
     notify.assert_not_called()
 
 
+def test_resume_fetches_the_rating_a_failed_start_missed():
+    """A start that goes through on resume pre-fetches the rating the failed first start missed."""
+    s = _scrobbler(600)
+    s.paused, s.paused_at = True, 1.0
+    s.api.scrobble_movie.return_value = {"action": "start", "movie": {"ids": {"trakt": 7}}}
+    s.api.get_user_rating.return_value = {"rating": 8}
+    with mock.patch.object(scrobbler, "get_setting_bool", return_value=True), \
+            mock.patch.object(s, "_notify_scrobble"):
+        s.playback_resumed()
+    info = s.video_info or {}
+    assert (info["movieid"], info["user"]) == (1, {"ratings": {"rating": 8}})
+
+
 def test_started_playback_does_not_sleep():
     """Loading a started video never sleeps the service thread."""
     s = _scrobbler(0)
