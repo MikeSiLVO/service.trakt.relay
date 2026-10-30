@@ -8,6 +8,7 @@ from lib.sync.compare import (
     compare_shows,
     count_episodes,
     episodes_to_unwatch,
+    movies_to_mark_watched,
     sanitize_movies,
     sanitize_shows,
 )
@@ -40,6 +41,24 @@ def test_compare_movies_with_one_of_two_same_titled_years_collected():
     expected = load_fixture("movies_local_same_name_result.json")
 
     assert compare_movies(local, remote, True) == expected
+
+
+def test_watched_movie_never_marks_a_same_titled_year():
+    """A Trakt play never marks a Kodi movie of the same title but another year."""
+    trakt = [{"title": "Life", "year": 2017, "plays": 1, "ids": {"imdb": "tt5442430"}}]
+    kodi = [{"title": "Life", "year": 1999, "movieid": 3, "plays": 0,
+             "ids": {"imdb": "tt0123964"}}]
+
+    assert movies_to_mark_watched(trakt, kodi, True) == []
+
+
+def test_watched_movie_without_a_year_marks_by_title():
+    """A Trakt play with no year marks the Kodi movie of the same title."""
+    trakt = [{"title": "Life", "year": None, "plays": 1, "ids": {},
+              "last_watched_at": "2026-10-01T20:00:00.000Z"}]
+    kodi = [{"title": "Life", "year": 1999, "movieid": 3, "plays": 0, "ids": {}}]
+
+    assert [update["movieid"] for update in movies_to_mark_watched(trakt, kodi, True)] == [3]
 
 
 @TITLE_MATCHING

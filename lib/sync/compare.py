@@ -404,7 +404,7 @@ def movies_to_mark_watched(
             year = trakt_movie.get("year")
             if title and year is not None:
                 matches = kodi_by_title_year.get((str(title), str(year)), [])
-            if not matches and title:
+            elif title:
                 matches = kodi_by_title.get(str(title), [])
 
         last_watched_at = trakt_movie.get("last_watched_at")
