@@ -153,7 +153,9 @@ def add_to_watchlist(data: Dict) -> None:
 
     result = shared.api.add_to_watchlist(payload)
     name = utilities.format_item_name(media_type, item)
-    if result and not any((result.get("not_found") or {}).values()):
+    if result and "limit" in result:
+        notify(get_string(32228) % result["limit"], name)
+    elif result and not any((result.get("not_found") or {}).values()):
         notify(get_string(32165), name)
     else:
         notify(get_string(32166), name)

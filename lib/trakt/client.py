@@ -2,7 +2,7 @@ import http.client
 import logging
 import time
 from json import dumps, loads
-from typing import Any, Dict, Optional
+from typing import Any, Callable, Dict, Optional
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -12,9 +12,10 @@ logger = logging.getLogger(__name__)
 
 
 class TraktClient:
-    """HTTP client for the Trakt API, waiting out rate limits once."""
+    """HTTP client for the Trakt API, waiting out rate limits once, with a hook for error codes."""
     api_url = "https://api.trakt.tv"
     max_retry_after = 60
+    on_error: Optional[Callable[[int], None]] = None
 
     def __init__(self, client_id: str, user_agent: str, proxy_url: Optional[str] = None) -> None:
         self.client_id = client_id
@@ -81,6 +82,8 @@ class TraktClient:
                         include_headers=include_headers,
                         include_error_code=include_error_code,
                     )
+            if self.on_error is not None:
+                self.on_error(exc.code)
             if exc.code == 401 and authorization and authorization.get("refresh_token"):
                 raise
             if include_error_code:

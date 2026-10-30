@@ -94,9 +94,11 @@ def test_item_without_a_library_id_is_not_looked_up():
 def _watchlist(item, reply):
     """Add a library item to the watchlist with Trakt replying as given; return api and notify."""
     api = mock.Mock(**{"add_to_watchlist.return_value": reply})
+    strings = {32228: "Watchlist limit of %i reached"}
     with mock.patch.object(actions.shared, "api", api), \
             mock.patch.object(actions, "_library_item", return_value=item), \
-            mock.patch.object(actions, "get_string", side_effect=str), \
+            mock.patch.object(actions, "get_string",
+                              side_effect=lambda i: strings.get(i, str(i))), \
             mock.patch.object(actions, "notify") as notify:
         actions.add_to_watchlist({"action": "addtowatchlist"})
     return api, notify
@@ -123,6 +125,14 @@ def test_movie_watchlist_sends_the_library_ids():
     api.get_movie_summary.assert_not_called()
     api.add_to_watchlist.assert_called_once_with({"movies": [{"ids": {"tmdb": "4951"}}]})
     notify.assert_called_once_with("32165", "10 Things I Hate About You (1999)")
+
+
+def test_full_watchlist_names_its_limit():
+    """A watchlist add refused for the account limit names the limit instead of a plain failure."""
+    item = {"media_type": "movie", "dbid": 5, "ids": {"tmdb": "949"}, "title": "Heat",
+            "year": 1995}
+    _, notify = _watchlist(item, {"limit": 100})
+    notify.assert_called_once_with("Watchlist limit of 100 reached", "Heat (1995)")
 
 
 def test_watchlist_item_trakt_could_not_match_notifies_a_failure():

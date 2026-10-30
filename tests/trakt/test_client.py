@@ -98,6 +98,19 @@ def test_broken_reply_returns_none(open_error, body):
             None, None)
 
 
+def test_error_hook_gets_each_status():
+    """The error hook gets the status of a failed request, which still returns None."""
+    client = TraktClient("id", "ua")
+    client.on_error = hook = mock.Mock()
+    locked = urllib.error.HTTPError(
+        "https://api.trakt.tv/sync/history", 423, "Locked", Message(), None)
+    opener = mock.Mock(**{"open.side_effect": locked})
+
+    with mock.patch("lib.trakt.client.urllib.request.build_opener", return_value=opener):
+        assert client.request("POST", "/sync/history", {}) is None
+    hook.assert_called_once_with(423)
+
+
 def test_error_code_caller_gets_the_status_unlogged(caplog):
     """A caller taking the error code gets the HTTP status back, with no failure logged."""
     client = TraktClient("id", "ua")

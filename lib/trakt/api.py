@@ -9,13 +9,13 @@ import urllib.parse
 from concurrent.futures import ThreadPoolExecutor
 
 from lib.kodi.client import ADDON
-from lib.kodi.utilities import database_path, get_proxy_url
+from lib.kodi.utilities import database_path, get_proxy_url, notify
 
 from lib.trakt.client import TraktClient
 from lib.trakt.keys import CLIENT_ID, deobfuscate
 from lib.trakt.objects import TraktObject, TraktSeason
 from lib.trakt.ratings import NO_SEASON, RatingsCache, rating_changes
-from lib.kodi.settings import get_setting, set_setting
+from lib.kodi.settings import get_setting, get_string, set_setting
 
 logger = logging.getLogger(__name__)
 
@@ -39,6 +39,8 @@ class TraktAPI:
         client_id = os.environ.get("TRAKT_CLIENT_ID") or deobfuscate(CLIENT_ID)
         user_agent = "Kodi service.trakt.relay/%s" % ADDON.getAddonInfo("version")
         self.client = TraktClient(client_id, user_agent, proxy_url)
+        self.client.on_error = self._check_error
+        self._locked = threading.Event()
         self.ratings = RatingsCache(database_path())
 
         if get_setting("authorization"):
@@ -48,6 +50,13 @@ class TraktAPI:
     def connected(self) -> bool:
         """True when an OAuth token is held."""
         return bool(self.authorization)
+
+    def _check_error(self, code: int) -> None:
+        """Check a Trakt error status, notifying once a session that the account is locked."""
+        if code == 423 and not self._locked.is_set():
+            self._locked.set()
+            logger.warning("Trakt reports the account locked or deactivated")
+            notify(ADDON.getAddonInfo("name"), get_string(32227))
 
     def request_device_code(self) -> Optional[Dict]:
         """Request a device code for the user to enter, or None when Trakt can't be reached."""
@@ -492,8 +501,16 @@ class TraktAPI:
         return False
 
     def add_to_watchlist(self, items: Dict) -> Optional[Dict]:
-        """Add to the watchlist, returning Trakt's counts or None on failure."""
-        return self._post("/sync/watchlist", items)
+        """Add to the watchlist, returning Trakt's counts, the limit if full, or None on failure."""
+        reply = self._request(
+            "POST", "/sync/watchlist", body=items, authorized=True, include_error_code=True
+        )
+        data, error_code = reply or (None, None)
+        if error_code == 420:
+            limits = (self.get_user() or {}).get("limits") or {}
+            limit = (limits.get("watchlist") or {}).get("item_count")
+            return {"limit": limit} if limit else None
+        return data
 
     def get_user_rating(
         self, media_type: str, trakt_id: Any, season: int = NO_SEASON

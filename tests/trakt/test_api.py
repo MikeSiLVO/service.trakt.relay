@@ -596,6 +596,31 @@ def test_scrobble_reads_trakts_409_as_a_duplicate(reply, result):
     assert api.scrobble_movie({"ids": {"trakt": 1}}, 95.0, "stop") == result
 
 
+@pytest.mark.parametrize("settings, result", [
+    ({"limits": {"watchlist": {"item_count": 100}}}, {"limit": 100}),
+    (None, None),
+])
+def test_watchlist_add_over_the_limit_reads_it(settings, result):
+    """A watchlist add Trakt refuses with 420 returns the account's limit, or None if unreadable."""
+    api = TraktAPI.__new__(TraktAPI)
+    api.authorization = {"access_token": "token", "refresh_token": "refresh"}
+    api.client = mock.Mock(**{"request.side_effect": [(None, 420), settings]})
+
+    assert api.add_to_watchlist({"movies": [{"ids": {"tmdb": 949}}]}) == result
+
+
+def test_locked_account_is_notified_once():
+    """Trakt's 423 for a locked account notifies once a session, and other errors never."""
+    api = TraktAPI.__new__(TraktAPI)
+    api._locked = threading.Event()
+    with mock.patch("lib.trakt.api.notify") as notify, \
+            mock.patch("lib.trakt.api.get_string", side_effect=str):
+        for code in (500, 423, 423, 404):
+            api._check_error(code)
+    notify.assert_called_once()
+    assert notify.call_args.args[1] == "32227"
+
+
 def _polling_api(*replies):
     """A TraktAPI whose mocked client answers each device-token request with the next reply."""
     api = TraktAPI.__new__(TraktAPI)
