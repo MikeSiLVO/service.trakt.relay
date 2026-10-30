@@ -19,6 +19,7 @@
     <extension point="xbmc.addon.metadata" name="trakt.metadata">
         <platform>all</platform>
         <license>GPL-2.0-only</license>
+        <forum>https://forum.kodi.tv/showthread.php?tid=389542</forum>
         <source>https://github.com/MikeSiLVO/service.trakt.relay</source>
         <news>First release, a fork of script.trakt 3.9.0.</news>
         <assets>
