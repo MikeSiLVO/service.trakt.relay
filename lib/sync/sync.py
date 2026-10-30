@@ -2,12 +2,14 @@
 
 import threading
 import logging
-from typing import Any
+from typing import Any, Callable, Dict, List, Optional
 
 import xbmc
 import xbmcgui
+from lib.media.utilities import chunks
 from lib.sync import episodes
 from lib.sync import movies
+from lib.sync.compare import count_episodes
 
 from lib.trakt import shared
 from lib.kodi.settings import get_setting, get_setting_bool, get_string, set_setting
@@ -31,6 +33,7 @@ class Sync:
         self.sync_on_update = get_setting_bool('sync_on_update')
         self.notify = get_setting_bool('show_sync_notifications')
         self.notify_during_playback = not get_setting_bool("hide_notifications_playback")
+        self.failed = 0
 
     def _enabled(self, media_type: str) -> bool:
         """True when any sync of the media type is on."""
@@ -115,18 +118,24 @@ class Sync:
         logger.info("[Sync] Finished synchronization with Trakt.tv")
 
     def _run_half(self, half: Any, heading_id: int) -> None:
-        """Run a sync half in its progress dialog, notifying its start and, if done, its finish."""
+        """Run a sync half in its progress dialog, notifying its start and its end or failures."""
         heading = get_string(heading_id)
         if self.should_notify:
             notify(heading, get_string(32061))
         if self.show_progress:
             self.progress.create(heading, "")
+        failed_before = self.failed
         finished = half.run()
+        failed = self.failed - failed_before
         if finished:
             self.update_progress(100, line1=get_string(32062))
         if self.show_progress:
             self.progress.close()
-        if finished and self.should_notify:
+        silent = self.manual and not self.show_progress
+        hidden = not self.notify_during_playback and xbmc.Player().isPlayingVideo()
+        if failed and not silent and not hidden:
+            notify(heading, get_string(32226) % failed)
+        elif finished and self.should_notify:
             notify(heading, get_string(32062))
 
     def _can_skip(self) -> bool:
@@ -197,6 +206,33 @@ class Sync:
         percent = from_percent + (to_percent - from_percent) * done // total
         self.update_progress(
             percent, line1=get_string(step_id), line2=get_string(32089) % (done, total))
+
+    def send(self, write: Callable[[Dict], Optional[Dict]], items: List[Dict], kind: str,
+             step_id: int, done_id: int, from_percent: int, to_percent: int) -> None:
+        """Send items to Trakt in chunks, show what it took and failed, and tally the failures."""
+        key = "movies" if kind == "movies" else "shows"
+        size = 200 if key == "movies" else 50
+        done = failed = 0
+        for i, chunk in enumerate(chunks(items, size), 1):
+            if self.is_canceled():
+                return
+            self.update_count(min(i * size, len(items)), len(items), from_percent, to_percent,
+                              step_id)
+            reply = write({key: chunk})
+            if reply is None:
+                failed += count_episodes(chunk) if kind == "episodes" else len(chunk)
+                continue
+            done += sum((reply.get(field) or {}).get(kind, 0)
+                        for field in ("added", "updated", "deleted"))
+            missing = {k: v for k, v in (reply.get("not_found") or {}).items() if v}
+            if missing:
+                logger.info("[Sync] Trakt found no match for: %s" % missing)
+        if failed:
+            logger.warning("[Sync] %i %s couldn't be synced" % (failed, kind))
+        self.failed += failed
+        self.update_progress(to_percent, line1=get_string(step_id),
+                             line2=get_string(done_id) % done,
+                             line3=get_string(32226) % failed if failed else "")
 
 
 class SyncThread(threading.Thread):

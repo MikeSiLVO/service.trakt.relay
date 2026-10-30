@@ -155,22 +155,8 @@ class MovieSync:
                 % len(trakt_movies_to_add)
             )
             logger.debug("[Movies Sync] Movies to add : %s" % titles)
-
-            self.sync.update_progress(
-                from_percent,
-                line1=get_string(32068),
-                line2=get_string(32063) % len(trakt_movies_to_add),
-            )
-
-            movies_to_add = {"movies": trakt_movies_to_add}
-            if self.sync.api.add_to_collection(movies_to_add) is None:
-                logger.warning("[Movies Sync] Adding movies to the Trakt collection failed")
-
-            self.sync.update_progress(
-                to_percent,
-                line1=get_string(32068),
-                line2=get_string(32085) % len(trakt_movies_to_add),
-            )
+            self.sync.send(self.sync.api.add_to_collection, trakt_movies_to_add, "movies",
+                           32068, 32085, from_percent, to_percent)
 
     def _remove_from_trakt_collection(
         self, trakt_movies: List[Dict], kodi_movies: List[Dict], from_percent: int, to_percent: int
@@ -207,22 +193,8 @@ class MovieSync:
                 % len(trakt_movies_to_remove)
             )
             logger.debug("[Movies Sync] Movies removed: %s" % titles)
-
-            self.sync.update_progress(
-                from_percent,
-                line1=get_string(32068),
-                line2=get_string(32076) % len(trakt_movies_to_remove),
-            )
-
-            movies_to_remove = {"movies": trakt_movies_to_remove}
-            if self.sync.api.remove_from_collection(movies_to_remove) is None:
-                logger.warning("[Movies Sync] Removing movies from the Trakt collection failed")
-
-            self.sync.update_progress(
-                to_percent,
-                line1=get_string(32068),
-                line2=get_string(32092) % len(trakt_movies_to_remove),
-            )
+            self.sync.send(self.sync.api.remove_from_collection, trakt_movies_to_remove, "movies",
+                           32068, 32092, from_percent, to_percent)
 
     def _add_to_trakt_history(
         self, kodi_movies: List[Dict], trakt_movies: List[Dict], from_percent: int, to_percent: int
@@ -253,32 +225,8 @@ class MovieSync:
                 % len(trakt_movies_to_update)
             )
             logger.debug("[Movies Sync] Movies updated: %s" % titles)
-
-            chunksize = 200
-            chunked_movies = utilities.chunks(
-                [movie for movie in trakt_movies_to_update], chunksize
-            )
-            errorcount = 0
-            i = 0
-            total = len(trakt_movies_to_update)
-            for chunk in chunked_movies:
-                if self.sync.is_canceled():
-                    return
-                i += 1
-                self.sync.update_count(
-                    min(i * chunksize, total), total, from_percent, to_percent, 32071)
-
-                params = {"movies": chunk}
-                if self.sync.api.add_to_history(params) is None:
-                    logger.warning("[Movies Sync] Adding movies to Trakt history failed")
-                    errorcount += 1
-
-            logger.debug("[Movies Sync] Movies updated: %d error(s)" % errorcount)
-            self.sync.update_progress(
-                to_percent,
-                line1=get_string(32071),
-                line2=get_string(32085) % len(trakt_movies_to_update),
-            )
+            self.sync.send(self.sync.api.add_to_history, trakt_movies_to_update, "movies",
+                           32071, 32085, from_percent, to_percent)
 
     def _mark_watched_in_kodi(
         self, trakt_movies: List[Dict], kodi_movies: List[Dict], from_percent: int, to_percent: int
@@ -420,23 +368,8 @@ class MovieSync:
                     "[Movies Sync] %i movie(s) ratings will be updated on Trakt"
                     % len(trakt_movies_to_update)
                 )
-
-                self.sync.update_progress(
-                    from_percent,
-                    line1=get_string(32179),
-                    line2=get_string(32063) % len(trakt_movies_to_update),
-                )
-
-                movies_ratings = {"movies": trakt_movies_to_update}
-
-                if self.sync.api.add_ratings(movies_ratings) is None:
-                    logger.warning("[Movies Sync] Adding movie ratings on Trakt failed")
-
-                self.sync.update_progress(
-                    to_percent,
-                    line1=get_string(32179),
-                    line2=get_string(32085) % len(trakt_movies_to_update),
-                )
+                self.sync.send(self.sync.api.add_ratings, trakt_movies_to_update, "movies",
+                               32179, 32085, from_percent, to_percent)
 
         if (
             get_setting_bool("sync_ratings_to_kodi")

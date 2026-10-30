@@ -1,4 +1,3 @@
-import logging
 from unittest import mock
 
 from lib.sync import movies as movies_module
@@ -29,17 +28,16 @@ def test_failed_trakt_load_stops_the_movie_half_before_any_write():
     sync.api.add_to_collection.assert_not_called()
 
 
-def test_failed_history_write_is_counted(caplog):
-    """A history add that Trakt refuses is logged and counted as an error."""
+def test_history_step_sends_movies_watched_in_kodi():
+    """Movies watched in Kodi but not on Trakt are sent as history adds."""
     sync = mock.Mock()
     sync.is_canceled.return_value = False
-    sync.api.add_to_history.return_value = None
-    caplog.set_level(logging.DEBUG, logger=movies_module.__name__)
     with mock.patch.object(movies_module, "get_setting_bool", return_value=True), \
             mock.patch.object(movies_module, "get_string", return_value=Text()):
         MovieSync(sync)._add_to_trakt_history([dict(HEAT)], [], 59, 69)
-    assert "Adding movies to Trakt history failed" in caplog.text
-    assert "1 error(s)" in caplog.text
+    write, items, kind = sync.send.call_args.args[:3]
+    assert (write, [item["title"] for item in items], kind) == (
+        sync.api.add_to_history, ["Heat"], "movies")
 
 
 def test_ratings_reach_trakt_with_no_movies_there():
@@ -50,7 +48,7 @@ def test_ratings_reach_trakt_with_no_movies_there():
                            side_effect=lambda name: name == "sync_ratings_to_trakt"), \
             mock.patch.object(movies_module, "get_string", return_value=Text()):
         MovieSync(sync)._sync_ratings([], [dict(HEAT, rating=8)], 92, 99)
-    sync.api.add_ratings.assert_called_once()
+    assert sync.send.call_args.args[0] is sync.api.add_ratings
 
 
 def test_progress_skips_a_movie_whose_runtime_cannot_be_found():

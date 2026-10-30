@@ -263,30 +263,8 @@ class EpisodeSync:
                     % self._describe(show)
                 )
 
-            chunksize = 50
-            chunked_episodes = utilities.chunks(trakt_shows_add["shows"], chunksize)
-            errorcount = 0
-            i = 0
-            total = len(trakt_shows_add["shows"])
-            for chunk in chunked_episodes:
-                if self.sync.is_canceled():
-                    return
-                i += 1
-                self.sync.update_count(
-                    min(i * chunksize, total), total, from_percent, to_percent, 32068)
-
-                payload = {"shows": chunk}
-                logger.debug("[Episodes Sync] Shows to add %s" % payload)
-                if self.sync.api.add_to_collection(payload) is None:
-                    logger.warning("[Episodes Sync] Adding episodes to the Trakt collection failed")
-                    errorcount += 1
-
-            logger.debug("[Episodes Sync] Finished with %d error(s)" % errorcount)
-            self.sync.update_progress(
-                to_percent,
-                line1=get_string(32068),
-                line2=get_string(32085) % count_episodes(trakt_shows_add),
-            )
+            self.sync.send(self.sync.api.add_to_collection, trakt_shows_add["shows"], "episodes",
+                           32068, 32085, from_percent, to_percent)
 
     def _remove_from_trakt_collection(
         self, trakt_shows: Dict, kodi_shows: Dict, from_percent: int, to_percent: int
@@ -323,22 +301,8 @@ class EpisodeSync:
                     "[Episodes Sync] Episodes removed: %s"
                     % self._describe(show)
                 )
-
-            self.sync.update_progress(
-                from_percent,
-                line1=get_string(32068),
-                line2=get_string(32076) % count_episodes(trakt_shows_remove),
-            )
-
-            logger.debug("[Episodes Sync] Shows to remove %s" % trakt_shows_remove)
-            if self.sync.api.remove_from_collection(trakt_shows_remove) is None:
-                logger.warning("[Episodes Sync] Removing episodes from the Trakt collection failed")
-
-            self.sync.update_progress(
-                to_percent,
-                line1=get_string(32068),
-                line2=get_string(32092) % count_episodes(trakt_shows_remove),
-            )
+            self.sync.send(self.sync.api.remove_from_collection, trakt_shows_remove["shows"],
+                           "episodes", 32068, 32092, from_percent, to_percent)
 
     def _add_to_trakt_history(
         self, kodi_shows: Dict, trakt_shows: Dict, from_percent: int, to_percent: int
@@ -376,36 +340,8 @@ class EpisodeSync:
                     "[Episodes Sync] Episodes updated: %s"
                     % self._describe(show)
                 )
-
-            errorcount = 0
-            i = 0
-            x = float(len(trakt_shows_update["shows"]))
-            for show in trakt_shows_update["shows"]:
-                if self.sync.is_canceled():
-                    return
-                episode_count = count_episodes([show])
-                title = show["title"]
-                i += 1
-                y = ((i / x) * (to_percent - from_percent)) + from_percent
-                self.sync.update_progress(
-                    int(y),
-                    line1=get_string(32071),
-                    line2=title,
-                    line3=get_string(32063) % episode_count,
-                )
-
-                s = {"shows": [show]}
-                logger.debug("[Episodes Sync] Shows to update %s" % s)
-                if self.sync.api.add_to_history(s) is None:
-                    logger.warning("[Episodes Sync] Adding episodes to Trakt history failed")
-                    errorcount += 1
-
-            logger.debug("[Episodes Sync] Finished with %d error(s)" % errorcount)
-            self.sync.update_progress(
-                to_percent,
-                line1=get_string(32071),
-                line2=get_string(32085) % count_episodes(trakt_shows_update),
-            )
+            self.sync.send(self.sync.api.add_to_history, trakt_shows_update["shows"], "episodes",
+                           32071, 32085, from_percent, to_percent)
 
     def _mark_watched_in_kodi(
         self, trakt_shows: Dict, kodi_shows: Dict, kodi_shows_collected: Dict,
@@ -584,21 +520,8 @@ class EpisodeSync:
                     "[Episodes Sync] %i show(s) will have show ratings added on Trakt"
                     % len(trakt_shows_to_update["shows"])
                 )
-
-                self.sync.update_progress(
-                    from_percent,
-                    line1=get_string(32179),
-                    line2=get_string(32063) % len(trakt_shows_to_update["shows"]),
-                )
-
-                if self.sync.api.add_ratings(trakt_shows_to_update) is None:
-                    logger.warning("[Episodes Sync] Adding ratings on Trakt failed")
-
-                self.sync.update_progress(
-                    to_percent,
-                    line1=get_string(32179),
-                    line2=get_string(32085) % len(trakt_shows_to_update["shows"]),
-                )
+                self.sync.send(self.sync.api.add_ratings, trakt_shows_to_update["shows"], "shows",
+                               32179, 32085, from_percent, to_percent)
 
         if (
             get_setting_bool("sync_ratings_to_kodi")
@@ -680,20 +603,8 @@ class EpisodeSync:
                     "[Episodes Sync] %i show(s) will have episode ratings added on Trakt"
                     % len(trakt_shows_to_update["shows"])
                 )
-
-                self.sync.update_progress(
-                    from_percent,
-                    line1=get_string(32179),
-                    line2=get_string(32063) % count_episodes(trakt_shows_to_update),
-                )
-                if self.sync.api.add_ratings(trakt_shows_to_update) is None:
-                    logger.warning("[Episodes Sync] Adding ratings on Trakt failed")
-
-                self.sync.update_progress(
-                    to_percent,
-                    line1=get_string(32179),
-                    line2=get_string(32085) % count_episodes(trakt_shows_to_update),
-                )
+                self.sync.send(self.sync.api.add_ratings, trakt_shows_to_update["shows"],
+                               "episodes", 32179, 32085, from_percent, to_percent)
 
         if (
             get_setting_bool("sync_ratings_to_kodi")
