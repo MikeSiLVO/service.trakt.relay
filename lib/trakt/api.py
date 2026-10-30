@@ -91,8 +91,9 @@ class TraktAPI:
         authorized: bool = False,
         timeout: int = 30,
         include_headers: bool = False,
+        include_error_code: bool = False,
     ) -> Any:
-        """Send a request; on a 401 refresh the token and resend once."""
+        """Send a request, with status or headers if asked; on a 401 refresh and resend once."""
         authorization = self.authorization if authorized else None
         try:
             return self.client.request(
@@ -102,6 +103,7 @@ class TraktAPI:
                 authorization=authorization,
                 timeout=timeout,
                 include_headers=include_headers,
+                include_error_code=include_error_code,
             )
         except urllib.error.HTTPError as exc:
             if not authorization or not self._refresh_token(authorization):
@@ -115,6 +117,7 @@ class TraktAPI:
                 authorization=self.authorization,
                 timeout=timeout,
                 include_headers=include_headers,
+                include_error_code=include_error_code,
             )
         except urllib.error.HTTPError as exc:
             logger.debug("Trakt request failed after refresh: %s %s -> %s"
@@ -350,9 +353,8 @@ class TraktAPI:
         if status not in ("start", "pause", "stop"):
             logger.debug("scrobble() Bad scrobble status")
             return None
-        return self._post(
-            "/scrobble/%s" % status,
-            {"show": show, "episode": episode, "progress": progress},
+        return self._post_scrobble(
+            status, {"show": show, "episode": episode, "progress": progress}
         )
 
     def scrobble_movie(self, movie: Dict, progress: float, status: str) -> Optional[Dict]:
@@ -360,9 +362,17 @@ class TraktAPI:
         if status not in ("start", "pause", "stop"):
             logger.debug("scrobble() Bad scrobble status")
             return None
-        return self._post(
-            "/scrobble/%s" % status, {"movie": movie, "progress": progress}
+        return self._post_scrobble(status, {"movie": movie, "progress": progress})
+
+    def _post_scrobble(self, status: str, body: Dict) -> Optional[Dict]:
+        """Post a scrobble, with Trakt's 409 for an item it just scrobbled read as a duplicate."""
+        reply = self._request(
+            "POST", "/scrobble/%s" % status, body=body, authorized=True, include_error_code=True
         )
+        data, error_code = reply or (None, None)
+        if error_code == 409:
+            return {"duplicate": True}
+        return data
 
     def get_collected_shows(self, shows: Dict) -> Optional[Dict]:
         """Get the user's collected shows into the store; None if a page fails."""

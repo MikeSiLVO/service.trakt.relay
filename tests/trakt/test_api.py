@@ -4,6 +4,8 @@ from typing import cast
 from email.message import Message
 from unittest import mock
 
+import pytest
+
 from lib.trakt.api import TraktAPI
 from lib.trakt.client import TraktClient
 from lib.sync.compare import compare_movies
@@ -578,6 +580,20 @@ def test_refresh_after_another_thread_dropped_the_token_fails():
 
     assert api._refresh_token(stale) is False
     cast(mock.Mock, api.client.request).assert_not_called()
+
+
+@pytest.mark.parametrize("reply, result", [
+    (({"action": "scrobble"}, None), {"action": "scrobble"}),
+    ((None, 409), {"duplicate": True}),
+    ((None, 500), None),
+])
+def test_scrobble_reads_trakts_409_as_a_duplicate(reply, result):
+    """A scrobble returns Trakt's reply, a duplicate on a 409, or None on any other failure."""
+    api = TraktAPI.__new__(TraktAPI)
+    api.authorization = {"access_token": "token", "refresh_token": "refresh"}
+    api.client = mock.Mock(**{"request.return_value": reply})
+
+    assert api.scrobble_movie({"ids": {"trakt": 1}}, 95.0, "stop") == result
 
 
 def _polling_api(*replies):

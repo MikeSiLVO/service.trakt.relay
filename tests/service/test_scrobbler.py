@@ -31,6 +31,18 @@ def test_stop_under_one_percent_is_sent(watched_time):
     s.api.scrobble_movie.assert_called_once_with(info, watched_time / 60, "stop")
 
 
+def test_duplicate_stop_is_not_queued():
+    """A stop Trakt answers as a duplicate of one it just scrobbled is never queued or notified."""
+    s = _scrobbler(5700)
+    s.scrobble_queue = queue = mock.Mock()
+    s.api.scrobble_movie.return_value = {"duplicate": True}
+    with mock.patch.object(scrobbler, "get_setting_bool", return_value=True), \
+            mock.patch.object(scrobbler, "notify") as notify:
+        assert s._scrobble("stop") == {"duplicate": True}
+    queue.add.assert_not_called()
+    notify.assert_not_called()
+
+
 def test_started_playback_does_not_sleep():
     """Loading a started video never sleeps the service thread."""
     s = _scrobbler(0)
