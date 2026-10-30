@@ -9,6 +9,7 @@ from lib.kodi.utilities import notify
 import math
 from lib.dialogs.rating import check_rating
 from lib.service.player import get_playing_item, identify
+from lib.service.actions import find_trakt_id
 from lib.service.queue import ScrobbleQueue
 from lib.trakt import shared
 from lib.media.dates import to_seconds, local_to_utc
@@ -136,8 +137,7 @@ class Scrobbler:
                         logger.debug(
                             "Multi episode transition - call start for next episode"
                         )
-                        response = self._scrobble("start")
-                        self._prefetch_rating(response)
+                        self._prefetch_rating(self._scrobble_start())
 
                 elif seek:
                     self._scrobble("start")
@@ -331,41 +331,7 @@ class Scrobbler:
             self.paused = False
             self._record_active(playcount)
 
-            result = {}
-            if get_setting_bool(
-                "scrobble_movie"
-            ) or get_setting_bool("scrobble_episode"):
-                result = self._scrobble("start")
-            elif (
-                get_setting_bool("rate_movie")
-                and utilities.is_movie(self.video["type"])
-                and self.video_info
-                and "ids" in self.video_info
-            ):
-                best_id, id_type = pick_best_id(
-                    self.video_info["ids"], self.video["type"]
-                )
-                result = {"movie": self.api.get_movie_summary(best_id).to_dict()}
-            elif (
-                get_setting_bool("rate_episode")
-                and utilities.is_episode(self.video["type"])
-                and self.video_info
-                and self.show_info
-                and "ids" in self.show_info
-            ):
-                best_id, id_type = pick_best_id(
-                    self.show_info["ids"], self.video["type"]
-                )
-                result = {
-                    "show": self.api.get_show_summary(best_id).to_dict(),
-                    "episode": self.api.get_episode_summary(
-                        best_id,
-                        self.video_info["season"],
-                        self.video_info["number"],
-                    ).to_dict(),
-                }
-                result["episode"]["season"] = self.video_info["season"]
-
+            result = self._scrobble_start()
             if result and "id" in self.video:
                 if utilities.is_movie(self.video["type"]) and "movie" in result:
                     result["movie"]["movieid"] = self.video["id"]
@@ -373,6 +339,41 @@ class Scrobbler:
                     result["episode"]["episodeid"] = self.video["id"]
 
             self._prefetch_rating(result)
+
+    def _scrobble_start(self) -> Optional[Dict]:
+        """Scrobble the start, or just fetch Trakt's item to rate when its type isn't scrobbled."""
+        if not self.video or not self.video_info:
+            return None
+        if utilities.is_movie(self.video["type"]):
+            if get_setting_bool("scrobble_movie"):
+                return self._scrobble("start")
+            if not get_setting_bool("rate_movie") or "ids" not in self.video_info:
+                return None
+            movie_id = find_trakt_id(*pick_best_id(self.video_info["ids"], "movie"), "movie")
+            movie = self.api.get_movie_summary(movie_id).to_dict() if movie_id else {}
+            return {"movie": movie} if movie else None
+
+        if get_setting_bool("scrobble_episode"):
+            return self._scrobble("start")
+        show_ids = (self.show_info or {}).get("ids")
+        if (
+            not utilities.is_episode(self.video["type"])
+            or not get_setting_bool("rate_episode")
+            or not show_ids
+        ):
+            return None
+        show_id = find_trakt_id(*pick_best_id(show_ids, "show"), "show")
+        if not show_id:
+            return None
+        show = self.api.get_show_summary(show_id).to_dict()
+        season = self.video_info["season"]
+        episode = self.api.get_episode_summary(
+            show_id, season, self.video_info["number"]
+        ).to_dict()
+        if not show or not episode:
+            return None
+        episode["season"] = season
+        return {"show": show, "episode": episode}
 
     def _prefetch_rating(self, result: Optional[Dict]) -> None:
         """Pre-fetch the user's rating, swapping in Trakt's item info, when rating is on."""

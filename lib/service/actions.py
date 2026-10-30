@@ -55,7 +55,7 @@ def _library_item(data: Dict) -> Optional[Dict]:
     return item
 
 
-def _trakt_id(best_id: Any, id_type: Optional[str], media_type: str) -> Any:
+def find_trakt_id(best_id: Any, id_type: Optional[str], media_type: str) -> Any:
     """Find the Trakt id for an item's best id, searching Trakt unless it is one, or None."""
     if not id_type or id_type == "trakt":
         return best_id
@@ -90,7 +90,7 @@ def rate_manually(data: Dict) -> None:
         best_id, id_type = pick_best_id(item["ids"], media_type)
     logger.debug("Manual %s of %s: %s" % (action, media_type, item))
 
-    trakt_id = _trakt_id(best_id, id_type, media_type)
+    trakt_id = find_trakt_id(best_id, id_type, media_type)
     if not trakt_id:
         logger.debug("No Trakt id for: |%s|-|%s|-|%s|." % (media_type, id_type, best_id))
         return
@@ -167,7 +167,7 @@ def start_rewatch(data: Dict) -> None:
     title = item["title"]
     if not xbmcgui.Dialog().yesno(title, get_string(32221)):
         return
-    trakt_id = _trakt_id(*pick_best_id(item["ids"], "show"), "show")
+    trakt_id = find_trakt_id(*pick_best_id(item["ids"], "show"), "show")
     if not trakt_id or shared.api.start_rewatch(trakt_id) is None:
         notify(get_string(32223), title)
         return

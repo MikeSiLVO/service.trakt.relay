@@ -172,6 +172,35 @@ def test_live_tv_episode_found_by_name_scrobbles_without_a_title():
     assert s.stop_pending is False
 
 
+def test_rating_only_episode_is_fetched_by_its_trakt_id():
+    """An episode rated but not scrobbled is fetched by its show's Trakt id, never a TMDB number."""
+    s = _scrobbler(0)
+    s.video = {"type": "episode", "id": 5}
+    s.video_info, s.show_info = {"season": 1, "number": 2}, {"ids": {"tmdb": 1399}}
+    s.api.get_show_summary.return_value.to_dict.return_value = {"ids": {"trakt": 1390}}
+    s.api.get_episode_summary.return_value.to_dict.return_value = {"ids": {"trakt": 73641}}
+    on = {"scrobble_movie", "rate_episode"}
+    with mock.patch.object(scrobbler, "get_setting_bool", side_effect=lambda name: name in on), \
+            mock.patch.object(scrobbler, "find_trakt_id", return_value=1390) as find:
+        result = s._scrobble_start()
+    find.assert_called_once_with(1399, "tmdb", "show")
+    s.api.get_episode_summary.assert_called_once_with(1390, 1, 2)
+    s.api.scrobble_episode.assert_not_called()
+    assert result == {"show": {"ids": {"trakt": 1390}},
+                      "episode": {"ids": {"trakt": 73641}, "season": 1}}
+
+
+def test_rating_only_movie_trakt_cannot_fetch_gives_nothing_to_rate():
+    """A movie rated but not scrobbled gives nothing to rate when Trakt can't fetch it."""
+    s = _scrobbler(0)
+    s.api.get_movie_summary.return_value.to_dict.return_value = {}
+    with mock.patch.object(scrobbler, "get_setting_bool",
+                           side_effect=lambda name: name == "rate_movie"), \
+            mock.patch.object(scrobbler, "find_trakt_id", return_value=603):
+        assert s._scrobble_start() is None
+    s.api.scrobble_movie.assert_not_called()
+
+
 @pytest.mark.parametrize("reply, header", [
     ({"action": "start"}, "32217"),
     ({"action": "pause", "progress": 42.5}, "Paused at 42%"),
