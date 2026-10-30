@@ -13,6 +13,8 @@ ADDON_ID = ADDON.getAddonInfo("id")
 EVENT = "event"
 ITEM_ACTIONS = ("rate", "unrate", "startrewatch", "addtowatchlist")
 RATE_STRINGS = {"movie": 32137, "tvshow": 32138, "season": 32149, "episode": 32139}
+# Trakt to Kodi and Both ways; literal, as the script imports nothing of the service's
+FROM_TRAKT = (1, 3)
 
 
 def _parse_args() -> dict:
@@ -34,8 +36,9 @@ def _show_context_menu(dbtype: str) -> str | None:
     actions = []
     if dbtype in RATE_STRINGS:
         actions += [("addtowatchlist", 32136), ("rate", RATE_STRINGS[dbtype])]
-    # with it off the next sync marks the episodes watched again
-    if dbtype == "tvshow" and ADDON.getSettingBool("rewatch_aware_sync"):
+    # a sync from Trakt that ignores rewatches marks the episodes watched again
+    from_trakt = ADDON.getSettingInt("sync_watched_episodes") in FROM_TRAKT
+    if dbtype == "tvshow" and (ADDON.getSettingBool("rewatch_aware_sync") or not from_trakt):
         actions.append(("startrewatch", 32220))
     actions.append(("sync", 32143))
 

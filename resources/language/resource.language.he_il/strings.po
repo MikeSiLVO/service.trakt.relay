@@ -184,37 +184,9 @@ msgctxt "#32046"
 msgid "Movies"
 msgstr "סרטים"
 
-msgctxt "#32047"
-msgid "Add new movies to Trakt collection"
-msgstr "הוסף סרטים חדשים לאוסף ב-Trakt"
-
-msgctxt "#32048"
-msgid "Add watched movies to Trakt history"
-msgstr "הוסף סרטים שנצפו להיסטוריה ב-Trakt"
-
-msgctxt "#32049"
-msgid "Mark movies from Trakt history as watched in Kodi"
-msgstr "סמן סרטים מהיסטוריית Trakt כנצפו ב-Kodi"
-
 msgctxt "#32050"
 msgid "Episodes"
 msgstr "פרקים"
-
-msgctxt "#32051"
-msgid "Add new TV episodes to Trakt collection"
-msgstr "הוסף פרקים חדשים לאוסף ב-Trakt"
-
-msgctxt "#32052"
-msgid "Add watched TV episodes to Trakt history"
-msgstr "הוסף פרקים שנצפו להיסטוריה ב-Trakt"
-
-msgctxt "#32053"
-msgid "Mark TV episodes from Trakt history as watched in Kodi"
-msgstr "סמן פרקים מהיסטוריית Trakt כנצפו ב-Kodi"
-
-msgctxt "#32054"
-msgid "Service"
-msgstr "שירות"
 
 msgctxt "#32055"
 msgid "Sync after a library scan or clean"
@@ -223,14 +195,6 @@ msgstr "סנכרן לאחר סריקה או ניקוי של הספרייה"
 msgctxt "#32056"
 msgid "Show sync notifications"
 msgstr "הצג התראות סנכרון"
-
-msgctxt "#32057"
-msgid "Remove deleted movies from Trakt collection"
-msgstr "הסר סרטים שנמחקו מהאוסף ב-Trakt"
-
-msgctxt "#32058"
-msgid "Remove deleted TV episodes from Trakt collection"
-msgstr "הסר פרקים שנמחקו מהאוסף ב-Trakt"
 
 msgctxt "#32060"
 msgid "Hide notifications during playback"
@@ -299,14 +263,6 @@ msgstr "הוסרו %i"
 msgctxt "#32116"
 msgid "Enable debug mode"
 msgstr "הפעל מצב ניפוי שגיאות"
-
-msgctxt "#32117"
-msgid "Sync movie playback progress to Kodi"
-msgstr "סנכרן התקדמות ניגון של סרטים ל-Kodi"
-
-msgctxt "#32118"
-msgid "Sync episode playback progress to Kodi"
-msgstr "סנכרן התקדמות ניגון של פרקים ל-Kodi"
 
 msgctxt "#32122"
 msgid "Loading Trakt playback progress"
@@ -415,14 +371,6 @@ msgstr "אל תשמור התקדמות ניגון ב-Trakt"
 msgctxt "#32193"
 msgid "Respect Trakt rewatch progress"
 msgstr "כבד את התקדמות הצפייה החוזרת ב-Trakt"
-
-msgctxt "#32196"
-msgid "Sync ratings from Trakt to Kodi"
-msgstr "סנכרן דירוגים מ-Trakt ל-Kodi"
-
-msgctxt "#32197"
-msgid "Sync ratings from Kodi to Trakt"
-msgstr "סנכרן דירוגים מ-Kodi ל-Trakt"
 
 msgctxt "#32198"
 msgid "Trakt"
@@ -535,3 +483,151 @@ msgstr "חשבון ה-Trakt שלך נעול. יש לפנות לתמיכה של T
 msgctxt "#32228"
 msgid "Watchlist limit of %i reached"
 msgstr "רשימת הצפייה הגיעה למגבלה של %i"
+
+msgctxt "#32229"
+msgid "Choose what to sync"
+msgstr "בחר מה לסנכרן"
+
+msgctxt "#32230"
+msgid "Open the sync setup shown after connecting to Trakt."
+msgstr "פותח את הגדרת הסנכרון שמוצגת לאחר ההתחברות ל-Trakt."
+
+msgctxt "#32231"
+msgid "Sync when Kodi finishes a library scan or clean. Otherwise a sync runs only when you start it, such as from the context menu."
+msgstr "סנכרן כאשר Kodi מסיים סריקה או ניקוי של הספרייה. אחרת, סנכרון מתבצע רק כאשר אתה מפעיל אותו, למשל מתפריט ההקשר."
+
+msgctxt "#32232"
+msgid "Notify when a sync after a library scan or clean starts and finishes."
+msgstr "הצג התראה כאשר סנכרון לאחר סריקה או ניקוי של הספרייה מתחיל ומסתיים."
+
+msgctxt "#32233"
+msgid "Show no sync notifications while a video plays."
+msgstr "אל תציג התראות סנכרון בזמן ניגון וידאו."
+
+msgctxt "#32234"
+msgid "Match items without an IMDb, TMDB or TVDB id by title and year, when scrobbling and syncing. Never used to unwatch items or clear ratings."
+msgstr "התאם פריטים ללא מזהה IMDb, TMDB או TVDB לפי כותרת ושנה, בעת דיווח צפייה וסנכרון. לעולם אינו משמש לסימון פריטים כלא נצפו או למחיקת דירוגים."
+
+msgctxt "#32235"
+msgid "Watched status"
+msgstr "מצב צפייה"
+
+msgctxt "#32236"
+msgid "Trakt to Kodi: Kodi matches Trakt, play counts and dates included, and anything with no plays on Trakt is unwatched. Kodi to Trakt: items watched in Kodi with no play on Trakt are added to its history. Both ways: each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "מ-Trakt ל-Kodi: Kodi תואם את Trakt, כולל מספר הצפיות והתאריכים, וכל מה שאין לו צפיות ב-Trakt מסומן כלא נצפה. מ-Kodi ל-Trakt: פריטים שנצפו ב-Kodi ואין להם צפייה ב-Trakt נוספים להיסטוריה שלו. בשני הכיוונים: כל צד מקבל את הצפיות החסרות לו, ושום דבר לא מסומן כלא נצפה מחוץ לצפייה חוזרת ב-Trakt."
+
+msgctxt "#32237"
+msgid "Off"
+msgstr "כבוי"
+
+msgctxt "#32238"
+msgid "Trakt to Kodi"
+msgstr "מ-Trakt ל-Kodi"
+
+msgctxt "#32239"
+msgid "Kodi to Trakt"
+msgstr "מ-Kodi ל-Trakt"
+
+msgctxt "#32240"
+msgid "Both ways"
+msgstr "בשני הכיוונים"
+
+msgctxt "#32241"
+msgid "Ratings"
+msgstr "דירוגים"
+
+msgctxt "#32242"
+msgid "Movies, shows and episodes"
+msgstr "סרטים, סדרות ופרקים"
+
+msgctxt "#32243"
+msgid "Trakt to Kodi: Kodi matches Trakt, and ratings Trakt doesn't have are cleared in Kodi. Kodi to Trakt: Kodi's ratings are added to Trakt, replacing different ones. Both ways: missing ratings are copied each way, and where they differ Trakt's is kept."
+msgstr "מ-Trakt ל-Kodi: Kodi תואם את Trakt, ודירוגים שאין ב-Trakt נמחקים ב-Kodi. מ-Kodi ל-Trakt: הדירוגים של Kodi נוספים ל-Trakt ומחליפים דירוגים שונים. בשני הכיוונים: דירוגים חסרים מועתקים לכל צד, וכאשר הם שונים נשמר הדירוג של Trakt."
+
+msgctxt "#32244"
+msgid "Resume points from Trakt"
+msgstr "נקודות המשך מ-Trakt"
+
+msgctxt "#32245"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device. Playback in Kodi still sends its progress to Trakt when this is off."
+msgstr "Kodi ממשיך מהמקום שבו הפריט מושהה ב-Trakt, למשל ממכשיר אחר. כשאפשרות זו כבויה, ניגון ב-Kodi עדיין שולח את ההתקדמות שלו ל-Trakt."
+
+msgctxt "#32246"
+msgid "Add"
+msgstr "הוספה"
+
+msgctxt "#32247"
+msgid "Add and remove"
+msgstr "הוספה והסרה"
+
+msgctxt "#32248"
+msgid "Add: Kodi's items are added to the Trakt collection. Add and remove: collected items Kodi doesn't have are removed from it too, including ones from other devices or apps."
+msgstr "הוספה: הפריטים של Kodi נוספים לאוסף ב-Trakt. הוספה והסרה: פריטים באוסף שאינם קיימים ב-Kodi מוסרים ממנו גם כן, כולל כאלה ממכשירים או מיישומים אחרים."
+
+msgctxt "#32249"
+msgid "Relay always scrobbles when connected. Sync handles what it didn't scrobble: other devices, older history."
+msgstr "כשהוא מחובר, Relay תמיד מדווח על צפייה. הסנכרון מטפל במה שלא דווח: מכשירים אחרים, היסטוריה ישנה יותר."
+
+msgctxt "#32250"
+msgid "On"
+msgstr "מופעל"
+
+msgctxt "#32251"
+msgid "Watched status isn't synced."
+msgstr "מצב הצפייה אינו מסונכרן."
+
+msgctxt "#32252"
+msgid "Kodi matches Trakt, play counts and dates included. Anything with no plays on Trakt is unwatched in Kodi."
+msgstr "Kodi תואם את Trakt, כולל מספר הצפיות והתאריכים. כל מה שאין לו צפיות ב-Trakt מסומן ב-Kodi כלא נצפה."
+
+msgctxt "#32253"
+msgid "Items watched in Kodi with no play on Trakt are added to its history. Kodi isn't changed."
+msgstr "פריטים שנצפו ב-Kodi ואין להם צפייה ב-Trakt נוספים להיסטוריה שלו. Kodi אינו משתנה."
+
+msgctxt "#32254"
+msgid "Each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "כל צד מקבל את הצפיות החסרות לו, ושום דבר לא מסומן כלא נצפה מחוץ לצפייה חוזרת ב-Trakt."
+
+msgctxt "#32255"
+msgid "Ratings aren't synced."
+msgstr "הדירוגים אינם מסונכרנים."
+
+msgctxt "#32256"
+msgid "Kodi's ratings match Trakt, and ratings Trakt doesn't have are cleared in Kodi."
+msgstr "הדירוגים ב-Kodi תואמים את Trakt, ודירוגים שאין ב-Trakt נמחקים ב-Kodi."
+
+msgctxt "#32257"
+msgid "Kodi's ratings are added to Trakt, replacing different ones. Kodi isn't changed."
+msgstr "הדירוגים של Kodi נוספים ל-Trakt ומחליפים דירוגים שונים. Kodi אינו משתנה."
+
+msgctxt "#32258"
+msgid "Missing ratings are copied each way. Where they differ, Trakt's rating is kept."
+msgstr "דירוגים חסרים מועתקים לכל צד. כאשר הם שונים, נשמר הדירוג של Trakt."
+
+msgctxt "#32259"
+msgid "Kodi keeps its own resume points."
+msgstr "Kodi שומר את נקודות ההמשך שלו."
+
+msgctxt "#32260"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device."
+msgstr "Kodi ממשיך מהמקום שבו הפריט מושהה ב-Trakt, למשל ממכשיר אחר."
+
+msgctxt "#32261"
+msgid "A sync runs only when you start it, such as from the context menu."
+msgstr "סנכרון מתבצע רק כאשר אתה מפעיל אותו, למשל מתפריט ההקשר."
+
+msgctxt "#32262"
+msgid "Sync when Kodi finishes a library scan or clean."
+msgstr "סנכרן כאשר Kodi מסיים סריקה או ניקוי של הספרייה."
+
+msgctxt "#32263"
+msgid "Save and sync"
+msgstr "שמור וסנכרן"
+
+msgctxt "#32264"
+msgid "Unwatch %i items in Kodi to match Trakt?"
+msgstr "לסמן %i פריטים כלא נצפו ב-Kodi כדי להתאים ל-Trakt?"
+
+msgctxt "#32265"
+msgid "Clear %i ratings in Kodi to match Trakt?"
+msgstr "למחוק %i דירוגים ב-Kodi כדי להתאים ל-Trakt?"

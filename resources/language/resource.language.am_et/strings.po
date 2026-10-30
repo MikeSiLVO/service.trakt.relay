@@ -185,37 +185,9 @@ msgctxt "#32046"
 msgid "Movies"
 msgstr "ሙቪዎች"
 
-msgctxt "#32047"
-msgid "Add new movies to Trakt collection"
-msgstr "አዲስ ሙቪዎችን ወደ Trakt ስብስብ ጨምር"
-
-msgctxt "#32048"
-msgid "Add watched movies to Trakt history"
-msgstr "የታዩ ሙቪዎችን ወደ Trakt ታሪክ ጨምር"
-
-msgctxt "#32049"
-msgid "Mark movies from Trakt history as watched in Kodi"
-msgstr "በ Trakt ታሪክ ያሉ ሙቪዎችን በ Kodi እንደታዩ ምልክት አድርግ"
-
 msgctxt "#32050"
 msgid "Episodes"
 msgstr "ክፍሎች"
-
-msgctxt "#32051"
-msgid "Add new TV episodes to Trakt collection"
-msgstr "አዲስ የቲቪ ክፍሎችን ወደ Trakt ስብስብ ጨምር"
-
-msgctxt "#32052"
-msgid "Add watched TV episodes to Trakt history"
-msgstr "የታዩ የቲቪ ክፍሎችን ወደ Trakt ታሪክ ጨምር"
-
-msgctxt "#32053"
-msgid "Mark TV episodes from Trakt history as watched in Kodi"
-msgstr "በ Trakt ታሪክ ያሉ የቲቪ ክፍሎችን በ Kodi እንደታዩ ምልክት አድርግ"
-
-msgctxt "#32054"
-msgid "Service"
-msgstr "አገልግሎት"
 
 msgctxt "#32055"
 msgid "Sync after a library scan or clean"
@@ -224,14 +196,6 @@ msgstr "ከቤተ-መጻሕፍት ቅኝት ወይም ጽዳት በኋላ አመ
 msgctxt "#32056"
 msgid "Show sync notifications"
 msgstr "የማመሳሰል ማሳወቂያዎችን አሳይ"
-
-msgctxt "#32057"
-msgid "Remove deleted movies from Trakt collection"
-msgstr "የተሰረዙ ሙቪዎችን ከ Trakt ስብስብ አስወግድ"
-
-msgctxt "#32058"
-msgid "Remove deleted TV episodes from Trakt collection"
-msgstr "የተሰረዙ የቲቪ ክፍሎችን ከ Trakt ስብስብ አስወግድ"
 
 msgctxt "#32060"
 msgid "Hide notifications during playback"
@@ -300,14 +264,6 @@ msgstr "%i ተወግዷል"
 msgctxt "#32116"
 msgid "Enable debug mode"
 msgstr "የማረሚያ ሁነታን አስችል"
-
-msgctxt "#32117"
-msgid "Sync movie playback progress to Kodi"
-msgstr "የሙቪ ማጫወት ሂደትን ወደ Kodi አመሳስል"
-
-msgctxt "#32118"
-msgid "Sync episode playback progress to Kodi"
-msgstr "የክፍል ማጫወት ሂደትን ወደ Kodi አመሳስል"
 
 msgctxt "#32122"
 msgid "Loading Trakt playback progress"
@@ -416,14 +372,6 @@ msgstr "የማጫወት ሂደትን በ Trakt ላይ አታስቀምጥ"
 msgctxt "#32193"
 msgid "Respect Trakt rewatch progress"
 msgstr "የ Trakt ድጋሚ እይታ ሂደትን አክብር"
-
-msgctxt "#32196"
-msgid "Sync ratings from Trakt to Kodi"
-msgstr "ደረጃዎችን ከ Trakt ወደ Kodi አመሳስል"
-
-msgctxt "#32197"
-msgid "Sync ratings from Kodi to Trakt"
-msgstr "ደረጃዎችን ከ Kodi ወደ Trakt አመሳስል"
 
 msgctxt "#32198"
 msgid "Trakt"
@@ -536,3 +484,151 @@ msgstr "የ Trakt መለያዎ ተቆልፏል። የ Trakt ድጋፍን ያነ�
 msgctxt "#32228"
 msgid "Watchlist limit of %i reached"
 msgstr "የመመልከቻ ዝርዝር ገደብ %i ላይ ተደርሷል"
+
+msgctxt "#32229"
+msgid "Choose what to sync"
+msgstr "የሚመሳሰለውን ምረጥ"
+
+msgctxt "#32230"
+msgid "Open the sync setup shown after connecting to Trakt."
+msgstr "ከ Trakt ጋር ከተገናኙ በኋላ የሚታየውን የማመሳሰል ማዋቀሪያ ክፈት።"
+
+msgctxt "#32231"
+msgid "Sync when Kodi finishes a library scan or clean. Otherwise a sync runs only when you start it, such as from the context menu."
+msgstr "Kodi የቤተ-መጻሕፍት ቅኝት ወይም ጽዳት ሲጨርስ አመሳስል። ያለበለዚያ ማመሳሰል የሚካሄደው እርስዎ ሲጀምሩት ብቻ ነው፣ ለምሳሌ ከአውድ ምናሌው።"
+
+msgctxt "#32232"
+msgid "Notify when a sync after a library scan or clean starts and finishes."
+msgstr "ከቤተ-መጻሕፍት ቅኝት ወይም ጽዳት በኋላ የሚካሄድ ማመሳሰል ሲጀምር እና ሲጠናቀቅ አሳውቅ።"
+
+msgctxt "#32233"
+msgid "Show no sync notifications while a video plays."
+msgstr "ቪዲዮ በሚጫወትበት ጊዜ የማመሳሰል ማሳወቂያዎችን አታሳይ።"
+
+msgctxt "#32234"
+msgid "Match items without an IMDb, TMDB or TVDB id by title and year, when scrobbling and syncing. Never used to unwatch items or clear ratings."
+msgstr "IMDb፣ TMDB ወይም TVDB መታወቂያ የሌላቸውን ንጥሎች ስክሮብል ሲደረግ እና ሲመሳሰል በርዕስ እና በዓመት አዛምድ። ንጥሎችን እንዳልታዩ ለማድረግ ወይም ደረጃዎችን ለማጽዳት በፍጹም ጥቅም ላይ አይውልም።"
+
+msgctxt "#32235"
+msgid "Watched status"
+msgstr "የታየ ሁኔታ"
+
+msgctxt "#32236"
+msgid "Trakt to Kodi: Kodi matches Trakt, play counts and dates included, and anything with no plays on Trakt is unwatched. Kodi to Trakt: items watched in Kodi with no play on Trakt are added to its history. Both ways: each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "ከ Trakt ወደ Kodi፦ Kodi ከ Trakt ጋር ይጣጣማል፣ የማጫወት ብዛትና ቀኖችን ጨምሮ፣ በ Trakt ላይ ምንም ማጫወት የሌለው ሁሉ እንዳልታየ ይደረጋል። ከ Kodi ወደ Trakt፦ በ Kodi የታዩ እና በ Trakt ላይ ማጫወት የሌላቸው ንጥሎች ወደ Trakt ታሪክ ይጨመራሉ። በሁለቱም አቅጣጫ፦ እያንዳንዱ ወገን የጎደሉትን ማጫወቶች ያገኛል፣ ከ Trakt ድጋሚ እይታ ውጭ ምንም እንዳልታየ አይደረግም።"
+
+msgctxt "#32237"
+msgid "Off"
+msgstr "ጠፍቷል"
+
+msgctxt "#32238"
+msgid "Trakt to Kodi"
+msgstr "ከ Trakt ወደ Kodi"
+
+msgctxt "#32239"
+msgid "Kodi to Trakt"
+msgstr "ከ Kodi ወደ Trakt"
+
+msgctxt "#32240"
+msgid "Both ways"
+msgstr "በሁለቱም አቅጣጫ"
+
+msgctxt "#32241"
+msgid "Ratings"
+msgstr "ደረጃዎች"
+
+msgctxt "#32242"
+msgid "Movies, shows and episodes"
+msgstr "ሙቪዎች፣ ተከታታዮች እና ክፍሎች"
+
+msgctxt "#32243"
+msgid "Trakt to Kodi: Kodi matches Trakt, and ratings Trakt doesn't have are cleared in Kodi. Kodi to Trakt: Kodi's ratings are added to Trakt, replacing different ones. Both ways: missing ratings are copied each way, and where they differ Trakt's is kept."
+msgstr "ከ Trakt ወደ Kodi፦ Kodi ከ Trakt ጋር ይጣጣማል፣ Trakt የሌሉት ደረጃዎችም በ Kodi ውስጥ ይጸዳሉ። ከ Kodi ወደ Trakt፦ የ Kodi ደረጃዎች ወደ Trakt ይጨመራሉ፣ የተለዩትን ይተካሉ። በሁለቱም አቅጣጫ፦ የጎደሉ ደረጃዎች ወደ ሁለቱም ወገን ይገለበጣሉ፣ በሚለያዩበት ቦታ የ Trakt ደረጃ ይቆያል።"
+
+msgctxt "#32244"
+msgid "Resume points from Trakt"
+msgstr "የመቀጠያ ነጥቦች ከ Trakt"
+
+msgctxt "#32245"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device. Playback in Kodi still sends its progress to Trakt when this is off."
+msgstr "Kodi ንጥሉ በ Trakt ላይ ለአፍታ ከቆመበት ቦታ ይቀጥላል፣ ለምሳሌ ከሌላ መሣሪያ። ይህ ሲጠፋም በ Kodi ውስጥ ያለው ማጫወት ሂደቱን ወደ Trakt ይልካል።"
+
+msgctxt "#32246"
+msgid "Add"
+msgstr "መጨመር"
+
+msgctxt "#32247"
+msgid "Add and remove"
+msgstr "መጨመር እና ማስወገድ"
+
+msgctxt "#32248"
+msgid "Add: Kodi's items are added to the Trakt collection. Add and remove: collected items Kodi doesn't have are removed from it too, including ones from other devices or apps."
+msgstr "መጨመር፦ የ Kodi ንጥሎች ወደ Trakt ስብስብ ይጨመራሉ። መጨመር እና ማስወገድ፦ Kodi የሌሉት የተሰበሰቡ ንጥሎችም ከስብስቡ ይወገዳሉ፣ ከሌሎች መሣሪያዎች ወይም መተግበሪያዎች የመጡትንም ጨምሮ።"
+
+msgctxt "#32249"
+msgid "Relay always scrobbles when connected. Sync handles what it didn't scrobble: other devices, older history."
+msgstr "Relay ሲገናኝ ሁልጊዜ ስክሮብል ያደርጋል። ማመሳሰል ደግሞ ስክሮብል ያልተደረገውን ይሸፍናል፦ ሌሎች መሣሪያዎች፣ የቆየ ታሪክ።"
+
+msgctxt "#32250"
+msgid "On"
+msgstr "በርቷል"
+
+msgctxt "#32251"
+msgid "Watched status isn't synced."
+msgstr "የታየ ሁኔታ አይመሳሰልም።"
+
+msgctxt "#32252"
+msgid "Kodi matches Trakt, play counts and dates included. Anything with no plays on Trakt is unwatched in Kodi."
+msgstr "Kodi ከ Trakt ጋር ይጣጣማል፣ የማጫወት ብዛትና ቀኖችን ጨምሮ። በ Trakt ላይ ምንም ማጫወት የሌለው ሁሉ በ Kodi ውስጥ እንዳልታየ ይደረጋል።"
+
+msgctxt "#32253"
+msgid "Items watched in Kodi with no play on Trakt are added to its history. Kodi isn't changed."
+msgstr "በ Kodi የታዩ እና በ Trakt ላይ ማጫወት የሌላቸው ንጥሎች ወደ Trakt ታሪክ ይጨመራሉ። Kodi አይቀየርም።"
+
+msgctxt "#32254"
+msgid "Each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "እያንዳንዱ ወገን የጎደሉትን ማጫወቶች ያገኛል፣ ከ Trakt ድጋሚ እይታ ውጭ ምንም እንዳልታየ አይደረግም።"
+
+msgctxt "#32255"
+msgid "Ratings aren't synced."
+msgstr "ደረጃዎች አይመሳሰሉም።"
+
+msgctxt "#32256"
+msgid "Kodi's ratings match Trakt, and ratings Trakt doesn't have are cleared in Kodi."
+msgstr "የ Kodi ደረጃዎች ከ Trakt ጋር ይጣጣማሉ፣ Trakt የሌሉት ደረጃዎችም በ Kodi ውስጥ ይጸዳሉ።"
+
+msgctxt "#32257"
+msgid "Kodi's ratings are added to Trakt, replacing different ones. Kodi isn't changed."
+msgstr "የ Kodi ደረጃዎች ወደ Trakt ይጨመራሉ፣ የተለዩትን ይተካሉ። Kodi አይቀየርም።"
+
+msgctxt "#32258"
+msgid "Missing ratings are copied each way. Where they differ, Trakt's rating is kept."
+msgstr "የጎደሉ ደረጃዎች ወደ ሁለቱም ወገን ይገለበጣሉ። በሚለያዩበት ቦታ የ Trakt ደረጃ ይቆያል።"
+
+msgctxt "#32259"
+msgid "Kodi keeps its own resume points."
+msgstr "Kodi የራሱን የመቀጠያ ነጥቦች ይይዛል።"
+
+msgctxt "#32260"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device."
+msgstr "Kodi ንጥሉ በ Trakt ላይ ለአፍታ ከቆመበት ቦታ ይቀጥላል፣ ለምሳሌ ከሌላ መሣሪያ።"
+
+msgctxt "#32261"
+msgid "A sync runs only when you start it, such as from the context menu."
+msgstr "ማመሳሰል የሚካሄደው እርስዎ ሲጀምሩት ብቻ ነው፣ ለምሳሌ ከአውድ ምናሌው።"
+
+msgctxt "#32262"
+msgid "Sync when Kodi finishes a library scan or clean."
+msgstr "Kodi የቤተ-መጻሕፍት ቅኝት ወይም ጽዳት ሲጨርስ አመሳስል።"
+
+msgctxt "#32263"
+msgid "Save and sync"
+msgstr "አስቀምጥ እና አመሳስል"
+
+msgctxt "#32264"
+msgid "Unwatch %i items in Kodi to match Trakt?"
+msgstr "ከ Trakt ጋር ለማጣጣም %i ንጥሎች በ Kodi ውስጥ እንዳልታዩ ይደረጉ?"
+
+msgctxt "#32265"
+msgid "Clear %i ratings in Kodi to match Trakt?"
+msgstr "ከ Trakt ጋር ለማጣጣም በ Kodi ውስጥ %i ደረጃዎች ይጽዱ?"

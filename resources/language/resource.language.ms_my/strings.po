@@ -184,37 +184,9 @@ msgctxt "#32046"
 msgid "Movies"
 msgstr "Cereka"
 
-msgctxt "#32047"
-msgid "Add new movies to Trakt collection"
-msgstr "Tambah cereka baharu ke koleksi Trakt"
-
-msgctxt "#32048"
-msgid "Add watched movies to Trakt history"
-msgstr "Tambah cereka yang ditonton ke sejarah Trakt"
-
-msgctxt "#32049"
-msgid "Mark movies from Trakt history as watched in Kodi"
-msgstr "Tanda cereka dari sejarah Trakt sebagai ditonton dalam Kodi"
-
 msgctxt "#32050"
 msgid "Episodes"
 msgstr "Episod"
-
-msgctxt "#32051"
-msgid "Add new TV episodes to Trakt collection"
-msgstr "Tambah episod TV baharu ke koleksi Trakt"
-
-msgctxt "#32052"
-msgid "Add watched TV episodes to Trakt history"
-msgstr "Tambah episod TV yang ditonton ke sejarah Trakt"
-
-msgctxt "#32053"
-msgid "Mark TV episodes from Trakt history as watched in Kodi"
-msgstr "Tanda episod TV dari sejarah Trakt sebagai ditonton dalam Kodi"
-
-msgctxt "#32054"
-msgid "Service"
-msgstr "Perkhidmatan"
 
 msgctxt "#32055"
 msgid "Sync after a library scan or clean"
@@ -223,14 +195,6 @@ msgstr "Segerak selepas imbasan atau pembersihan pustaka"
 msgctxt "#32056"
 msgid "Show sync notifications"
 msgstr "Tunjuk pemberitahuan segerak"
-
-msgctxt "#32057"
-msgid "Remove deleted movies from Trakt collection"
-msgstr "Buang cereka yang dipadam dari koleksi Trakt"
-
-msgctxt "#32058"
-msgid "Remove deleted TV episodes from Trakt collection"
-msgstr "Buang episod TV yang dipadam dari koleksi Trakt"
 
 msgctxt "#32060"
 msgid "Hide notifications during playback"
@@ -299,14 +263,6 @@ msgstr "Dibuang %i"
 msgctxt "#32116"
 msgid "Enable debug mode"
 msgstr "Dayakan mod nyahpepijat"
-
-msgctxt "#32117"
-msgid "Sync movie playback progress to Kodi"
-msgstr "Segerak kemajuan main balik cereka ke Kodi"
-
-msgctxt "#32118"
-msgid "Sync episode playback progress to Kodi"
-msgstr "Segerak kemajuan main balik episod ke Kodi"
 
 msgctxt "#32122"
 msgid "Loading Trakt playback progress"
@@ -415,14 +371,6 @@ msgstr "Jangan simpan kemajuan main balik di Trakt"
 msgctxt "#32193"
 msgid "Respect Trakt rewatch progress"
 msgstr "Patuhi kemajuan tonton semula Trakt"
-
-msgctxt "#32196"
-msgid "Sync ratings from Trakt to Kodi"
-msgstr "Segerak penarafan dari Trakt ke Kodi"
-
-msgctxt "#32197"
-msgid "Sync ratings from Kodi to Trakt"
-msgstr "Segerak penarafan dari Kodi ke Trakt"
 
 msgctxt "#32198"
 msgid "Trakt"
@@ -535,3 +483,151 @@ msgstr "Akaun Trakt anda dikunci. Hubungi sokongan Trakt."
 msgctxt "#32228"
 msgid "Watchlist limit of %i reached"
 msgstr "Had senarai tontonan %i telah dicapai"
+
+msgctxt "#32229"
+msgid "Choose what to sync"
+msgstr "Pilih apa yang hendak disegerak"
+
+msgctxt "#32230"
+msgid "Open the sync setup shown after connecting to Trakt."
+msgstr "Membuka persediaan segerak yang ditunjukkan selepas bersambung ke Trakt."
+
+msgctxt "#32231"
+msgid "Sync when Kodi finishes a library scan or clean. Otherwise a sync runs only when you start it, such as from the context menu."
+msgstr "Menyegerak apabila Kodi selesai mengimbas atau membersihkan pustaka. Jika tidak, segerak hanya berjalan apabila anda memulakannya, seperti dari menu konteks."
+
+msgctxt "#32232"
+msgid "Notify when a sync after a library scan or clean starts and finishes."
+msgstr "Memberitahu apabila segerak selepas imbasan atau pembersihan pustaka bermula dan selesai."
+
+msgctxt "#32233"
+msgid "Show no sync notifications while a video plays."
+msgstr "Tidak menunjukkan pemberitahuan segerak semasa video dimainkan."
+
+msgctxt "#32234"
+msgid "Match items without an IMDb, TMDB or TVDB id by title and year, when scrobbling and syncing. Never used to unwatch items or clear ratings."
+msgstr "Memadankan item tanpa ID IMDb, TMDB atau TVDB melalui tajuk dan tahun, semasa merekod tontonan dan menyegerak. Tidak sekali-kali digunakan untuk menanda item sebagai belum ditonton atau membuang penarafan."
+
+msgctxt "#32235"
+msgid "Watched status"
+msgstr "Status tontonan"
+
+msgctxt "#32236"
+msgid "Trakt to Kodi: Kodi matches Trakt, play counts and dates included, and anything with no plays on Trakt is unwatched. Kodi to Trakt: items watched in Kodi with no play on Trakt are added to its history. Both ways: each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Trakt ke Kodi: Kodi mengikut Trakt, termasuk kiraan main dan tarikh, dan apa-apa yang tidak pernah dimainkan di Trakt ditanda belum ditonton. Kodi ke Trakt: item yang ditonton dalam Kodi tetapi tidak pernah dimainkan di Trakt ditambah ke sejarahnya. Dua hala: setiap pihak menerima rekod main yang tiada padanya, dan tiada apa-apa ditanda belum ditonton di luar tonton semula Trakt."
+
+msgctxt "#32237"
+msgid "Off"
+msgstr "Mati"
+
+msgctxt "#32238"
+msgid "Trakt to Kodi"
+msgstr "Trakt ke Kodi"
+
+msgctxt "#32239"
+msgid "Kodi to Trakt"
+msgstr "Kodi ke Trakt"
+
+msgctxt "#32240"
+msgid "Both ways"
+msgstr "Dua hala"
+
+msgctxt "#32241"
+msgid "Ratings"
+msgstr "Penarafan"
+
+msgctxt "#32242"
+msgid "Movies, shows and episodes"
+msgstr "Cereka, rancangan dan episod"
+
+msgctxt "#32243"
+msgid "Trakt to Kodi: Kodi matches Trakt, and ratings Trakt doesn't have are cleared in Kodi. Kodi to Trakt: Kodi's ratings are added to Trakt, replacing different ones. Both ways: missing ratings are copied each way, and where they differ Trakt's is kept."
+msgstr "Trakt ke Kodi: Kodi mengikut Trakt, dan penarafan yang tiada di Trakt dibuang dalam Kodi. Kodi ke Trakt: penarafan Kodi ditambah ke Trakt, menggantikan penarafan yang berbeza. Dua hala: penarafan yang tiada disalin ke kedua-dua arah, dan jika berbeza, penarafan Trakt dikekalkan."
+
+msgctxt "#32244"
+msgid "Resume points from Trakt"
+msgstr "Titik sambung semula dari Trakt"
+
+msgctxt "#32245"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device. Playback in Kodi still sends its progress to Trakt when this is off."
+msgstr "Kodi menyambung semula di tempat item dijeda di Trakt, seperti dari peranti lain. Main balik dalam Kodi masih menghantar kemajuannya ke Trakt apabila ini dimatikan."
+
+msgctxt "#32246"
+msgid "Add"
+msgstr "Penambahan"
+
+msgctxt "#32247"
+msgid "Add and remove"
+msgstr "Penambahan dan pembuangan"
+
+msgctxt "#32248"
+msgid "Add: Kodi's items are added to the Trakt collection. Add and remove: collected items Kodi doesn't have are removed from it too, including ones from other devices or apps."
+msgstr "Penambahan: item Kodi ditambah ke koleksi Trakt. Penambahan dan pembuangan: item koleksi yang tiada dalam Kodi turut dibuang daripadanya, termasuk item dari peranti atau aplikasi lain."
+
+msgctxt "#32249"
+msgid "Relay always scrobbles when connected. Sync handles what it didn't scrobble: other devices, older history."
+msgstr "Relay sentiasa merekod tontonan apabila bersambung. Segerak mengendalikan yang tidak direkod: peranti lain, sejarah lama."
+
+msgctxt "#32250"
+msgid "On"
+msgstr "Hidup"
+
+msgctxt "#32251"
+msgid "Watched status isn't synced."
+msgstr "Status tontonan tidak disegerak."
+
+msgctxt "#32252"
+msgid "Kodi matches Trakt, play counts and dates included. Anything with no plays on Trakt is unwatched in Kodi."
+msgstr "Kodi mengikut Trakt, termasuk kiraan main dan tarikh. Apa-apa yang tidak pernah dimainkan di Trakt ditanda belum ditonton dalam Kodi."
+
+msgctxt "#32253"
+msgid "Items watched in Kodi with no play on Trakt are added to its history. Kodi isn't changed."
+msgstr "Item yang ditonton dalam Kodi tetapi tidak pernah dimainkan di Trakt ditambah ke sejarahnya. Kodi tidak diubah."
+
+msgctxt "#32254"
+msgid "Each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Setiap pihak menerima rekod main yang tiada padanya, dan tiada apa-apa ditanda belum ditonton di luar tonton semula Trakt."
+
+msgctxt "#32255"
+msgid "Ratings aren't synced."
+msgstr "Penarafan tidak disegerak."
+
+msgctxt "#32256"
+msgid "Kodi's ratings match Trakt, and ratings Trakt doesn't have are cleared in Kodi."
+msgstr "Penarafan Kodi mengikut Trakt, dan penarafan yang tiada di Trakt dibuang dalam Kodi."
+
+msgctxt "#32257"
+msgid "Kodi's ratings are added to Trakt, replacing different ones. Kodi isn't changed."
+msgstr "Penarafan Kodi ditambah ke Trakt, menggantikan penarafan yang berbeza. Kodi tidak diubah."
+
+msgctxt "#32258"
+msgid "Missing ratings are copied each way. Where they differ, Trakt's rating is kept."
+msgstr "Penarafan yang tiada disalin ke kedua-dua arah. Jika berbeza, penarafan Trakt dikekalkan."
+
+msgctxt "#32259"
+msgid "Kodi keeps its own resume points."
+msgstr "Kodi mengekalkan titik sambung semulanya sendiri."
+
+msgctxt "#32260"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device."
+msgstr "Kodi menyambung semula di tempat item dijeda di Trakt, seperti dari peranti lain."
+
+msgctxt "#32261"
+msgid "A sync runs only when you start it, such as from the context menu."
+msgstr "Segerak hanya berjalan apabila anda memulakannya, seperti dari menu konteks."
+
+msgctxt "#32262"
+msgid "Sync when Kodi finishes a library scan or clean."
+msgstr "Menyegerak apabila Kodi selesai mengimbas atau membersihkan pustaka."
+
+msgctxt "#32263"
+msgid "Save and sync"
+msgstr "Simpan dan segerak"
+
+msgctxt "#32264"
+msgid "Unwatch %i items in Kodi to match Trakt?"
+msgstr "Tanda %i item sebagai belum ditonton dalam Kodi agar sepadan dengan Trakt?"
+
+msgctxt "#32265"
+msgid "Clear %i ratings in Kodi to match Trakt?"
+msgstr "Buang %i penarafan dalam Kodi agar sepadan dengan Trakt?"

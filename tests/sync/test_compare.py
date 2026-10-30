@@ -7,12 +7,15 @@ from lib.sync.compare import (
     compare_movies,
     compare_shows,
     count_episodes,
+    episodes_to_mirror,
     episodes_to_unwatch,
     movies_to_mark_watched,
+    movies_to_mirror,
     needs_resume,
     sanitize_movies,
     sanitize_shows,
 )
+from lib.media.dates import utc_to_local
 from tests.helpers import HEAT, load_fixture
 
 TITLE_MATCHING = pytest.mark.parametrize("match_title_year", [True, False])
@@ -224,26 +227,26 @@ def test_compare_episodes_with_one_missing_from_the_target(match_title_year):
     assert compare_episodes(local, remote, match_title_year) == expected
 
 
-def _unwatch(keep_unplayed=False, reset_at: Optional[str] = "2026-10-01T00:00:00.000Z"):
+REWATCH_PLAYS = [{"number": 1, "plays": 2, "last_watched_at": "2026-10-02T00:00:00.000Z"},
+                 {"number": 2, "plays": 1, "last_watched_at": "2025-01-01T00:00:00.000Z"}]
+
+
+def _lost(episodes, **show):
+    """Lost with season 1 holding the given episodes, plus any other show fields."""
+    return {"shows": [dict({"title": "Lost", "year": 2004, "ids": {"tvdb": "73739"},
+                            "seasons": [{"number": 1, "episodes": episodes}]}, **show)]}
+
+
+def _unwatch(reset_at: Optional[str] = "2026-10-01T00:00:00.000Z"):
     """Unwatch S01E01-03 watched in Kodi against Trakt's plays of E01 and E02; return updates."""
-    plays = [{"number": 1, "plays": 2, "last_watched_at": "2026-10-02T00:00:00.000Z"},
-             {"number": 2, "plays": 1, "last_watched_at": "2025-01-01T00:00:00.000Z"}]
-    trakt = {"shows": [{"title": "Lost", "year": 2004, "ids": {"tvdb": 73739}, "reset_at": reset_at,
-                        "seasons": [{"number": 1, "episodes": plays}]}]}
-    kodi_episodes = [{"number": n, "plays": 1, "ids": {"episodeid": 10 + n}} for n in (1, 2, 3)]
-    kodi = {"shows": [{"title": "Lost", "year": 2004, "ids": {"tvdb": "73739"},
-                       "seasons": [{"number": 1, "episodes": kodi_episodes}]}]}
-    return episodes_to_unwatch(trakt, kodi, True, keep_unplayed)
+    trakt = _lost(REWATCH_PLAYS, reset_at=reset_at)
+    kodi = _lost([{"number": n, "plays": 1, "ids": {"episodeid": 10 + n}} for n in (1, 2, 3)])
+    return episodes_to_unwatch(trakt, kodi, True)
 
 
 def test_rewatch_unwatches_episodes_it_has_not_reached():
-    """Episodes last played before the rewatch or never on Trakt are unwatched; rewatched stay."""
-    assert _unwatch() == [{"episodeid": n, "playcount": 0, "lastplayed": ""} for n in (12, 13)]
-
-
-def test_rewatch_unwatching_can_keep_episodes_trakt_never_played():
-    """Keeping episodes Trakt never played, only the one played before the rewatch is unwatched."""
-    assert [update["episodeid"] for update in _unwatch(keep_unplayed=True)] == [12]
+    """Only an episode last played before the rewatch is unwatched; one Trakt never played stays."""
+    assert _unwatch() == [{"episodeid": 12, "playcount": 0, "lastplayed": ""}]
 
 
 def test_show_not_in_a_rewatch_unwatches_nothing():
@@ -300,8 +303,8 @@ def test_sanitize_shows_strips_episode_fields():
     assert "episodeid" not in episode["ids"]
 
 
-def test_ratings_sync_never_clears_a_rating():
-    """Ratings copy only where the source has one; an unrated side never clears the other."""
+def test_rating_compare_never_clears_a_rating():
+    """Ratings copy only where the source has one; an unrated source never clears the target."""
     rated, unrated = dict(HEAT, rating=8), dict(HEAT, rating=0)
     assert compare_movies([unrated], [rated], False, restrict=True, rating=True) == []
     assert compare_movies([rated], [unrated], False, restrict=True, rating=True)[0]["rating"] == 8
@@ -313,3 +316,82 @@ def test_ratings_sync_never_clears_a_rating():
     rated_episode = dict(show, seasons=[{"number": 1, "episodes": [dict(episode, rating=6)]}])
     assert compare_episodes({"shows": [with_episode]}, {"shows": [rated_episode]}, False,
                             restrict=True, rating=True) == {"shows": []}
+
+
+def test_unrated_only_compare_skips_what_the_target_rated():
+    """Asked for unrated only, a rating the target has is left out and one it lacks is kept."""
+    assert compare_movies([dict(HEAT, rating=8)], [dict(HEAT, rating=6)], False, rating=True,
+                          unrated_only=True) == []
+    assert len(compare_movies([dict(HEAT, rating=8)], [dict(HEAT, rating=0)], False,
+                              rating=True, unrated_only=True)) == 1
+    show = {"title": "Lost", "year": 2004, "ids": {"tvdb": "73739"}}
+    assert compare_shows({"shows": [dict(show, rating=8)]}, {"shows": [dict(show, rating=6)]},
+                         False, unrated_only=True) == {"shows": []}
+    episode = {"number": 1, "ids": {"episodeid": 5}}
+    assert compare_episodes(_lost([dict(episode, rating=8)]), _lost([dict(episode, rating=6)]),
+                            False, rating=True, unrated_only=True) == {"shows": []}
+
+
+def test_rating_compare_carries_the_kodi_id_of_a_show_the_target_lacks():
+    """A rated Kodi show missing from the target keeps its Kodi id for the write back."""
+    kodi = {"shows": [{"title": "Lost", "year": 2004, "ids": {"tvdb": "73739"}, "rating": 8,
+                       "tvshowid": 3}]}
+    assert compare_shows(kodi, {"shows": []}, False)["shows"][0]["tvshowid"] == 3
+
+
+WATCHED = "2026-10-02T00:00:00.000Z"
+KODI_WATCHED = "2026-10-02 00:00:00+00:00"
+
+
+def test_mirror_matches_trakts_plays_and_date_and_leaves_a_current_movie():
+    """Kodi takes Trakt's play count, lower too, and its date; a matching movie gets no write."""
+    trakt = [dict(HEAT, plays=1, last_watched_at=WATCHED, ids={"imdb": "tt0113277", "trakt": 1})]
+    updates, unwatches = movies_to_mirror(trakt, [dict(HEAT, plays=3)], False, [])
+    assert (updates, unwatches) == ([{"movieid": 7, "playcount": 1,
+                                      "lastplayed": utc_to_local(WATCHED)}], [])
+    current = dict(HEAT, plays=1, watched_at=KODI_WATCHED)
+    assert movies_to_mirror(trakt, [current], False, []) == ([], [])
+
+
+@pytest.mark.parametrize("kodi_time, written", [
+    ("2026-10-02 00:00:51+00:00", False), ("2026-10-01 23:59:09+00:00", False),
+    ("2026-10-02 00:01:00+00:00", True),
+])
+def test_mirror_leaves_a_date_within_trakts_minute(kodi_time, written):
+    """Kodi's seconds within Trakt's minute count as the same date; a minute off gets rewritten."""
+    trakt = [dict(HEAT, plays=1, last_watched_at=WATCHED, ids={"imdb": "tt0113277", "trakt": 1})]
+    updates, _ = movies_to_mirror(trakt, [dict(HEAT, plays=1, watched_at=kodi_time)], False, [])
+    assert bool(updates) is written
+
+
+def test_mirror_dates_a_movie_by_its_later_pause():
+    """A pause on Trakt after the last full play dates Kodi's last play."""
+    trakt = [dict(HEAT, plays=1, last_watched_at=WATCHED, ids={"imdb": "tt0113277", "trakt": 1})]
+    paused = [{"ids": {"trakt": 1}, "paused_at": "2026-10-05T00:00:00.000Z"}]
+    updates, _ = movies_to_mirror(trakt, [dict(HEAT, plays=1, watched_at=KODI_WATCHED)], False,
+                                  paused)
+    assert updates[0]["lastplayed"] == utc_to_local("2026-10-05T00:00:00.000Z")
+
+
+def test_mirror_unwatches_only_a_movie_with_ids():
+    """A watched Kodi movie Trakt never played is unwatched only when it carries an id."""
+    blind = {"title": "Blind", "year": 2017, "ids": {}, "movieid": 9, "plays": 1}
+    assert movies_to_mirror([], [dict(HEAT, plays=1), blind], True, []) == (
+        [], [{"movieid": 7, "playcount": 0, "lastplayed": ""}])
+
+
+def test_episode_mirror_follows_a_rewatch():
+    """In a rewatch a play before it counts as none; Kodi takes the rewatch count and unwatches."""
+    trakt = _lost(REWATCH_PLAYS, reset_at="2026-10-01T00:00:00.000Z")
+    kodi = _lost([{"number": n, "plays": 1, "ids": {"episodeid": 10 + n}} for n in (1, 2, 3)])
+    updates, unwatches = episodes_to_mirror(trakt, kodi, True, {}, True)
+    assert updates == [{"episodeid": 11, "playcount": 2, "lastplayed": utc_to_local(WATCHED)}]
+    assert [u["episodeid"] for u in unwatches] == [12, 13]
+    _, unwatches = episodes_to_mirror(trakt, kodi, True, {}, False)
+    assert [u["episodeid"] for u in unwatches] == [13]
+
+
+def test_episode_mirror_leaves_a_show_without_ids_watched():
+    """Episodes of a Kodi show without ids are never unwatched, whatever Trakt lacks."""
+    kodi = _lost([{"number": 1, "plays": 1, "ids": {"episodeid": 11}}], ids={})
+    assert episodes_to_mirror({"shows": []}, kodi, True, {}, True) == ([], [])

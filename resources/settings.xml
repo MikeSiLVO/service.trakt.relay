@@ -503,11 +503,6 @@
 					<default>false</default>
 					<level>1</level>
 				</setting>
-				<setting id="scrobble_fallback" type="boolean" label="32164" help="">
-					<control type="toggle" />
-					<default>true</default>
-					<level>1</level>
-				</setting>
 				<setting id="scrobble_start_offset" type="integer" label="32167" help="">
 					<control type="edit" format="integer">
 						<popup>false</popup>
@@ -528,92 +523,119 @@
 			</group>
 		</category>
 		<category id="synchronize" label="32045" help="">
-			<group id="1" label="32054">
-				<setting id="sync_on_update" type="boolean" label="32055" help="">
+			<group id="1" label="">
+				<setting id="sync_on_update" type="boolean" label="32055" help="32231">
 					<control type="toggle" />
 					<default>false</default>
 					<level>1</level>
 				</setting>
-				<setting id="show_sync_notifications" type="boolean" label="32056" help="">
+				<setting id="show_sync_notifications" type="boolean" label="32056" help="32232">
 					<control type="toggle" />
 					<default>false</default>
 					<level>1</level>
 				</setting>
-				<setting id="hide_notifications_playback" type="boolean" label="32060" help="">
+				<setting id="hide_notifications_playback" type="boolean" label="32060" help="32233">
 					<control type="toggle" />
 					<default>false</default>
 					<level>1</level>
 				</setting>
-				<setting id="sync_ratings_to_kodi" type="boolean" label="32196" help="">
+				<setting id="scrobble_fallback" type="boolean" label="32164" help="32234">
 					<control type="toggle" />
 					<default>true</default>
-					<level>1</level>
-				</setting>
-				<setting id="sync_ratings_to_trakt" type="boolean" label="32197" help="">
-					<control type="toggle" />
-					<default>false</default>
 					<level>1</level>
 				</setting>
 			</group>
-			<group id="2" label="32046">
-				<setting id="sync_collection_movies_to_trakt" type="boolean" label="32047" help="">
-					<control type="toggle" />
-					<default>false</default>
+			<group id="2" label="32235">
+				<setting id="sync_watched_movies" type="integer" label="32046" help="32236">
+					<constraints>
+						<options>
+							<option label="32237">0</option>
+							<option label="32238">1</option>
+							<option label="32239">2</option>
+							<option label="32240">3</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string" />
+					<default>0</default>
 					<level>1</level>
 				</setting>
-				<setting id="sync_clean_collection_movies_to_trakt" type="boolean" label="32057" help="">
-					<control type="toggle" />
-					<default>false</default>
+				<setting id="sync_watched_episodes" type="integer" label="32050" help="32236">
+					<constraints>
+						<options>
+							<option label="32237">0</option>
+							<option label="32238">1</option>
+							<option label="32239">2</option>
+							<option label="32240">3</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string" />
+					<default>0</default>
 					<level>1</level>
 				</setting>
-				<setting id="sync_playcount_movies_to_trakt" type="boolean" label="32048" help="">
-					<control type="toggle" />
-					<default>false</default>
-					<level>1</level>
-				</setting>
-				<setting id="kodi_movie_playcount" type="boolean" label="32049" help="">
-					<control type="toggle" />
-					<default>true</default>
-					<level>1</level>
-				</setting>
-				<setting id="trakt_movie_playback" type="boolean" label="32117" help="">
-					<control type="toggle" />
-					<default>false</default>
-					<level>1</level>
-				</setting>
-			</group>
-			<group id="3" label="32050">
-				<setting id="sync_collection_episodes_to_trakt" type="boolean" label="32051" help="">
-					<control type="toggle" />
-					<default>false</default>
-					<level>1</level>
-				</setting>
-				<setting id="sync_clean_collection_episodes_to_trakt" type="boolean" label="32058" help="">
-					<control type="toggle" />
-					<default>false</default>
-					<level>1</level>
-				</setting>
-				<setting id="sync_playcount_episodes_to_trakt" type="boolean" label="32052" help="">
-					<control type="toggle" />
-					<default>false</default>
-					<level>1</level>
-				</setting>
-				<setting id="kodi_episode_playcount" type="boolean" label="32053" help="">
-					<control type="toggle" />
-					<default>true</default>
-					<level>1</level>
-				</setting>
-				<setting id="rewatch_aware_sync" type="boolean" label="32193" help="32212" parent="kodi_episode_playcount">
+				<setting id="rewatch_aware_sync" type="boolean" label="32193" help="32212" parent="sync_watched_episodes">
 					<control type="toggle" />
 					<default>true</default>
 					<dependencies>
-						<dependency type="enable" setting="kodi_episode_playcount">true</dependency>
+						<dependency type="visible">
+							<or>
+								<condition setting="sync_watched_episodes">1</condition>
+								<condition setting="sync_watched_episodes">3</condition>
+							</or>
+						</dependency>
 					</dependencies>
 					<level>1</level>
 				</setting>
-				<setting id="trakt_episode_playback" type="boolean" label="32118" help="">
+			</group>
+			<group id="3" label="32241">
+				<setting id="sync_ratings" type="integer" label="32242" help="32243">
+					<constraints>
+						<options>
+							<option label="32237">0</option>
+							<option label="32238">1</option>
+							<option label="32239">2</option>
+							<option label="32240">3</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string" />
+					<default>0</default>
+					<level>1</level>
+				</setting>
+			</group>
+			<group id="4" label="32244">
+				<setting id="trakt_movie_playback" type="boolean" label="32046" help="32245">
 					<control type="toggle" />
 					<default>false</default>
+					<level>1</level>
+				</setting>
+				<setting id="trakt_episode_playback" type="boolean" label="32050" help="32245">
+					<control type="toggle" />
+					<default>false</default>
+					<level>1</level>
+				</setting>
+			</group>
+			<group id="5" label="32068">
+				<setting id="sync_collection_movies" type="integer" label="32046" help="32248">
+					<constraints>
+						<options>
+							<option label="32237">0</option>
+							<option label="32246">1</option>
+							<option label="32247">2</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string" />
+					<default>0</default>
+					<level>1</level>
+				</setting>
+				<setting id="sync_collection_episodes" type="integer" label="32050" help="32248">
+					<constraints>
+						<options>
+							<option label="32237">0</option>
+							<option label="32246">1</option>
+							<option label="32247">2</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string" />
+					<default>0</default>
 					<level>1</level>
 				</setting>
 			</group>

@@ -12,10 +12,14 @@ from lib.sync import movies
 from lib.sync.compare import count_episodes
 
 from lib.trakt import shared
-from lib.kodi.settings import get_setting, get_setting_bool, get_string, set_setting
+from lib.kodi.client import ADDON
+from lib.kodi.settings import (get_setting, get_setting_bool, get_setting_int, get_string,
+                               set_setting)
 from lib.kodi.utilities import notify
 
 logger = logging.getLogger(__name__)
+
+REMOVAL_LIMIT = 20
 
 
 class Sync:
@@ -54,26 +58,15 @@ class Sync:
 
     def _collection_enabled(self, media_type: str) -> bool:
         """True when the media type's Trakt collection is added to or cleaned."""
-        if media_type == 'movies':
-            return (get_setting_bool('sync_collection_movies_to_trakt')
-                    or get_setting_bool('sync_clean_collection_movies_to_trakt'))
-        else:
-            return (get_setting_bool('sync_collection_episodes_to_trakt')
-                    or get_setting_bool('sync_clean_collection_episodes_to_trakt'))
+        return get_setting_int('sync_collection_%s' % media_type) > 0
 
     def _ratings_enabled(self) -> bool:
-        """True when ratings sync is on in either direction."""
-        return (get_setting_bool('sync_ratings_to_trakt')
-                or get_setting_bool('sync_ratings_to_kodi'))
+        """True when ratings sync is on in any direction."""
+        return get_setting_int('sync_ratings') > 0
 
     def _watched_enabled(self, media_type: str) -> bool:
-        """True when watched state syncs in either direction for the media type."""
-        if media_type == 'movies':
-            return (get_setting_bool('sync_playcount_movies_to_trakt')
-                    or get_setting_bool('kodi_movie_playcount'))
-        else:
-            return (get_setting_bool('sync_playcount_episodes_to_trakt')
-                    or get_setting_bool('kodi_episode_playcount'))
+        """True when watched state syncs in any direction for the media type."""
+        return get_setting_int('sync_watched_%s' % media_type) > 0
 
     @property
     def should_notify(self) -> bool:
@@ -210,6 +203,15 @@ class Sync:
         percent = from_percent + (to_percent - from_percent) * done // total
         self.update_progress(
             percent, line1=get_string(step_id), line2=get_string(32089) % (done, total))
+
+    def confirm_removals(self, removals: List[Dict], message_id: int) -> List[Dict]:
+        """Confirm Kodi unwatches or rating clears: up to 20 pass, more if a user agrees."""
+        if len(removals) <= REMOVAL_LIMIT or self.show_progress and xbmcgui.Dialog().yesno(
+                ADDON.getAddonInfo("name"), get_string(message_id) % len(removals)):
+            return removals
+        logger.info("[Sync] Left %i Kodi items as they are; a sync with progress asks before"
+                    " more than %i" % (len(removals), REMOVAL_LIMIT))
+        return []
 
     def send(self, write: Callable[[Dict], Optional[Dict]], items: List[Dict], kind: str,
              step_id: int, done_id: int, from_percent: int, to_percent: int) -> None:

@@ -5,10 +5,12 @@ import logging
 from typing import Dict, Tuple, Optional, Any
 
 from lib.media import utilities
+from lib.media.ids import has_id
 from lib.sync.compare import (
     compare_episodes,
     compare_shows,
     episodes_to_mark_watched,
+    episodes_to_mirror,
     episodes_to_unwatch,
     count_episodes,
     needs_resume,
@@ -17,7 +19,8 @@ from lib.sync.compare import (
 from lib.service.queue import ScrobbleQueue
 from lib.kodi.client import batch_request, request
 from lib.kodi.library import get_play_states, to_trakt_items
-from lib.kodi.settings import get_setting_bool, get_string
+from lib.kodi.settings import (ADD_AND_REMOVE, BOTH_WAYS, TRAKT_TO_KODI, get_setting_bool,
+                               get_setting_int, get_string, syncs_to_kodi, syncs_to_trakt)
 
 logger = logging.getLogger(__name__)
 
@@ -63,7 +66,8 @@ class EpisodeSync:
         self._add_to_trakt_history(kodi_shows_watched, trakt_shows_watched, 59, 69)
 
         self._mark_watched_in_kodi(
-            trakt_shows_watched, kodi_shows_watched, kodi_shows_collected, 70, 80
+            trakt_shows_watched, kodi_shows_watched, kodi_shows_collected, trakt_shows_progress,
+            70, 80
         )
 
         self._set_kodi_progress(trakt_shows_progress, kodi_shows_collected, 81, 91)
@@ -189,7 +193,7 @@ class EpisodeSync:
             return None
         trakt_shows_rated: Optional[Dict] = {}
         trakt_episodes_rated: Optional[Dict] = {}
-        if get_setting_bool("sync_ratings_to_trakt") or get_setting_bool("sync_ratings_to_kodi"):
+        if get_setting_int("sync_ratings"):
             self.sync.update_progress(20, line1=get_string(32216))
             trakt_shows_rated = self.sync.api.get_rated_shows({})
             trakt_episodes_rated = self.sync.api.get_rated_episodes({})
@@ -217,11 +221,11 @@ class EpisodeSync:
     def _load_trakt_progress(
         self, from_percent: int, to_percent: int
     ) -> Optional[Dict]:
-        """Load paused episodes from Trakt; None when playback sync is off, canceled or failing."""
+        """Load paused episodes for resume points and mirror dates; None if skipped or failing."""
         if (
             get_setting_bool("trakt_episode_playback")
-            and not self.sync.is_canceled()
-        ):
+            or get_setting_int("sync_watched_episodes") == TRAKT_TO_KODI
+        ) and not self.sync.is_canceled():
             self.sync.update_progress(from_percent, line1=get_string(32122))
 
             logger.debug("[Playback Sync] Getting playback progress from Trakt.tv")
@@ -240,10 +244,7 @@ class EpisodeSync:
         self, kodi_shows: Dict, trakt_shows: Dict, from_percent: int, to_percent: int
     ) -> None:
         """Add Kodi episodes missing from the Trakt collection, when that sync is on."""
-        if (
-            get_setting_bool("sync_collection_episodes_to_trakt")
-            and not self.sync.is_canceled()
-        ):
+        if get_setting_int("sync_collection_episodes") and not self.sync.is_canceled():
             trakt_shows_add = compare_episodes(
                 kodi_shows,
                 trakt_shows,
@@ -278,9 +279,9 @@ class EpisodeSync:
     def _remove_from_trakt_collection(
         self, trakt_shows: Dict, kodi_shows: Dict, from_percent: int, to_percent: int
     ) -> None:
-        """Remove collected Trakt episodes missing from Kodi, when collection cleaning is on."""
+        """Remove collected Trakt episodes missing from Kodi, when collection sync removes too."""
         if (
-            get_setting_bool("sync_clean_collection_episodes_to_trakt")
+            get_setting_int("sync_collection_episodes") == ADD_AND_REMOVE
             and not self.sync.is_canceled()
         ):
             trakt_shows_remove = compare_episodes(
@@ -316,11 +317,8 @@ class EpisodeSync:
     def _add_to_trakt_history(
         self, kodi_shows: Dict, trakt_shows: Dict, from_percent: int, to_percent: int
     ) -> None:
-        """Add episodes watched in Kodi but not on Trakt to its history, when that sync is on."""
-        if (
-            get_setting_bool("sync_playcount_episodes_to_trakt")
-            and not self.sync.is_canceled()
-        ):
+        """Add episodes watched in Kodi but not on Trakt to its history, per the watched setting."""
+        if syncs_to_trakt("sync_watched_episodes") and not self.sync.is_canceled():
             trakt_shows_update = compare_episodes(
                 kodi_shows,
                 trakt_shows,
@@ -354,31 +352,28 @@ class EpisodeSync:
 
     def _mark_watched_in_kodi(
         self, trakt_shows: Dict, kodi_shows: Dict, kodi_shows_collected: Dict,
-        from_percent: int, to_percent: int
+        trakt_progress: Optional[Dict], from_percent: int, to_percent: int
     ) -> None:
-        """Mark Kodi episodes watched when Trakt has more plays; in a rewatch, unwatch the rest."""
-        if not (
-            get_setting_bool("kodi_episode_playcount")
-            and not self.sync.is_canceled()
-        ):
+        """Mark Kodi episodes watched as on Trakt; mirroring or rewatches also unwatch the rest."""
+        if not syncs_to_kodi("sync_watched_episodes") or self.sync.is_canceled():
             return
 
         rewatches = get_setting_bool("rewatch_aware_sync")
-        episodes = episodes_to_mark_watched(
-            trakt_shows,
-            kodi_shows_collected,
-            get_setting_bool("scrobble_fallback"),
-            apply_rewatch_filter=rewatches,
-        )
-        # unwatch only while every Kodi play reaches Trakt
-        if rewatches and get_setting_bool("scrobble_episode") and not len(ScrobbleQueue()):
-            episodes += episodes_to_unwatch(
-                trakt_shows,
-                kodi_shows,
-                get_setting_bool("scrobble_fallback"),
-                # the history push sends these this sync
-                keep_unplayed=get_setting_bool("sync_playcount_episodes_to_trakt"),
-            )
+        fallback = get_setting_bool("scrobble_fallback")
+        if get_setting_int("sync_watched_episodes") == TRAKT_TO_KODI:
+            episodes, unwatches = episodes_to_mirror(
+                trakt_shows, kodi_shows_collected, fallback, trakt_progress or {}, rewatches)
+        else:
+            episodes = episodes_to_mark_watched(
+                trakt_shows, kodi_shows_collected, fallback, apply_rewatch_filter=rewatches)
+            # a play that never reached Trakt would look unplayed there
+            scrobbled = get_setting_bool("scrobble_episode")
+            unwatches = episodes_to_unwatch(
+                trakt_shows, kodi_shows, fallback) if rewatches and scrobbled else []
+        if unwatches and len(ScrobbleQueue()):
+            logger.info("[Episodes Sync] Unwatching waits for failed scrobbles to be retried")
+        else:
+            episodes += self.sync.confirm_removals(unwatches, 32264)
 
         if len(episodes) == 0:
             self.sync.update_progress(
@@ -511,17 +506,13 @@ class EpisodeSync:
     def _sync_show_ratings(
         self, trakt_shows: Dict, kodi_shows: Dict, from_percent: int, to_percent: int
     ) -> None:
-        """Sync show ratings to Trakt and to Kodi, each direction when its setting is on."""
-        if (
-            get_setting_bool("sync_ratings_to_trakt")
-            and trakt_shows
-            and not self.sync.is_canceled()
-        ):
+        """Sync show ratings the chosen way; mirroring also clears Kodi ratings Trakt lacks."""
+        direction = get_setting_int("sync_ratings")
+        fallback = get_setting_bool("scrobble_fallback")
+        if syncs_to_trakt("sync_ratings") and not self.sync.is_canceled():
+            # with both ways Trakt's rating wins where both sides have one
             trakt_shows_to_update = compare_shows(
-                kodi_shows,
-                trakt_shows,
-                get_setting_bool("scrobble_fallback"),
-            )
+                kodi_shows, trakt_shows, fallback, unrated_only=direction == BOTH_WAYS)
             if len(trakt_shows_to_update["shows"]) == 0:
                 self.sync.update_progress(
                     to_percent, line1=get_string(32179), line2=get_string(32086)
@@ -535,17 +526,13 @@ class EpisodeSync:
                 self.sync.send(self.sync.api.add_ratings, trakt_shows_to_update["shows"], "shows",
                                32179, 32085, from_percent, to_percent)
 
-        if (
-            get_setting_bool("sync_ratings_to_kodi")
-            and trakt_shows
-            and not self.sync.is_canceled()
-        ):
-            kodi_shows_update = compare_shows(
-                trakt_shows,
-                kodi_shows,
-                get_setting_bool("scrobble_fallback"),
-                restrict=True,
-            )
+        if syncs_to_kodi("sync_ratings") and not self.sync.is_canceled():
+            kodi_shows_update = compare_shows(trakt_shows, kodi_shows, fallback, restrict=True)
+            if direction == TRAKT_TO_KODI:
+                cleared = [dict(show, rating=0) for show in compare_shows(
+                    kodi_shows, trakt_shows, fallback, unrated_only=True)["shows"]
+                    if has_id(show)]
+                kodi_shows_update["shows"] += self.sync.confirm_removals(cleared, 32265)
 
             if len(kodi_shows_update["shows"]) == 0:
                 self.sync.update_progress(
@@ -593,18 +580,13 @@ class EpisodeSync:
     def _sync_episode_ratings(
         self, trakt_shows: Dict, kodi_shows: Dict, from_percent: int, to_percent: int
     ) -> None:
-        """Sync episode ratings to Trakt and to Kodi, each direction when its setting is on."""
-        if (
-            get_setting_bool("sync_ratings_to_trakt")
-            and trakt_shows
-            and not self.sync.is_canceled()
-        ):
+        """Sync episode ratings the chosen way; mirroring also clears Kodi ratings Trakt lacks."""
+        direction = get_setting_int("sync_ratings")
+        fallback = get_setting_bool("scrobble_fallback")
+        if syncs_to_trakt("sync_ratings") and not self.sync.is_canceled():
             trakt_shows_to_update = compare_episodes(
-                kodi_shows,
-                trakt_shows,
-                get_setting_bool("scrobble_fallback"),
-                rating=True,
-            )
+                kodi_shows, trakt_shows, fallback, rating=True,
+                unrated_only=direction == BOTH_WAYS)
             if len(trakt_shows_to_update["shows"]) == 0:
                 self.sync.update_progress(
                     to_percent, line1=get_string(32179), line2=get_string(32086)
@@ -618,18 +600,20 @@ class EpisodeSync:
                 self.sync.send(self.sync.api.add_ratings, trakt_shows_to_update["shows"],
                                "episodes", 32179, 32085, from_percent, to_percent)
 
-        if (
-            get_setting_bool("sync_ratings_to_kodi")
-            and trakt_shows
-            and not self.sync.is_canceled()
-        ):
+        if syncs_to_kodi("sync_ratings") and not self.sync.is_canceled():
             kodi_shows_update = compare_episodes(
-                trakt_shows,
-                kodi_shows,
-                get_setting_bool("scrobble_fallback"),
-                restrict=True,
-                rating=True,
-            )
+                trakt_shows, kodi_shows, fallback, restrict=True, rating=True)
+            if direction == TRAKT_TO_KODI:
+                cleared = [show for show in compare_episodes(
+                    kodi_shows, trakt_shows, fallback, rating=True, unrated_only=True)["shows"]
+                    if has_id(show)]
+                for show in cleared:
+                    for season in show["seasons"]:
+                        season["episodes"] = [dict(ep, rating=0) for ep in season["episodes"]]
+                if self.sync.confirm_removals(
+                        [ep for show in cleared for season in show["seasons"]
+                         for ep in season["episodes"]], 32265):
+                    kodi_shows_update["shows"] += cleared
             if len(kodi_shows_update["shows"]) == 0:
                 self.sync.update_progress(
                     to_percent, line1=get_string(32169), line2=get_string(32086)

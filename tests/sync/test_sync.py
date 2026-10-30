@@ -2,6 +2,8 @@ import logging
 from typing import cast
 from unittest import mock
 
+import pytest
+
 from lib.sync import sync as sync_module
 from tests.helpers import Text
 
@@ -29,6 +31,19 @@ def _half(sync, finished, failed=0):
             mock.patch.object(sync_module, "get_string", side_effect=lambda i: Text(i)):
         sync._run_half(half, 32213)
     return [c.args[:2] for c in notify.call_args_list]
+
+
+@pytest.mark.parametrize("count, manual, agreed, kept", [
+    (20, False, False, 20), (21, True, True, 21), (21, True, False, 0), (21, False, True, 0)])
+def test_more_than_20_removals_need_a_yes_in_a_sync_showing_progress(count, manual, agreed, kept):
+    """Up to 20 removals pass; more pass only once a sync showing progress gets a yes."""
+    sync = _sync(manual=manual)
+    dialog = mock.Mock(**{"yesno.return_value": agreed})
+    with mock.patch.object(sync_module.xbmcgui, "Dialog", return_value=dialog), \
+            mock.patch.object(sync_module, "get_string", side_effect=lambda i: Text(i)), \
+            mock.patch.object(sync_module, "ADDON"):
+        assert len(sync.confirm_removals([{}] * count, 32264)) == kept
+    assert dialog.yesno.called is (count > 20 and manual)
 
 
 def test_background_half_notifies_its_start_and_finish():

@@ -4,6 +4,9 @@ import xbmcaddon
 
 from lib.kodi.client import ADDON, request
 
+TRAKT_TO_KODI, KODI_TO_TRAKT, BOTH_WAYS = 1, 2, 3
+ADD_AND_REMOVE = 2
+
 
 def reload_settings() -> None:
     """Reload the settings by swapping in a fresh Addon for every later read and write."""
@@ -48,6 +51,16 @@ def get_setting_int(setting: str) -> int:
         return int(get_setting_float(setting))
     except ValueError:
         return 0
+
+
+def syncs_to_kodi(setting: str) -> bool:
+    """True when a direction setting copies Trakt to Kodi, one way or both."""
+    return get_setting_int(setting) in (TRAKT_TO_KODI, BOTH_WAYS)
+
+
+def syncs_to_trakt(setting: str) -> bool:
+    """True when a direction setting sends Kodi to Trakt, one way or both."""
+    return get_setting_int(setting) in (KODI_TO_TRAKT, BOTH_WAYS)
 
 
 def get_string(string_id: int) -> str:

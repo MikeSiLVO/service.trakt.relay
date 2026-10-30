@@ -1,11 +1,12 @@
 """Comparisons of Kodi and Trakt items, finding what one side lacks or has different."""
 
 import logging
-from typing import List, Dict, Optional, Union
+from typing import List, Dict, Optional, Tuple, Union
 
 import dateutil.parser
 
 from lib.media.dates import local_to_utc, utc_to_local
+from lib.media.ids import has_id
 from lib.media.match import build_media_index, find_in_index
 
 
@@ -60,6 +61,7 @@ def compare_movies(
     restrict: bool = False,
     playback: bool = False,
     rating: bool = False,
+    unrated_only: bool = False,
 ) -> List:
     """Compare movies to the target: ones it lacks or differs on, or every match for playback."""
     movies = []
@@ -84,7 +86,8 @@ def compare_movies(
                 elif rating:
                     source_rating = source_movie.get("rating", 0)
                     target_rating = target_movie.get("rating", 0)
-                    if source_rating and source_rating != target_rating:
+                    if source_rating and source_rating != target_rating and not (
+                            unrated_only and target_rating):
                         movie = dict(source_movie)
                         movie["rating"] = source_rating
                         if "movieid" not in movie:
@@ -106,7 +109,8 @@ def compare_movies(
 
 
 def compare_shows(
-    source: Dict, target: Dict, match_title_year: bool, restrict: bool = False
+    source: Dict, target: Dict, match_title_year: bool, restrict: bool = False,
+    unrated_only: bool = False
 ) -> Dict:
     """Compare show ratings to target: ones rated otherwise, plus rated ones it lacks by default."""
     shows = []
@@ -132,7 +136,8 @@ def compare_shows(
 
                 source_rating = source_show.get("rating", 0)
                 target_rating = target_show.get("rating", 0)
-                if source_rating and source_rating != target_rating:
+                if source_rating and source_rating != target_rating and not (
+                        unrated_only and target_rating):
                     show["rating"] = source_rating
                     shows.append(show)
             else:
@@ -144,6 +149,8 @@ def compare_shows(
                     }
                     if source_show["ids"]:
                         show["ids"].update(source_show["ids"])
+                    if "tvshowid" in source_show:
+                        show["tvshowid"] = source_show["tvshowid"]
 
                     if "rating" in source_show and source_show["rating"] != 0:
                         show["rating"] = source_show["rating"]
@@ -161,6 +168,7 @@ def compare_episodes(
     restrict: bool = False,
     playback: bool = False,
     rating: bool = False,
+    unrated_only: bool = False,
 ) -> Dict:
     """Compare episodes to the target: ones it lacks or differs on, or every match for playback."""
     shows = []
@@ -198,7 +206,9 @@ def compare_episodes(
                             eps = {}
                             for ep in set(a).intersection(set(b)):
                                 source_rating = a[ep].get("rating", 0)
-                                if source_rating and source_rating != b[ep].get("rating", 0):
+                                target_rating = b[ep].get("rating", 0)
+                                if source_rating and source_rating != target_rating and not (
+                                        unrated_only and target_rating):
                                     eps[ep] = _copy_episode(a[ep])
                                     eps[ep]["rating"] = source_rating
                                     if "episodeid" in b[ep]["ids"]:
@@ -324,9 +334,9 @@ def episodes_to_mark_watched(
 
 
 def episodes_to_unwatch(
-    trakt_shows: Dict, kodi_shows_watched: Dict, match_title_year: bool, keep_unplayed: bool
+    trakt_shows: Dict, kodi_shows_watched: Dict, match_title_year: bool
 ) -> List[Dict]:
-    """List Kodi updates unwatching episodes a rewatch hasn't reached, all or only Trakt-played."""
+    """List Kodi updates unwatching episodes Trakt played before a rewatch and not since."""
     updates: List[Dict] = []
     show_index = build_media_index(kodi_shows_watched.get("shows", []))
     for trakt_show in trakt_shows.get("shows", []):
@@ -343,9 +353,10 @@ def episodes_to_unwatch(
             for ep in season.get("episodes", []) or []:
                 watched_at = last_played.get((season.get("number"), ep.get("number")))
                 episodeid = ep.get("ids", {}).get("episodeid")
-                if episodeid is None or (watched_at is None and keep_unplayed):
+                # one Trakt never played goes to its history this sync
+                if episodeid is None or watched_at is None:
                     continue
-                if (watched_at or "") < reset_at:
+                if watched_at < reset_at:
                     updates.append({"episodeid": episodeid, "playcount": 0, "lastplayed": ""})
     return updates
 
@@ -417,6 +428,86 @@ def movies_to_mark_watched(
                 "lastplayed": utc_to_local(last_watched_at),
             })
     return updates
+
+
+def movies_to_mirror(
+    trakt_movies: List[Dict], kodi_movies: List[Dict], match_title_year: bool, paused: List[Dict]
+) -> Tuple[List[Dict], List[Dict]]:
+    """List Kodi movie updates to Trakt's plays and last play, plus unwatches of ones it lacks."""
+    index = build_media_index([movie for movie in trakt_movies if movie.get("plays")])
+    paused_at = {movie["ids"]["trakt"]: movie.get("paused_at")
+                 for movie in paused if (movie.get("ids") or {}).get("trakt")}
+    updates: List[Dict] = []
+    unwatches: List[Dict] = []
+    for movie in kodi_movies:
+        trakt_movie = find_in_index(movie, index, match_title_year)
+        if trakt_movie:
+            last = _latest(trakt_movie.get("last_watched_at"),
+                           paused_at.get((trakt_movie.get("ids") or {}).get("trakt")))
+            if movie.get("plays") != trakt_movie["plays"] or not _same_time(
+                    movie.get("watched_at"), last):
+                updates.append({"movieid": movie["movieid"], "playcount": trakt_movie["plays"],
+                                "lastplayed": utc_to_local(last)})
+        elif movie.get("plays") and has_id(movie):
+            unwatches.append({"movieid": movie["movieid"], "playcount": 0, "lastplayed": ""})
+    return updates, unwatches
+
+
+def episodes_to_mirror(
+    trakt_shows: Dict, kodi_shows: Dict, match_title_year: bool, paused: Dict, rewatches: bool
+) -> Tuple[List[Dict], List[Dict]]:
+    """List Kodi episode updates to Trakt's plays and last play, plus unwatches of ones it lacks."""
+    index = build_media_index(trakt_shows.get("shows", []))
+    paused_at = {
+        ((show.get("ids") or {}).get("trakt"), season.get("number"), ep.get("number")):
+            ep.get("paused_at")
+        for show in paused.get("shows", [])
+        for season in show.get("seasons", []) or []
+        for ep in season.get("episodes", []) or []
+    }
+    updates: List[Dict] = []
+    unwatches: List[Dict] = []
+    for kodi_show in kodi_shows.get("shows", []):
+        trakt_show = find_in_index(kodi_show, index, match_title_year) or {}
+        show_id = (trakt_show.get("ids") or {}).get("trakt")
+        reset_at = trakt_show.get("reset_at") if rewatches else None
+        played = {}
+        for season in trakt_show.get("seasons", []) or []:
+            for ep in season.get("episodes", []) or []:
+                before = reset_at and (ep.get("last_watched_at") or "") < reset_at
+                if ep.get("plays") and not before:
+                    played[(season.get("number"), ep.get("number"))] = ep
+        for season in kodi_show.get("seasons", []) or []:
+            for ep in season.get("episodes", []) or []:
+                episodeid = ep.get("ids", {}).get("episodeid")
+                if episodeid is None:
+                    continue
+                key = (season.get("number"), ep.get("number"))
+                trakt_ep = played.get(key)
+                if trakt_ep:
+                    last = _latest(trakt_ep.get("last_watched_at"), paused_at.get((show_id,) + key))
+                    if ep.get("plays") != trakt_ep["plays"] or not _same_time(
+                            ep.get("watched_at"), last):
+                        updates.append({"episodeid": episodeid, "playcount": trakt_ep["plays"],
+                                        "lastplayed": utc_to_local(last)})
+                elif ep.get("plays") and has_id(kodi_show):
+                    unwatches.append({"episodeid": episodeid, "playcount": 0, "lastplayed": ""})
+    return updates, unwatches
+
+
+def _latest(*times: Optional[str]) -> Optional[str]:
+    """Latest of Trakt's UTC timestamps, skipping missing ones, or None when all are."""
+    known = [t for t in times if t]
+    return max(known) if known else None
+
+
+def _same_time(kodi_utc: Optional[str], trakt_utc: Optional[str]) -> bool:
+    """True when Kodi's last play and Trakt's time fall within a minute, or both are unset."""
+    if not kodi_utc or not trakt_utc:
+        return not kodi_utc and not trakt_utc
+    gap = dateutil.parser.parse(kodi_utc) - dateutil.parser.parse(trakt_utc)
+    # Trakt keeps watch times to the minute, Kodi to the second
+    return abs(gap.total_seconds()) < 60
 
 
 def needs_resume(item: Dict, kodi_state: Optional[Dict]) -> bool:

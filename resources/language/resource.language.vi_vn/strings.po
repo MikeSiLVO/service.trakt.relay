@@ -185,37 +185,9 @@ msgctxt "#32046"
 msgid "Movies"
 msgstr "Phim"
 
-msgctxt "#32047"
-msgid "Add new movies to Trakt collection"
-msgstr "Thêm phim mới vào bộ sưu tập Trakt"
-
-msgctxt "#32048"
-msgid "Add watched movies to Trakt history"
-msgstr "Thêm phim đã xem vào lịch sử Trakt"
-
-msgctxt "#32049"
-msgid "Mark movies from Trakt history as watched in Kodi"
-msgstr "Đánh dấu phim trong lịch sử Trakt là đã xem trong Kodi"
-
 msgctxt "#32050"
 msgid "Episodes"
 msgstr "Tập"
-
-msgctxt "#32051"
-msgid "Add new TV episodes to Trakt collection"
-msgstr "Thêm tập TV mới vào bộ sưu tập Trakt"
-
-msgctxt "#32052"
-msgid "Add watched TV episodes to Trakt history"
-msgstr "Thêm tập TV đã xem vào lịch sử Trakt"
-
-msgctxt "#32053"
-msgid "Mark TV episodes from Trakt history as watched in Kodi"
-msgstr "Đánh dấu tập TV trong lịch sử Trakt là đã xem trong Kodi"
-
-msgctxt "#32054"
-msgid "Service"
-msgstr "Dịch Vụ"
 
 msgctxt "#32055"
 msgid "Sync after a library scan or clean"
@@ -224,14 +196,6 @@ msgstr "Đồng bộ sau khi quét hoặc dọn dẹp thư viện"
 msgctxt "#32056"
 msgid "Show sync notifications"
 msgstr "Hiện thông báo đồng bộ"
-
-msgctxt "#32057"
-msgid "Remove deleted movies from Trakt collection"
-msgstr "Gỡ phim đã bị xóa khỏi bộ sưu tập Trakt"
-
-msgctxt "#32058"
-msgid "Remove deleted TV episodes from Trakt collection"
-msgstr "Gỡ tập TV đã bị xóa khỏi bộ sưu tập Trakt"
 
 msgctxt "#32060"
 msgid "Hide notifications during playback"
@@ -300,14 +264,6 @@ msgstr "Đã gỡ %i"
 msgctxt "#32116"
 msgid "Enable debug mode"
 msgstr "Bật chế độ gỡ lỗi"
-
-msgctxt "#32117"
-msgid "Sync movie playback progress to Kodi"
-msgstr "Đồng bộ tiến trình phát phim vào Kodi"
-
-msgctxt "#32118"
-msgid "Sync episode playback progress to Kodi"
-msgstr "Đồng bộ tiến trình phát tập vào Kodi"
 
 msgctxt "#32122"
 msgid "Loading Trakt playback progress"
@@ -416,14 +372,6 @@ msgstr "Không giữ tiến trình phát trên Trakt"
 msgctxt "#32193"
 msgid "Respect Trakt rewatch progress"
 msgstr "Theo tiến trình xem lại của Trakt"
-
-msgctxt "#32196"
-msgid "Sync ratings from Trakt to Kodi"
-msgstr "Đồng bộ điểm từ Trakt sang Kodi"
-
-msgctxt "#32197"
-msgid "Sync ratings from Kodi to Trakt"
-msgstr "Đồng bộ điểm từ Kodi sang Trakt"
 
 msgctxt "#32198"
 msgid "Trakt"
@@ -536,3 +484,151 @@ msgstr "Tài khoản Trakt của bạn đã bị khóa. Hãy liên hệ bộ ph�
 msgctxt "#32228"
 msgid "Watchlist limit of %i reached"
 msgstr "Đã đạt giới hạn %i mục của danh sách muốn xem"
+
+msgctxt "#32229"
+msgid "Choose what to sync"
+msgstr "Chọn nội dung cần đồng bộ"
+
+msgctxt "#32230"
+msgid "Open the sync setup shown after connecting to Trakt."
+msgstr "Mở phần thiết lập đồng bộ được hiển thị sau khi kết nối với Trakt."
+
+msgctxt "#32231"
+msgid "Sync when Kodi finishes a library scan or clean. Otherwise a sync runs only when you start it, such as from the context menu."
+msgstr "Đồng bộ khi Kodi quét hoặc dọn dẹp thư viện xong. Nếu không, việc đồng bộ chỉ chạy khi bạn tự bắt đầu, chẳng hạn từ menu ngữ cảnh."
+
+msgctxt "#32232"
+msgid "Notify when a sync after a library scan or clean starts and finishes."
+msgstr "Thông báo khi lần đồng bộ sau khi quét hoặc dọn dẹp thư viện bắt đầu và kết thúc."
+
+msgctxt "#32233"
+msgid "Show no sync notifications while a video plays."
+msgstr "Không hiện thông báo đồng bộ khi đang phát video."
+
+msgctxt "#32234"
+msgid "Match items without an IMDb, TMDB or TVDB id by title and year, when scrobbling and syncing. Never used to unwatch items or clear ratings."
+msgstr "Khớp các mục không có ID IMDb, TMDB hoặc TVDB theo tên và năm khi scrobble và đồng bộ. Không bao giờ dùng để đánh dấu chưa xem hay xóa điểm."
+
+msgctxt "#32235"
+msgid "Watched status"
+msgstr "Trạng thái đã xem"
+
+msgctxt "#32236"
+msgid "Trakt to Kodi: Kodi matches Trakt, play counts and dates included, and anything with no plays on Trakt is unwatched. Kodi to Trakt: items watched in Kodi with no play on Trakt are added to its history. Both ways: each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Trakt sang Kodi: Kodi khớp với Trakt, bao gồm cả số lần phát và ngày, và mọi thứ không có lượt phát nào trên Trakt sẽ được đánh dấu chưa xem. Kodi sang Trakt: các mục đã xem trên Kodi nhưng chưa có lượt phát nào trên Trakt sẽ được thêm vào lịch sử Trakt. Cả hai chiều: mỗi bên nhận các lượt phát còn thiếu, và không có gì bị đánh dấu chưa xem ngoài một lần xem lại trên Trakt."
+
+msgctxt "#32237"
+msgid "Off"
+msgstr "Tắt"
+
+msgctxt "#32238"
+msgid "Trakt to Kodi"
+msgstr "Trakt sang Kodi"
+
+msgctxt "#32239"
+msgid "Kodi to Trakt"
+msgstr "Kodi sang Trakt"
+
+msgctxt "#32240"
+msgid "Both ways"
+msgstr "Cả hai chiều"
+
+msgctxt "#32241"
+msgid "Ratings"
+msgstr "Điểm"
+
+msgctxt "#32242"
+msgid "Movies, shows and episodes"
+msgstr "Phim, chương trình và tập"
+
+msgctxt "#32243"
+msgid "Trakt to Kodi: Kodi matches Trakt, and ratings Trakt doesn't have are cleared in Kodi. Kodi to Trakt: Kodi's ratings are added to Trakt, replacing different ones. Both ways: missing ratings are copied each way, and where they differ Trakt's is kept."
+msgstr "Trakt sang Kodi: Kodi khớp với Trakt, và các điểm mà Trakt không có sẽ bị xóa trong Kodi. Kodi sang Trakt: điểm của Kodi được thêm vào Trakt, thay thế các điểm khác biệt. Cả hai chiều: các điểm còn thiếu được sao chép theo mỗi chiều, và khi có khác biệt thì giữ điểm của Trakt."
+
+msgctxt "#32244"
+msgid "Resume points from Trakt"
+msgstr "Điểm tiếp tục xem từ Trakt"
+
+msgctxt "#32245"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device. Playback in Kodi still sends its progress to Trakt when this is off."
+msgstr "Kodi tiếp tục phát từ chỗ mục đang tạm dừng trên Trakt, chẳng hạn từ thiết bị khác. Khi tắt tùy chọn này, việc phát trên Kodi vẫn gửi tiến trình lên Trakt."
+
+msgctxt "#32246"
+msgid "Add"
+msgstr "Thêm"
+
+msgctxt "#32247"
+msgid "Add and remove"
+msgstr "Thêm và gỡ"
+
+msgctxt "#32248"
+msgid "Add: Kodi's items are added to the Trakt collection. Add and remove: collected items Kodi doesn't have are removed from it too, including ones from other devices or apps."
+msgstr "Thêm: các mục của Kodi được thêm vào bộ sưu tập Trakt. Thêm và gỡ: các mục trong bộ sưu tập mà Kodi không có cũng bị gỡ khỏi đó, kể cả các mục từ thiết bị hoặc ứng dụng khác."
+
+msgctxt "#32249"
+msgid "Relay always scrobbles when connected. Sync handles what it didn't scrobble: other devices, older history."
+msgstr "Relay luôn scrobble khi đã kết nối. Đồng bộ xử lý những gì Relay không scrobble: thiết bị khác, lịch sử cũ hơn."
+
+msgctxt "#32250"
+msgid "On"
+msgstr "Bật"
+
+msgctxt "#32251"
+msgid "Watched status isn't synced."
+msgstr "Trạng thái đã xem không được đồng bộ."
+
+msgctxt "#32252"
+msgid "Kodi matches Trakt, play counts and dates included. Anything with no plays on Trakt is unwatched in Kodi."
+msgstr "Kodi khớp với Trakt, bao gồm cả số lần phát và ngày. Mọi thứ không có lượt phát nào trên Trakt sẽ được đánh dấu chưa xem trong Kodi."
+
+msgctxt "#32253"
+msgid "Items watched in Kodi with no play on Trakt are added to its history. Kodi isn't changed."
+msgstr "Các mục đã xem trên Kodi nhưng chưa có lượt phát nào trên Trakt sẽ được thêm vào lịch sử Trakt. Kodi không bị thay đổi."
+
+msgctxt "#32254"
+msgid "Each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Mỗi bên nhận các lượt phát còn thiếu, và không có gì bị đánh dấu chưa xem ngoài một lần xem lại trên Trakt."
+
+msgctxt "#32255"
+msgid "Ratings aren't synced."
+msgstr "Điểm không được đồng bộ."
+
+msgctxt "#32256"
+msgid "Kodi's ratings match Trakt, and ratings Trakt doesn't have are cleared in Kodi."
+msgstr "Điểm của Kodi khớp với Trakt, và các điểm mà Trakt không có sẽ bị xóa trong Kodi."
+
+msgctxt "#32257"
+msgid "Kodi's ratings are added to Trakt, replacing different ones. Kodi isn't changed."
+msgstr "Điểm của Kodi được thêm vào Trakt, thay thế các điểm khác biệt. Kodi không bị thay đổi."
+
+msgctxt "#32258"
+msgid "Missing ratings are copied each way. Where they differ, Trakt's rating is kept."
+msgstr "Các điểm còn thiếu được sao chép theo mỗi chiều. Khi có khác biệt, điểm của Trakt được giữ lại."
+
+msgctxt "#32259"
+msgid "Kodi keeps its own resume points."
+msgstr "Kodi giữ các điểm tiếp tục xem của riêng mình."
+
+msgctxt "#32260"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device."
+msgstr "Kodi tiếp tục phát từ chỗ mục đang tạm dừng trên Trakt, chẳng hạn từ thiết bị khác."
+
+msgctxt "#32261"
+msgid "A sync runs only when you start it, such as from the context menu."
+msgstr "Việc đồng bộ chỉ chạy khi bạn tự bắt đầu, chẳng hạn từ menu ngữ cảnh."
+
+msgctxt "#32262"
+msgid "Sync when Kodi finishes a library scan or clean."
+msgstr "Đồng bộ khi Kodi quét hoặc dọn dẹp thư viện xong."
+
+msgctxt "#32263"
+msgid "Save and sync"
+msgstr "Lưu và đồng bộ"
+
+msgctxt "#32264"
+msgid "Unwatch %i items in Kodi to match Trakt?"
+msgstr "Đánh dấu chưa xem %i mục trong Kodi để khớp với Trakt?"
+
+msgctxt "#32265"
+msgid "Clear %i ratings in Kodi to match Trakt?"
+msgstr "Xóa %i điểm trong Kodi để khớp với Trakt?"

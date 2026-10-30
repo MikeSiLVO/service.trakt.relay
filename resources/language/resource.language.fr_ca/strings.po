@@ -184,37 +184,9 @@ msgctxt "#32046"
 msgid "Movies"
 msgstr "Films"
 
-msgctxt "#32047"
-msgid "Add new movies to Trakt collection"
-msgstr "Ajouter les nouveaux films à la collection Trakt"
-
-msgctxt "#32048"
-msgid "Add watched movies to Trakt history"
-msgstr "Ajouter les films visionnés à l'historique Trakt"
-
-msgctxt "#32049"
-msgid "Mark movies from Trakt history as watched in Kodi"
-msgstr "Marquer comme visionnés dans Kodi les films de l'historique Trakt"
-
 msgctxt "#32050"
 msgid "Episodes"
 msgstr "Épisodes"
-
-msgctxt "#32051"
-msgid "Add new TV episodes to Trakt collection"
-msgstr "Ajouter les nouveaux épisodes à la collection Trakt"
-
-msgctxt "#32052"
-msgid "Add watched TV episodes to Trakt history"
-msgstr "Ajouter les épisodes visionnés à l'historique Trakt"
-
-msgctxt "#32053"
-msgid "Mark TV episodes from Trakt history as watched in Kodi"
-msgstr "Marquer comme visionnés dans Kodi les épisodes de l'historique Trakt"
-
-msgctxt "#32054"
-msgid "Service"
-msgstr "Service"
 
 msgctxt "#32055"
 msgid "Sync after a library scan or clean"
@@ -223,14 +195,6 @@ msgstr "Synchroniser après un balayage ou un nettoyage de la vidéothèque"
 msgctxt "#32056"
 msgid "Show sync notifications"
 msgstr "Afficher les notifications de synchronisation"
-
-msgctxt "#32057"
-msgid "Remove deleted movies from Trakt collection"
-msgstr "Retirer les films supprimés de la collection Trakt"
-
-msgctxt "#32058"
-msgid "Remove deleted TV episodes from Trakt collection"
-msgstr "Retirer les épisodes supprimés de la collection Trakt"
 
 msgctxt "#32060"
 msgid "Hide notifications during playback"
@@ -299,14 +263,6 @@ msgstr "%i retirés"
 msgctxt "#32116"
 msgid "Enable debug mode"
 msgstr "Activer le mode de débogage"
-
-msgctxt "#32117"
-msgid "Sync movie playback progress to Kodi"
-msgstr "Synchroniser la progression de lecture des films vers Kodi"
-
-msgctxt "#32118"
-msgid "Sync episode playback progress to Kodi"
-msgstr "Synchroniser la progression de lecture des épisodes vers Kodi"
 
 msgctxt "#32122"
 msgid "Loading Trakt playback progress"
@@ -415,14 +371,6 @@ msgstr "Ne pas conserver la progression de lecture sur Trakt"
 msgctxt "#32193"
 msgid "Respect Trakt rewatch progress"
 msgstr "Respecter la progression de revisionnement Trakt"
-
-msgctxt "#32196"
-msgid "Sync ratings from Trakt to Kodi"
-msgstr "Synchroniser les évaluations de Trakt vers Kodi"
-
-msgctxt "#32197"
-msgid "Sync ratings from Kodi to Trakt"
-msgstr "Synchroniser les évaluations de Kodi vers Trakt"
 
 msgctxt "#32198"
 msgid "Trakt"
@@ -535,3 +483,151 @@ msgstr "Votre compte Trakt est verrouillé. Communiquez avec le soutien techniqu
 msgctxt "#32228"
 msgid "Watchlist limit of %i reached"
 msgstr "Limite de %i atteinte pour la liste de visionnement"
+
+msgctxt "#32229"
+msgid "Choose what to sync"
+msgstr "Choisir quoi synchroniser"
+
+msgctxt "#32230"
+msgid "Open the sync setup shown after connecting to Trakt."
+msgstr "Ouvre la configuration de synchronisation affichée après la connexion à Trakt."
+
+msgctxt "#32231"
+msgid "Sync when Kodi finishes a library scan or clean. Otherwise a sync runs only when you start it, such as from the context menu."
+msgstr "Synchroniser lorsque Kodi termine un balayage ou un nettoyage de la vidéothèque. Sinon, une synchronisation ne s'exécute que lorsque vous la lancez, par exemple depuis le menu contextuel."
+
+msgctxt "#32232"
+msgid "Notify when a sync after a library scan or clean starts and finishes."
+msgstr "Avertir lorsqu'une synchronisation après un balayage ou un nettoyage de la vidéothèque commence et se termine."
+
+msgctxt "#32233"
+msgid "Show no sync notifications while a video plays."
+msgstr "N'afficher aucune notification de synchronisation pendant la lecture d'une vidéo."
+
+msgctxt "#32234"
+msgid "Match items without an IMDb, TMDB or TVDB id by title and year, when scrobbling and syncing. Never used to unwatch items or clear ratings."
+msgstr "Associer par titre et année les éléments sans identifiant IMDb, TMDB ou TVDB, lors du scrobbling et de la synchronisation. Jamais utilisé pour marquer des éléments comme non visionnés ni pour effacer des évaluations."
+
+msgctxt "#32235"
+msgid "Watched status"
+msgstr "État de visionnement"
+
+msgctxt "#32236"
+msgid "Trakt to Kodi: Kodi matches Trakt, play counts and dates included, and anything with no plays on Trakt is unwatched. Kodi to Trakt: items watched in Kodi with no play on Trakt are added to its history. Both ways: each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "De Trakt à Kodi : Kodi reflète Trakt, nombres de lectures et dates inclus, et tout ce qui n'a aucune lecture sur Trakt est marqué comme non visionné. De Kodi à Trakt : les éléments visionnés dans Kodi sans lecture sur Trakt sont ajoutés à son historique. Dans les deux sens : chaque côté reçoit les lectures qui lui manquent, et rien n'est marqué comme non visionné en dehors d'un revisionnement Trakt."
+
+msgctxt "#32237"
+msgid "Off"
+msgstr "Désactivé"
+
+msgctxt "#32238"
+msgid "Trakt to Kodi"
+msgstr "De Trakt à Kodi"
+
+msgctxt "#32239"
+msgid "Kodi to Trakt"
+msgstr "De Kodi à Trakt"
+
+msgctxt "#32240"
+msgid "Both ways"
+msgstr "Dans les deux sens"
+
+msgctxt "#32241"
+msgid "Ratings"
+msgstr "Évaluations"
+
+msgctxt "#32242"
+msgid "Movies, shows and episodes"
+msgstr "Films, séries et épisodes"
+
+msgctxt "#32243"
+msgid "Trakt to Kodi: Kodi matches Trakt, and ratings Trakt doesn't have are cleared in Kodi. Kodi to Trakt: Kodi's ratings are added to Trakt, replacing different ones. Both ways: missing ratings are copied each way, and where they differ Trakt's is kept."
+msgstr "De Trakt à Kodi : Kodi reflète Trakt, et les évaluations absentes de Trakt sont effacées dans Kodi. De Kodi à Trakt : les évaluations de Kodi sont ajoutées à Trakt, en remplaçant celles qui diffèrent. Dans les deux sens : les évaluations manquantes sont copiées dans chaque sens, et en cas de différence, celle de Trakt est conservée."
+
+msgctxt "#32244"
+msgid "Resume points from Trakt"
+msgstr "Points de reprise depuis Trakt"
+
+msgctxt "#32245"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device. Playback in Kodi still sends its progress to Trakt when this is off."
+msgstr "Kodi reprend là où Trakt a mis l'élément en pause, par exemple depuis un autre appareil. La lecture dans Kodi envoie quand même sa progression à Trakt lorsque ce réglage est désactivé."
+
+msgctxt "#32246"
+msgid "Add"
+msgstr "Ajout"
+
+msgctxt "#32247"
+msgid "Add and remove"
+msgstr "Ajout et retrait"
+
+msgctxt "#32248"
+msgid "Add: Kodi's items are added to the Trakt collection. Add and remove: collected items Kodi doesn't have are removed from it too, including ones from other devices or apps."
+msgstr "Ajout : les éléments de Kodi sont ajoutés à la collection Trakt. Ajout et retrait : les éléments de la collection que Kodi n'a pas en sont aussi retirés, y compris ceux d'autres appareils ou applications."
+
+msgctxt "#32249"
+msgid "Relay always scrobbles when connected. Sync handles what it didn't scrobble: other devices, older history."
+msgstr "Relay scrobble toujours lorsqu'il est connecté. La synchronisation couvre ce qu'il n'a pas scrobblé : autres appareils, historique plus ancien."
+
+msgctxt "#32250"
+msgid "On"
+msgstr "Activé"
+
+msgctxt "#32251"
+msgid "Watched status isn't synced."
+msgstr "L'état de visionnement n'est pas synchronisé."
+
+msgctxt "#32252"
+msgid "Kodi matches Trakt, play counts and dates included. Anything with no plays on Trakt is unwatched in Kodi."
+msgstr "Kodi reflète Trakt, nombres de lectures et dates inclus. Tout ce qui n'a aucune lecture sur Trakt est marqué comme non visionné dans Kodi."
+
+msgctxt "#32253"
+msgid "Items watched in Kodi with no play on Trakt are added to its history. Kodi isn't changed."
+msgstr "Les éléments visionnés dans Kodi sans lecture sur Trakt sont ajoutés à son historique. Kodi n'est pas modifié."
+
+msgctxt "#32254"
+msgid "Each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Chaque côté reçoit les lectures qui lui manquent, et rien n'est marqué comme non visionné en dehors d'un revisionnement Trakt."
+
+msgctxt "#32255"
+msgid "Ratings aren't synced."
+msgstr "Les évaluations ne sont pas synchronisées."
+
+msgctxt "#32256"
+msgid "Kodi's ratings match Trakt, and ratings Trakt doesn't have are cleared in Kodi."
+msgstr "Les évaluations de Kodi reflètent Trakt, et celles absentes de Trakt sont effacées dans Kodi."
+
+msgctxt "#32257"
+msgid "Kodi's ratings are added to Trakt, replacing different ones. Kodi isn't changed."
+msgstr "Les évaluations de Kodi sont ajoutées à Trakt, en remplaçant celles qui diffèrent. Kodi n'est pas modifié."
+
+msgctxt "#32258"
+msgid "Missing ratings are copied each way. Where they differ, Trakt's rating is kept."
+msgstr "Les évaluations manquantes sont copiées dans chaque sens. En cas de différence, l'évaluation de Trakt est conservée."
+
+msgctxt "#32259"
+msgid "Kodi keeps its own resume points."
+msgstr "Kodi conserve ses propres points de reprise."
+
+msgctxt "#32260"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device."
+msgstr "Kodi reprend là où Trakt a mis l'élément en pause, par exemple depuis un autre appareil."
+
+msgctxt "#32261"
+msgid "A sync runs only when you start it, such as from the context menu."
+msgstr "Une synchronisation ne s'exécute que lorsque vous la lancez, par exemple depuis le menu contextuel."
+
+msgctxt "#32262"
+msgid "Sync when Kodi finishes a library scan or clean."
+msgstr "Synchroniser lorsque Kodi termine un balayage ou un nettoyage de la vidéothèque."
+
+msgctxt "#32263"
+msgid "Save and sync"
+msgstr "Enregistrer et synchroniser"
+
+msgctxt "#32264"
+msgid "Unwatch %i items in Kodi to match Trakt?"
+msgstr "Marquer %i éléments comme non visionnés dans Kodi pour refléter Trakt?"
+
+msgctxt "#32265"
+msgid "Clear %i ratings in Kodi to match Trakt?"
+msgstr "Effacer %i évaluations dans Kodi pour refléter Trakt?"

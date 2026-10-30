@@ -5,7 +5,7 @@ Trakt Relay scrobbles what you watch in Kodi to [Trakt](https://trakt.tv) and sy
 ## What it does
 
 - Scrobbles movies, episodes, live TV and recordings as you watch them.
-- Syncs your collection, watched status, ratings and playback progress. Each direction is switched on in the settings.
+- Syncs watched status and ratings in the direction you choose, resume points from Trakt, and your collection to Trakt. A sync asks before it unwatches or clears more than 20 items in Kodi, and leaves them as they are when it runs in the background.
 - Asks for a rating after you watch, when that is switched on.
 - Adds a Trakt entry to the context menu: rate, add to the watchlist, start a rewatch of a show, or sync the whole library.
 - Sends a finished play to Trakt later when Trakt can't be reached at the time.
@@ -37,7 +37,7 @@ curl -s -H 'Content-Type: application/json' http://localhost:8080/jsonrpc -d '{
              "params": {"action": "sync", "silent": "true", "library": "movies"}}}'
 ```
 
-`silent` hides the progress dialog, and `library` limits the sync to `movies` or `episodes`. Leave either out for the defaults: the dialog shows and both are synced.
+`silent` hides the progress dialog, and `library` limits the sync to `movies` or `episodes`. Leave either out for the defaults: the dialog shows and both are synced. A silent sync can't ask, so it skips any change it would ask about.
 
 ## Problems
 

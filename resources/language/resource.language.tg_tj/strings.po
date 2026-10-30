@@ -185,37 +185,9 @@ msgctxt "#32046"
 msgid "Movies"
 msgstr "Филмҳо"
 
-msgctxt "#32047"
-msgid "Add new movies to Trakt collection"
-msgstr "Илова кардани филмҳои нав ба маҷмӯаи Trakt"
-
-msgctxt "#32048"
-msgid "Add watched movies to Trakt history"
-msgstr "Илова кардани филмҳои тамошошуда ба таърихи Trakt"
-
-msgctxt "#32049"
-msgid "Mark movies from Trakt history as watched in Kodi"
-msgstr "Филмҳои таърихи Trakt-ро дар Kodi ҳамчун тамошошуда қайд кардан"
-
 msgctxt "#32050"
 msgid "Episodes"
 msgstr "Қисмҳо"
-
-msgctxt "#32051"
-msgid "Add new TV episodes to Trakt collection"
-msgstr "Илова кардани қисмҳои нави телевизионӣ ба маҷмӯаи Trakt"
-
-msgctxt "#32052"
-msgid "Add watched TV episodes to Trakt history"
-msgstr "Илова кардани қисмҳои тамошошудаи телевизионӣ ба таърихи Trakt"
-
-msgctxt "#32053"
-msgid "Mark TV episodes from Trakt history as watched in Kodi"
-msgstr "Қисмҳои телевизионии таърихи Trakt-ро дар Kodi ҳамчун тамошошуда қайд кардан"
-
-msgctxt "#32054"
-msgid "Service"
-msgstr "Хизмат"
 
 msgctxt "#32055"
 msgid "Sync after a library scan or clean"
@@ -224,14 +196,6 @@ msgstr "Ҳамоҳангсозӣ пас аз скан ё тозакунии ки
 msgctxt "#32056"
 msgid "Show sync notifications"
 msgstr "Нишон додани огоҳиномаҳои ҳамоҳангсозӣ"
-
-msgctxt "#32057"
-msgid "Remove deleted movies from Trakt collection"
-msgstr "Хориҷ кардани филмҳои нестшуда аз маҷмӯаи Trakt"
-
-msgctxt "#32058"
-msgid "Remove deleted TV episodes from Trakt collection"
-msgstr "Хориҷ кардани қисмҳои нестшудаи телевизионӣ аз маҷмӯаи Trakt"
 
 msgctxt "#32060"
 msgid "Hide notifications during playback"
@@ -300,14 +264,6 @@ msgstr "Хориҷ шуд: %i"
 msgctxt "#32116"
 msgid "Enable debug mode"
 msgstr "Фаъол кардани реҷаи ислоҳкунӣ"
-
-msgctxt "#32117"
-msgid "Sync movie playback progress to Kodi"
-msgstr "Ҳамоҳангсозии пешрафти пахши филмҳо бо Kodi"
-
-msgctxt "#32118"
-msgid "Sync episode playback progress to Kodi"
-msgstr "Ҳамоҳангсозии пешрафти пахши қисмҳо бо Kodi"
 
 msgctxt "#32122"
 msgid "Loading Trakt playback progress"
@@ -416,14 +372,6 @@ msgstr "Пешрафти пахшро дар Trakt нигоҳ надоштан"
 msgctxt "#32193"
 msgid "Respect Trakt rewatch progress"
 msgstr "Ба назар гирифтани пешрафти аз нав тамошои Trakt"
-
-msgctxt "#32196"
-msgid "Sync ratings from Trakt to Kodi"
-msgstr "Ҳамоҳангсозии баҳоҳо аз Trakt ба Kodi"
-
-msgctxt "#32197"
-msgid "Sync ratings from Kodi to Trakt"
-msgstr "Ҳамоҳангсозии баҳоҳо аз Kodi ба Trakt"
 
 msgctxt "#32198"
 msgid "Trakt"
@@ -536,3 +484,151 @@ msgstr "Ҳисоби Trakt-и шумо баста шудааст. Ба хада�
 msgctxt "#32228"
 msgid "Watchlist limit of %i reached"
 msgstr "Ба ҳадди рӯйхати тамошо расид: %i"
+
+msgctxt "#32229"
+msgid "Choose what to sync"
+msgstr "Интихоби он чи ҳамоҳанг шавад"
+
+msgctxt "#32230"
+msgid "Open the sync setup shown after connecting to Trakt."
+msgstr "Танзимоти ҳамоҳангсозиро, ки пас аз пайваст шудан ба Trakt нишон дода мешавад, мекушояд."
+
+msgctxt "#32231"
+msgid "Sync when Kodi finishes a library scan or clean. Otherwise a sync runs only when you start it, such as from the context menu."
+msgstr "Вақте ки Kodi скан ё тозакунии китобхонаро анҷом медиҳад, ҳамоҳанг мекунад. Дар акси ҳол, ҳамоҳангсозӣ танҳо вақте иҷро мешавад, ки шумо онро оғоз кунед, масалан аз менюи контекстӣ."
+
+msgctxt "#32232"
+msgid "Notify when a sync after a library scan or clean starts and finishes."
+msgstr "Вақте ки ҳамоҳангсозӣ пас аз скан ё тозакунии китобхона оғоз ва анҷом меёбад, огоҳ мекунад."
+
+msgctxt "#32233"
+msgid "Show no sync notifications while a video plays."
+msgstr "Ҳангоми пахши видео огоҳиномаҳои ҳамоҳангсозиро нишон намедиҳад."
+
+msgctxt "#32234"
+msgid "Match items without an IMDb, TMDB or TVDB id by title and year, when scrobbling and syncing. Never used to unwatch items or clear ratings."
+msgstr "Унсурҳоро бе ID-и IMDb, TMDB ё TVDB ҳангоми скроббл ва ҳамоҳангсозӣ аз рӯи сарлавҳа ва сол мутобиқ мекунад. Ҳеҷ гоҳ барои тамошонашуда қайд кардани унсурҳо ё тоза кардани баҳоҳо истифода намешавад."
+
+msgctxt "#32235"
+msgid "Watched status"
+msgstr "Ҳолати тамошо"
+
+msgctxt "#32236"
+msgid "Trakt to Kodi: Kodi matches Trakt, play counts and dates included, and anything with no plays on Trakt is unwatched. Kodi to Trakt: items watched in Kodi with no play on Trakt are added to its history. Both ways: each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Аз Trakt ба Kodi: Kodi ба Trakt мувофиқ мешавад, бо шумораи пахшҳо ва санаҳо, ва ҳар чизе, ки дар Trakt пахш надорад, ҳамчун тамошонашуда қайд мешавад. Аз Kodi ба Trakt: унсурҳое, ки дар Kodi тамошо шудаанд ва дар Trakt пахш надоранд, ба таърихи Trakt илова мешаванд. Ба ҳар ду самт: ҳар тараф пахшҳоеро, ки надорад, мегирад ва ҳеҷ чиз ҷуз дар ҳолати аз нав тамошои Trakt тамошонашуда қайд намешавад."
+
+msgctxt "#32237"
+msgid "Off"
+msgstr "Хомӯш"
+
+msgctxt "#32238"
+msgid "Trakt to Kodi"
+msgstr "Аз Trakt ба Kodi"
+
+msgctxt "#32239"
+msgid "Kodi to Trakt"
+msgstr "Аз Kodi ба Trakt"
+
+msgctxt "#32240"
+msgid "Both ways"
+msgstr "Ба ҳар ду самт"
+
+msgctxt "#32241"
+msgid "Ratings"
+msgstr "Баҳоҳо"
+
+msgctxt "#32242"
+msgid "Movies, shows and episodes"
+msgstr "Филмҳо, намоишҳо ва қисмҳо"
+
+msgctxt "#32243"
+msgid "Trakt to Kodi: Kodi matches Trakt, and ratings Trakt doesn't have are cleared in Kodi. Kodi to Trakt: Kodi's ratings are added to Trakt, replacing different ones. Both ways: missing ratings are copied each way, and where they differ Trakt's is kept."
+msgstr "Аз Trakt ба Kodi: Kodi ба Trakt мувофиқ мешавад ва баҳоҳое, ки дар Trakt нестанд, дар Kodi тоза карда мешаванд. Аз Kodi ба Trakt: баҳоҳои Kodi ба Trakt илова мешаванд ва баҳоҳои гуногунро иваз мекунанд. Ба ҳар ду самт: баҳоҳои мавҷуднабуда ба ҳар ду самт нусхабардорӣ мешаванд ва дар ҷое, ки фарқ мекунанд, баҳои Trakt нигоҳ дошта мешавад."
+
+msgctxt "#32244"
+msgid "Resume points from Trakt"
+msgstr "Нуқтаҳои идома аз Trakt"
+
+msgctxt "#32245"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device. Playback in Kodi still sends its progress to Trakt when this is off."
+msgstr "Kodi аз ҷое идома медиҳад, ки Trakt унсурро таваққуф кардааст, масалан аз дастгоҳи дигар. Вақте ки ин хомӯш аст, пахш дар Kodi ба ҳар ҳол пешрафти худро ба Trakt мефиристад."
+
+msgctxt "#32246"
+msgid "Add"
+msgstr "Иловакунӣ"
+
+msgctxt "#32247"
+msgid "Add and remove"
+msgstr "Иловакунӣ ва хориҷкунӣ"
+
+msgctxt "#32248"
+msgid "Add: Kodi's items are added to the Trakt collection. Add and remove: collected items Kodi doesn't have are removed from it too, including ones from other devices or apps."
+msgstr "Иловакунӣ: унсурҳои Kodi ба маҷмӯаи Trakt илова мешаванд. Иловакунӣ ва хориҷкунӣ: унсурҳои маҷмӯа, ки дар Kodi нестанд, низ аз он хориҷ карда мешаванд, аз ҷумла унсурҳо аз дастгоҳҳо ё барномаҳои дигар."
+
+msgctxt "#32249"
+msgid "Relay always scrobbles when connected. Sync handles what it didn't scrobble: other devices, older history."
+msgstr "Relay ҳангоми пайваст будан ҳамеша скроббл мекунад. Ҳамоҳангсозӣ он чиро, ки скроббл нашуд, фаро мегирад: дастгоҳҳои дигар, таърихи пештара."
+
+msgctxt "#32250"
+msgid "On"
+msgstr "Фурӯзон"
+
+msgctxt "#32251"
+msgid "Watched status isn't synced."
+msgstr "Ҳолати тамошо ҳамоҳанг карда намешавад."
+
+msgctxt "#32252"
+msgid "Kodi matches Trakt, play counts and dates included. Anything with no plays on Trakt is unwatched in Kodi."
+msgstr "Kodi ба Trakt мувофиқ мешавад, бо шумораи пахшҳо ва санаҳо. Ҳар чизе, ки дар Trakt пахш надорад, дар Kodi ҳамчун тамошонашуда қайд мешавад."
+
+msgctxt "#32253"
+msgid "Items watched in Kodi with no play on Trakt are added to its history. Kodi isn't changed."
+msgstr "Унсурҳое, ки дар Kodi тамошо шудаанд ва дар Trakt пахш надоранд, ба таърихи Trakt илова мешаванд. Kodi тағйир намеёбад."
+
+msgctxt "#32254"
+msgid "Each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Ҳар тараф пахшҳоеро, ки надорад, мегирад ва ҳеҷ чиз ҷуз дар ҳолати аз нав тамошои Trakt тамошонашуда қайд намешавад."
+
+msgctxt "#32255"
+msgid "Ratings aren't synced."
+msgstr "Баҳоҳо ҳамоҳанг карда намешаванд."
+
+msgctxt "#32256"
+msgid "Kodi's ratings match Trakt, and ratings Trakt doesn't have are cleared in Kodi."
+msgstr "Баҳоҳои Kodi ба Trakt мувофиқ мешаванд ва баҳоҳое, ки дар Trakt нестанд, дар Kodi тоза карда мешаванд."
+
+msgctxt "#32257"
+msgid "Kodi's ratings are added to Trakt, replacing different ones. Kodi isn't changed."
+msgstr "Баҳоҳои Kodi ба Trakt илова мешаванд ва баҳоҳои гуногунро иваз мекунанд. Kodi тағйир намеёбад."
+
+msgctxt "#32258"
+msgid "Missing ratings are copied each way. Where they differ, Trakt's rating is kept."
+msgstr "Баҳоҳои мавҷуднабуда ба ҳар ду самт нусхабардорӣ мешаванд. Дар ҷое, ки фарқ мекунанд, баҳои Trakt нигоҳ дошта мешавад."
+
+msgctxt "#32259"
+msgid "Kodi keeps its own resume points."
+msgstr "Kodi нуқтаҳои идомаи худро нигоҳ медорад."
+
+msgctxt "#32260"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device."
+msgstr "Kodi аз ҷое идома медиҳад, ки Trakt унсурро таваққуф кардааст, масалан аз дастгоҳи дигар."
+
+msgctxt "#32261"
+msgid "A sync runs only when you start it, such as from the context menu."
+msgstr "Ҳамоҳангсозӣ танҳо вақте иҷро мешавад, ки шумо онро оғоз кунед, масалан аз менюи контекстӣ."
+
+msgctxt "#32262"
+msgid "Sync when Kodi finishes a library scan or clean."
+msgstr "Вақте ки Kodi скан ё тозакунии китобхонаро анҷом медиҳад, ҳамоҳанг карда мешавад."
+
+msgctxt "#32263"
+msgid "Save and sync"
+msgstr "Захира ва ҳамоҳанг кардан"
+
+msgctxt "#32264"
+msgid "Unwatch %i items in Kodi to match Trakt?"
+msgstr "%i унсур дар Kodi барои мувофиқат ба Trakt ҳамчун тамошонашуда қайд карда шаванд?"
+
+msgctxt "#32265"
+msgid "Clear %i ratings in Kodi to match Trakt?"
+msgstr "%i баҳо дар Kodi барои мувофиқат ба Trakt тоза карда шаванд?"

@@ -184,37 +184,9 @@ msgctxt "#32046"
 msgid "Movies"
 msgstr "Ffilmiau"
 
-msgctxt "#32047"
-msgid "Add new movies to Trakt collection"
-msgstr "Ychwanegu ffilmiau newydd at gasgliad Trakt"
-
-msgctxt "#32048"
-msgid "Add watched movies to Trakt history"
-msgstr "Ychwanegu ffilmiau a wyliwyd at hanes Trakt"
-
-msgctxt "#32049"
-msgid "Mark movies from Trakt history as watched in Kodi"
-msgstr "Nodi ffilmiau o hanes Trakt fel rhai a wyliwyd yn Kodi"
-
 msgctxt "#32050"
 msgid "Episodes"
 msgstr "Penodau"
-
-msgctxt "#32051"
-msgid "Add new TV episodes to Trakt collection"
-msgstr "Ychwanegu penodau teledu newydd at gasgliad Trakt"
-
-msgctxt "#32052"
-msgid "Add watched TV episodes to Trakt history"
-msgstr "Ychwanegu penodau teledu a wyliwyd at hanes Trakt"
-
-msgctxt "#32053"
-msgid "Mark TV episodes from Trakt history as watched in Kodi"
-msgstr "Nodi penodau teledu o hanes Trakt fel rhai a wyliwyd yn Kodi"
-
-msgctxt "#32054"
-msgid "Service"
-msgstr "Gwasanaeth"
 
 msgctxt "#32055"
 msgid "Sync after a library scan or clean"
@@ -223,14 +195,6 @@ msgstr "Cysoni ar ôl sganio neu lanhau'r llyfrgell"
 msgctxt "#32056"
 msgid "Show sync notifications"
 msgstr "Dangos hysbysiadau cysoni"
-
-msgctxt "#32057"
-msgid "Remove deleted movies from Trakt collection"
-msgstr "Tynnu ffilmiau a ddilëwyd o gasgliad Trakt"
-
-msgctxt "#32058"
-msgid "Remove deleted TV episodes from Trakt collection"
-msgstr "Tynnu penodau teledu a ddilëwyd o gasgliad Trakt"
 
 msgctxt "#32060"
 msgid "Hide notifications during playback"
@@ -299,14 +263,6 @@ msgstr "Tynnwyd %i"
 msgctxt "#32116"
 msgid "Enable debug mode"
 msgstr "Galluogi modd dadfygio"
-
-msgctxt "#32117"
-msgid "Sync movie playback progress to Kodi"
-msgstr "Cysoni cynnydd chwarae ffilmiau i Kodi"
-
-msgctxt "#32118"
-msgid "Sync episode playback progress to Kodi"
-msgstr "Cysoni cynnydd chwarae penodau i Kodi"
 
 msgctxt "#32122"
 msgid "Loading Trakt playback progress"
@@ -415,14 +371,6 @@ msgstr "Peidio â chadw cynnydd chwarae ar Trakt"
 msgctxt "#32193"
 msgid "Respect Trakt rewatch progress"
 msgstr "Parchu cynnydd ail-wylio Trakt"
-
-msgctxt "#32196"
-msgid "Sync ratings from Trakt to Kodi"
-msgstr "Cysoni graddau o Trakt i Kodi"
-
-msgctxt "#32197"
-msgid "Sync ratings from Kodi to Trakt"
-msgstr "Cysoni graddau o Kodi i Trakt"
 
 msgctxt "#32198"
 msgid "Trakt"
@@ -535,3 +483,151 @@ msgstr "Mae eich cyfrif Trakt wedi'i gloi. Cysylltwch â chymorth Trakt."
 msgctxt "#32228"
 msgid "Watchlist limit of %i reached"
 msgstr "Wedi cyrraedd terfyn y rhestr wylio o %i"
+
+msgctxt "#32229"
+msgid "Choose what to sync"
+msgstr "Dewis beth i'w gysoni"
+
+msgctxt "#32230"
+msgid "Open the sync setup shown after connecting to Trakt."
+msgstr "Agor y gosodiad cysoni a ddangosir ar ôl cysylltu â Trakt."
+
+msgctxt "#32231"
+msgid "Sync when Kodi finishes a library scan or clean. Otherwise a sync runs only when you start it, such as from the context menu."
+msgstr "Cysoni pan fydd Kodi yn gorffen sganio neu lanhau'r llyfrgell. Fel arall dim ond pan fyddwch chi'n ei ddechrau y bydd cysoni'n rhedeg, er enghraifft o'r ddewislen cyd-destun."
+
+msgctxt "#32232"
+msgid "Notify when a sync after a library scan or clean starts and finishes."
+msgstr "Hysbysu pan fydd cysoni ar ôl sganio neu lanhau'r llyfrgell yn dechrau ac yn gorffen."
+
+msgctxt "#32233"
+msgid "Show no sync notifications while a video plays."
+msgstr "Peidio â dangos hysbysiadau cysoni tra bo fideo'n chwarae."
+
+msgctxt "#32234"
+msgid "Match items without an IMDb, TMDB or TVDB id by title and year, when scrobbling and syncing. Never used to unwatch items or clear ratings."
+msgstr "Paru eitemau heb ID IMDb, TMDB na TVDB yn ôl teitl a blwyddyn, wrth sgroblo a chysoni. Ni chaiff byth ei ddefnyddio i nodi eitemau fel heb eu gwylio nac i glirio graddau."
+
+msgctxt "#32235"
+msgid "Watched status"
+msgstr "Statws gwylio"
+
+msgctxt "#32236"
+msgid "Trakt to Kodi: Kodi matches Trakt, play counts and dates included, and anything with no plays on Trakt is unwatched. Kodi to Trakt: items watched in Kodi with no play on Trakt are added to its history. Both ways: each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Trakt i Kodi: mae Kodi yn cyfateb i Trakt, gan gynnwys nifer y troeon chwarae a'r dyddiadau, a nodir unrhyw beth heb ei chwarae ar Trakt fel heb ei wylio. Kodi i Trakt: ychwanegir eitemau a wyliwyd yn Kodi heb eu chwarae ar Trakt at ei hanes. Y ddwy ffordd: mae pob ochr yn cael y troeon chwarae sydd ar goll ganddi, ac ni nodir dim fel heb ei wylio y tu allan i ail-wylio ar Trakt."
+
+msgctxt "#32237"
+msgid "Off"
+msgstr "I ffwrdd"
+
+msgctxt "#32238"
+msgid "Trakt to Kodi"
+msgstr "Trakt i Kodi"
+
+msgctxt "#32239"
+msgid "Kodi to Trakt"
+msgstr "Kodi i Trakt"
+
+msgctxt "#32240"
+msgid "Both ways"
+msgstr "Y ddwy ffordd"
+
+msgctxt "#32241"
+msgid "Ratings"
+msgstr "Graddau"
+
+msgctxt "#32242"
+msgid "Movies, shows and episodes"
+msgstr "Ffilmiau, rhaglenni a phenodau"
+
+msgctxt "#32243"
+msgid "Trakt to Kodi: Kodi matches Trakt, and ratings Trakt doesn't have are cleared in Kodi. Kodi to Trakt: Kodi's ratings are added to Trakt, replacing different ones. Both ways: missing ratings are copied each way, and where they differ Trakt's is kept."
+msgstr "Trakt i Kodi: mae Kodi yn cyfateb i Trakt, a chaiff graddau nad oes gan Trakt eu clirio yn Kodi. Kodi i Trakt: ychwanegir graddau Kodi at Trakt, gan ddisodli rhai gwahanol. Y ddwy ffordd: caiff graddau coll eu copïo i'r ddau gyfeiriad, a lle maen nhw'n wahanol cedwir gradd Trakt."
+
+msgctxt "#32244"
+msgid "Resume points from Trakt"
+msgstr "Pwyntiau ailddechrau o Trakt"
+
+msgctxt "#32245"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device. Playback in Kodi still sends its progress to Trakt when this is off."
+msgstr "Mae Kodi yn ailddechrau lle mae'r eitem wedi'i hoedi ar Trakt, er enghraifft o ddyfais arall. Mae chwarae yn Kodi yn dal i anfon ei gynnydd i Trakt pan fydd hwn i ffwrdd."
+
+msgctxt "#32246"
+msgid "Add"
+msgstr "Ychwanegu"
+
+msgctxt "#32247"
+msgid "Add and remove"
+msgstr "Ychwanegu a thynnu"
+
+msgctxt "#32248"
+msgid "Add: Kodi's items are added to the Trakt collection. Add and remove: collected items Kodi doesn't have are removed from it too, including ones from other devices or apps."
+msgstr "Ychwanegu: ychwanegir eitemau Kodi at gasgliad Trakt. Ychwanegu a thynnu: caiff eitemau yn y casgliad nad ydynt gan Kodi eu tynnu ohono hefyd, gan gynnwys rhai o ddyfeisiau neu apiau eraill."
+
+msgctxt "#32249"
+msgid "Relay always scrobbles when connected. Sync handles what it didn't scrobble: other devices, older history."
+msgstr "Mae Relay bob amser yn sgroblo pan fydd wedi cysylltu. Mae cysoni'n trin yr hyn na wnaeth ei sgroblo: dyfeisiau eraill, hanes hŷn."
+
+msgctxt "#32250"
+msgid "On"
+msgstr "Ymlaen"
+
+msgctxt "#32251"
+msgid "Watched status isn't synced."
+msgstr "Nid yw statws gwylio'n cael ei gysoni."
+
+msgctxt "#32252"
+msgid "Kodi matches Trakt, play counts and dates included. Anything with no plays on Trakt is unwatched in Kodi."
+msgstr "Mae Kodi yn cyfateb i Trakt, gan gynnwys nifer y troeon chwarae a'r dyddiadau. Nodir unrhyw beth heb ei chwarae ar Trakt fel heb ei wylio yn Kodi."
+
+msgctxt "#32253"
+msgid "Items watched in Kodi with no play on Trakt are added to its history. Kodi isn't changed."
+msgstr "Ychwanegir eitemau a wyliwyd yn Kodi heb eu chwarae ar Trakt at ei hanes. Nid yw Kodi yn cael ei newid."
+
+msgctxt "#32254"
+msgid "Each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Mae pob ochr yn cael y troeon chwarae sydd ar goll ganddi, ac ni nodir dim fel heb ei wylio y tu allan i ail-wylio ar Trakt."
+
+msgctxt "#32255"
+msgid "Ratings aren't synced."
+msgstr "Nid yw graddau'n cael eu cysoni."
+
+msgctxt "#32256"
+msgid "Kodi's ratings match Trakt, and ratings Trakt doesn't have are cleared in Kodi."
+msgstr "Mae graddau Kodi yn cyfateb i Trakt, a chaiff graddau nad oes gan Trakt eu clirio yn Kodi."
+
+msgctxt "#32257"
+msgid "Kodi's ratings are added to Trakt, replacing different ones. Kodi isn't changed."
+msgstr "Ychwanegir graddau Kodi at Trakt, gan ddisodli rhai gwahanol. Nid yw Kodi yn cael ei newid."
+
+msgctxt "#32258"
+msgid "Missing ratings are copied each way. Where they differ, Trakt's rating is kept."
+msgstr "Caiff graddau coll eu copïo i'r ddau gyfeiriad. Lle maen nhw'n wahanol, cedwir gradd Trakt."
+
+msgctxt "#32259"
+msgid "Kodi keeps its own resume points."
+msgstr "Mae Kodi yn cadw ei bwyntiau ailddechrau ei hun."
+
+msgctxt "#32260"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device."
+msgstr "Mae Kodi yn ailddechrau lle mae'r eitem wedi'i hoedi ar Trakt, er enghraifft o ddyfais arall."
+
+msgctxt "#32261"
+msgid "A sync runs only when you start it, such as from the context menu."
+msgstr "Dim ond pan fyddwch chi'n ei ddechrau y bydd cysoni'n rhedeg, er enghraifft o'r ddewislen cyd-destun."
+
+msgctxt "#32262"
+msgid "Sync when Kodi finishes a library scan or clean."
+msgstr "Cysoni pan fydd Kodi yn gorffen sganio neu lanhau'r llyfrgell."
+
+msgctxt "#32263"
+msgid "Save and sync"
+msgstr "Cadw a chysoni"
+
+msgctxt "#32264"
+msgid "Unwatch %i items in Kodi to match Trakt?"
+msgstr "Nodi %i eitem fel heb eu gwylio yn Kodi i gyfateb i Trakt?"
+
+msgctxt "#32265"
+msgid "Clear %i ratings in Kodi to match Trakt?"
+msgstr "Clirio %i gradd yn Kodi i gyfateb i Trakt?"

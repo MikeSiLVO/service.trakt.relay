@@ -184,37 +184,9 @@ msgctxt "#32046"
 msgid "Movies"
 msgstr "Filmati"
 
-msgctxt "#32047"
-msgid "Add new movies to Trakt collection"
-msgstr "Żid filmati ġodda mal-kollezzjoni ta' Trakt"
-
-msgctxt "#32048"
-msgid "Add watched movies to Trakt history"
-msgstr "Żid il-filmati li rajt mal-istorja ta' Trakt"
-
-msgctxt "#32049"
-msgid "Mark movies from Trakt history as watched in Kodi"
-msgstr "Immarka l-filmati mill-istorja ta' Trakt bħala li rajthom f'Kodi"
-
 msgctxt "#32050"
 msgid "Episodes"
 msgstr "Episodji"
-
-msgctxt "#32051"
-msgid "Add new TV episodes to Trakt collection"
-msgstr "Żid episodji ġodda tat-TV mal-kollezzjoni ta' Trakt"
-
-msgctxt "#32052"
-msgid "Add watched TV episodes to Trakt history"
-msgstr "Żid l-episodji tat-TV li rajt mal-istorja ta' Trakt"
-
-msgctxt "#32053"
-msgid "Mark TV episodes from Trakt history as watched in Kodi"
-msgstr "Immarka l-episodji tat-TV mill-istorja ta' Trakt bħala li rajthom f'Kodi"
-
-msgctxt "#32054"
-msgid "Service"
-msgstr "Servizz"
 
 msgctxt "#32055"
 msgid "Sync after a library scan or clean"
@@ -223,14 +195,6 @@ msgstr "Issinkronizza wara scan jew tindif tal-librerija"
 msgctxt "#32056"
 msgid "Show sync notifications"
 msgstr "Uri n-notifiki tas-sinkronizzazzjoni"
-
-msgctxt "#32057"
-msgid "Remove deleted movies from Trakt collection"
-msgstr "Neħħi l-filmati mħassra mill-kollezzjoni ta' Trakt"
-
-msgctxt "#32058"
-msgid "Remove deleted TV episodes from Trakt collection"
-msgstr "Neħħi l-episodji tat-TV imħassra mill-kollezzjoni ta' Trakt"
 
 msgctxt "#32060"
 msgid "Hide notifications during playback"
@@ -299,14 +263,6 @@ msgstr "%i mneħħija"
 msgctxt "#32116"
 msgid "Enable debug mode"
 msgstr "Attiva l-modalità ta' debug"
-
-msgctxt "#32117"
-msgid "Sync movie playback progress to Kodi"
-msgstr "Issinkronizza l-progress tar-riproduzzjoni tal-filmati ma' Kodi"
-
-msgctxt "#32118"
-msgid "Sync episode playback progress to Kodi"
-msgstr "Issinkronizza l-progress tar-riproduzzjoni tal-episodji ma' Kodi"
 
 msgctxt "#32122"
 msgid "Loading Trakt playback progress"
@@ -415,14 +371,6 @@ msgstr "Iżżommx il-progress tar-riproduzzjoni fuq Trakt"
 msgctxt "#32193"
 msgid "Respect Trakt rewatch progress"
 msgstr "Irrispetta l-progress tar-rewatch ta' Trakt"
-
-msgctxt "#32196"
-msgid "Sync ratings from Trakt to Kodi"
-msgstr "Issinkronizza r-ratings minn Trakt għal Kodi"
-
-msgctxt "#32197"
-msgid "Sync ratings from Kodi to Trakt"
-msgstr "Issinkronizza r-ratings minn Kodi għal Trakt"
 
 msgctxt "#32198"
 msgid "Trakt"
@@ -535,3 +483,151 @@ msgstr "Il-kont tiegħek ta' Trakt huwa msakkar. Ikkuntattja l-appoġġ ta' Trak
 msgctxt "#32228"
 msgid "Watchlist limit of %i reached"
 msgstr "Intlaħaq il-limitu ta' %i tal-lista ta' x'tara"
+
+msgctxt "#32229"
+msgid "Choose what to sync"
+msgstr "Agħżel x'tissinkronizza"
+
+msgctxt "#32230"
+msgid "Open the sync setup shown after connecting to Trakt."
+msgstr "Iftaħ is-setup tas-sinkronizzazzjoni li jidher wara l-konnessjoni ma' Trakt."
+
+msgctxt "#32231"
+msgid "Sync when Kodi finishes a library scan or clean. Otherwise a sync runs only when you start it, such as from the context menu."
+msgstr "Issinkronizza meta Kodi jlesti scan jew tindif tal-librerija. Inkella s-sinkronizzazzjoni ssir biss meta tibdieha int, pereżempju mill-menu tal-kuntest."
+
+msgctxt "#32232"
+msgid "Notify when a sync after a library scan or clean starts and finishes."
+msgstr "Javża meta tibda u tispiċċa sinkronizzazzjoni wara scan jew tindif tal-librerija."
+
+msgctxt "#32233"
+msgid "Show no sync notifications while a video plays."
+msgstr "Ma juri l-ebda notifika tas-sinkronizzazzjoni waqt li jkun qed jindaqq video."
+
+msgctxt "#32234"
+msgid "Match items without an IMDb, TMDB or TVDB id by title and year, when scrobbling and syncing. Never used to unwatch items or clear ratings."
+msgstr "Iqabbel bit-titlu u s-sena l-oġġetti mingħajr ID ta' IMDb, TMDB jew TVDB, waqt l-iscrobble u s-sinkronizzazzjoni. Qatt ma jintuża biex jimmarka oġġetti bħala li ma rajthomx jew biex iħassar ratings."
+
+msgctxt "#32235"
+msgid "Watched status"
+msgstr "Status ta' x'rajt"
+
+msgctxt "#32236"
+msgid "Trakt to Kodi: Kodi matches Trakt, play counts and dates included, and anything with no plays on Trakt is unwatched. Kodi to Trakt: items watched in Kodi with no play on Trakt are added to its history. Both ways: each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Minn Trakt għal Kodi: Kodi jaqbel ma' Trakt, inklużi l-għadd ta' riproduzzjonijiet u d-dati, u kull ma m'għandux riproduzzjonijiet fuq Trakt jiġi mmarkat bħala li ma rajtux. Minn Kodi għal Trakt: l-oġġetti li rajt f'Kodi mingħajr riproduzzjoni fuq Trakt jiżdiedu mal-istorja tiegħu. Iż-żewġ direzzjonijiet: kull naħa tieħu r-riproduzzjonijiet li jonqsuha, u xejn ma jiġi mmarkat bħala li ma rajtux barra minn rewatch ta' Trakt."
+
+msgctxt "#32237"
+msgid "Off"
+msgstr "Mitfi"
+
+msgctxt "#32238"
+msgid "Trakt to Kodi"
+msgstr "Minn Trakt għal Kodi"
+
+msgctxt "#32239"
+msgid "Kodi to Trakt"
+msgstr "Minn Kodi għal Trakt"
+
+msgctxt "#32240"
+msgid "Both ways"
+msgstr "Iż-żewġ direzzjonijiet"
+
+msgctxt "#32241"
+msgid "Ratings"
+msgstr "Ratings"
+
+msgctxt "#32242"
+msgid "Movies, shows and episodes"
+msgstr "Filmati, programmi u episodji"
+
+msgctxt "#32243"
+msgid "Trakt to Kodi: Kodi matches Trakt, and ratings Trakt doesn't have are cleared in Kodi. Kodi to Trakt: Kodi's ratings are added to Trakt, replacing different ones. Both ways: missing ratings are copied each way, and where they differ Trakt's is kept."
+msgstr "Minn Trakt għal Kodi: Kodi jaqbel ma' Trakt, u r-ratings li m'għandux Trakt jitħassru f'Kodi. Minn Kodi għal Trakt: ir-ratings ta' Kodi jiżdiedu ma' Trakt, u jissostitwixxu dawk differenti. Iż-żewġ direzzjonijiet: ir-ratings nieqsa jiġu kkupjati fiż-żewġ naħat, u fejn ikunu differenti jinżamm dak ta' Trakt."
+
+msgctxt "#32244"
+msgid "Resume points from Trakt"
+msgstr "Punti biex tkompli minn Trakt"
+
+msgctxt "#32245"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device. Playback in Kodi still sends its progress to Trakt when this is off."
+msgstr "Kodi jkompli minn fejn Trakt għandu l-oġġett imwaqqaf, pereżempju minn apparat ieħor. Meta dan ikun mitfi, ir-riproduzzjoni f'Kodi xorta tibgħat il-progress tagħha lil Trakt."
+
+msgctxt "#32246"
+msgid "Add"
+msgstr "Żieda"
+
+msgctxt "#32247"
+msgid "Add and remove"
+msgstr "Żieda u tneħħija"
+
+msgctxt "#32248"
+msgid "Add: Kodi's items are added to the Trakt collection. Add and remove: collected items Kodi doesn't have are removed from it too, including ones from other devices or apps."
+msgstr "Żieda: l-oġġetti ta' Kodi jiżdiedu mal-kollezzjoni ta' Trakt. Żieda u tneħħija: l-oġġetti fil-kollezzjoni li m'għandux Kodi jitneħħew ukoll minnha, inklużi dawk minn apparati jew apps oħra."
+
+msgctxt "#32249"
+msgid "Relay always scrobbles when connected. Sync handles what it didn't scrobble: other devices, older history."
+msgstr "Relay dejjem jagħmel scrobble meta jkun konness. Is-sinkronizzazzjoni tkopri dak li baqa' mingħajr scrobble: apparat ieħor, storja eqdem."
+
+msgctxt "#32250"
+msgid "On"
+msgstr "Mixgħul"
+
+msgctxt "#32251"
+msgid "Watched status isn't synced."
+msgstr "L-istatus ta' x'rajt ma jiġix sinkronizzat."
+
+msgctxt "#32252"
+msgid "Kodi matches Trakt, play counts and dates included. Anything with no plays on Trakt is unwatched in Kodi."
+msgstr "Kodi jaqbel ma' Trakt, inklużi l-għadd ta' riproduzzjonijiet u d-dati. Kull ma m'għandux riproduzzjonijiet fuq Trakt jiġi mmarkat f'Kodi bħala li ma rajtux."
+
+msgctxt "#32253"
+msgid "Items watched in Kodi with no play on Trakt are added to its history. Kodi isn't changed."
+msgstr "L-oġġetti li rajt f'Kodi mingħajr riproduzzjoni fuq Trakt jiżdiedu mal-istorja tiegħu. Kodi ma jinbidilx."
+
+msgctxt "#32254"
+msgid "Each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Kull naħa tieħu r-riproduzzjonijiet li jonqsuha, u xejn ma jiġi mmarkat bħala li ma rajtux barra minn rewatch ta' Trakt."
+
+msgctxt "#32255"
+msgid "Ratings aren't synced."
+msgstr "Ir-ratings ma jiġux sinkronizzati."
+
+msgctxt "#32256"
+msgid "Kodi's ratings match Trakt, and ratings Trakt doesn't have are cleared in Kodi."
+msgstr "Ir-ratings ta' Kodi jaqblu ma' Trakt, u r-ratings li m'għandux Trakt jitħassru f'Kodi."
+
+msgctxt "#32257"
+msgid "Kodi's ratings are added to Trakt, replacing different ones. Kodi isn't changed."
+msgstr "Ir-ratings ta' Kodi jiżdiedu ma' Trakt, u jissostitwixxu dawk differenti. Kodi ma jinbidilx."
+
+msgctxt "#32258"
+msgid "Missing ratings are copied each way. Where they differ, Trakt's rating is kept."
+msgstr "Ir-ratings nieqsa jiġu kkupjati fiż-żewġ naħat. Fejn ikunu differenti, jinżamm ir-rating ta' Trakt."
+
+msgctxt "#32259"
+msgid "Kodi keeps its own resume points."
+msgstr "Kodi jżomm il-punti tiegħu biex tkompli."
+
+msgctxt "#32260"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device."
+msgstr "Kodi jkompli minn fejn Trakt għandu l-oġġett imwaqqaf, pereżempju minn apparat ieħor."
+
+msgctxt "#32261"
+msgid "A sync runs only when you start it, such as from the context menu."
+msgstr "Is-sinkronizzazzjoni ssir biss meta tibdieha int, pereżempju mill-menu tal-kuntest."
+
+msgctxt "#32262"
+msgid "Sync when Kodi finishes a library scan or clean."
+msgstr "Issinkronizza meta Kodi jlesti scan jew tindif tal-librerija."
+
+msgctxt "#32263"
+msgid "Save and sync"
+msgstr "Salva u ssinkronizza"
+
+msgctxt "#32264"
+msgid "Unwatch %i items in Kodi to match Trakt?"
+msgstr "Timmarka %i oġġetti f'Kodi bħala li ma rajthomx biex jaqblu ma' Trakt?"
+
+msgctxt "#32265"
+msgid "Clear %i ratings in Kodi to match Trakt?"
+msgstr "Tħassar %i ratings f'Kodi biex jaqblu ma' Trakt?"

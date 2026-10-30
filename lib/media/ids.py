@@ -24,6 +24,12 @@ def guess_ids(item_id: str, media_type: str) -> Tuple[Dict, str]:
     return data, id_type
 
 
+def has_id(item: Dict) -> bool:
+    """True when the item has an IMDb, TMDB or TVDB id to match by, not just a title."""
+    ids = item.get("ids") or {}
+    return bool(str(ids.get("imdb") or "").startswith("tt") or ids.get("tmdb") or ids.get("tvdb"))
+
+
 def pick_best_id(ids: Dict, media_type: str) -> Tuple[Any, Optional[str]]:
     """Pick the most reliable id and type: Trakt, IMDb for a movie, then TMDB, TVDB, the rest."""
     if "trakt" in ids:

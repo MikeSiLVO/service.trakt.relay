@@ -185,37 +185,9 @@ msgctxt "#32046"
 msgid "Movies"
 msgstr "Filmid"
 
-msgctxt "#32047"
-msgid "Add new movies to Trakt collection"
-msgstr "Lisa uusi filme Trakti kogusse"
-
-msgctxt "#32048"
-msgid "Add watched movies to Trakt history"
-msgstr "Lisa vaadatud filmid Trakti ajalukku"
-
-msgctxt "#32049"
-msgid "Mark movies from Trakt history as watched in Kodi"
-msgstr "Märgi filmid Trakti ajaloost Kodis vaadatuks"
-
 msgctxt "#32050"
 msgid "Episodes"
 msgstr "Episoodid"
-
-msgctxt "#32051"
-msgid "Add new TV episodes to Trakt collection"
-msgstr "Lisa Trakti kogusse uusi episoode"
-
-msgctxt "#32052"
-msgid "Add watched TV episodes to Trakt history"
-msgstr "Lisa vaadatud episoodid Trakti ajalukku"
-
-msgctxt "#32053"
-msgid "Mark TV episodes from Trakt history as watched in Kodi"
-msgstr "Märgi episoodid Trakti ajaloost Kodis vaadatuks"
-
-msgctxt "#32054"
-msgid "Service"
-msgstr "Teenus"
 
 msgctxt "#32055"
 msgid "Sync after a library scan or clean"
@@ -224,14 +196,6 @@ msgstr "Sünkrooni pärast teegi skannimist või puhastamist"
 msgctxt "#32056"
 msgid "Show sync notifications"
 msgstr "Kuva sünkroonimise märguanded"
-
-msgctxt "#32057"
-msgid "Remove deleted movies from Trakt collection"
-msgstr "Eemalda kustutatud filmid Trakti kogumikust"
-
-msgctxt "#32058"
-msgid "Remove deleted TV episodes from Trakt collection"
-msgstr "Eemalda kustutatud episoodid Trakti kogumikust"
 
 msgctxt "#32060"
 msgid "Hide notifications during playback"
@@ -300,14 +264,6 @@ msgstr "Eemaldatud %i"
 msgctxt "#32116"
 msgid "Enable debug mode"
 msgstr "Luba silumine"
-
-msgctxt "#32117"
-msgid "Sync movie playback progress to Kodi"
-msgstr "Sünkrooni filmide edenemine Kodiga"
-
-msgctxt "#32118"
-msgid "Sync episode playback progress to Kodi"
-msgstr "Sünkrooni episoodide edenemine Kodiga"
 
 msgctxt "#32122"
 msgid "Loading Trakt playback progress"
@@ -416,14 +372,6 @@ msgstr "Ära hoia taasesituse edenemist Traktis"
 msgctxt "#32193"
 msgid "Respect Trakt rewatch progress"
 msgstr "Arvesta Trakti uuesti vaatamise edenemist"
-
-msgctxt "#32196"
-msgid "Sync ratings from Trakt to Kodi"
-msgstr "Sünkrooni hinded Traktist Kodisse"
-
-msgctxt "#32197"
-msgid "Sync ratings from Kodi to Trakt"
-msgstr "Sünkrooni hinded Kodist Trakti"
 
 msgctxt "#32198"
 msgid "Trakt"
@@ -536,3 +484,151 @@ msgstr "Sinu Trakti konto on lukustatud. Võta ühendust Trakti toega."
 msgctxt "#32228"
 msgid "Watchlist limit of %i reached"
 msgstr "Jälgimisloendi piirang %i on saavutatud"
+
+msgctxt "#32229"
+msgid "Choose what to sync"
+msgstr "Vali, mida sünkroonida"
+
+msgctxt "#32230"
+msgid "Open the sync setup shown after connecting to Trakt."
+msgstr "Ava sünkroonimise seadistus, mida kuvatakse pärast Traktiga ühendamist."
+
+msgctxt "#32231"
+msgid "Sync when Kodi finishes a library scan or clean. Otherwise a sync runs only when you start it, such as from the context menu."
+msgstr "Sünkrooni, kui Kodi lõpetab teegi skannimise või puhastamise. Muidu toimub sünkroonimine ainult siis, kui sa selle ise käivitad, näiteks kontekstimenüüst."
+
+msgctxt "#32232"
+msgid "Notify when a sync after a library scan or clean starts and finishes."
+msgstr "Teavita, kui pärast teegi skannimist või puhastamist tehtav sünkroonimine algab ja lõpeb."
+
+msgctxt "#32233"
+msgid "Show no sync notifications while a video plays."
+msgstr "Ära kuva sünkroonimise märguandeid video esitamise ajal."
+
+msgctxt "#32234"
+msgid "Match items without an IMDb, TMDB or TVDB id by title and year, when scrobbling and syncing. Never used to unwatch items or clear ratings."
+msgstr "Sobita ilma IMDb, TMDB või TVDB ID-ta üksused pealkirja ja aasta järgi, nii talletamisel kui ka sünkroonimisel. Seda ei kasutata kunagi üksuste vaatamata märkimiseks ega hinnete kustutamiseks."
+
+msgctxt "#32235"
+msgid "Watched status"
+msgstr "Vaatamise olek"
+
+msgctxt "#32236"
+msgid "Trakt to Kodi: Kodi matches Trakt, play counts and dates included, and anything with no plays on Trakt is unwatched. Kodi to Trakt: items watched in Kodi with no play on Trakt are added to its history. Both ways: each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Traktist Kodisse: Kodi viiakse vastavusse Traktiga, kaasa arvatud esituste arv ja kuupäevad, ning kõik, millel Traktis esitusi pole, märgitakse vaatamata. Kodist Traktisse: Kodis vaadatud üksused, millel Traktis esitust pole, lisatakse selle ajalukku. Mõlemas suunas: kumbki pool saab puuduolevad esitused ja väljaspool Trakti uuesti vaatamist ei märgita midagi vaatamata."
+
+msgctxt "#32237"
+msgid "Off"
+msgstr "Väljas"
+
+msgctxt "#32238"
+msgid "Trakt to Kodi"
+msgstr "Traktist Kodisse"
+
+msgctxt "#32239"
+msgid "Kodi to Trakt"
+msgstr "Kodist Traktisse"
+
+msgctxt "#32240"
+msgid "Both ways"
+msgstr "Mõlemas suunas"
+
+msgctxt "#32241"
+msgid "Ratings"
+msgstr "Hinded"
+
+msgctxt "#32242"
+msgid "Movies, shows and episodes"
+msgstr "Filmid, sarjad ja episoodid"
+
+msgctxt "#32243"
+msgid "Trakt to Kodi: Kodi matches Trakt, and ratings Trakt doesn't have are cleared in Kodi. Kodi to Trakt: Kodi's ratings are added to Trakt, replacing different ones. Both ways: missing ratings are copied each way, and where they differ Trakt's is kept."
+msgstr "Traktist Kodisse: Kodi viiakse vastavusse Traktiga ja hinded, mida Traktis pole, kustutatakse Kodis. Kodist Traktisse: Kodi hinded lisatakse Traktisse, asendades erinevad. Mõlemas suunas: puuduvad hinded kopeeritakse kummassegi suunda ja kui need erinevad, jäetakse alles Trakti hinne."
+
+msgctxt "#32244"
+msgid "Resume points from Trakt"
+msgstr "Jätkamiskohad Traktist"
+
+msgctxt "#32245"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device. Playback in Kodi still sends its progress to Trakt when this is off."
+msgstr "Kodi jätkab kohast, kus üksus on Traktis peatatud, näiteks teises seadmes. Kui see on väljas, saadab Kodis esitamine oma edenemise ikkagi Traktisse."
+
+msgctxt "#32246"
+msgid "Add"
+msgstr "Lisamine"
+
+msgctxt "#32247"
+msgid "Add and remove"
+msgstr "Lisamine ja eemaldamine"
+
+msgctxt "#32248"
+msgid "Add: Kodi's items are added to the Trakt collection. Add and remove: collected items Kodi doesn't have are removed from it too, including ones from other devices or apps."
+msgstr "Lisamine: Kodi üksused lisatakse Trakti kogusse. Lisamine ja eemaldamine: kogus olevad üksused, mida Kodis pole, eemaldatakse sealt samuti, kaasa arvatud teistest seadmetest või rakendustest pärit üksused."
+
+msgctxt "#32249"
+msgid "Relay always scrobbles when connected. Sync handles what it didn't scrobble: other devices, older history."
+msgstr "Relay talletab alati, kui on ühendatud. Sünkroonimine katab selle, mida see ei talletanud: teised seadmed, vanem ajalugu."
+
+msgctxt "#32250"
+msgid "On"
+msgstr "Sees"
+
+msgctxt "#32251"
+msgid "Watched status isn't synced."
+msgstr "Vaatamise olekut ei sünkroonita."
+
+msgctxt "#32252"
+msgid "Kodi matches Trakt, play counts and dates included. Anything with no plays on Trakt is unwatched in Kodi."
+msgstr "Kodi viiakse vastavusse Traktiga, kaasa arvatud esituste arv ja kuupäevad. Kõik, millel Traktis esitusi pole, märgitakse Kodis vaatamata."
+
+msgctxt "#32253"
+msgid "Items watched in Kodi with no play on Trakt are added to its history. Kodi isn't changed."
+msgstr "Kodis vaadatud üksused, millel Traktis esitust pole, lisatakse selle ajalukku. Kodis midagi ei muudeta."
+
+msgctxt "#32254"
+msgid "Each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Kumbki pool saab puuduolevad esitused ja väljaspool Trakti uuesti vaatamist ei märgita midagi vaatamata."
+
+msgctxt "#32255"
+msgid "Ratings aren't synced."
+msgstr "Hindeid ei sünkroonita."
+
+msgctxt "#32256"
+msgid "Kodi's ratings match Trakt, and ratings Trakt doesn't have are cleared in Kodi."
+msgstr "Kodi hinded viiakse vastavusse Traktiga ja hinded, mida Traktis pole, kustutatakse Kodis."
+
+msgctxt "#32257"
+msgid "Kodi's ratings are added to Trakt, replacing different ones. Kodi isn't changed."
+msgstr "Kodi hinded lisatakse Traktisse, asendades erinevad. Kodis midagi ei muudeta."
+
+msgctxt "#32258"
+msgid "Missing ratings are copied each way. Where they differ, Trakt's rating is kept."
+msgstr "Puuduvad hinded kopeeritakse kummassegi suunda. Kui need erinevad, jäetakse alles Trakti hinne."
+
+msgctxt "#32259"
+msgid "Kodi keeps its own resume points."
+msgstr "Kodi säilitab oma jätkamiskohad."
+
+msgctxt "#32260"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device."
+msgstr "Kodi jätkab kohast, kus üksus on Traktis peatatud, näiteks teises seadmes."
+
+msgctxt "#32261"
+msgid "A sync runs only when you start it, such as from the context menu."
+msgstr "Sünkroonimine toimub ainult siis, kui sa selle ise käivitad, näiteks kontekstimenüüst."
+
+msgctxt "#32262"
+msgid "Sync when Kodi finishes a library scan or clean."
+msgstr "Sünkroonimine toimub, kui Kodi lõpetab teegi skannimise või puhastamise."
+
+msgctxt "#32263"
+msgid "Save and sync"
+msgstr "Salvesta ja sünkrooni"
+
+msgctxt "#32264"
+msgid "Unwatch %i items in Kodi to match Trakt?"
+msgstr "Kas märkida Kodis %i üksust vaatamata, et see vastaks Traktile?"
+
+msgctxt "#32265"
+msgid "Clear %i ratings in Kodi to match Trakt?"
+msgstr "Kas kustutada Kodis %i hinnet, et see vastaks Traktile?"

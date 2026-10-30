@@ -185,37 +185,9 @@ msgctxt "#32046"
 msgid "Movies"
 msgstr "Scannáin"
 
-msgctxt "#32047"
-msgid "Add new movies to Trakt collection"
-msgstr "Cuir scannáin nua le bailiúchán Trakt"
-
-msgctxt "#32048"
-msgid "Add watched movies to Trakt history"
-msgstr "Cuir scannáin féachta le stair Trakt"
-
-msgctxt "#32049"
-msgid "Mark movies from Trakt history as watched in Kodi"
-msgstr "Marcáil scannáin ó stair Trakt mar féachta in Kodi"
-
 msgctxt "#32050"
 msgid "Episodes"
 msgstr "Eipeasóidí"
-
-msgctxt "#32051"
-msgid "Add new TV episodes to Trakt collection"
-msgstr "Cuir eipeasóidí teilifíse nua le bailiúchán Trakt"
-
-msgctxt "#32052"
-msgid "Add watched TV episodes to Trakt history"
-msgstr "Cuir eipeasóidí teilifíse féachta le stair Trakt"
-
-msgctxt "#32053"
-msgid "Mark TV episodes from Trakt history as watched in Kodi"
-msgstr "Marcáil eipeasóidí teilifíse ó stair Trakt mar féachta in Kodi"
-
-msgctxt "#32054"
-msgid "Service"
-msgstr "Seirbhís"
 
 msgctxt "#32055"
 msgid "Sync after a library scan or clean"
@@ -224,14 +196,6 @@ msgstr "Sioncrónaigh tar éis scanadh nó glanadh leabharlainne"
 msgctxt "#32056"
 msgid "Show sync notifications"
 msgstr "Taispeáin fógraí sioncrónaithe"
-
-msgctxt "#32057"
-msgid "Remove deleted movies from Trakt collection"
-msgstr "Bain scannáin scriosta ó bhailiúchán Trakt"
-
-msgctxt "#32058"
-msgid "Remove deleted TV episodes from Trakt collection"
-msgstr "Bain eipeasóidí teilifíse scriosta ó bhailiúchán Trakt"
 
 msgctxt "#32060"
 msgid "Hide notifications during playback"
@@ -300,14 +264,6 @@ msgstr "%i bainte"
 msgctxt "#32116"
 msgid "Enable debug mode"
 msgstr "Cumasaigh mód dífhabhtaithe"
-
-msgctxt "#32117"
-msgid "Sync movie playback progress to Kodi"
-msgstr "Sioncrónaigh dul chun cinn athsheinm scannán le Kodi"
-
-msgctxt "#32118"
-msgid "Sync episode playback progress to Kodi"
-msgstr "Sioncrónaigh dul chun cinn athsheinm eipeasóidí le Kodi"
 
 msgctxt "#32122"
 msgid "Loading Trakt playback progress"
@@ -416,14 +372,6 @@ msgstr "Ná coinnigh dul chun cinn athsheinm ar Trakt"
 msgctxt "#32193"
 msgid "Respect Trakt rewatch progress"
 msgstr "Cloígh le dul chun cinn athbhreathnaithe Trakt"
-
-msgctxt "#32196"
-msgid "Sync ratings from Trakt to Kodi"
-msgstr "Sioncrónaigh rátálacha ó Trakt go Kodi"
-
-msgctxt "#32197"
-msgid "Sync ratings from Kodi to Trakt"
-msgstr "Sioncrónaigh rátálacha ó Kodi go Trakt"
 
 msgctxt "#32198"
 msgid "Trakt"
@@ -536,3 +484,151 @@ msgstr "Tá do chuntas Trakt faoi ghlas. Déan teagmháil le tacaíocht Trakt."
 msgctxt "#32228"
 msgid "Watchlist limit of %i reached"
 msgstr "Tá teorainn an liosta faire sroichte: %i"
+
+msgctxt "#32229"
+msgid "Choose what to sync"
+msgstr "Roghnaigh cad atá le sioncrónú"
+
+msgctxt "#32230"
+msgid "Open the sync setup shown after connecting to Trakt."
+msgstr "Oscail an socrú sioncrónaithe a thaispeántar tar éis ceangal le Trakt."
+
+msgctxt "#32231"
+msgid "Sync when Kodi finishes a library scan or clean. Otherwise a sync runs only when you start it, such as from the context menu."
+msgstr "Sioncrónaigh nuair a chríochnaíonn Kodi scanadh nó glanadh leabharlainne. Seachas sin, ní ritheann sioncrónú ach nuair a thosaíonn tú féin é, mar shampla ón roghchlár comhthéacs."
+
+msgctxt "#32232"
+msgid "Notify when a sync after a library scan or clean starts and finishes."
+msgstr "Tabhair fógra nuair a thosaíonn agus a chríochnaíonn sioncrónú tar éis scanadh nó glanadh leabharlainne."
+
+msgctxt "#32233"
+msgid "Show no sync notifications while a video plays."
+msgstr "Ná taispeáin aon fhógraí sioncrónaithe fad is atá físeán á sheinm."
+
+msgctxt "#32234"
+msgid "Match items without an IMDb, TMDB or TVDB id by title and year, when scrobbling and syncing. Never used to unwatch items or clear ratings."
+msgstr "Meaitseáil míreanna gan aitheantas IMDb, TMDB ná TVDB de réir teidil agus bliana, le linn scrobála agus sioncrónaithe. Ní úsáidtear riamh é chun míreanna a mharcáil mar neamhfhéachta ná chun rátálacha a ghlanadh."
+
+msgctxt "#32235"
+msgid "Watched status"
+msgstr "Stádas féachta"
+
+msgctxt "#32236"
+msgid "Trakt to Kodi: Kodi matches Trakt, play counts and dates included, and anything with no plays on Trakt is unwatched. Kodi to Trakt: items watched in Kodi with no play on Trakt are added to its history. Both ways: each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Trakt go Kodi: meaitseálann Kodi Trakt, líon na seinmeanna agus na dátaí san áireamh, agus marcáiltear aon rud gan seinm ar Trakt mar neamhfhéachta. Kodi go Trakt: cuirtear míreanna a féachadh orthu in Kodi gan seinm ar Trakt le stair Trakt. An dá bhealach: faigheann gach taobh na seinmeanna atá in easnamh air, agus ní mharcáiltear aon rud mar neamhfhéachta lasmuigh d'athbhreathnú Trakt."
+
+msgctxt "#32237"
+msgid "Off"
+msgstr "As"
+
+msgctxt "#32238"
+msgid "Trakt to Kodi"
+msgstr "Trakt go Kodi"
+
+msgctxt "#32239"
+msgid "Kodi to Trakt"
+msgstr "Kodi go Trakt"
+
+msgctxt "#32240"
+msgid "Both ways"
+msgstr "An dá bhealach"
+
+msgctxt "#32241"
+msgid "Ratings"
+msgstr "Rátálacha"
+
+msgctxt "#32242"
+msgid "Movies, shows and episodes"
+msgstr "Scannáin, seónna agus eipeasóidí"
+
+msgctxt "#32243"
+msgid "Trakt to Kodi: Kodi matches Trakt, and ratings Trakt doesn't have are cleared in Kodi. Kodi to Trakt: Kodi's ratings are added to Trakt, replacing different ones. Both ways: missing ratings are copied each way, and where they differ Trakt's is kept."
+msgstr "Trakt go Kodi: meaitseálann Kodi Trakt, agus glantar in Kodi na rátálacha nach bhfuil ag Trakt. Kodi go Trakt: cuirtear rátálacha Kodi le Trakt, in ionad cinn atá difriúil. An dá bhealach: cóipeáiltear rátálacha atá in easnamh i ngach treo, agus nuair atá siad difriúil coinnítear rátáil Trakt."
+
+msgctxt "#32244"
+msgid "Resume points from Trakt"
+msgstr "Pointí atosaithe ó Trakt"
+
+msgctxt "#32245"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device. Playback in Kodi still sends its progress to Trakt when this is off."
+msgstr "Atosaíonn Kodi san áit a bhfuil an mhír curtha ar sos ag Trakt, mar shampla ó ghléas eile. Seolann athsheinm in Kodi a dhul chun cinn chuig Trakt fós nuair atá sé seo as."
+
+msgctxt "#32246"
+msgid "Add"
+msgstr "Cur leis"
+
+msgctxt "#32247"
+msgid "Add and remove"
+msgstr "Cur leis agus baint"
+
+msgctxt "#32248"
+msgid "Add: Kodi's items are added to the Trakt collection. Add and remove: collected items Kodi doesn't have are removed from it too, including ones from other devices or apps."
+msgstr "Cur leis: cuirtear míreanna Kodi le bailiúchán Trakt. Cur leis agus baint: baintear as freisin míreanna bailithe nach bhfuil ag Kodi, iad siúd ó ghléasanna nó aipeanna eile san áireamh."
+
+msgctxt "#32249"
+msgid "Relay always scrobbles when connected. Sync handles what it didn't scrobble: other devices, older history."
+msgstr "Déanann Relay scrobáil i gcónaí nuair atá sé ceangailte. Láimhseálann an sioncrónú an méid nár scrobáil sé: gléasanna eile, stair níos sine."
+
+msgctxt "#32250"
+msgid "On"
+msgstr "Ar siúl"
+
+msgctxt "#32251"
+msgid "Watched status isn't synced."
+msgstr "Ní shioncrónaítear stádas féachta."
+
+msgctxt "#32252"
+msgid "Kodi matches Trakt, play counts and dates included. Anything with no plays on Trakt is unwatched in Kodi."
+msgstr "Meaitseálann Kodi Trakt, líon na seinmeanna agus na dátaí san áireamh. Marcáiltear aon rud gan seinm ar Trakt mar neamhfhéachta in Kodi."
+
+msgctxt "#32253"
+msgid "Items watched in Kodi with no play on Trakt are added to its history. Kodi isn't changed."
+msgstr "Cuirtear míreanna a féachadh orthu in Kodi gan seinm ar Trakt le stair Trakt. Ní athraítear Kodi."
+
+msgctxt "#32254"
+msgid "Each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Faigheann gach taobh na seinmeanna atá in easnamh air, agus ní mharcáiltear aon rud mar neamhfhéachta lasmuigh d'athbhreathnú Trakt."
+
+msgctxt "#32255"
+msgid "Ratings aren't synced."
+msgstr "Ní shioncrónaítear rátálacha."
+
+msgctxt "#32256"
+msgid "Kodi's ratings match Trakt, and ratings Trakt doesn't have are cleared in Kodi."
+msgstr "Meaitseálann rátálacha Kodi Trakt, agus glantar in Kodi na rátálacha nach bhfuil ag Trakt."
+
+msgctxt "#32257"
+msgid "Kodi's ratings are added to Trakt, replacing different ones. Kodi isn't changed."
+msgstr "Cuirtear rátálacha Kodi le Trakt, in ionad cinn atá difriúil. Ní athraítear Kodi."
+
+msgctxt "#32258"
+msgid "Missing ratings are copied each way. Where they differ, Trakt's rating is kept."
+msgstr "Cóipeáiltear rátálacha atá in easnamh i ngach treo. Nuair atá siad difriúil, coinnítear rátáil Trakt."
+
+msgctxt "#32259"
+msgid "Kodi keeps its own resume points."
+msgstr "Coinníonn Kodi a phointí atosaithe féin."
+
+msgctxt "#32260"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device."
+msgstr "Atosaíonn Kodi san áit a bhfuil an mhír curtha ar sos ag Trakt, mar shampla ó ghléas eile."
+
+msgctxt "#32261"
+msgid "A sync runs only when you start it, such as from the context menu."
+msgstr "Ní ritheann sioncrónú ach nuair a thosaíonn tú féin é, mar shampla ón roghchlár comhthéacs."
+
+msgctxt "#32262"
+msgid "Sync when Kodi finishes a library scan or clean."
+msgstr "Sioncrónaigh nuair a chríochnaíonn Kodi scanadh nó glanadh leabharlainne."
+
+msgctxt "#32263"
+msgid "Save and sync"
+msgstr "Sábháil agus sioncrónaigh"
+
+msgctxt "#32264"
+msgid "Unwatch %i items in Kodi to match Trakt?"
+msgstr "An marcálfar %i mír mar neamhfhéachta in Kodi chun Trakt a mheaitseáil?"
+
+msgctxt "#32265"
+msgid "Clear %i ratings in Kodi to match Trakt?"
+msgstr "An nglanfar %i rátáil in Kodi chun Trakt a mheaitseáil?"

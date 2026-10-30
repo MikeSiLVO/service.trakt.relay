@@ -3,6 +3,8 @@ import subprocess
 import sys
 from unittest import mock
 
+import pytest
+
 from lib.script import script
 from tests.helpers import ROOT
 
@@ -71,11 +73,14 @@ def test_movie_context_menu_leaves_out_the_rewatch():
     assert _main({"action": "contextmenu"}, dbtype="movie", choice=2) == [{"action": "sync"}]
 
 
-def test_show_context_menu_leaves_out_the_rewatch_while_rewatch_sync_is_off():
-    """A show's context menu offers no rewatch while rewatch sync is off."""
-    with mock.patch.object(script.ADDON, "getSettingBool", return_value=False):
+@pytest.mark.parametrize("direction, offered", [(0, True), (1, False), (2, True), (3, False)])
+def test_show_context_menu_offers_the_rewatch_unless_a_sync_from_trakt_ignores_it(
+        direction, offered):
+    """With rewatches ignored, a show's menu offers no rewatch while watched comes from Trakt."""
+    with mock.patch.object(script.ADDON, "getSettingBool", return_value=False), \
+            mock.patch.object(script.ADDON, "getSettingInt", return_value=direction):
         events = _main({"action": "contextmenu"}, dbtype="tvshow", choice=2)
-    assert events == [{"action": "sync"}]
+    assert events[0]["action"] == ("startrewatch" if offered else "sync")
 
 
 def test_closed_context_menu_sends_nothing():

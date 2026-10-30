@@ -4,10 +4,14 @@ import logging
 from typing import Dict, List, Optional, Any
 
 from lib.media import utilities
-from lib.sync.compare import compare_movies, movies_to_mark_watched, needs_resume, sanitize_movies
+from lib.media.ids import has_id
+from lib.sync.compare import (compare_movies, movies_to_mark_watched, movies_to_mirror,
+                              needs_resume, sanitize_movies)
+from lib.service.queue import ScrobbleQueue
 from lib.kodi.client import batch_request, request
 from lib.kodi.library import get_play_states, to_trakt_items
-from lib.kodi.settings import get_setting_bool, get_string
+from lib.kodi.settings import (ADD_AND_REMOVE, BOTH_WAYS, TRAKT_TO_KODI, get_setting_bool,
+                               get_setting_int, get_string, syncs_to_kodi, syncs_to_trakt)
 
 logger = logging.getLogger(__name__)
 
@@ -41,7 +45,7 @@ class MovieSync:
 
         self._add_to_trakt_history(kodi_movies, trakt_movies, 59, 69)
 
-        self._mark_watched_in_kodi(trakt_movies, kodi_movies, 70, 80)
+        self._mark_watched_in_kodi(trakt_movies, kodi_movies, trakt_movies_progress, 70, 80)
 
         self._set_kodi_progress(trakt_movies_progress, kodi_movies, 81, 91)
 
@@ -91,8 +95,8 @@ class MovieSync:
         if trakt_movies is not None and not self.sync.is_canceled():
             self.sync.update_progress(17, line1=get_string(32082))
             trakt_movies = self.sync.api.get_watched_movies(trakt_movies)
-        if trakt_movies is not None and not self.sync.is_canceled() and (
-            get_setting_bool("sync_ratings_to_trakt") or get_setting_bool("sync_ratings_to_kodi")
+        if trakt_movies is not None and not self.sync.is_canceled() and get_setting_int(
+            "sync_ratings"
         ):
             self.sync.update_progress(21, line1=get_string(32216))
             trakt_movies = self.sync.api.get_rated_movies(trakt_movies)
@@ -104,11 +108,11 @@ class MovieSync:
     def _load_trakt_progress(
         self, from_percent: int, to_percent: int
     ) -> Optional[Dict]:
-        """Load paused movies from Trakt; None when playback sync is off, canceled or failing."""
+        """Load paused movies for resume points and mirror dates; None if skipped or failing."""
         if (
             get_setting_bool("trakt_movie_playback")
-            and not self.sync.is_canceled()
-        ):
+            or get_setting_int("sync_watched_movies") == TRAKT_TO_KODI
+        ) and not self.sync.is_canceled():
             self.sync.update_progress(from_percent, line1=get_string(32122))
 
             logger.debug("[Movies Sync] Getting playback progress from Trakt.tv")
@@ -127,10 +131,7 @@ class MovieSync:
         self, kodi_movies: List[Dict], trakt_movies: List[Dict], from_percent: int, to_percent: int
     ) -> None:
         """Add Kodi movies missing from the Trakt collection, when that sync is on."""
-        if (
-            get_setting_bool("sync_collection_movies_to_trakt")
-            and not self.sync.is_canceled()
-        ):
+        if get_setting_int("sync_collection_movies") and not self.sync.is_canceled():
             trakt_movies_to_add = compare_movies(
                 kodi_movies,
                 trakt_movies,
@@ -161,9 +162,9 @@ class MovieSync:
     def _remove_from_trakt_collection(
         self, trakt_movies: List[Dict], kodi_movies: List[Dict], from_percent: int, to_percent: int
     ) -> None:
-        """Remove collected Trakt movies missing from Kodi, when collection cleaning is on."""
+        """Remove collected Trakt movies missing from Kodi, when collection sync removes too."""
         if (
-            get_setting_bool("sync_clean_collection_movies_to_trakt")
+            get_setting_int("sync_collection_movies") == ADD_AND_REMOVE
             and not self.sync.is_canceled()
         ):
             logger.debug("[Movies Sync] Starting to remove.")
@@ -199,11 +200,8 @@ class MovieSync:
     def _add_to_trakt_history(
         self, kodi_movies: List[Dict], trakt_movies: List[Dict], from_percent: int, to_percent: int
     ) -> None:
-        """Add movies watched in Kodi but not on Trakt to its history, when that sync is on."""
-        if (
-            get_setting_bool("sync_playcount_movies_to_trakt")
-            and not self.sync.is_canceled()
-        ):
+        """Add movies watched in Kodi but not on Trakt to its history, per the watched setting."""
+        if syncs_to_trakt("sync_watched_movies") and not self.sync.is_canceled():
             trakt_movies_to_update = compare_movies(
                 kodi_movies,
                 trakt_movies,
@@ -229,20 +227,23 @@ class MovieSync:
                            32071, 32085, from_percent, to_percent)
 
     def _mark_watched_in_kodi(
-        self, trakt_movies: List[Dict], kodi_movies: List[Dict], from_percent: int, to_percent: int
+        self, trakt_movies: List[Dict], kodi_movies: List[Dict], trakt_progress: Optional[Dict],
+        from_percent: int, to_percent: int
     ) -> None:
-        """Mark Kodi movies watched, every copy, when Trakt has more plays and that sync is on."""
-        if not (
-            get_setting_bool("kodi_movie_playcount")
-            and not self.sync.is_canceled()
-        ):
+        """Mark Kodi movies watched as on Trakt, every copy; mirroring also unwatches the rest."""
+        if not syncs_to_kodi("sync_watched_movies") or self.sync.is_canceled():
             return
 
-        movie_updates = movies_to_mark_watched(
-            trakt_movies,
-            kodi_movies,
-            get_setting_bool("scrobble_fallback"),
-        )
+        fallback = get_setting_bool("scrobble_fallback")
+        if get_setting_int("sync_watched_movies") == TRAKT_TO_KODI:
+            movie_updates, unwatches = movies_to_mirror(
+                trakt_movies, kodi_movies, fallback, (trakt_progress or {}).get("movies", []))
+            if unwatches and len(ScrobbleQueue()):
+                logger.info("[Movies Sync] Unwatching waits for failed scrobbles to be retried")
+            else:
+                movie_updates += self.sync.confirm_removals(unwatches, 32264)
+        else:
+            movie_updates = movies_to_mark_watched(trakt_movies, kodi_movies, fallback)
 
         if len(movie_updates) == 0:
             self.sync.update_progress(
@@ -357,14 +358,14 @@ class MovieSync:
     def _sync_ratings(
         self, trakt_movies: List[Dict], kodi_movies: List[Dict], from_percent: int, to_percent: int
     ) -> None:
-        """Sync movie ratings to Trakt and to Kodi, each direction when its setting is on."""
-        if get_setting_bool("sync_ratings_to_trakt") and not self.sync.is_canceled():
+        """Sync movie ratings the chosen way; mirroring also clears Kodi ratings Trakt lacks."""
+        direction = get_setting_int("sync_ratings")
+        fallback = get_setting_bool("scrobble_fallback")
+        if syncs_to_trakt("sync_ratings") and not self.sync.is_canceled():
+            # with both ways Trakt's rating wins where both sides have one
             trakt_movies_to_update = compare_movies(
-                kodi_movies,
-                trakt_movies,
-                get_setting_bool("scrobble_fallback"),
-                rating=True,
-            )
+                kodi_movies, trakt_movies, fallback, rating=True,
+                unrated_only=direction == BOTH_WAYS)
             if len(trakt_movies_to_update) == 0:
                 self.sync.update_progress(
                     to_percent, line1=get_string(32179), line2=get_string(32086)
@@ -378,18 +379,14 @@ class MovieSync:
                 self.sync.send(self.sync.api.add_ratings, trakt_movies_to_update, "movies",
                                32179, 32085, from_percent, to_percent)
 
-        if (
-            get_setting_bool("sync_ratings_to_kodi")
-            and trakt_movies
-            and not self.sync.is_canceled()
-        ):
+        if syncs_to_kodi("sync_ratings") and not self.sync.is_canceled():
             kodi_movies_to_update = compare_movies(
-                trakt_movies,
-                kodi_movies,
-                get_setting_bool("scrobble_fallback"),
-                restrict=True,
-                rating=True,
-            )
+                trakt_movies, kodi_movies, fallback, restrict=True, rating=True)
+            if direction == TRAKT_TO_KODI:
+                cleared = [dict(movie, rating=0) for movie in compare_movies(
+                    kodi_movies, trakt_movies, fallback, rating=True, unrated_only=True)
+                    if has_id(movie)]
+                kodi_movies_to_update += self.sync.confirm_removals(cleared, 32265)
             if len(kodi_movies_to_update) == 0:
                 self.sync.update_progress(
                     to_percent, line1=get_string(32169), line2=get_string(32086)

@@ -185,37 +185,9 @@ msgctxt "#32046"
 msgid "Movies"
 msgstr "సినిమాలు"
 
-msgctxt "#32047"
-msgid "Add new movies to Trakt collection"
-msgstr "కొత్త సినిమాలను Trakt సేకరణకు జోడించు"
-
-msgctxt "#32048"
-msgid "Add watched movies to Trakt history"
-msgstr "చూసిన సినిమాలను Trakt చరిత్రకు జోడించు"
-
-msgctxt "#32049"
-msgid "Mark movies from Trakt history as watched in Kodi"
-msgstr "Trakt చరిత్రలోని సినిమాలను Kodi లో చూసినవిగా గుర్తించు"
-
 msgctxt "#32050"
 msgid "Episodes"
 msgstr "ఎపిసోడ్‌లు"
-
-msgctxt "#32051"
-msgid "Add new TV episodes to Trakt collection"
-msgstr "కొత్త టీవీ ఎపిసోడ్‌లను Trakt సేకరణకు జోడించు"
-
-msgctxt "#32052"
-msgid "Add watched TV episodes to Trakt history"
-msgstr "చూసిన టీవీ ఎపిసోడ్‌లను Trakt చరిత్రకు జోడించు"
-
-msgctxt "#32053"
-msgid "Mark TV episodes from Trakt history as watched in Kodi"
-msgstr "Trakt చరిత్రలోని టీవీ ఎపిసోడ్‌లను Kodi లో చూసినవిగా గుర్తించు"
-
-msgctxt "#32054"
-msgid "Service"
-msgstr "సేవ"
 
 msgctxt "#32055"
 msgid "Sync after a library scan or clean"
@@ -224,14 +196,6 @@ msgstr "లైబ్రరీ స్కాన్ లేదా క్లీన్
 msgctxt "#32056"
 msgid "Show sync notifications"
 msgstr "సమకాలీకరణ నోటిఫికేషన్‌లను చూపు"
-
-msgctxt "#32057"
-msgid "Remove deleted movies from Trakt collection"
-msgstr "తొలగించిన సినిమాలను Trakt సేకరణ నుండి తీసివేయి"
-
-msgctxt "#32058"
-msgid "Remove deleted TV episodes from Trakt collection"
-msgstr "తొలగించిన టీవీ ఎపిసోడ్‌లను Trakt సేకరణ నుండి తీసివేయి"
 
 msgctxt "#32060"
 msgid "Hide notifications during playback"
@@ -300,14 +264,6 @@ msgstr "%i తీసివేయబడ్డాయి"
 msgctxt "#32116"
 msgid "Enable debug mode"
 msgstr "డీబగ్ మోడ్‌ను ప్రారంభించు"
-
-msgctxt "#32117"
-msgid "Sync movie playback progress to Kodi"
-msgstr "సినిమా ప్లేబ్యాక్ పురోగతిని Kodi కి సమకాలీకరించు"
-
-msgctxt "#32118"
-msgid "Sync episode playback progress to Kodi"
-msgstr "ఎపిసోడ్ ప్లేబ్యాక్ పురోగతిని Kodi కి సమకాలీకరించు"
 
 msgctxt "#32122"
 msgid "Loading Trakt playback progress"
@@ -416,14 +372,6 @@ msgstr "ప్లేబ్యాక్ పురోగతిని Trakt లో 
 msgctxt "#32193"
 msgid "Respect Trakt rewatch progress"
 msgstr "Trakt రీవాచ్ పురోగతిని అనుసరించు"
-
-msgctxt "#32196"
-msgid "Sync ratings from Trakt to Kodi"
-msgstr "Trakt నుండి Kodi కి రేటింగ్‌లను సమకాలీకరించు"
-
-msgctxt "#32197"
-msgid "Sync ratings from Kodi to Trakt"
-msgstr "Kodi నుండి Trakt కి రేటింగ్‌లను సమకాలీకరించు"
 
 msgctxt "#32198"
 msgid "Trakt"
@@ -536,3 +484,151 @@ msgstr "మీ Trakt ఖాతా లాక్ చేయబడింది. Trak
 msgctxt "#32228"
 msgid "Watchlist limit of %i reached"
 msgstr "వాచ్‌లిస్ట్ పరిమితి %i కి చేరుకుంది"
+
+msgctxt "#32229"
+msgid "Choose what to sync"
+msgstr "ఏమి సమకాలీకరించాలో ఎంచుకో"
+
+msgctxt "#32230"
+msgid "Open the sync setup shown after connecting to Trakt."
+msgstr "Trakt కి కనెక్ట్ అయిన తర్వాత చూపే సమకాలీకరణ సెటప్‌ను తెరుస్తుంది."
+
+msgctxt "#32231"
+msgid "Sync when Kodi finishes a library scan or clean. Otherwise a sync runs only when you start it, such as from the context menu."
+msgstr "Kodi లైబ్రరీ స్కాన్ లేదా క్లీన్ పూర్తి చేసినప్పుడు సమకాలీకరిస్తుంది. లేకపోతే, మీరు ప్రారంభించినప్పుడు మాత్రమే సమకాలీకరణ జరుగుతుంది, ఉదాహరణకు సందర్భ మెనూ నుండి."
+
+msgctxt "#32232"
+msgid "Notify when a sync after a library scan or clean starts and finishes."
+msgstr "లైబ్రరీ స్కాన్ లేదా క్లీన్ తర్వాత జరిగే సమకాలీకరణ ప్రారంభమైనప్పుడు మరియు పూర్తయినప్పుడు తెలియజేస్తుంది."
+
+msgctxt "#32233"
+msgid "Show no sync notifications while a video plays."
+msgstr "వీడియో ప్లే అవుతున్నప్పుడు సమకాలీకరణ నోటిఫికేషన్‌లను చూపదు."
+
+msgctxt "#32234"
+msgid "Match items without an IMDb, TMDB or TVDB id by title and year, when scrobbling and syncing. Never used to unwatch items or clear ratings."
+msgstr "IMDb, TMDB లేదా TVDB ID లేని అంశాలను స్క్రోబుల్ మరియు సమకాలీకరణ సమయంలో శీర్షిక మరియు సంవత్సరం ద్వారా సరిపోలుస్తుంది. అంశాలను చూడనివిగా గుర్తించడానికి లేదా రేటింగ్‌లను క్లియర్ చేయడానికి ఎప్పుడూ ఉపయోగించబడదు."
+
+msgctxt "#32235"
+msgid "Watched status"
+msgstr "చూసిన స్థితి"
+
+msgctxt "#32236"
+msgid "Trakt to Kodi: Kodi matches Trakt, play counts and dates included, and anything with no plays on Trakt is unwatched. Kodi to Trakt: items watched in Kodi with no play on Trakt are added to its history. Both ways: each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Trakt నుండి Kodi కి: Kodi, Trakt కి సరిపోతుంది, ప్లే గణనలు మరియు తేదీలతో సహా, మరియు Trakt లో ప్లేలు లేని ఏదైనా చూడనిదిగా గుర్తించబడుతుంది. Kodi నుండి Trakt కి: Kodi లో చూసి, Trakt లో ప్లే లేని అంశాలు దాని చరిత్రకు జోడించబడతాయి. రెండు వైపులా: ప్రతి వైపు తనకు లేని ప్లేలను పొందుతుంది, మరియు Trakt రీవాచ్ వెలుపల ఏదీ చూడనిదిగా గుర్తించబడదు."
+
+msgctxt "#32237"
+msgid "Off"
+msgstr "ఆఫ్"
+
+msgctxt "#32238"
+msgid "Trakt to Kodi"
+msgstr "Trakt నుండి Kodi కి"
+
+msgctxt "#32239"
+msgid "Kodi to Trakt"
+msgstr "Kodi నుండి Trakt కి"
+
+msgctxt "#32240"
+msgid "Both ways"
+msgstr "రెండు వైపులా"
+
+msgctxt "#32241"
+msgid "Ratings"
+msgstr "రేటింగ్‌లు"
+
+msgctxt "#32242"
+msgid "Movies, shows and episodes"
+msgstr "సినిమాలు, షోలు మరియు ఎపిసోడ్‌లు"
+
+msgctxt "#32243"
+msgid "Trakt to Kodi: Kodi matches Trakt, and ratings Trakt doesn't have are cleared in Kodi. Kodi to Trakt: Kodi's ratings are added to Trakt, replacing different ones. Both ways: missing ratings are copied each way, and where they differ Trakt's is kept."
+msgstr "Trakt నుండి Kodi కి: Kodi, Trakt కి సరిపోతుంది, మరియు Trakt లో లేని రేటింగ్‌లు Kodi లో క్లియర్ చేయబడతాయి. Kodi నుండి Trakt కి: Kodi రేటింగ్‌లు Trakt కి జోడించబడతాయి, వేరుగా ఉన్నవాటిని భర్తీ చేస్తాయి. రెండు వైపులా: లేని రేటింగ్‌లు రెండు వైపులా కాపీ చేయబడతాయి, మరియు అవి వేరుగా ఉన్నచోట Trakt రేటింగ్ ఉంచబడుతుంది."
+
+msgctxt "#32244"
+msgid "Resume points from Trakt"
+msgstr "Trakt నుండి రెజ్యూమ్ పాయింట్‌లు"
+
+msgctxt "#32245"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device. Playback in Kodi still sends its progress to Trakt when this is off."
+msgstr "Trakt లో అంశం ఎక్కడ పాజ్ చేయబడిందో అక్కడి నుండి Kodi కొనసాగిస్తుంది, ఉదాహరణకు మరొక పరికరం నుండి. ఇది ఆఫ్‌లో ఉన్నప్పుడు కూడా Kodi లో ప్లేబ్యాక్ తన పురోగతిని Trakt కి పంపుతుంది."
+
+msgctxt "#32246"
+msgid "Add"
+msgstr "జోడించడం"
+
+msgctxt "#32247"
+msgid "Add and remove"
+msgstr "జోడించడం మరియు తీసివేయడం"
+
+msgctxt "#32248"
+msgid "Add: Kodi's items are added to the Trakt collection. Add and remove: collected items Kodi doesn't have are removed from it too, including ones from other devices or apps."
+msgstr "జోడించడం: Kodi అంశాలు Trakt సేకరణకు జోడించబడతాయి. జోడించడం మరియు తీసివేయడం: Kodi లో లేని సేకరణ అంశాలు కూడా దాని నుండి తీసివేయబడతాయి, ఇతర పరికరాలు లేదా యాప్‌ల నుండి వచ్చినవి సహా."
+
+msgctxt "#32249"
+msgid "Relay always scrobbles when connected. Sync handles what it didn't scrobble: other devices, older history."
+msgstr "కనెక్ట్ అయి ఉన్నప్పుడు Relay ఎల్లప్పుడూ స్క్రోబుల్ చేస్తుంది. అది స్క్రోబుల్ చేయని వాటిని సమకాలీకరణ చూసుకుంటుంది: ఇతర పరికరాలు, పాత చరిత్ర."
+
+msgctxt "#32250"
+msgid "On"
+msgstr "ఆన్"
+
+msgctxt "#32251"
+msgid "Watched status isn't synced."
+msgstr "చూసిన స్థితి సమకాలీకరించబడదు."
+
+msgctxt "#32252"
+msgid "Kodi matches Trakt, play counts and dates included. Anything with no plays on Trakt is unwatched in Kodi."
+msgstr "Kodi, Trakt కి సరిపోతుంది, ప్లే గణనలు మరియు తేదీలతో సహా. Trakt లో ప్లేలు లేని ఏదైనా Kodi లో చూడనిదిగా గుర్తించబడుతుంది."
+
+msgctxt "#32253"
+msgid "Items watched in Kodi with no play on Trakt are added to its history. Kodi isn't changed."
+msgstr "Kodi లో చూసి, Trakt లో ప్లే లేని అంశాలు దాని చరిత్రకు జోడించబడతాయి. Kodi మార్చబడదు."
+
+msgctxt "#32254"
+msgid "Each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "ప్రతి వైపు తనకు లేని ప్లేలను పొందుతుంది, మరియు Trakt రీవాచ్ వెలుపల ఏదీ చూడనిదిగా గుర్తించబడదు."
+
+msgctxt "#32255"
+msgid "Ratings aren't synced."
+msgstr "రేటింగ్‌లు సమకాలీకరించబడవు."
+
+msgctxt "#32256"
+msgid "Kodi's ratings match Trakt, and ratings Trakt doesn't have are cleared in Kodi."
+msgstr "Kodi రేటింగ్‌లు Trakt కి సరిపోతాయి, మరియు Trakt లో లేని రేటింగ్‌లు Kodi లో క్లియర్ చేయబడతాయి."
+
+msgctxt "#32257"
+msgid "Kodi's ratings are added to Trakt, replacing different ones. Kodi isn't changed."
+msgstr "Kodi రేటింగ్‌లు Trakt కి జోడించబడతాయి, వేరుగా ఉన్నవాటిని భర్తీ చేస్తాయి. Kodi మార్చబడదు."
+
+msgctxt "#32258"
+msgid "Missing ratings are copied each way. Where they differ, Trakt's rating is kept."
+msgstr "లేని రేటింగ్‌లు రెండు వైపులా కాపీ చేయబడతాయి. అవి వేరుగా ఉన్నచోట, Trakt రేటింగ్ ఉంచబడుతుంది."
+
+msgctxt "#32259"
+msgid "Kodi keeps its own resume points."
+msgstr "Kodi తన సొంత రెజ్యూమ్ పాయింట్‌లను ఉంచుకుంటుంది."
+
+msgctxt "#32260"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device."
+msgstr "Trakt లో అంశం ఎక్కడ పాజ్ చేయబడిందో అక్కడి నుండి Kodi కొనసాగిస్తుంది, ఉదాహరణకు మరొక పరికరం నుండి."
+
+msgctxt "#32261"
+msgid "A sync runs only when you start it, such as from the context menu."
+msgstr "మీరు ప్రారంభించినప్పుడు మాత్రమే సమకాలీకరణ జరుగుతుంది, ఉదాహరణకు సందర్భ మెనూ నుండి."
+
+msgctxt "#32262"
+msgid "Sync when Kodi finishes a library scan or clean."
+msgstr "Kodi లైబ్రరీ స్కాన్ లేదా క్లీన్ పూర్తి చేసినప్పుడు సమకాలీకరణ జరుగుతుంది."
+
+msgctxt "#32263"
+msgid "Save and sync"
+msgstr "సేవ్ చేసి సమకాలీకరించు"
+
+msgctxt "#32264"
+msgid "Unwatch %i items in Kodi to match Trakt?"
+msgstr "Trakt కి సరిపోయేలా Kodi లో %i అంశాలను చూడనివిగా గుర్తించాలా?"
+
+msgctxt "#32265"
+msgid "Clear %i ratings in Kodi to match Trakt?"
+msgstr "Trakt కి సరిపోయేలా Kodi లో %i రేటింగ్‌లను క్లియర్ చేయాలా?"

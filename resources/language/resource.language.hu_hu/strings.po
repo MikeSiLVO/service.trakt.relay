@@ -185,37 +185,9 @@ msgctxt "#32046"
 msgid "Movies"
 msgstr "Filmek"
 
-msgctxt "#32047"
-msgid "Add new movies to Trakt collection"
-msgstr "Új filmek hozzáadása a Trakt gyűjteményhez"
-
-msgctxt "#32048"
-msgid "Add watched movies to Trakt history"
-msgstr "Megnézett filmek hozzáadása a Trakt előzményekhez"
-
-msgctxt "#32049"
-msgid "Mark movies from Trakt history as watched in Kodi"
-msgstr "Trakt előzményekben levő filmek megnézettnek jelölése"
-
 msgctxt "#32050"
 msgid "Episodes"
 msgstr "Epizódok"
-
-msgctxt "#32051"
-msgid "Add new TV episodes to Trakt collection"
-msgstr "Új epizódok hozzáadása a Trakt gyűjteményhez"
-
-msgctxt "#32052"
-msgid "Add watched TV episodes to Trakt history"
-msgstr "Megnézett epizódok hozzáadása a Trakt előzményekhez"
-
-msgctxt "#32053"
-msgid "Mark TV episodes from Trakt history as watched in Kodi"
-msgstr "Trakt előzményekben levő epizódok megnézettnek jelölése"
-
-msgctxt "#32054"
-msgid "Service"
-msgstr "Szolgáltatás"
 
 msgctxt "#32055"
 msgid "Sync after a library scan or clean"
@@ -224,14 +196,6 @@ msgstr "Szinkronizálás a médiatár frissítése vagy tisztítása után"
 msgctxt "#32056"
 msgid "Show sync notifications"
 msgstr "Szinkronizálási értesítések mutatása"
-
-msgctxt "#32057"
-msgid "Remove deleted movies from Trakt collection"
-msgstr "Törölt filmek törlése a Trakt gyűjteményből"
-
-msgctxt "#32058"
-msgid "Remove deleted TV episodes from Trakt collection"
-msgstr "Törölt sorozat részek törlése a Trakt gyűjteményből"
 
 msgctxt "#32060"
 msgid "Hide notifications during playback"
@@ -300,14 +264,6 @@ msgstr "%i eltávolítva"
 msgctxt "#32116"
 msgid "Enable debug mode"
 msgstr "Hibakereső mód"
-
-msgctxt "#32117"
-msgid "Sync movie playback progress to Kodi"
-msgstr "Film lejátszási folyamat szinkronizálása"
-
-msgctxt "#32118"
-msgid "Sync episode playback progress to Kodi"
-msgstr "Epizód lejátszási folyamat szinkronizálása"
 
 msgctxt "#32122"
 msgid "Loading Trakt playback progress"
@@ -416,14 +372,6 @@ msgstr "Ne maradjon meg a lejátszási folyamat a Trakton"
 msgctxt "#32193"
 msgid "Respect Trakt rewatch progress"
 msgstr "Trakt újranézési folyamat figyelembevétele"
-
-msgctxt "#32196"
-msgid "Sync ratings from Trakt to Kodi"
-msgstr "Értékelések szinkronizálása a Traktról a Kodiba"
-
-msgctxt "#32197"
-msgid "Sync ratings from Kodi to Trakt"
-msgstr "Értékelések szinkronizálása a Kodiból a Traktra"
 
 msgctxt "#32198"
 msgid "Trakt"
@@ -536,3 +484,151 @@ msgstr "A Trakt fiókod zárolva van. Fordulj a Trakt ügyfélszolgálatához."
 msgctxt "#32228"
 msgid "Watchlist limit of %i reached"
 msgstr "Elérted a figyelőlista %i elemes korlátját"
+
+msgctxt "#32229"
+msgid "Choose what to sync"
+msgstr "Szinkronizálandó elemek kiválasztása"
+
+msgctxt "#32230"
+msgid "Open the sync setup shown after connecting to Trakt."
+msgstr "Megnyitja a szinkronizálás beállítását, amely a Trakthoz csatlakozás után jelenik meg."
+
+msgctxt "#32231"
+msgid "Sync when Kodi finishes a library scan or clean. Otherwise a sync runs only when you start it, such as from the context menu."
+msgstr "Szinkronizál, amikor a Kodi befejezi a médiatár frissítését vagy tisztítását. Ellenkező esetben szinkronizálás csak akkor fut, ha te indítod el, például a helyi menüből."
+
+msgctxt "#32232"
+msgid "Notify when a sync after a library scan or clean starts and finishes."
+msgstr "Értesít, amikor egy médiatár-frissítés vagy -tisztítás utáni szinkronizálás elindul és befejeződik."
+
+msgctxt "#32233"
+msgid "Show no sync notifications while a video plays."
+msgstr "Videó lejátszása közben nem jelenít meg szinkronizálási értesítéseket."
+
+msgctxt "#32234"
+msgid "Match items without an IMDb, TMDB or TVDB id by title and year, when scrobbling and syncing. Never used to unwatch items or clear ratings."
+msgstr "Az IMDb, TMDB vagy TVDB azonosító nélküli elemeket cím és év alapján egyezteti beküldéskor és szinkronizáláskor. Soha nem használja elemek nem megnézettnek jelölésére vagy értékelések törlésére."
+
+msgctxt "#32235"
+msgid "Watched status"
+msgstr "Megnézett állapot"
+
+msgctxt "#32236"
+msgid "Trakt to Kodi: Kodi matches Trakt, play counts and dates included, and anything with no plays on Trakt is unwatched. Kodi to Trakt: items watched in Kodi with no play on Trakt are added to its history. Both ways: each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Traktról Kodiba: a Kodi a Traktot követi, a lejátszások számával és dátumaival együtt, és minden, aminek nincs lejátszása a Trakton, nem megnézettnek lesz jelölve. Kodiból Traktra: a Kodiban megnézett, de a Trakton lejátszás nélküli elemek hozzáadódnak a Trakt előzményeihez. Mindkét irányba: mindkét oldal megkapja a hiányzó lejátszásait, és a Trakt újranézésen kívül semmi sem lesz nem megnézettnek jelölve."
+
+msgctxt "#32237"
+msgid "Off"
+msgstr "Ki"
+
+msgctxt "#32238"
+msgid "Trakt to Kodi"
+msgstr "Traktról Kodiba"
+
+msgctxt "#32239"
+msgid "Kodi to Trakt"
+msgstr "Kodiból Traktra"
+
+msgctxt "#32240"
+msgid "Both ways"
+msgstr "Mindkét irányba"
+
+msgctxt "#32241"
+msgid "Ratings"
+msgstr "Értékelések"
+
+msgctxt "#32242"
+msgid "Movies, shows and episodes"
+msgstr "Filmek, sorozatok és epizódok"
+
+msgctxt "#32243"
+msgid "Trakt to Kodi: Kodi matches Trakt, and ratings Trakt doesn't have are cleared in Kodi. Kodi to Trakt: Kodi's ratings are added to Trakt, replacing different ones. Both ways: missing ratings are copied each way, and where they differ Trakt's is kept."
+msgstr "Traktról Kodiba: a Kodi a Traktot követi, és a Kodiban törlődnek azok az értékelések, amelyek a Trakton nincsenek meg. Kodiból Traktra: a Kodi értékelései hozzáadódnak a Trakthoz, felülírva az eltérőket. Mindkét irányba: a hiányzó értékelések mindkét irányba átmásolódnak, eltérés esetén pedig a Trakt értékelése marad meg."
+
+msgctxt "#32244"
+msgid "Resume points from Trakt"
+msgstr "Folytatási pontok a Traktról"
+
+msgctxt "#32245"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device. Playback in Kodi still sends its progress to Trakt when this is off."
+msgstr "A Kodi ott folytatja, ahol a Trakton az elem szüneteltetve van, például egy másik eszközről. Ha ez ki van kapcsolva, a Kodiban történő lejátszás továbbra is elküldi a folyamatot a Traktra."
+
+msgctxt "#32246"
+msgid "Add"
+msgstr "Hozzáadás"
+
+msgctxt "#32247"
+msgid "Add and remove"
+msgstr "Hozzáadás és eltávolítás"
+
+msgctxt "#32248"
+msgid "Add: Kodi's items are added to the Trakt collection. Add and remove: collected items Kodi doesn't have are removed from it too, including ones from other devices or apps."
+msgstr "Hozzáadás: a Kodi elemei hozzáadódnak a Trakt gyűjteményhez. Hozzáadás és eltávolítás: a gyűjtemény azon elemei is eltávolításra kerülnek, amelyek a Kodiban nincsenek meg, beleértve a más eszközökről vagy alkalmazásokból származókat is."
+
+msgctxt "#32249"
+msgid "Relay always scrobbles when connected. Sync handles what it didn't scrobble: other devices, older history."
+msgstr "Csatlakozva a Relay mindig beküldi, amit nézel. A szinkronizálás kezeli, amit nem küldött be: más eszközök, régebbi előzmények."
+
+msgctxt "#32250"
+msgid "On"
+msgstr "Be"
+
+msgctxt "#32251"
+msgid "Watched status isn't synced."
+msgstr "A megnézett állapot nincs szinkronizálva."
+
+msgctxt "#32252"
+msgid "Kodi matches Trakt, play counts and dates included. Anything with no plays on Trakt is unwatched in Kodi."
+msgstr "A Kodi a Traktot követi, a lejátszások számával és dátumaival együtt. Aminek nincs lejátszása a Trakton, az a Kodiban nem megnézettnek lesz jelölve."
+
+msgctxt "#32253"
+msgid "Items watched in Kodi with no play on Trakt are added to its history. Kodi isn't changed."
+msgstr "A Kodiban megnézett, de a Trakton lejátszás nélküli elemek hozzáadódnak a Trakt előzményeihez. A Kodi nem változik."
+
+msgctxt "#32254"
+msgid "Each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Mindkét oldal megkapja a hiányzó lejátszásait, és a Trakt újranézésen kívül semmi sem lesz nem megnézettnek jelölve."
+
+msgctxt "#32255"
+msgid "Ratings aren't synced."
+msgstr "Az értékelések nincsenek szinkronizálva."
+
+msgctxt "#32256"
+msgid "Kodi's ratings match Trakt, and ratings Trakt doesn't have are cleared in Kodi."
+msgstr "A Kodi értékelései a Traktot követik, és a Kodiban törlődnek azok az értékelések, amelyek a Trakton nincsenek meg."
+
+msgctxt "#32257"
+msgid "Kodi's ratings are added to Trakt, replacing different ones. Kodi isn't changed."
+msgstr "A Kodi értékelései hozzáadódnak a Trakthoz, felülírva az eltérőket. A Kodi nem változik."
+
+msgctxt "#32258"
+msgid "Missing ratings are copied each way. Where they differ, Trakt's rating is kept."
+msgstr "A hiányzó értékelések mindkét irányba átmásolódnak. Eltérés esetén a Trakt értékelése marad meg."
+
+msgctxt "#32259"
+msgid "Kodi keeps its own resume points."
+msgstr "A Kodi megtartja a saját folytatási pontjait."
+
+msgctxt "#32260"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device."
+msgstr "A Kodi ott folytatja, ahol a Trakton az elem szüneteltetve van, például egy másik eszközről."
+
+msgctxt "#32261"
+msgid "A sync runs only when you start it, such as from the context menu."
+msgstr "Szinkronizálás csak akkor fut, ha te indítod el, például a helyi menüből."
+
+msgctxt "#32262"
+msgid "Sync when Kodi finishes a library scan or clean."
+msgstr "Szinkronizál, amikor a Kodi befejezi a médiatár frissítését vagy tisztítását."
+
+msgctxt "#32263"
+msgid "Save and sync"
+msgstr "Mentés és szinkronizálás"
+
+msgctxt "#32264"
+msgid "Unwatch %i items in Kodi to match Trakt?"
+msgstr "Nem megnézettnek jelölsz %i elemet a Kodiban, hogy egyezzen a Trakttal?"
+
+msgctxt "#32265"
+msgid "Clear %i ratings in Kodi to match Trakt?"
+msgstr "Törölsz %i értékelést a Kodiban, hogy egyezzen a Trakttal?"

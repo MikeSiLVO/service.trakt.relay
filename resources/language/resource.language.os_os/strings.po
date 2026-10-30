@@ -185,37 +185,9 @@ msgctxt "#32046"
 msgid "Movies"
 msgstr "Фильмтӕ"
 
-msgctxt "#32047"
-msgid "Add new movies to Trakt collection"
-msgstr "Ног фильмтӕ Trakt-ы ӕмбырдгондмӕ бафтауын"
-
-msgctxt "#32048"
-msgid "Add watched movies to Trakt history"
-msgstr "Акаст фильмтӕ Trakt-ы историмӕ бафтауын"
-
-msgctxt "#32049"
-msgid "Mark movies from Trakt history as watched in Kodi"
-msgstr "Trakt-ы историйӕ фильмтӕ Kodi-йы акастыл банысан кӕнын"
-
 msgctxt "#32050"
 msgid "Episodes"
 msgstr "Эпизодтӕ"
-
-msgctxt "#32051"
-msgid "Add new TV episodes to Trakt collection"
-msgstr "Ног ТВ-эпизодтӕ Trakt-ы ӕмбырдгондмӕ бафтауын"
-
-msgctxt "#32052"
-msgid "Add watched TV episodes to Trakt history"
-msgstr "Акаст ТВ-эпизодтӕ Trakt-ы историмӕ бафтауын"
-
-msgctxt "#32053"
-msgid "Mark TV episodes from Trakt history as watched in Kodi"
-msgstr "Trakt-ы историйӕ ТВ-эпизодтӕ Kodi-йы акастыл банысан кӕнын"
-
-msgctxt "#32054"
-msgid "Service"
-msgstr "Лӕггад"
 
 msgctxt "#32055"
 msgid "Sync after a library scan or clean"
@@ -224,14 +196,6 @@ msgstr "Библиотекӕ скан кӕныны кӕнӕ сыгъдӕг кӕ�
 msgctxt "#32056"
 msgid "Show sync notifications"
 msgstr "Синхронизацийы хъусинӕгтӕ равдисын"
-
-msgctxt "#32057"
-msgid "Remove deleted movies from Trakt collection"
-msgstr "Хафт фильмтӕ Trakt-ы ӕмбырдгондӕй айсын"
-
-msgctxt "#32058"
-msgid "Remove deleted TV episodes from Trakt collection"
-msgstr "Хафт ТВ-эпизодтӕ Trakt-ы ӕмбырдгондӕй айсын"
 
 msgctxt "#32060"
 msgid "Hide notifications during playback"
@@ -300,14 +264,6 @@ msgstr "Айст %i"
 msgctxt "#32116"
 msgid "Enable debug mode"
 msgstr "Рӕдыдтӕ агурыны режим баиу кӕнын"
-
-msgctxt "#32117"
-msgid "Sync movie playback progress to Kodi"
-msgstr "Фильмты ахъазыны размӕцыд Kodi-мӕ синхронизаци кӕнын"
-
-msgctxt "#32118"
-msgid "Sync episode playback progress to Kodi"
-msgstr "Эпизодты ахъазыны размӕцыд Kodi-мӕ синхронизаци кӕнын"
 
 msgctxt "#32122"
 msgid "Loading Trakt playback progress"
@@ -416,14 +372,6 @@ msgstr "Trakt-ы ахъазыны размӕцыд ма хъахъхъӕнын"
 msgctxt "#32193"
 msgid "Respect Trakt rewatch progress"
 msgstr "Trakt-ы ногӕй кӕсыны размӕцыд нымайын"
-
-msgctxt "#32196"
-msgid "Sync ratings from Trakt to Kodi"
-msgstr "Рейтингтӕ Trakt-ӕй Kodi-мӕ синхронизаци кӕнын"
-
-msgctxt "#32197"
-msgid "Sync ratings from Kodi to Trakt"
-msgstr "Рейтингтӕ Kodi-йӕ Trakt-мӕ синхронизаци кӕнын"
 
 msgctxt "#32198"
 msgid "Trakt"
@@ -536,3 +484,151 @@ msgstr "Дӕ Trakt аккаунт ӕхгӕд у. Бадзур Trakt-ы ӕхху�
 msgctxt "#32228"
 msgid "Watchlist limit of %i reached"
 msgstr "Кӕсинаг номхыгъды арӕнмӕ бахӕццӕ: %i"
+
+msgctxt "#32229"
+msgid "Choose what to sync"
+msgstr "Цы синхронизаци кӕнын, уый равзарын"
+
+msgctxt "#32230"
+msgid "Open the sync setup shown after connecting to Trakt."
+msgstr "Trakt-имӕ баиу уӕвыны фӕстӕ цы синхронизацийы уагӕвӕрд фӕзыны, уый бакӕны."
+
+msgctxt "#32231"
+msgid "Sync when Kodi finishes a library scan or clean. Otherwise a sync runs only when you start it, such as from the context menu."
+msgstr "Kodi библиотекӕ скан кӕнын кӕнӕ сыгъдӕг кӕнын куы фӕуа, уӕд синхронизаци кӕны. Иннӕ хъуыддаджы синхронизаци цӕуы ӕрмӕст ды йӕ куы райдайай, уӕд, зӕгъӕм, контекстон менюйӕ."
+
+msgctxt "#32232"
+msgid "Notify when a sync after a library scan or clean starts and finishes."
+msgstr "Библиотекӕ скан кӕныны кӕнӕ сыгъдӕг кӕныны фӕстӕ синхронизаци куы райдайы ӕмӕ куы фӕвӕййы, уӕд хъусын кӕны."
+
+msgctxt "#32233"
+msgid "Show no sync notifications while a video plays."
+msgstr "Видео куы цӕуы, уӕд синхронизацийы хъусинӕгтӕ нӕ равдисы."
+
+msgctxt "#32234"
+msgid "Match items without an IMDb, TMDB or TVDB id by title and year, when scrobbling and syncing. Never used to unwatch items or clear ratings."
+msgstr "IMDb, TMDB кӕнӕ TVDB ID кӕмӕн нӕй, уыцы элементтӕ ном ӕмӕ азмӕ гӕсгӕ абары, скробблинг ӕмӕ синхронизаци кӕнгӕйӕ. Элементтӕ нӕакастыл банысан кӕнынӕн кӕнӕ рейтингтӕ айсынӕн никуы пайдагонд цӕуы."
+
+msgctxt "#32235"
+msgid "Watched status"
+msgstr "Акасты уавӕр"
+
+msgctxt "#32236"
+msgid "Trakt to Kodi: Kodi matches Trakt, play counts and dates included, and anything with no plays on Trakt is unwatched. Kodi to Trakt: items watched in Kodi with no play on Trakt are added to its history. Both ways: each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Trakt-ӕй Kodi-мӕ: Kodi Trakt-имӕ ӕмхуызон вӕййы, ахъазынты нымӕц ӕмӕ датӕтимӕ, ӕмӕ Trakt-ы ахъазын кӕмӕн нӕй, уыдон нӕакастыл банысан вӕййынц. Kodi-йӕ Trakt-мӕ: Kodi-йы акаст элементтӕ, Trakt-ы ахъазын кӕмӕн нӕй, уыдон Trakt-ы историмӕ бафтауд вӕййынц. Дыууӕрдӕм: алы фарс дӕр, йӕ цы ахъазынтӕ хъӕуы, уыдон райсы, ӕмӕ Trakt-ы ногӕй кӕсыны ӕддейы ницы нӕакастыл банысан вӕййы."
+
+msgctxt "#32237"
+msgid "Off"
+msgstr "Ахуыссад"
+
+msgctxt "#32238"
+msgid "Trakt to Kodi"
+msgstr "Trakt-ӕй Kodi-мӕ"
+
+msgctxt "#32239"
+msgid "Kodi to Trakt"
+msgstr "Kodi-йӕ Trakt-мӕ"
+
+msgctxt "#32240"
+msgid "Both ways"
+msgstr "Дыууӕрдӕм"
+
+msgctxt "#32241"
+msgid "Ratings"
+msgstr "Рейтингтӕ"
+
+msgctxt "#32242"
+msgid "Movies, shows and episodes"
+msgstr "Фильмтӕ, сериалтӕ ӕмӕ эпизодтӕ"
+
+msgctxt "#32243"
+msgid "Trakt to Kodi: Kodi matches Trakt, and ratings Trakt doesn't have are cleared in Kodi. Kodi to Trakt: Kodi's ratings are added to Trakt, replacing different ones. Both ways: missing ratings are copied each way, and where they differ Trakt's is kept."
+msgstr "Trakt-ӕй Kodi-мӕ: Kodi Trakt-имӕ ӕмхуызон вӕййы, ӕмӕ Trakt-ы кӕй нӕй, уыцы рейтингтӕ Kodi-йы айст вӕййынц. Kodi-йӕ Trakt-мӕ: Kodi-йы рейтингтӕ Trakt-мӕ бафтауд вӕййынц, ӕндӕр хуызон рейтингты бӕсты. Дыууӕрдӕм: кӕй нӕй, уыцы рейтингтӕ алырдӕм дӕр копи кӕнд вӕййынц, ӕмӕ кӕм хицӕн кӕнынц, уым Trakt-ы рейтинг баззайы."
+
+msgctxt "#32244"
+msgid "Resume points from Trakt"
+msgstr "Trakt-ӕй ахъазын дарддӕр кӕныны бынӕттӕ"
+
+msgctxt "#32245"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device. Playback in Kodi still sends its progress to Trakt when this is off."
+msgstr "Kodi ахъазын дарддӕр кӕны, Trakt-ы элемент кӕм ӕрлӕууын кодтой, уырдыгӕй, зӕгъӕм, ӕндӕр устройствӕйӕ. Ай ахуыссад куы уа, уӕд дӕр Kodi-йы ахъазын йӕ размӕцыд Trakt-мӕ арвиты."
+
+msgctxt "#32246"
+msgid "Add"
+msgstr "Бафтауын"
+
+msgctxt "#32247"
+msgid "Add and remove"
+msgstr "Бафтауын ӕмӕ айсын"
+
+msgctxt "#32248"
+msgid "Add: Kodi's items are added to the Trakt collection. Add and remove: collected items Kodi doesn't have are removed from it too, including ones from other devices or apps."
+msgstr "Бафтауын: Kodi-йы элементтӕ Trakt-ы ӕмбырдгондмӕ бафтауд вӕййынц. Бафтауын ӕмӕ айсын: ӕмбырдгонды цы элементтӕ ис, Kodi-йы та кӕй нӕй, уыдон дӕр уымӕй айст вӕййынц, ӕндӕр устройствӕтӕй кӕнӕ приложенитӕй цы ис, уыдон дӕр."
+
+msgctxt "#32249"
+msgid "Relay always scrobbles when connected. Sync handles what it didn't scrobble: other devices, older history."
+msgstr "Relay баиу куы у, уӕд алкуыдӕр скробблинг кӕны. Цы скробблинг нӕ бакодта, уый синхронизаци йӕхимӕ исы: ӕндӕр устройствӕтӕ, раздӕры истори."
+
+msgctxt "#32250"
+msgid "On"
+msgstr "Баиу"
+
+msgctxt "#32251"
+msgid "Watched status isn't synced."
+msgstr "Акасты уавӕр синхронизаци нӕ цӕуы."
+
+msgctxt "#32252"
+msgid "Kodi matches Trakt, play counts and dates included. Anything with no plays on Trakt is unwatched in Kodi."
+msgstr "Kodi Trakt-имӕ ӕмхуызон вӕййы, ахъазынты нымӕц ӕмӕ датӕтимӕ. Trakt-ы ахъазын кӕмӕн нӕй, уыдон Kodi-йы нӕакастыл банысан вӕййынц."
+
+msgctxt "#32253"
+msgid "Items watched in Kodi with no play on Trakt are added to its history. Kodi isn't changed."
+msgstr "Kodi-йы акаст элементтӕ, Trakt-ы ахъазын кӕмӕн нӕй, уыдон Trakt-ы историмӕ бафтауд вӕййынц. Kodi нӕ ивд цӕуы."
+
+msgctxt "#32254"
+msgid "Each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Алы фарс дӕр, йӕ цы ахъазынтӕ хъӕуы, уыдон райсы, ӕмӕ Trakt-ы ногӕй кӕсыны ӕддейы ницы нӕакастыл банысан вӕййы."
+
+msgctxt "#32255"
+msgid "Ratings aren't synced."
+msgstr "Рейтингтӕ синхронизаци нӕ цӕуынц."
+
+msgctxt "#32256"
+msgid "Kodi's ratings match Trakt, and ratings Trakt doesn't have are cleared in Kodi."
+msgstr "Kodi-йы рейтингтӕ Trakt-имӕ ӕмхуызон вӕййынц, ӕмӕ Trakt-ы кӕй нӕй, уыцы рейтингтӕ Kodi-йы айст вӕййынц."
+
+msgctxt "#32257"
+msgid "Kodi's ratings are added to Trakt, replacing different ones. Kodi isn't changed."
+msgstr "Kodi-йы рейтингтӕ Trakt-мӕ бафтауд вӕййынц, ӕндӕр хуызон рейтингты бӕсты. Kodi нӕ ивд цӕуы."
+
+msgctxt "#32258"
+msgid "Missing ratings are copied each way. Where they differ, Trakt's rating is kept."
+msgstr "Кӕй нӕй, уыцы рейтингтӕ алырдӕм дӕр копи кӕнд вӕййынц. Кӕм хицӕн кӕнынц, уым Trakt-ы рейтинг баззайы."
+
+msgctxt "#32259"
+msgid "Kodi keeps its own resume points."
+msgstr "Kodi йӕхи ахъазын дарддӕр кӕныны бынӕттӕ хъахъхъӕны."
+
+msgctxt "#32260"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device."
+msgstr "Kodi ахъазын дарддӕр кӕны, Trakt-ы элемент кӕм ӕрлӕууын кодтой, уырдыгӕй, зӕгъӕм, ӕндӕр устройствӕйӕ."
+
+msgctxt "#32261"
+msgid "A sync runs only when you start it, such as from the context menu."
+msgstr "Синхронизаци цӕуы ӕрмӕст ды йӕ куы райдайай, уӕд, зӕгъӕм, контекстон менюйӕ."
+
+msgctxt "#32262"
+msgid "Sync when Kodi finishes a library scan or clean."
+msgstr "Kodi библиотекӕ скан кӕнын кӕнӕ сыгъдӕг кӕнын куы фӕуа, уӕд синхронизаци кӕнын."
+
+msgctxt "#32263"
+msgid "Save and sync"
+msgstr "Бахъахъхъӕнын ӕмӕ синхронизаци кӕнын"
+
+msgctxt "#32264"
+msgid "Unwatch %i items in Kodi to match Trakt?"
+msgstr "Kodi-йы %i элементы нӕакастыл банысан кӕнын, Trakt-имӕ ӕмхуызон куыд уой, афтӕ?"
+
+msgctxt "#32265"
+msgid "Clear %i ratings in Kodi to match Trakt?"
+msgstr "Kodi-йы %i рейтинджы айсын, Trakt-имӕ ӕмхуызон куыд уой, афтӕ?"

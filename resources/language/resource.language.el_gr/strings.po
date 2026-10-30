@@ -184,37 +184,9 @@ msgctxt "#32046"
 msgid "Movies"
 msgstr "Ταινίες"
 
-msgctxt "#32047"
-msgid "Add new movies to Trakt collection"
-msgstr "Προσθήκη νέων ταινιών στη συλλογή του Trakt"
-
-msgctxt "#32048"
-msgid "Add watched movies to Trakt history"
-msgstr "Προσθήκη προβεβλημένων ταινιών στο ιστορικό του Trakt"
-
-msgctxt "#32049"
-msgid "Mark movies from Trakt history as watched in Kodi"
-msgstr "Σήμανση ταινιών από το ιστορικό του Trakt ως προβεβλημένων στο Kodi"
-
 msgctxt "#32050"
 msgid "Episodes"
 msgstr "Επεισόδια"
-
-msgctxt "#32051"
-msgid "Add new TV episodes to Trakt collection"
-msgstr "Προσθήκη νέων επεισοδίων στη συλλογή του Trakt"
-
-msgctxt "#32052"
-msgid "Add watched TV episodes to Trakt history"
-msgstr "Προσθήκη προβεβλημένων επεισοδίων στο ιστορικό του Trakt"
-
-msgctxt "#32053"
-msgid "Mark TV episodes from Trakt history as watched in Kodi"
-msgstr "Σήμανση επεισοδίων από το ιστορικό του Trakt ως προβεβλημένων στο Kodi"
-
-msgctxt "#32054"
-msgid "Service"
-msgstr "Υπηρεσία"
 
 msgctxt "#32055"
 msgid "Sync after a library scan or clean"
@@ -223,14 +195,6 @@ msgstr "Συγχρονισμός μετά από σάρωση ή εκκαθάρ�
 msgctxt "#32056"
 msgid "Show sync notifications"
 msgstr "Εμφάνιση ειδοποιήσεων συγχρονισμού"
-
-msgctxt "#32057"
-msgid "Remove deleted movies from Trakt collection"
-msgstr "Αφαίρεση διαγραμμένων ταινιών από τη συλλογή του Trakt"
-
-msgctxt "#32058"
-msgid "Remove deleted TV episodes from Trakt collection"
-msgstr "Αφαίρεση διαγραμμένων επεισοδίων από τη συλλογή του Trakt"
 
 msgctxt "#32060"
 msgid "Hide notifications during playback"
@@ -299,14 +263,6 @@ msgstr "Αφαιρέθηκαν %i"
 msgctxt "#32116"
 msgid "Enable debug mode"
 msgstr "Ενεργοποίηση λειτουργίας αποσφαλμάτωσης"
-
-msgctxt "#32117"
-msgid "Sync movie playback progress to Kodi"
-msgstr "Συγχρονισμός προόδου αναπαραγωγής ταινιών στο Kodi"
-
-msgctxt "#32118"
-msgid "Sync episode playback progress to Kodi"
-msgstr "Συγχρονισμός προόδου αναπαραγωγής επεισοδίων στο Kodi"
 
 msgctxt "#32122"
 msgid "Loading Trakt playback progress"
@@ -415,14 +371,6 @@ msgstr "Να μη διατηρείται η πρόοδος αναπαραγωγ�
 msgctxt "#32193"
 msgid "Respect Trakt rewatch progress"
 msgstr "Τήρηση της προόδου επαναπροβολής του Trakt"
-
-msgctxt "#32196"
-msgid "Sync ratings from Trakt to Kodi"
-msgstr "Συγχρονισμός αξιολογήσεων από το Trakt στο Kodi"
-
-msgctxt "#32197"
-msgid "Sync ratings from Kodi to Trakt"
-msgstr "Συγχρονισμός αξιολογήσεων από το Kodi στο Trakt"
 
 msgctxt "#32198"
 msgid "Trakt"
@@ -535,3 +483,151 @@ msgstr "Ο λογαριασμός σας στο Trakt είναι κλειδωμ�
 msgctxt "#32228"
 msgid "Watchlist limit of %i reached"
 msgstr "Η λίστα παρακολούθησης έφτασε το όριο των %i"
+
+msgctxt "#32229"
+msgid "Choose what to sync"
+msgstr "Επιλογή στοιχείων συγχρονισμού"
+
+msgctxt "#32230"
+msgid "Open the sync setup shown after connecting to Trakt."
+msgstr "Άνοιγμα της ρύθμισης συγχρονισμού που εμφανίζεται μετά τη σύνδεση στο Trakt."
+
+msgctxt "#32231"
+msgid "Sync when Kodi finishes a library scan or clean. Otherwise a sync runs only when you start it, such as from the context menu."
+msgstr "Συγχρονισμός όταν το Kodi ολοκληρώνει μια σάρωση ή εκκαθάριση βιβλιοθήκης. Διαφορετικά, ο συγχρονισμός εκτελείται μόνο όταν τον ξεκινάτε εσείς, για παράδειγμα από το μενού περιβάλλοντος."
+
+msgctxt "#32232"
+msgid "Notify when a sync after a library scan or clean starts and finishes."
+msgstr "Ειδοποίηση όταν ένας συγχρονισμός μετά από σάρωση ή εκκαθάριση βιβλιοθήκης ξεκινά και ολοκληρώνεται."
+
+msgctxt "#32233"
+msgid "Show no sync notifications while a video plays."
+msgstr "Να μην εμφανίζονται ειδοποιήσεις συγχρονισμού κατά την αναπαραγωγή βίντεο."
+
+msgctxt "#32234"
+msgid "Match items without an IMDb, TMDB or TVDB id by title and year, when scrobbling and syncing. Never used to unwatch items or clear ratings."
+msgstr "Αντιστοίχιση στοιχείων χωρίς αναγνωριστικό IMDb, TMDB ή TVDB με βάση τον τίτλο και το έτος, κατά την κοινοποίηση και τον συγχρονισμό. Δεν χρησιμοποιείται ποτέ για τη σήμανση στοιχείων ως μη προβεβλημένων ή τη διαγραφή αξιολογήσεων."
+
+msgctxt "#32235"
+msgid "Watched status"
+msgstr "Κατάσταση προβολής"
+
+msgctxt "#32236"
+msgid "Trakt to Kodi: Kodi matches Trakt, play counts and dates included, and anything with no plays on Trakt is unwatched. Kodi to Trakt: items watched in Kodi with no play on Trakt are added to its history. Both ways: each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Από Trakt σε Kodi: το Kodi ταυτίζεται με το Trakt, μαζί με τον αριθμό και τις ημερομηνίες προβολών, και ό,τι δεν έχει προβολές στο Trakt σημαίνεται ως μη προβεβλημένο. Από Kodi σε Trakt: τα στοιχεία που προβλήθηκαν στο Kodi χωρίς προβολή στο Trakt προστίθενται στο ιστορικό του. Αμφίδρομα: κάθε πλευρά παίρνει τις προβολές που της λείπουν και τίποτα δεν σημαίνεται ως μη προβεβλημένο εκτός επαναπροβολής στο Trakt."
+
+msgctxt "#32237"
+msgid "Off"
+msgstr "Ανενεργό"
+
+msgctxt "#32238"
+msgid "Trakt to Kodi"
+msgstr "Από Trakt σε Kodi"
+
+msgctxt "#32239"
+msgid "Kodi to Trakt"
+msgstr "Από Kodi σε Trakt"
+
+msgctxt "#32240"
+msgid "Both ways"
+msgstr "Αμφίδρομα"
+
+msgctxt "#32241"
+msgid "Ratings"
+msgstr "Αξιολογήσεις"
+
+msgctxt "#32242"
+msgid "Movies, shows and episodes"
+msgstr "Ταινίες, σειρές και επεισόδια"
+
+msgctxt "#32243"
+msgid "Trakt to Kodi: Kodi matches Trakt, and ratings Trakt doesn't have are cleared in Kodi. Kodi to Trakt: Kodi's ratings are added to Trakt, replacing different ones. Both ways: missing ratings are copied each way, and where they differ Trakt's is kept."
+msgstr "Από Trakt σε Kodi: το Kodi ταυτίζεται με το Trakt και οι αξιολογήσεις που δεν έχει το Trakt διαγράφονται στο Kodi. Από Kodi σε Trakt: οι αξιολογήσεις του Kodi προστίθενται στο Trakt, αντικαθιστώντας όσες διαφέρουν. Αμφίδρομα: οι αξιολογήσεις που λείπουν αντιγράφονται προς κάθε πλευρά και, όπου διαφέρουν, διατηρείται η αξιολόγηση του Trakt."
+
+msgctxt "#32244"
+msgid "Resume points from Trakt"
+msgstr "Σημεία συνέχισης από το Trakt"
+
+msgctxt "#32245"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device. Playback in Kodi still sends its progress to Trakt when this is off."
+msgstr "Το Kodi συνεχίζει από το σημείο όπου το Trakt έχει το στοιχείο σε παύση, για παράδειγμα από άλλη συσκευή. Η αναπαραγωγή στο Kodi εξακολουθεί να στέλνει την πρόοδό της στο Trakt όταν αυτό είναι ανενεργό."
+
+msgctxt "#32246"
+msgid "Add"
+msgstr "Προσθήκη"
+
+msgctxt "#32247"
+msgid "Add and remove"
+msgstr "Προσθήκη και αφαίρεση"
+
+msgctxt "#32248"
+msgid "Add: Kodi's items are added to the Trakt collection. Add and remove: collected items Kodi doesn't have are removed from it too, including ones from other devices or apps."
+msgstr "Προσθήκη: τα στοιχεία του Kodi προστίθενται στη συλλογή Trakt. Προσθήκη και αφαίρεση: τα στοιχεία της συλλογής που δεν έχει το Kodi αφαιρούνται επίσης από αυτήν, μαζί με όσα προέρχονται από άλλες συσκευές ή εφαρμογές."
+
+msgctxt "#32249"
+msgid "Relay always scrobbles when connected. Sync handles what it didn't scrobble: other devices, older history."
+msgstr "Το Relay κοινοποιεί πάντα όταν είναι συνδεδεμένο. Ο συγχρονισμός καλύπτει ό,τι δεν κοινοποίησε: άλλες συσκευές, παλαιότερο ιστορικό."
+
+msgctxt "#32250"
+msgid "On"
+msgstr "Ενεργό"
+
+msgctxt "#32251"
+msgid "Watched status isn't synced."
+msgstr "Η κατάσταση προβολής δεν συγχρονίζεται."
+
+msgctxt "#32252"
+msgid "Kodi matches Trakt, play counts and dates included. Anything with no plays on Trakt is unwatched in Kodi."
+msgstr "Το Kodi ταυτίζεται με το Trakt, μαζί με τον αριθμό και τις ημερομηνίες προβολών. Ό,τι δεν έχει προβολές στο Trakt σημαίνεται ως μη προβεβλημένο στο Kodi."
+
+msgctxt "#32253"
+msgid "Items watched in Kodi with no play on Trakt are added to its history. Kodi isn't changed."
+msgstr "Τα στοιχεία που προβλήθηκαν στο Kodi χωρίς προβολή στο Trakt προστίθενται στο ιστορικό του. Το Kodi δεν αλλάζει."
+
+msgctxt "#32254"
+msgid "Each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Κάθε πλευρά παίρνει τις προβολές που της λείπουν και τίποτα δεν σημαίνεται ως μη προβεβλημένο εκτός επαναπροβολής στο Trakt."
+
+msgctxt "#32255"
+msgid "Ratings aren't synced."
+msgstr "Οι αξιολογήσεις δεν συγχρονίζονται."
+
+msgctxt "#32256"
+msgid "Kodi's ratings match Trakt, and ratings Trakt doesn't have are cleared in Kodi."
+msgstr "Οι αξιολογήσεις του Kodi ταυτίζονται με του Trakt και όσες δεν έχει το Trakt διαγράφονται στο Kodi."
+
+msgctxt "#32257"
+msgid "Kodi's ratings are added to Trakt, replacing different ones. Kodi isn't changed."
+msgstr "Οι αξιολογήσεις του Kodi προστίθενται στο Trakt, αντικαθιστώντας όσες διαφέρουν. Το Kodi δεν αλλάζει."
+
+msgctxt "#32258"
+msgid "Missing ratings are copied each way. Where they differ, Trakt's rating is kept."
+msgstr "Οι αξιολογήσεις που λείπουν αντιγράφονται προς κάθε πλευρά. Όπου διαφέρουν, διατηρείται η αξιολόγηση του Trakt."
+
+msgctxt "#32259"
+msgid "Kodi keeps its own resume points."
+msgstr "Το Kodi διατηρεί τα δικά του σημεία συνέχισης."
+
+msgctxt "#32260"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device."
+msgstr "Το Kodi συνεχίζει από το σημείο όπου το Trakt έχει το στοιχείο σε παύση, για παράδειγμα από άλλη συσκευή."
+
+msgctxt "#32261"
+msgid "A sync runs only when you start it, such as from the context menu."
+msgstr "Ο συγχρονισμός εκτελείται μόνο όταν τον ξεκινάτε εσείς, για παράδειγμα από το μενού περιβάλλοντος."
+
+msgctxt "#32262"
+msgid "Sync when Kodi finishes a library scan or clean."
+msgstr "Συγχρονισμός όταν το Kodi ολοκληρώνει μια σάρωση ή εκκαθάριση βιβλιοθήκης."
+
+msgctxt "#32263"
+msgid "Save and sync"
+msgstr "Αποθήκευση και συγχρονισμός"
+
+msgctxt "#32264"
+msgid "Unwatch %i items in Kodi to match Trakt?"
+msgstr "Σήμανση %i στοιχείων ως μη προβεβλημένων στο Kodi για ταύτιση με το Trakt;"
+
+msgctxt "#32265"
+msgid "Clear %i ratings in Kodi to match Trakt?"
+msgstr "Διαγραφή %i αξιολογήσεων στο Kodi για ταύτιση με το Trakt;"

@@ -19,7 +19,7 @@ from lib.sync.sync import SyncThread
 from lib.trakt.api import TraktAPI
 from lib.kodi.client import ADDON
 from lib.kodi.log import ADDON_ID, configure_logging
-from lib.kodi.settings import get_setting_bool, get_setting_int, set_setting
+from lib.kodi.settings import ADD_AND_REMOVE, get_setting_bool, get_setting_int, set_setting
 from lib.kodi.utilities import remove_empty_settings
 
 logger = logging.getLogger(__name__)
@@ -83,9 +83,9 @@ class Service:
                     self.start_sync()
             elif action == "databaseCleaned":
                 set_setting("kodi_library_dirty", "true")
-                if get_setting_bool("sync_on_update") and (
-                    get_setting_bool("sync_clean_collection_movies_to_trakt")
-                    or get_setting_bool("sync_clean_collection_episodes_to_trakt")
+                if get_setting_bool("sync_on_update") and ADD_AND_REMOVE in (
+                    get_setting_int("sync_collection_movies"),
+                    get_setting_int("sync_collection_episodes"),
                 ):
                     logger.debug("Performing sync after library clean.")
                     self.start_sync()

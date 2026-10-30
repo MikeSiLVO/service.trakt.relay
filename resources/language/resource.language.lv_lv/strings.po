@@ -184,37 +184,9 @@ msgctxt "#32046"
 msgid "Movies"
 msgstr "Filmas"
 
-msgctxt "#32047"
-msgid "Add new movies to Trakt collection"
-msgstr "Pievienot jaunas filmas Trakt kolekcijai"
-
-msgctxt "#32048"
-msgid "Add watched movies to Trakt history"
-msgstr "Pievienot noskatītās filmas Trakt vēsturei"
-
-msgctxt "#32049"
-msgid "Mark movies from Trakt history as watched in Kodi"
-msgstr "Atzīmēt filmas no Trakt vēstures kā noskatītas Kodi"
-
 msgctxt "#32050"
 msgid "Episodes"
 msgstr "Sērijas"
-
-msgctxt "#32051"
-msgid "Add new TV episodes to Trakt collection"
-msgstr "Pievienot jaunas TV sērijas Trakt kolekcijai"
-
-msgctxt "#32052"
-msgid "Add watched TV episodes to Trakt history"
-msgstr "Pievienot noskatītās TV sērijas Trakt vēsturei"
-
-msgctxt "#32053"
-msgid "Mark TV episodes from Trakt history as watched in Kodi"
-msgstr "Atzīmēt TV sērijas no Trakt vēstures kā noskatītas Kodi"
-
-msgctxt "#32054"
-msgid "Service"
-msgstr "Pakalpojums"
 
 msgctxt "#32055"
 msgid "Sync after a library scan or clean"
@@ -223,14 +195,6 @@ msgstr "Sinhronizēt pēc bibliotēkas skenēšanas vai tīrīšanas"
 msgctxt "#32056"
 msgid "Show sync notifications"
 msgstr "Rādīt sinhronizācijas paziņojumus"
-
-msgctxt "#32057"
-msgid "Remove deleted movies from Trakt collection"
-msgstr "Noņemt dzēstās filmas no Trakt kolekcijas"
-
-msgctxt "#32058"
-msgid "Remove deleted TV episodes from Trakt collection"
-msgstr "Noņemt dzēstās TV sērijas no Trakt kolekcijas"
 
 msgctxt "#32060"
 msgid "Hide notifications during playback"
@@ -299,14 +263,6 @@ msgstr "Noņemti %i"
 msgctxt "#32116"
 msgid "Enable debug mode"
 msgstr "Iespējot atkļūdošanas režīmu"
-
-msgctxt "#32117"
-msgid "Sync movie playback progress to Kodi"
-msgstr "Sinhronizēt filmu atskaņošanas progresu uz Kodi"
-
-msgctxt "#32118"
-msgid "Sync episode playback progress to Kodi"
-msgstr "Sinhronizēt sēriju atskaņošanas progresu uz Kodi"
 
 msgctxt "#32122"
 msgid "Loading Trakt playback progress"
@@ -415,14 +371,6 @@ msgstr "Neglabāt atskaņošanas progresu Trakt"
 msgctxt "#32193"
 msgid "Respect Trakt rewatch progress"
 msgstr "Ievērot Trakt atkārtotās skatīšanās progresu"
-
-msgctxt "#32196"
-msgid "Sync ratings from Trakt to Kodi"
-msgstr "Sinhronizēt reitingus no Trakt uz Kodi"
-
-msgctxt "#32197"
-msgid "Sync ratings from Kodi to Trakt"
-msgstr "Sinhronizēt reitingus no Kodi uz Trakt"
 
 msgctxt "#32198"
 msgid "Trakt"
@@ -535,3 +483,151 @@ msgstr "Jūsu Trakt konts ir bloķēts. Sazinieties ar Trakt atbalsta dienestu."
 msgctxt "#32228"
 msgid "Watchlist limit of %i reached"
 msgstr "Sasniegts skatīšanās saraksta limits: %i"
+
+msgctxt "#32229"
+msgid "Choose what to sync"
+msgstr "Izvēlēties, ko sinhronizēt"
+
+msgctxt "#32230"
+msgid "Open the sync setup shown after connecting to Trakt."
+msgstr "Atver sinhronizācijas iestatīšanu, kas tiek rādīta pēc savienošanas ar Trakt."
+
+msgctxt "#32231"
+msgid "Sync when Kodi finishes a library scan or clean. Otherwise a sync runs only when you start it, such as from the context menu."
+msgstr "Sinhronizēt, kad Kodi pabeidz bibliotēkas skenēšanu vai tīrīšanu. Pretējā gadījumā sinhronizācija notiek tikai tad, kad jūs to sākat, piemēram, no konteksta izvēlnes."
+
+msgctxt "#32232"
+msgid "Notify when a sync after a library scan or clean starts and finishes."
+msgstr "Paziņot, kad sinhronizācija pēc bibliotēkas skenēšanas vai tīrīšanas sākas un beidzas."
+
+msgctxt "#32233"
+msgid "Show no sync notifications while a video plays."
+msgstr "Nerādīt sinhronizācijas paziņojumus, kamēr tiek atskaņots video."
+
+msgctxt "#32234"
+msgid "Match items without an IMDb, TMDB or TVDB id by title and year, when scrobbling and syncing. Never used to unwatch items or clear ratings."
+msgstr "Salīdzināt vienumus bez IMDb, TMDB vai TVDB ID pēc nosaukuma un gada, skroblējot un sinhronizējot. Nekad netiek izmantots, lai atzīmētu vienumus kā nenoskatītus vai notīrītu reitingus."
+
+msgctxt "#32235"
+msgid "Watched status"
+msgstr "Noskatīšanās statuss"
+
+msgctxt "#32236"
+msgid "Trakt to Kodi: Kodi matches Trakt, play counts and dates included, and anything with no plays on Trakt is unwatched. Kodi to Trakt: items watched in Kodi with no play on Trakt are added to its history. Both ways: each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "No Trakt uz Kodi: Kodi atbilst Trakt, ieskaitot atskaņojumu skaitu un datumus, un viss, kam Trakt nav atskaņojumu, tiek atzīmēts kā nenoskatīts. No Kodi uz Trakt: Kodi noskatītie vienumi, kuriem Trakt nav atskaņojuma, tiek pievienoti tā vēsturei. Abos virzienos: katra puse saņem trūkstošos atskaņojumus, un ārpus Trakt atkārtotās skatīšanās nekas netiek atzīmēts kā nenoskatīts."
+
+msgctxt "#32237"
+msgid "Off"
+msgstr "Izslēgts"
+
+msgctxt "#32238"
+msgid "Trakt to Kodi"
+msgstr "No Trakt uz Kodi"
+
+msgctxt "#32239"
+msgid "Kodi to Trakt"
+msgstr "No Kodi uz Trakt"
+
+msgctxt "#32240"
+msgid "Both ways"
+msgstr "Abos virzienos"
+
+msgctxt "#32241"
+msgid "Ratings"
+msgstr "Reitingi"
+
+msgctxt "#32242"
+msgid "Movies, shows and episodes"
+msgstr "Filmas, seriāli un sērijas"
+
+msgctxt "#32243"
+msgid "Trakt to Kodi: Kodi matches Trakt, and ratings Trakt doesn't have are cleared in Kodi. Kodi to Trakt: Kodi's ratings are added to Trakt, replacing different ones. Both ways: missing ratings are copied each way, and where they differ Trakt's is kept."
+msgstr "No Trakt uz Kodi: Kodi atbilst Trakt, un reitingi, kuru Trakt nav, Kodi tiek notīrīti. No Kodi uz Trakt: Kodi reitingi tiek pievienoti Trakt, aizstājot atšķirīgos. Abos virzienos: trūkstošie reitingi tiek kopēti abos virzienos, un, ja tie atšķiras, tiek saglabāts Trakt reitings."
+
+msgctxt "#32244"
+msgid "Resume points from Trakt"
+msgstr "Atsākšanas punkti no Trakt"
+
+msgctxt "#32245"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device. Playback in Kodi still sends its progress to Trakt when this is off."
+msgstr "Kodi atsāk no vietas, kur Trakt vienums ir pauzēts, piemēram, citā ierīcē. Kad šis ir izslēgts, atskaņošana Kodi joprojām sūta savu progresu uz Trakt."
+
+msgctxt "#32246"
+msgid "Add"
+msgstr "Pievienošana"
+
+msgctxt "#32247"
+msgid "Add and remove"
+msgstr "Pievienošana un noņemšana"
+
+msgctxt "#32248"
+msgid "Add: Kodi's items are added to the Trakt collection. Add and remove: collected items Kodi doesn't have are removed from it too, including ones from other devices or apps."
+msgstr "Pievienošana: Kodi vienumi tiek pievienoti Trakt kolekcijai. Pievienošana un noņemšana: no tās tiek noņemti arī kolekcijas vienumi, kuru Kodi nav, ieskaitot tos, kas pievienoti no citām ierīcēm vai lietotnēm."
+
+msgctxt "#32249"
+msgid "Relay always scrobbles when connected. Sync handles what it didn't scrobble: other devices, older history."
+msgstr "Relay vienmēr skroblē, kad ir savienots. Sinhronizācija aptver to, ko tas neskroblēja: citas ierīces, vecāku vēsturi."
+
+msgctxt "#32250"
+msgid "On"
+msgstr "Ieslēgts"
+
+msgctxt "#32251"
+msgid "Watched status isn't synced."
+msgstr "Noskatīšanās statuss netiek sinhronizēts."
+
+msgctxt "#32252"
+msgid "Kodi matches Trakt, play counts and dates included. Anything with no plays on Trakt is unwatched in Kodi."
+msgstr "Kodi atbilst Trakt, ieskaitot atskaņojumu skaitu un datumus. Viss, kam Trakt nav atskaņojumu, Kodi tiek atzīmēts kā nenoskatīts."
+
+msgctxt "#32253"
+msgid "Items watched in Kodi with no play on Trakt are added to its history. Kodi isn't changed."
+msgstr "Kodi noskatītie vienumi, kuriem Trakt nav atskaņojuma, tiek pievienoti tā vēsturei. Kodi netiek mainīts."
+
+msgctxt "#32254"
+msgid "Each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Katra puse saņem trūkstošos atskaņojumus, un ārpus Trakt atkārtotās skatīšanās nekas netiek atzīmēts kā nenoskatīts."
+
+msgctxt "#32255"
+msgid "Ratings aren't synced."
+msgstr "Reitingi netiek sinhronizēti."
+
+msgctxt "#32256"
+msgid "Kodi's ratings match Trakt, and ratings Trakt doesn't have are cleared in Kodi."
+msgstr "Kodi reitingi atbilst Trakt, un reitingi, kuru Trakt nav, Kodi tiek notīrīti."
+
+msgctxt "#32257"
+msgid "Kodi's ratings are added to Trakt, replacing different ones. Kodi isn't changed."
+msgstr "Kodi reitingi tiek pievienoti Trakt, aizstājot atšķirīgos. Kodi netiek mainīts."
+
+msgctxt "#32258"
+msgid "Missing ratings are copied each way. Where they differ, Trakt's rating is kept."
+msgstr "Trūkstošie reitingi tiek kopēti abos virzienos. Ja tie atšķiras, tiek saglabāts Trakt reitings."
+
+msgctxt "#32259"
+msgid "Kodi keeps its own resume points."
+msgstr "Kodi saglabā savus atsākšanas punktus."
+
+msgctxt "#32260"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device."
+msgstr "Kodi atsāk no vietas, kur Trakt vienums ir pauzēts, piemēram, citā ierīcē."
+
+msgctxt "#32261"
+msgid "A sync runs only when you start it, such as from the context menu."
+msgstr "Sinhronizācija notiek tikai tad, kad jūs to sākat, piemēram, no konteksta izvēlnes."
+
+msgctxt "#32262"
+msgid "Sync when Kodi finishes a library scan or clean."
+msgstr "Sinhronizēt, kad Kodi pabeidz bibliotēkas skenēšanu vai tīrīšanu."
+
+msgctxt "#32263"
+msgid "Save and sync"
+msgstr "Saglabāt un sinhronizēt"
+
+msgctxt "#32264"
+msgid "Unwatch %i items in Kodi to match Trakt?"
+msgstr "Atzīmēt %i vienumus Kodi kā nenoskatītus, lai atbilstu Trakt?"
+
+msgctxt "#32265"
+msgid "Clear %i ratings in Kodi to match Trakt?"
+msgstr "Notīrīt %i reitingus Kodi, lai atbilstu Trakt?"

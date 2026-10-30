@@ -185,37 +185,9 @@ msgctxt "#32046"
 msgid "Movies"
 msgstr "영화"
 
-msgctxt "#32047"
-msgid "Add new movies to Trakt collection"
-msgstr "Trakt 컬렉션에 새 영화 추가"
-
-msgctxt "#32048"
-msgid "Add watched movies to Trakt history"
-msgstr "Trakt 이력에 시청한 영화 추가"
-
-msgctxt "#32049"
-msgid "Mark movies from Trakt history as watched in Kodi"
-msgstr "Trakt 기록에 있는 영화를 Kodi에 시청함으로 표시"
-
 msgctxt "#32050"
 msgid "Episodes"
 msgstr "에피소드"
-
-msgctxt "#32051"
-msgid "Add new TV episodes to Trakt collection"
-msgstr "Trakt 컬렉션에 새 TV 에피소드 추가"
-
-msgctxt "#32052"
-msgid "Add watched TV episodes to Trakt history"
-msgstr "Trakt 이력에 시청한 TV 에피소드 추가"
-
-msgctxt "#32053"
-msgid "Mark TV episodes from Trakt history as watched in Kodi"
-msgstr "Trakt 기록에 있는 TV 쇼 에피소드를 Kodi에 시청함으로 표시"
-
-msgctxt "#32054"
-msgid "Service"
-msgstr "서비스"
 
 msgctxt "#32055"
 msgid "Sync after a library scan or clean"
@@ -224,14 +196,6 @@ msgstr "라이브러리 스캔 또는 정리 후 동기화"
 msgctxt "#32056"
 msgid "Show sync notifications"
 msgstr "동기화 알림 보기"
-
-msgctxt "#32057"
-msgid "Remove deleted movies from Trakt collection"
-msgstr "삭제한 영화를 Trakt 컬렉션에서 지우기"
-
-msgctxt "#32058"
-msgid "Remove deleted TV episodes from Trakt collection"
-msgstr "삭제한 TV 에피소드를 Trakt 컬렉션에서 지우기"
 
 msgctxt "#32060"
 msgid "Hide notifications during playback"
@@ -300,14 +264,6 @@ msgstr "%i개 제거됨"
 msgctxt "#32116"
 msgid "Enable debug mode"
 msgstr "디버그 모드 사용"
-
-msgctxt "#32117"
-msgid "Sync movie playback progress to Kodi"
-msgstr "영화 재생 진행 상태를 Kodi로 동기화"
-
-msgctxt "#32118"
-msgid "Sync episode playback progress to Kodi"
-msgstr "에피소드 재생 진행 상태를 Kodi로 싱크"
 
 msgctxt "#32122"
 msgid "Loading Trakt playback progress"
@@ -416,14 +372,6 @@ msgstr "Trakt에 재생 진행 상태 유지 안 함"
 msgctxt "#32193"
 msgid "Respect Trakt rewatch progress"
 msgstr "Trakt 다시 보기 진행 상태 따르기"
-
-msgctxt "#32196"
-msgid "Sync ratings from Trakt to Kodi"
-msgstr "Trakt에서 Kodi로 평점 동기화"
-
-msgctxt "#32197"
-msgid "Sync ratings from Kodi to Trakt"
-msgstr "Kodi에서 Trakt로 평점 동기화"
 
 msgctxt "#32198"
 msgid "Trakt"
@@ -536,3 +484,151 @@ msgstr "Trakt 계정이 잠겨 있습니다. Trakt 지원팀에 문의하세요.
 msgctxt "#32228"
 msgid "Watchlist limit of %i reached"
 msgstr "watchlist 한도 %i개에 도달함"
+
+msgctxt "#32229"
+msgid "Choose what to sync"
+msgstr "동기화할 항목 선택"
+
+msgctxt "#32230"
+msgid "Open the sync setup shown after connecting to Trakt."
+msgstr "Trakt에 연결한 후 표시되는 동기화 설정을 엽니다."
+
+msgctxt "#32231"
+msgid "Sync when Kodi finishes a library scan or clean. Otherwise a sync runs only when you start it, such as from the context menu."
+msgstr "Kodi가 라이브러리 스캔 또는 정리를 마치면 동기화합니다. 그렇지 않으면 컨텍스트 메뉴 등에서 직접 시작할 때만 동기화가 실행됩니다."
+
+msgctxt "#32232"
+msgid "Notify when a sync after a library scan or clean starts and finishes."
+msgstr "라이브러리 스캔 또는 정리 후 동기화가 시작되고 끝날 때 알립니다."
+
+msgctxt "#32233"
+msgid "Show no sync notifications while a video plays."
+msgstr "동영상 재생 중에는 동기화 알림을 표시하지 않습니다."
+
+msgctxt "#32234"
+msgid "Match items without an IMDb, TMDB or TVDB id by title and year, when scrobbling and syncing. Never used to unwatch items or clear ratings."
+msgstr "시청 여부 전송 및 동기화 시 IMDb, TMDB 또는 TVDB ID가 없는 항목을 제목과 연도로 일치시킵니다. 항목을 시청 안 함으로 표시하거나 평점을 지우는 데는 사용되지 않습니다."
+
+msgctxt "#32235"
+msgid "Watched status"
+msgstr "시청 상태"
+
+msgctxt "#32236"
+msgid "Trakt to Kodi: Kodi matches Trakt, play counts and dates included, and anything with no plays on Trakt is unwatched. Kodi to Trakt: items watched in Kodi with no play on Trakt are added to its history. Both ways: each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Trakt에서 Kodi로: Kodi가 재생 횟수와 날짜를 포함해 Trakt와 일치하게 되며, Trakt에 재생 기록이 없는 항목은 시청 안 함으로 표시됩니다. Kodi에서 Trakt로: Kodi에서 시청했지만 Trakt에 재생 기록이 없는 항목이 Trakt 기록에 추가됩니다. 양방향: 각 쪽이 부족한 재생 기록을 받으며, Trakt 다시 보기 외에는 시청 안 함으로 표시되는 항목이 없습니다."
+
+msgctxt "#32237"
+msgid "Off"
+msgstr "끔"
+
+msgctxt "#32238"
+msgid "Trakt to Kodi"
+msgstr "Trakt에서 Kodi로"
+
+msgctxt "#32239"
+msgid "Kodi to Trakt"
+msgstr "Kodi에서 Trakt로"
+
+msgctxt "#32240"
+msgid "Both ways"
+msgstr "양방향"
+
+msgctxt "#32241"
+msgid "Ratings"
+msgstr "평점"
+
+msgctxt "#32242"
+msgid "Movies, shows and episodes"
+msgstr "영화, TV 쇼, 에피소드"
+
+msgctxt "#32243"
+msgid "Trakt to Kodi: Kodi matches Trakt, and ratings Trakt doesn't have are cleared in Kodi. Kodi to Trakt: Kodi's ratings are added to Trakt, replacing different ones. Both ways: missing ratings are copied each way, and where they differ Trakt's is kept."
+msgstr "Trakt에서 Kodi로: Kodi가 Trakt와 일치하게 되며, Trakt에 없는 평점은 Kodi에서 지워집니다. Kodi에서 Trakt로: Kodi의 평점이 Trakt에 추가되며 다른 평점을 대체합니다. 양방향: 누락된 평점이 양쪽으로 복사되며, 평점이 다를 경우 Trakt의 평점이 유지됩니다."
+
+msgctxt "#32244"
+msgid "Resume points from Trakt"
+msgstr "Trakt의 이어보기 지점"
+
+msgctxt "#32245"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device. Playback in Kodi still sends its progress to Trakt when this is off."
+msgstr "다른 기기 등에서 Trakt에 일시 중지된 지점부터 Kodi가 이어서 재생합니다. 이 설정이 꺼져 있어도 Kodi에서의 재생 진행 상태는 Trakt로 전송됩니다."
+
+msgctxt "#32246"
+msgid "Add"
+msgstr "추가"
+
+msgctxt "#32247"
+msgid "Add and remove"
+msgstr "추가 및 제거"
+
+msgctxt "#32248"
+msgid "Add: Kodi's items are added to the Trakt collection. Add and remove: collected items Kodi doesn't have are removed from it too, including ones from other devices or apps."
+msgstr "추가: Kodi의 항목이 Trakt 컬렉션에 추가됩니다. 추가 및 제거: 다른 기기나 앱에서 추가된 항목을 포함해, Kodi에 없는 컬렉션 항목도 컬렉션에서 제거됩니다."
+
+msgctxt "#32249"
+msgid "Relay always scrobbles when connected. Sync handles what it didn't scrobble: other devices, older history."
+msgstr "Relay는 연결되어 있으면 항상 시청 여부를 전송합니다. 동기화는 Relay가 전송하지 않은 것을 처리합니다: 다른 기기, 이전 기록."
+
+msgctxt "#32250"
+msgid "On"
+msgstr "켬"
+
+msgctxt "#32251"
+msgid "Watched status isn't synced."
+msgstr "시청 상태를 동기화하지 않습니다."
+
+msgctxt "#32252"
+msgid "Kodi matches Trakt, play counts and dates included. Anything with no plays on Trakt is unwatched in Kodi."
+msgstr "Kodi가 재생 횟수와 날짜를 포함해 Trakt와 일치하게 됩니다. Trakt에 재생 기록이 없는 항목은 Kodi에서 시청 안 함으로 표시됩니다."
+
+msgctxt "#32253"
+msgid "Items watched in Kodi with no play on Trakt are added to its history. Kodi isn't changed."
+msgstr "Kodi에서 시청했지만 Trakt에 재생 기록이 없는 항목이 Trakt 기록에 추가됩니다. Kodi는 변경되지 않습니다."
+
+msgctxt "#32254"
+msgid "Each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "각 쪽이 부족한 재생 기록을 받으며, Trakt 다시 보기 외에는 시청 안 함으로 표시되는 항목이 없습니다."
+
+msgctxt "#32255"
+msgid "Ratings aren't synced."
+msgstr "평점을 동기화하지 않습니다."
+
+msgctxt "#32256"
+msgid "Kodi's ratings match Trakt, and ratings Trakt doesn't have are cleared in Kodi."
+msgstr "Kodi의 평점이 Trakt와 일치하게 되며, Trakt에 없는 평점은 Kodi에서 지워집니다."
+
+msgctxt "#32257"
+msgid "Kodi's ratings are added to Trakt, replacing different ones. Kodi isn't changed."
+msgstr "Kodi의 평점이 Trakt에 추가되며 다른 평점을 대체합니다. Kodi는 변경되지 않습니다."
+
+msgctxt "#32258"
+msgid "Missing ratings are copied each way. Where they differ, Trakt's rating is kept."
+msgstr "누락된 평점이 양쪽으로 복사됩니다. 평점이 다를 경우 Trakt의 평점이 유지됩니다."
+
+msgctxt "#32259"
+msgid "Kodi keeps its own resume points."
+msgstr "Kodi가 자체 이어보기 지점을 유지합니다."
+
+msgctxt "#32260"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device."
+msgstr "다른 기기 등에서 Trakt에 일시 중지된 지점부터 Kodi가 이어서 재생합니다."
+
+msgctxt "#32261"
+msgid "A sync runs only when you start it, such as from the context menu."
+msgstr "컨텍스트 메뉴 등에서 직접 시작할 때만 동기화가 실행됩니다."
+
+msgctxt "#32262"
+msgid "Sync when Kodi finishes a library scan or clean."
+msgstr "Kodi가 라이브러리 스캔 또는 정리를 마치면 동기화합니다."
+
+msgctxt "#32263"
+msgid "Save and sync"
+msgstr "저장 및 동기화"
+
+msgctxt "#32264"
+msgid "Unwatch %i items in Kodi to match Trakt?"
+msgstr "Trakt와 일치하도록 Kodi에서 %i개 항목을 시청 안 함으로 표시할까요?"
+
+msgctxt "#32265"
+msgid "Clear %i ratings in Kodi to match Trakt?"
+msgstr "Trakt와 일치하도록 Kodi에서 평점 %i개를 지울까요?"

@@ -185,37 +185,9 @@ msgctxt "#32046"
 msgid "Movies"
 msgstr "电影"
 
-msgctxt "#32047"
-msgid "Add new movies to Trakt collection"
-msgstr "向Trakt收藏添加新电影"
-
-msgctxt "#32048"
-msgid "Add watched movies to Trakt history"
-msgstr "向Trakt历史添加已观看电影"
-
-msgctxt "#32049"
-msgid "Mark movies from Trakt history as watched in Kodi"
-msgstr "在Kodi上对存在于Trakt历史中的电影标记已观看"
-
 msgctxt "#32050"
 msgid "Episodes"
 msgstr "剧集"
-
-msgctxt "#32051"
-msgid "Add new TV episodes to Trakt collection"
-msgstr "向Trakt收藏添加新的电视剧集"
-
-msgctxt "#32052"
-msgid "Add watched TV episodes to Trakt history"
-msgstr "向Trakt历史添加已观看电视剧集"
-
-msgctxt "#32053"
-msgid "Mark TV episodes from Trakt history as watched in Kodi"
-msgstr "在Kodi上对存在于Trakt历史中的电视剧集标记已观看"
-
-msgctxt "#32054"
-msgid "Service"
-msgstr "服务"
 
 msgctxt "#32055"
 msgid "Sync after a library scan or clean"
@@ -224,14 +196,6 @@ msgstr "媒体库扫描或清理后同步"
 msgctxt "#32056"
 msgid "Show sync notifications"
 msgstr "节目同步通知"
-
-msgctxt "#32057"
-msgid "Remove deleted movies from Trakt collection"
-msgstr "从Trakt收藏中删除已删除的电影"
-
-msgctxt "#32058"
-msgid "Remove deleted TV episodes from Trakt collection"
-msgstr "从Trakt收藏中删除已删除的电视剧集"
 
 msgctxt "#32060"
 msgid "Hide notifications during playback"
@@ -300,14 +264,6 @@ msgstr "已移除%i项"
 msgctxt "#32116"
 msgid "Enable debug mode"
 msgstr "启用调试模式"
-
-msgctxt "#32117"
-msgid "Sync movie playback progress to Kodi"
-msgstr "同步电影播放进度到kodi"
-
-msgctxt "#32118"
-msgid "Sync episode playback progress to Kodi"
-msgstr "同步剧集播放进度到kodi"
 
 msgctxt "#32122"
 msgid "Loading Trakt playback progress"
@@ -416,14 +372,6 @@ msgstr "不在Trakt上保留播放进度"
 msgctxt "#32193"
 msgid "Respect Trakt rewatch progress"
 msgstr "遵循Trakt重看进度"
-
-msgctxt "#32196"
-msgid "Sync ratings from Trakt to Kodi"
-msgstr "从Trakt同步评分到Kodi"
-
-msgctxt "#32197"
-msgid "Sync ratings from Kodi to Trakt"
-msgstr "从Kodi同步评分到Trakt"
 
 msgctxt "#32198"
 msgid "Trakt"
@@ -536,3 +484,151 @@ msgstr "您的Trakt帐户已被锁定。请联系Trakt支持团队。"
 msgctxt "#32228"
 msgid "Watchlist limit of %i reached"
 msgstr "待看列表已达上限（%i项）"
+
+msgctxt "#32229"
+msgid "Choose what to sync"
+msgstr "选择要同步的内容"
+
+msgctxt "#32230"
+msgid "Open the sync setup shown after connecting to Trakt."
+msgstr "打开连接到Trakt后显示的同步设置。"
+
+msgctxt "#32231"
+msgid "Sync when Kodi finishes a library scan or clean. Otherwise a sync runs only when you start it, such as from the context menu."
+msgstr "Kodi完成媒体库扫描或清理时同步。否则仅在您手动启动时同步，例如从上下文菜单启动。"
+
+msgctxt "#32232"
+msgid "Notify when a sync after a library scan or clean starts and finishes."
+msgstr "媒体库扫描或清理后的同步开始和完成时发出通知。"
+
+msgctxt "#32233"
+msgid "Show no sync notifications while a video plays."
+msgstr "视频播放时不显示同步通知。"
+
+msgctxt "#32234"
+msgid "Match items without an IMDb, TMDB or TVDB id by title and year, when scrobbling and syncing. Never used to unwatch items or clear ratings."
+msgstr "自动记录和同步时，按标题和年份匹配没有IMDb、TMDB或TVDB ID的项目。从不用于将项目标记为未观看或清除评分。"
+
+msgctxt "#32235"
+msgid "Watched status"
+msgstr "观看状态"
+
+msgctxt "#32236"
+msgid "Trakt to Kodi: Kodi matches Trakt, play counts and dates included, and anything with no plays on Trakt is unwatched. Kodi to Trakt: items watched in Kodi with no play on Trakt are added to its history. Both ways: each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Trakt到Kodi：Kodi与Trakt保持一致，包括播放次数和日期，在Trakt上没有播放记录的内容都会标记为未观看。Kodi到Trakt：在Kodi中已观看但在Trakt上没有播放记录的项目会添加到Trakt历史。双向：每一方都会获得缺少的播放记录，除Trakt重看外不会将任何内容标记为未观看。"
+
+msgctxt "#32237"
+msgid "Off"
+msgstr "关闭"
+
+msgctxt "#32238"
+msgid "Trakt to Kodi"
+msgstr "Trakt到Kodi"
+
+msgctxt "#32239"
+msgid "Kodi to Trakt"
+msgstr "Kodi到Trakt"
+
+msgctxt "#32240"
+msgid "Both ways"
+msgstr "双向"
+
+msgctxt "#32241"
+msgid "Ratings"
+msgstr "评分"
+
+msgctxt "#32242"
+msgid "Movies, shows and episodes"
+msgstr "电影、节目和剧集"
+
+msgctxt "#32243"
+msgid "Trakt to Kodi: Kodi matches Trakt, and ratings Trakt doesn't have are cleared in Kodi. Kodi to Trakt: Kodi's ratings are added to Trakt, replacing different ones. Both ways: missing ratings are copied each way, and where they differ Trakt's is kept."
+msgstr "Trakt到Kodi：Kodi与Trakt保持一致，Trakt上没有的评分会在Kodi中清除。Kodi到Trakt：Kodi的评分会添加到Trakt，并替换不同的评分。双向：缺少的评分会双向复制，不一致时保留Trakt的评分。"
+
+msgctxt "#32244"
+msgid "Resume points from Trakt"
+msgstr "来自Trakt的续播点"
+
+msgctxt "#32245"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device. Playback in Kodi still sends its progress to Trakt when this is off."
+msgstr "Kodi从Trakt上暂停该项目的位置续播，例如在其他设备上暂停的位置。关闭此项时，Kodi中的播放仍会将进度发送到Trakt。"
+
+msgctxt "#32246"
+msgid "Add"
+msgstr "添加"
+
+msgctxt "#32247"
+msgid "Add and remove"
+msgstr "添加和移除"
+
+msgctxt "#32248"
+msgid "Add: Kodi's items are added to the Trakt collection. Add and remove: collected items Kodi doesn't have are removed from it too, including ones from other devices or apps."
+msgstr "添加：Kodi的项目会添加到Trakt收藏。添加和移除：Kodi中没有的收藏项目也会从收藏中移除，包括来自其他设备或应用的项目。"
+
+msgctxt "#32249"
+msgid "Relay always scrobbles when connected. Sync handles what it didn't scrobble: other devices, older history."
+msgstr "Relay连接后始终自动记录。同步处理未自动记录的内容：其他设备、较早的历史。"
+
+msgctxt "#32250"
+msgid "On"
+msgstr "开启"
+
+msgctxt "#32251"
+msgid "Watched status isn't synced."
+msgstr "不同步观看状态。"
+
+msgctxt "#32252"
+msgid "Kodi matches Trakt, play counts and dates included. Anything with no plays on Trakt is unwatched in Kodi."
+msgstr "Kodi与Trakt保持一致，包括播放次数和日期。在Trakt上没有播放记录的内容都会在Kodi中标记为未观看。"
+
+msgctxt "#32253"
+msgid "Items watched in Kodi with no play on Trakt are added to its history. Kodi isn't changed."
+msgstr "在Kodi中已观看但在Trakt上没有播放记录的项目会添加到Trakt历史。Kodi不会更改。"
+
+msgctxt "#32254"
+msgid "Each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "每一方都会获得缺少的播放记录，除Trakt重看外不会将任何内容标记为未观看。"
+
+msgctxt "#32255"
+msgid "Ratings aren't synced."
+msgstr "不同步评分。"
+
+msgctxt "#32256"
+msgid "Kodi's ratings match Trakt, and ratings Trakt doesn't have are cleared in Kodi."
+msgstr "Kodi的评分与Trakt保持一致，Trakt上没有的评分会在Kodi中清除。"
+
+msgctxt "#32257"
+msgid "Kodi's ratings are added to Trakt, replacing different ones. Kodi isn't changed."
+msgstr "Kodi的评分会添加到Trakt，并替换不同的评分。Kodi不会更改。"
+
+msgctxt "#32258"
+msgid "Missing ratings are copied each way. Where they differ, Trakt's rating is kept."
+msgstr "缺少的评分会双向复制。不一致时保留Trakt的评分。"
+
+msgctxt "#32259"
+msgid "Kodi keeps its own resume points."
+msgstr "Kodi保留自己的续播点。"
+
+msgctxt "#32260"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device."
+msgstr "Kodi从Trakt上暂停该项目的位置续播，例如在其他设备上暂停的位置。"
+
+msgctxt "#32261"
+msgid "A sync runs only when you start it, such as from the context menu."
+msgstr "仅在您手动启动时同步，例如从上下文菜单启动。"
+
+msgctxt "#32262"
+msgid "Sync when Kodi finishes a library scan or clean."
+msgstr "Kodi完成媒体库扫描或清理时同步。"
+
+msgctxt "#32263"
+msgid "Save and sync"
+msgstr "保存并同步"
+
+msgctxt "#32264"
+msgid "Unwatch %i items in Kodi to match Trakt?"
+msgstr "要将Kodi中的%i个项目标记为未观看以与Trakt保持一致吗？"
+
+msgctxt "#32265"
+msgid "Clear %i ratings in Kodi to match Trakt?"
+msgstr "要清除Kodi中的%i个评分以与Trakt保持一致吗？"

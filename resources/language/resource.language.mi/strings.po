@@ -185,37 +185,9 @@ msgctxt "#32046"
 msgid "Movies"
 msgstr "Kiriata"
 
-msgctxt "#32047"
-msgid "Add new movies to Trakt collection"
-msgstr "Tāpiri kiriata hou ki te kohinga Trakt"
-
-msgctxt "#32048"
-msgid "Add watched movies to Trakt history"
-msgstr "Tāpiri kiriata kua mātakitakina ki te hītori Trakt"
-
-msgctxt "#32049"
-msgid "Mark movies from Trakt history as watched in Kodi"
-msgstr "Tohua ngā kiriata o te hītori Trakt kia mātakitakina i Kodi"
-
 msgctxt "#32050"
 msgid "Episodes"
 msgstr "Wāhanga"
-
-msgctxt "#32051"
-msgid "Add new TV episodes to Trakt collection"
-msgstr "Tāpiri wāhanga TV hou ki te kohinga Trakt"
-
-msgctxt "#32052"
-msgid "Add watched TV episodes to Trakt history"
-msgstr "Tāpiri wāhanga TV kua mātakitakina ki te hītori Trakt"
-
-msgctxt "#32053"
-msgid "Mark TV episodes from Trakt history as watched in Kodi"
-msgstr "Tohua ngā wāhanga TV o te hītori Trakt kia mātakitakina i Kodi"
-
-msgctxt "#32054"
-msgid "Service"
-msgstr "Ratonga"
 
 msgctxt "#32055"
 msgid "Sync after a library scan or clean"
@@ -224,14 +196,6 @@ msgstr "Tukutahi i muri i te matawai, te horoi rānei i te pātaka"
 msgctxt "#32056"
 msgid "Show sync notifications"
 msgstr "Whakaatu whakamōhiotanga tukutahi"
-
-msgctxt "#32057"
-msgid "Remove deleted movies from Trakt collection"
-msgstr "Tangohia ngā kiriata kua mukua i te kohinga Trakt"
-
-msgctxt "#32058"
-msgid "Remove deleted TV episodes from Trakt collection"
-msgstr "Tangohia ngā wāhanga TV kua mukua i te kohinga Trakt"
 
 msgctxt "#32060"
 msgid "Hide notifications during playback"
@@ -300,14 +264,6 @@ msgstr "Kua tangohia %i"
 msgctxt "#32116"
 msgid "Enable debug mode"
 msgstr "Whakahohe aratau patuiro"
-
-msgctxt "#32117"
-msgid "Sync movie playback progress to Kodi"
-msgstr "Tukutahi i te kauneke whakatākaro kiriata ki Kodi"
-
-msgctxt "#32118"
-msgid "Sync episode playback progress to Kodi"
-msgstr "Tukutahi i te kauneke whakatākaro wāhanga ki Kodi"
 
 msgctxt "#32122"
 msgid "Loading Trakt playback progress"
@@ -416,14 +372,6 @@ msgstr "Kaua e pupuri i te kauneke whakatākaro ki Trakt"
 msgctxt "#32193"
 msgid "Respect Trakt rewatch progress"
 msgstr "Whakaute i te kauneke mātaki anō o Trakt"
-
-msgctxt "#32196"
-msgid "Sync ratings from Trakt to Kodi"
-msgstr "Tukutahi i ngā whakatauranga mai i Trakt ki Kodi"
-
-msgctxt "#32197"
-msgid "Sync ratings from Kodi to Trakt"
-msgstr "Tukutahi i ngā whakatauranga mai i Kodi ki Trakt"
 
 msgctxt "#32198"
 msgid "Trakt"
@@ -536,3 +484,151 @@ msgstr "Kua rakaina tō pūkete Trakt. Whakapā atu ki te tautoko a Trakt."
 msgctxt "#32228"
 msgid "Watchlist limit of %i reached"
 msgstr "Kua tae ki te tepe %i o te rārangi mātaki"
+
+msgctxt "#32229"
+msgid "Choose what to sync"
+msgstr "Kōwhiria ngā mea hei tukutahi"
+
+msgctxt "#32230"
+msgid "Open the sync setup shown after connecting to Trakt."
+msgstr "Ka whakatuwhera i te tatūnga tukutahi ka whakaaturia i muri i te hono ki Trakt."
+
+msgctxt "#32231"
+msgid "Sync when Kodi finishes a library scan or clean. Otherwise a sync runs only when you start it, such as from the context menu."
+msgstr "Tukutahi ina oti i a Kodi te matawai, te horoi rānei i te pātaka. Ki te kore, ka rere noa te tukutahi ina tīmatahia e koe, hei tauira, mai i te tahua horopaki."
+
+msgctxt "#32232"
+msgid "Notify when a sync after a library scan or clean starts and finishes."
+msgstr "Whakamōhio ina tīmata, ina oti hoki tētahi tukutahi i muri i te matawai, te horoi rānei i te pātaka."
+
+msgctxt "#32233"
+msgid "Show no sync notifications while a video plays."
+msgstr "Kaua e whakaatu whakamōhiotanga tukutahi i te wā e whakatākaro ana tētahi ataata."
+
+msgctxt "#32234"
+msgid "Match items without an IMDb, TMDB or TVDB id by title and year, when scrobbling and syncing. Never used to unwatch items or clear ratings."
+msgstr "Whakaōrite i ngā tūemi kāore he ID IMDb, TMDB, TVDB rānei mā te taitara me te tau, i te wā scrobble me te tukutahi. Kāore rawa e whakamahia hei tohu i ngā tūemi kia kore e mātakitakina, hei ūkui rānei i ngā whakatauranga."
+
+msgctxt "#32235"
+msgid "Watched status"
+msgstr "Tūnga mātaki"
+
+msgctxt "#32236"
+msgid "Trakt to Kodi: Kodi matches Trakt, play counts and dates included, and anything with no plays on Trakt is unwatched. Kodi to Trakt: items watched in Kodi with no play on Trakt are added to its history. Both ways: each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Trakt ki Kodi: ka ōrite a Kodi ki a Trakt, tae atu ki ngā tatau whakatākaro me ngā rā, ā, ko ngā mea kāore he whakatākaro i Trakt ka tohua kia kore e mātakitakina. Kodi ki Trakt: ko ngā tūemi kua mātakitakina i Kodi kāore he whakatākaro i Trakt ka tāpiria ki tōna hītori. Ngā ahunga e rua: ka whiwhi ia taha i ngā whakatākaro e ngaro ana i a ia, ā, kāore he mea e tohua kia kore e mātakitakina i waho i tētahi mātaki anō i Trakt."
+
+msgctxt "#32237"
+msgid "Off"
+msgstr "Weto"
+
+msgctxt "#32238"
+msgid "Trakt to Kodi"
+msgstr "Trakt ki Kodi"
+
+msgctxt "#32239"
+msgid "Kodi to Trakt"
+msgstr "Kodi ki Trakt"
+
+msgctxt "#32240"
+msgid "Both ways"
+msgstr "Ngā ahunga e rua"
+
+msgctxt "#32241"
+msgid "Ratings"
+msgstr "Whakatauranga"
+
+msgctxt "#32242"
+msgid "Movies, shows and episodes"
+msgstr "Ngā kiriata, ngā hōtaka me ngā wāhanga"
+
+msgctxt "#32243"
+msgid "Trakt to Kodi: Kodi matches Trakt, and ratings Trakt doesn't have are cleared in Kodi. Kodi to Trakt: Kodi's ratings are added to Trakt, replacing different ones. Both ways: missing ratings are copied each way, and where they differ Trakt's is kept."
+msgstr "Trakt ki Kodi: ka ōrite a Kodi ki a Trakt, ā, ko ngā whakatauranga kāore i a Trakt ka ūkuia i Kodi. Kodi ki Trakt: ka tāpiria ngā whakatauranga o Kodi ki Trakt, hei whakakapi i ngā mea rerekē. Ngā ahunga e rua: ka tāruatia ngā whakatauranga ngaro ki ia ahunga, ā, ki te rerekē, ka puritia te whakatauranga o Trakt."
+
+msgctxt "#32244"
+msgid "Resume points from Trakt"
+msgstr "Ngā wāhi haere tonu mai i Trakt"
+
+msgctxt "#32245"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device. Playback in Kodi still sends its progress to Trakt when this is off."
+msgstr "Ka haere tonu a Kodi i te wāhi i whakatārewatia ai te tūemi i Trakt, hei tauira, mai i tētahi atu pūrere. Ka tukuna tonu e te whakatākaro i Kodi tōna kauneke ki Trakt ina weto tēnei."
+
+msgctxt "#32246"
+msgid "Add"
+msgstr "Tāpiri"
+
+msgctxt "#32247"
+msgid "Add and remove"
+msgstr "Tāpiri me te tango"
+
+msgctxt "#32248"
+msgid "Add: Kodi's items are added to the Trakt collection. Add and remove: collected items Kodi doesn't have are removed from it too, including ones from other devices or apps."
+msgstr "Tāpiri: ka tāpiria ngā tūemi o Kodi ki te kohinga Trakt. Tāpiri me te tango: ko ngā tūemi o te kohinga kāore i a Kodi ka tangohia hoki, tae atu ki ērā nō ētahi atu pūrere, taupānga rānei."
+
+msgctxt "#32249"
+msgid "Relay always scrobbles when connected. Sync handles what it didn't scrobble: other devices, older history."
+msgstr "Ka scrobble a Relay i ngā wā katoa ina hono ana. Ka whakahaere te tukutahi i ngā mea kāore ia i scrobble: ētahi atu pūrere, hītori tawhito ake."
+
+msgctxt "#32250"
+msgid "On"
+msgstr "Kā"
+
+msgctxt "#32251"
+msgid "Watched status isn't synced."
+msgstr "Kāore te tūnga mātaki e tukutahitia."
+
+msgctxt "#32252"
+msgid "Kodi matches Trakt, play counts and dates included. Anything with no plays on Trakt is unwatched in Kodi."
+msgstr "Ka ōrite a Kodi ki a Trakt, tae atu ki ngā tatau whakatākaro me ngā rā. Ko ngā mea kāore he whakatākaro i Trakt ka tohua kia kore e mātakitakina i Kodi."
+
+msgctxt "#32253"
+msgid "Items watched in Kodi with no play on Trakt are added to its history. Kodi isn't changed."
+msgstr "Ko ngā tūemi kua mātakitakina i Kodi kāore he whakatākaro i Trakt ka tāpiria ki tōna hītori. Kāore a Kodi e whakarerekētia."
+
+msgctxt "#32254"
+msgid "Each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Ka whiwhi ia taha i ngā whakatākaro e ngaro ana i a ia, ā, kāore he mea e tohua kia kore e mātakitakina i waho i tētahi mātaki anō i Trakt."
+
+msgctxt "#32255"
+msgid "Ratings aren't synced."
+msgstr "Kāore ngā whakatauranga e tukutahitia."
+
+msgctxt "#32256"
+msgid "Kodi's ratings match Trakt, and ratings Trakt doesn't have are cleared in Kodi."
+msgstr "Ka ōrite ngā whakatauranga o Kodi ki a Trakt, ā, ko ngā whakatauranga kāore i a Trakt ka ūkuia i Kodi."
+
+msgctxt "#32257"
+msgid "Kodi's ratings are added to Trakt, replacing different ones. Kodi isn't changed."
+msgstr "Ka tāpiria ngā whakatauranga o Kodi ki Trakt, hei whakakapi i ngā mea rerekē. Kāore a Kodi e whakarerekētia."
+
+msgctxt "#32258"
+msgid "Missing ratings are copied each way. Where they differ, Trakt's rating is kept."
+msgstr "Ka tāruatia ngā whakatauranga ngaro ki ia ahunga. Ki te rerekē, ka puritia te whakatauranga o Trakt."
+
+msgctxt "#32259"
+msgid "Kodi keeps its own resume points."
+msgstr "Ka pupuri a Kodi i ōna ake wāhi haere tonu."
+
+msgctxt "#32260"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device."
+msgstr "Ka haere tonu a Kodi i te wāhi i whakatārewatia ai te tūemi i Trakt, hei tauira, mai i tētahi atu pūrere."
+
+msgctxt "#32261"
+msgid "A sync runs only when you start it, such as from the context menu."
+msgstr "Ka rere noa te tukutahi ina tīmatahia e koe, hei tauira, mai i te tahua horopaki."
+
+msgctxt "#32262"
+msgid "Sync when Kodi finishes a library scan or clean."
+msgstr "Ka tukutahi ina oti i a Kodi te matawai, te horoi rānei i te pātaka."
+
+msgctxt "#32263"
+msgid "Save and sync"
+msgstr "Tiaki me te tukutahi"
+
+msgctxt "#32264"
+msgid "Unwatch %i items in Kodi to match Trakt?"
+msgstr "Me tohu %i tūemi kia kore e mātakitakina i Kodi kia ōrite ki a Trakt?"
+
+msgctxt "#32265"
+msgid "Clear %i ratings in Kodi to match Trakt?"
+msgstr "Me ūkui %i whakatauranga i Kodi kia ōrite ki a Trakt?"

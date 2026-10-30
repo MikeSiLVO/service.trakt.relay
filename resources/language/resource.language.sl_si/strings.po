@@ -184,37 +184,9 @@ msgctxt "#32046"
 msgid "Movies"
 msgstr "Filmi"
 
-msgctxt "#32047"
-msgid "Add new movies to Trakt collection"
-msgstr "Dodaj nove filme v zbirko Trakt"
-
-msgctxt "#32048"
-msgid "Add watched movies to Trakt history"
-msgstr "Dodaj ogledane filme v zgodovino Trakt"
-
-msgctxt "#32049"
-msgid "Mark movies from Trakt history as watched in Kodi"
-msgstr "Označi filme iz zgodovine Trakt kot ogledane v Kodi"
-
 msgctxt "#32050"
 msgid "Episodes"
 msgstr "Epizode"
-
-msgctxt "#32051"
-msgid "Add new TV episodes to Trakt collection"
-msgstr "Dodaj nove epizode v zbirko Trakt"
-
-msgctxt "#32052"
-msgid "Add watched TV episodes to Trakt history"
-msgstr "Dodaj ogledane epizode v zgodovino Trakt"
-
-msgctxt "#32053"
-msgid "Mark TV episodes from Trakt history as watched in Kodi"
-msgstr "Označi epizode iz zgodovine Trakt kot ogledane v Kodi"
-
-msgctxt "#32054"
-msgid "Service"
-msgstr "Storitev"
 
 msgctxt "#32055"
 msgid "Sync after a library scan or clean"
@@ -223,14 +195,6 @@ msgstr "Sinhroniziraj po pregledu ali čiščenju knjižnice"
 msgctxt "#32056"
 msgid "Show sync notifications"
 msgstr "Pokaži obvestila o sinhronizaciji"
-
-msgctxt "#32057"
-msgid "Remove deleted movies from Trakt collection"
-msgstr "Odstrani izbrisane filme iz zbirke Trakt"
-
-msgctxt "#32058"
-msgid "Remove deleted TV episodes from Trakt collection"
-msgstr "Odstrani izbrisane epizode iz zbirke Trakt"
 
 msgctxt "#32060"
 msgid "Hide notifications during playback"
@@ -299,14 +263,6 @@ msgstr "Odstranjeno %i"
 msgctxt "#32116"
 msgid "Enable debug mode"
 msgstr "Omogoči način razhroščevanja"
-
-msgctxt "#32117"
-msgid "Sync movie playback progress to Kodi"
-msgstr "Sinhroniziraj napredek predvajanja filmov v Kodi"
-
-msgctxt "#32118"
-msgid "Sync episode playback progress to Kodi"
-msgstr "Sinhroniziraj napredek predvajanja epizod v Kodi"
 
 msgctxt "#32122"
 msgid "Loading Trakt playback progress"
@@ -415,14 +371,6 @@ msgstr "Ne hrani napredka predvajanja na Trakt"
 msgctxt "#32193"
 msgid "Respect Trakt rewatch progress"
 msgstr "Upoštevaj napredek ponovnega ogleda na Trakt"
-
-msgctxt "#32196"
-msgid "Sync ratings from Trakt to Kodi"
-msgstr "Sinhroniziraj ocene iz Trakt v Kodi"
-
-msgctxt "#32197"
-msgid "Sync ratings from Kodi to Trakt"
-msgstr "Sinhroniziraj ocene iz Kodi v Trakt"
 
 msgctxt "#32198"
 msgid "Trakt"
@@ -535,3 +483,151 @@ msgstr "Vaš račun Trakt je zaklenjen. Obrnite se na podporo Trakt."
 msgctxt "#32228"
 msgid "Watchlist limit of %i reached"
 msgstr "Dosežena omejitev seznama za ogled: %i"
+
+msgctxt "#32229"
+msgid "Choose what to sync"
+msgstr "Izberi, kaj sinhronizirati"
+
+msgctxt "#32230"
+msgid "Open the sync setup shown after connecting to Trakt."
+msgstr "Odpre nastavitev sinhronizacije, ki se prikaže po povezavi s Trakt."
+
+msgctxt "#32231"
+msgid "Sync when Kodi finishes a library scan or clean. Otherwise a sync runs only when you start it, such as from the context menu."
+msgstr "Sinhronizira, ko Kodi konča pregled ali čiščenje knjižnice. Sicer se sinhronizacija zažene le, ko jo začnete sami, na primer iz kontekstnega menija."
+
+msgctxt "#32232"
+msgid "Notify when a sync after a library scan or clean starts and finishes."
+msgstr "Obvesti, ko se sinhronizacija po pregledu ali čiščenju knjižnice začne in konča."
+
+msgctxt "#32233"
+msgid "Show no sync notifications while a video plays."
+msgstr "Med predvajanjem videa ne prikazuje obvestil o sinhronizaciji."
+
+msgctxt "#32234"
+msgid "Match items without an IMDb, TMDB or TVDB id by title and year, when scrobbling and syncing. Never used to unwatch items or clear ratings."
+msgstr "Elemente brez ID-ja IMDb, TMDB ali TVDB ujema po naslovu in letu, pri beleženju ogledov in sinhronizaciji. Nikoli se ne uporablja za označevanje elementov kot neogledanih ali brisanje ocen."
+
+msgctxt "#32235"
+msgid "Watched status"
+msgstr "Stanje ogledov"
+
+msgctxt "#32236"
+msgid "Trakt to Kodi: Kodi matches Trakt, play counts and dates included, and anything with no plays on Trakt is unwatched. Kodi to Trakt: items watched in Kodi with no play on Trakt are added to its history. Both ways: each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Iz Trakt v Kodi: Kodi se ujema s Trakt, vključno s številom predvajanj in datumi, vse brez predvajanj na Trakt pa je označeno kot neogledano. Iz Kodi v Trakt: elementi, ogledani v Kodi brez predvajanja na Trakt, se dodajo v zgodovino Trakt. V obe smeri: vsaka stran dobi predvajanja, ki ji manjkajo, in nič ni označeno kot neogledano zunaj ponovnega ogleda na Trakt."
+
+msgctxt "#32237"
+msgid "Off"
+msgstr "Izklopljeno"
+
+msgctxt "#32238"
+msgid "Trakt to Kodi"
+msgstr "Iz Trakt v Kodi"
+
+msgctxt "#32239"
+msgid "Kodi to Trakt"
+msgstr "Iz Kodi v Trakt"
+
+msgctxt "#32240"
+msgid "Both ways"
+msgstr "V obe smeri"
+
+msgctxt "#32241"
+msgid "Ratings"
+msgstr "Ocene"
+
+msgctxt "#32242"
+msgid "Movies, shows and episodes"
+msgstr "Filmi, serije in epizode"
+
+msgctxt "#32243"
+msgid "Trakt to Kodi: Kodi matches Trakt, and ratings Trakt doesn't have are cleared in Kodi. Kodi to Trakt: Kodi's ratings are added to Trakt, replacing different ones. Both ways: missing ratings are copied each way, and where they differ Trakt's is kept."
+msgstr "Iz Trakt v Kodi: Kodi se ujema s Trakt, ocene, ki jih Trakt nima, pa se v Kodi izbrišejo. Iz Kodi v Trakt: ocene iz Kodi se dodajo na Trakt in zamenjajo drugačne. V obe smeri: manjkajoče ocene se kopirajo v obe smeri, kjer se razlikujejo, pa se ohrani ocena s Trakt."
+
+msgctxt "#32244"
+msgid "Resume points from Trakt"
+msgstr "Točke nadaljevanja s Trakt"
+
+msgctxt "#32245"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device. Playback in Kodi still sends its progress to Trakt when this is off."
+msgstr "Kodi nadaljuje, kjer je element na Trakt začasno ustavljen, na primer iz druge naprave. Predvajanje v Kodi še vedno pošilja svoj napredek na Trakt, ko je to izklopljeno."
+
+msgctxt "#32246"
+msgid "Add"
+msgstr "Dodajanje"
+
+msgctxt "#32247"
+msgid "Add and remove"
+msgstr "Dodajanje in odstranjevanje"
+
+msgctxt "#32248"
+msgid "Add: Kodi's items are added to the Trakt collection. Add and remove: collected items Kodi doesn't have are removed from it too, including ones from other devices or apps."
+msgstr "Dodajanje: elementi iz Kodi se dodajo v zbirko Trakt. Dodajanje in odstranjevanje: elementi v zbirki, ki jih Kodi nima, se iz nje tudi odstranijo, vključno s tistimi iz drugih naprav ali aplikacij."
+
+msgctxt "#32249"
+msgid "Relay always scrobbles when connected. Sync handles what it didn't scrobble: other devices, older history."
+msgstr "Ko je povezan, Relay vedno beleži oglede. Sinhronizacija pokrije, česar ni zabeležil: druge naprave, starejšo zgodovino."
+
+msgctxt "#32250"
+msgid "On"
+msgstr "Vklopljeno"
+
+msgctxt "#32251"
+msgid "Watched status isn't synced."
+msgstr "Stanje ogledov se ne sinhronizira."
+
+msgctxt "#32252"
+msgid "Kodi matches Trakt, play counts and dates included. Anything with no plays on Trakt is unwatched in Kodi."
+msgstr "Kodi se ujema s Trakt, vključno s številom predvajanj in datumi. Vse brez predvajanj na Trakt je v Kodi označeno kot neogledano."
+
+msgctxt "#32253"
+msgid "Items watched in Kodi with no play on Trakt are added to its history. Kodi isn't changed."
+msgstr "Elementi, ogledani v Kodi brez predvajanja na Trakt, se dodajo v zgodovino Trakt. Kodi se ne spremeni."
+
+msgctxt "#32254"
+msgid "Each side gets the plays it's missing, and nothing is unwatched outside a Trakt rewatch."
+msgstr "Vsaka stran dobi predvajanja, ki ji manjkajo, in nič ni označeno kot neogledano zunaj ponovnega ogleda na Trakt."
+
+msgctxt "#32255"
+msgid "Ratings aren't synced."
+msgstr "Ocene se ne sinhronizirajo."
+
+msgctxt "#32256"
+msgid "Kodi's ratings match Trakt, and ratings Trakt doesn't have are cleared in Kodi."
+msgstr "Ocene v Kodi se ujemajo s Trakt, ocene, ki jih Trakt nima, pa se v Kodi izbrišejo."
+
+msgctxt "#32257"
+msgid "Kodi's ratings are added to Trakt, replacing different ones. Kodi isn't changed."
+msgstr "Ocene iz Kodi se dodajo na Trakt in zamenjajo drugačne. Kodi se ne spremeni."
+
+msgctxt "#32258"
+msgid "Missing ratings are copied each way. Where they differ, Trakt's rating is kept."
+msgstr "Manjkajoče ocene se kopirajo v obe smeri. Kjer se razlikujejo, se ohrani ocena s Trakt."
+
+msgctxt "#32259"
+msgid "Kodi keeps its own resume points."
+msgstr "Kodi obdrži svoje točke nadaljevanja."
+
+msgctxt "#32260"
+msgid "Kodi resumes where Trakt has the item paused, such as from another device."
+msgstr "Kodi nadaljuje, kjer je element na Trakt začasno ustavljen, na primer iz druge naprave."
+
+msgctxt "#32261"
+msgid "A sync runs only when you start it, such as from the context menu."
+msgstr "Sinhronizacija se zažene le, ko jo začnete sami, na primer iz kontekstnega menija."
+
+msgctxt "#32262"
+msgid "Sync when Kodi finishes a library scan or clean."
+msgstr "Sinhroniziraj, ko Kodi konča pregled ali čiščenje knjižnice."
+
+msgctxt "#32263"
+msgid "Save and sync"
+msgstr "Shrani in sinhroniziraj"
+
+msgctxt "#32264"
+msgid "Unwatch %i items in Kodi to match Trakt?"
+msgstr "Želite v Kodi označiti %i elementov kot neogledane za ujemanje s Trakt?"
+
+msgctxt "#32265"
+msgid "Clear %i ratings in Kodi to match Trakt?"
+msgstr "Želite v Kodi izbrisati %i ocen za ujemanje s Trakt?"
