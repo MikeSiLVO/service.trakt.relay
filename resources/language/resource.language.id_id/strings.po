@@ -1,0 +1,525 @@
+# Kodi Media Center language file
+# Addon Name: Trakt Relay
+# Addon id: service.trakt.relay
+# Addon Provider: MikeSiLVO
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Addons\n"
+"Report-Msgid-Bugs-To: https://github.com/MikeSiLVO/service.trakt.relay/issues\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: Indonesian (http://www.transifex.com/projects/p/xbmc-addons/language/id/)\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgctxt "Addon Summary"
+msgid "Scrobbles what you watch in Kodi and syncs your library with Trakt"
+msgstr "Scrobble tontonan Anda di Kodi dan sinkronkan pustaka Anda dengan Trakt"
+
+msgctxt "Addon Description"
+msgid "Trakt Relay scrobbles the movies, episodes, live TV and recordings you watch in Kodi to Trakt, and syncs your library with it: collection, watched status, ratings and playback progress, each direction switched on in the settings. It asks for a rating after you watch, and its context menu rates, adds to the watchlist and starts a rewatch of a show. Scrobbles that fail are retried later.[CR][CR]Trakt Relay is a modified version of script.trakt by Trakt.tv, Razzeee and its contributors."
+msgstr "Trakt Relay melakukan scrobble film, episode, TV langsung, dan rekaman yang Anda tonton di Kodi ke Trakt, serta menyinkronkan pustaka Anda dengannya: koleksi, status tonton, rating, dan progres pemutaran, masing-masing arah diaktifkan di pengaturan. Relay meminta rating setelah Anda menonton, dan menu konteksnya dapat memberi rating, menambahkan ke daftar tonton, dan memulai tonton ulang sebuah acara. Scrobble yang gagal akan dicoba ulang nanti.[CR][CR]Trakt Relay adalah versi modifikasi dari script.trakt oleh Trakt.tv, Razzeee, dan para kontributornya."
+
+msgctxt "Addon Disclaimer"
+msgid "Trakt Relay is not affiliated with or endorsed by Trakt."
+msgstr "Trakt Relay tidak berafiliasi dengan atau didukung oleh Trakt."
+
+msgctxt "#32000"
+msgid "General"
+msgstr "Umum"
+
+msgctxt "#32003"
+msgid "Startup delay (seconds)"
+msgstr "Penundaan Awal (detik)"
+
+msgctxt "#32004"
+msgid "Rating"
+msgstr "Rating"
+
+msgctxt "#32005"
+msgid "Rate movies after watching"
+msgstr "Beri rating film setelah ditonton"
+
+msgctxt "#32006"
+msgid "Rate episodes after watching"
+msgstr "Beri rating episode setelah ditonton"
+
+msgctxt "#32008"
+msgid "Minimum percent watched before asking"
+msgstr "Persentase tonton minimum sebelum bertanya"
+
+msgctxt "#32009"
+msgid "Allow re-rating"
+msgstr "Izinkan rating ulang"
+
+msgctxt "#32010"
+msgid "Default rating"
+msgstr "Rating bawaan"
+
+msgctxt "#32011"
+msgid "Scrobbling"
+msgstr "Scrobbling"
+
+msgctxt "#32012"
+msgid "Scrobble movies"
+msgstr "Scrobble film"
+
+msgctxt "#32013"
+msgid "Scrobble episodes"
+msgstr "Scrobble episode"
+
+msgctxt "#32014"
+msgid "Show scrobble notifications"
+msgstr "Tampilkan notifikasi scrobble"
+
+msgctxt "#32015"
+msgid "Watched"
+msgstr "Ditonton"
+
+msgctxt "#32016"
+msgid "Exclusions"
+msgstr "Pengecualian"
+
+msgctxt "#32017"
+msgid "Exclude live TV"
+msgstr "Kecualikan TV Langsung"
+
+msgctxt "#32018"
+msgid "Exclude HTTP sources"
+msgstr "Kecualikan sumber HTTP"
+
+msgctxt "#32019"
+msgid "Exclude path"
+msgstr "Kecualikan jalur"
+
+msgctxt "#32020"
+msgid "Folder, subfolders included"
+msgstr "Folder, termasuk subfolder"
+
+msgctxt "#32023"
+msgid "Couldn't reach Trakt"
+msgstr "Tidak dapat menghubungi Trakt"
+
+msgctxt "#32026"
+msgid "What did you think?"
+msgstr "Bagaimana Menurut Anda?"
+
+msgctxt "#32027"
+msgid "Totally Ninja!"
+msgstr "Benar-benar Keren!"
+
+msgctxt "#32028"
+msgid "Weak Sauce :("
+msgstr "Payah :("
+
+msgctxt "#32029"
+msgid "Terrible"
+msgstr "Sangat buruk"
+
+msgctxt "#32030"
+msgid "Bad"
+msgstr "Buruk"
+
+msgctxt "#32031"
+msgid "Poor"
+msgstr "Kurang"
+
+msgctxt "#32032"
+msgid "Meh"
+msgstr "Biasa saja"
+
+msgctxt "#32033"
+msgid "Fair"
+msgstr "Cukup"
+
+msgctxt "#32034"
+msgid "Good"
+msgstr "Bagus"
+
+msgctxt "#32035"
+msgid "Great"
+msgstr "Hebat"
+
+msgctxt "#32036"
+msgid "Superb"
+msgstr "Luar biasa"
+
+msgctxt "#32037"
+msgid "Unrate this movie"
+msgstr "Hapus rating film ini"
+
+msgctxt "#32038"
+msgid "Unrate this show"
+msgstr "Hapus rating acara ini"
+
+msgctxt "#32039"
+msgid "Unrate this episode"
+msgstr "Hapus rating episode ini"
+
+msgctxt "#32040"
+msgid "Rated %i"
+msgstr "Rating %i"
+
+msgctxt "#32041"
+msgid "Already rated %i"
+msgstr "Sudah diberi rating %i"
+
+msgctxt "#32042"
+msgid "Unrated"
+msgstr "Rating dihapus"
+
+msgctxt "#32044"
+msgid "Couldn't rate"
+msgstr "Gagal memberi rating"
+
+msgctxt "#32045"
+msgid "Sync"
+msgstr "Sinkronisasi"
+
+msgctxt "#32046"
+msgid "Movies"
+msgstr "Film"
+
+msgctxt "#32047"
+msgid "Add new movies to Trakt collection"
+msgstr "Tambahkan film baru ke koleksi Trakt"
+
+msgctxt "#32048"
+msgid "Add watched movies to Trakt history"
+msgstr "Tambahkan film yang ditonton ke riwayat Trakt"
+
+msgctxt "#32049"
+msgid "Mark movies from Trakt history as watched in Kodi"
+msgstr "Tandai film dari riwayat Trakt sebagai ditonton di Kodi"
+
+msgctxt "#32050"
+msgid "Episodes"
+msgstr "Episode"
+
+msgctxt "#32051"
+msgid "Add new TV episodes to Trakt collection"
+msgstr "Tambahkan episode TV baru ke koleksi Trakt"
+
+msgctxt "#32052"
+msgid "Add watched TV episodes to Trakt history"
+msgstr "Tambahkan episode TV yang ditonton ke riwayat Trakt"
+
+msgctxt "#32053"
+msgid "Mark TV episodes from Trakt history as watched in Kodi"
+msgstr "Tandai episode TV dari riwayat Trakt sebagai ditonton di Kodi"
+
+msgctxt "#32054"
+msgid "Service"
+msgstr "Layanan"
+
+msgctxt "#32055"
+msgid "Sync after a library scan or clean"
+msgstr "Sinkronkan setelah pemindaian atau pembersihan pustaka"
+
+msgctxt "#32056"
+msgid "Show sync notifications"
+msgstr "Tampilkan notifikasi sinkronisasi"
+
+msgctxt "#32057"
+msgid "Remove deleted movies from Trakt collection"
+msgstr "Buang film yang telah dihapus dari koleksi Trakt"
+
+msgctxt "#32058"
+msgid "Remove deleted TV episodes from Trakt collection"
+msgstr "Buang episode TV yang telah dihapus dari koleksi Trakt"
+
+msgctxt "#32060"
+msgid "Hide notifications during playback"
+msgstr "Sembunyikan notifikasi saat pemutaran"
+
+msgctxt "#32061"
+msgid "Started"
+msgstr "Dimulai"
+
+msgctxt "#32062"
+msgid "Finished"
+msgstr "Selesai"
+
+msgctxt "#32063"
+msgid "Adding %i"
+msgstr "Menambahkan %i"
+
+msgctxt "#32068"
+msgid "Trakt collection"
+msgstr "Koleksi Trakt"
+
+msgctxt "#32071"
+msgid "Trakt history"
+msgstr "Riwayat Trakt"
+
+msgctxt "#32074"
+msgid "Kodi watched status"
+msgstr "Status tonton Kodi"
+
+msgctxt "#32076"
+msgid "Removing %i"
+msgstr "Membuang %i"
+
+msgctxt "#32079"
+msgid "Loading Kodi library"
+msgstr "Memuat pustaka Kodi"
+
+msgctxt "#32081"
+msgid "Loading Trakt collection"
+msgstr "Memuat koleksi Trakt"
+
+msgctxt "#32082"
+msgid "Loading Trakt history"
+msgstr "Memuat riwayat Trakt"
+
+msgctxt "#32085"
+msgid "Added %i"
+msgstr "Ditambahkan %i"
+
+msgctxt "#32086"
+msgid "Up to date"
+msgstr "Sudah terbaru"
+
+msgctxt "#32089"
+msgid "%i of %i"
+msgstr "%i dari %i"
+
+msgctxt "#32090"
+msgid "Updated %i"
+msgstr "Diperbarui %i"
+
+msgctxt "#32092"
+msgid "Removed %i"
+msgstr "Dibuang %i"
+
+msgctxt "#32116"
+msgid "Enable debug mode"
+msgstr "Aktifkan mode debug"
+
+msgctxt "#32117"
+msgid "Sync movie playback progress to Kodi"
+msgstr "Sinkronkan progres pemutaran film ke Kodi"
+
+msgctxt "#32118"
+msgid "Sync episode playback progress to Kodi"
+msgstr "Sinkronkan progres pemutaran episode ke Kodi"
+
+msgctxt "#32122"
+msgid "Loading Trakt playback progress"
+msgstr "Memuat progres pemutaran Trakt"
+
+msgctxt "#32132"
+msgid "Unrate this season"
+msgstr "Hapus rating musim ini"
+
+msgctxt "#32136"
+msgid "Add to watchlist"
+msgstr "Tambahkan ke daftar tonton"
+
+msgctxt "#32137"
+msgid "Rate this movie"
+msgstr "Beri rating film ini"
+
+msgctxt "#32138"
+msgid "Rate this show"
+msgstr "Beri rating acara ini"
+
+msgctxt "#32139"
+msgid "Rate this episode"
+msgstr "Beri rating episode ini"
+
+msgctxt "#32143"
+msgid "Sync library"
+msgstr "Sinkronkan pustaka"
+
+msgctxt "#32144"
+msgid "Shows a code and a QR code to approve Relay on your Trakt account."
+msgstr "Menampilkan kode dan kode QR untuk menyetujui Relay di akun Trakt Anda."
+
+msgctxt "#32149"
+msgid "Rate this season"
+msgstr "Beri rating musim ini"
+
+msgctxt "#32152"
+msgid "Connected to Trakt"
+msgstr "Terhubung ke Trakt"
+
+msgctxt "#32163"
+msgid "Connected as"
+msgstr "Terhubung sebagai"
+
+msgctxt "#32164"
+msgid "Fall back to title and year matching"
+msgstr "Gunakan pencocokan judul dan tahun sebagai cadangan"
+
+msgctxt "#32165"
+msgid "Added to watchlist"
+msgstr "Ditambahkan ke daftar tonton"
+
+msgctxt "#32166"
+msgid "Couldn't add to watchlist"
+msgstr "Gagal menambahkan ke daftar tonton"
+
+msgctxt "#32167"
+msgid "Scrobble start delay (minutes)"
+msgstr "Penundaan awal scrobble (menit)"
+
+msgctxt "#32169"
+msgid "Kodi ratings"
+msgstr "Rating Kodi"
+
+msgctxt "#32179"
+msgid "Trakt ratings"
+msgstr "Rating Trakt"
+
+msgctxt "#32184"
+msgid "Retry a failed scrobble by show title search"
+msgstr "Coba ulang scrobble gagal dengan mencari judul acara"
+
+msgctxt "#32185"
+msgid "Exclude plugins"
+msgstr "Kecualikan Plugin"
+
+msgctxt "#32186"
+msgid "Add-ons can pause scrobbling"
+msgstr "Add-on dapat menjeda scrobbling"
+
+msgctxt "#32187"
+msgid "Use own proxy"
+msgstr "Gunakan proksi sendiri"
+
+msgctxt "#32188"
+msgid "Proxy address"
+msgstr "Alamat proksi"
+
+msgctxt "#32189"
+msgid "Proxy port"
+msgstr "Port proksi"
+
+msgctxt "#32190"
+msgid "Username"
+msgstr "Nama pengguna"
+
+msgctxt "#32191"
+msgid "Password"
+msgstr "Kata sandi"
+
+msgctxt "#32192"
+msgid "Don't keep playback progress on Trakt"
+msgstr "Jangan simpan progres pemutaran di Trakt"
+
+msgctxt "#32193"
+msgid "Respect Trakt rewatch progress"
+msgstr "Ikuti progres tonton ulang Trakt"
+
+msgctxt "#32196"
+msgid "Sync ratings from Trakt to Kodi"
+msgstr "Sinkronkan rating dari Trakt ke Kodi"
+
+msgctxt "#32197"
+msgid "Sync ratings from Kodi to Trakt"
+msgstr "Sinkronkan rating dari Kodi ke Trakt"
+
+msgctxt "#32198"
+msgid "Trakt"
+msgstr "Trakt"
+
+msgctxt "#32199"
+msgid "Connect to Trakt"
+msgstr "Hubungkan ke Trakt"
+
+msgctxt "#32200"
+msgid "Visit {0}[CR]or scan the QR code, then enter:"
+msgstr "Kunjungi {0}[CR]atau pindai kode QR, lalu masukkan:"
+
+msgctxt "#32201"
+msgid "This closes by itself once you approve."
+msgstr "Ini akan tertutup sendiri setelah Anda menyetujui."
+
+msgctxt "#32202"
+msgid "Not connected to Trakt. Connect from the add-on settings."
+msgstr "Tidak terhubung ke Trakt. Hubungkan dari pengaturan add-on."
+
+msgctxt "#32206"
+msgid "Kodi resume points"
+msgstr "Titik lanjut Kodi"
+
+msgctxt "#32207"
+msgid "Use the proxy below instead of Kodi's proxy setting."
+msgstr "Gunakan proksi di bawah ini, bukan pengaturan proksi Kodi."
+
+msgctxt "#32208"
+msgid "Proxy server address, like http://proxy.lan."
+msgstr "Alamat server proksi, misalnya http://proxy.lan."
+
+msgctxt "#32209"
+msgid "Port of the proxy server."
+msgstr "Port server proksi."
+
+msgctxt "#32210"
+msgid "Optional user name needed to authenticate with the proxy."
+msgstr "Nama pengguna opsional yang diperlukan untuk autentikasi dengan proksi."
+
+msgctxt "#32211"
+msgid "Optional password needed to authenticate with the proxy."
+msgstr "Kata sandi opsional yang diperlukan untuk autentikasi dengan proksi."
+
+msgctxt "#32212"
+msgid "Shows you are rewatching on Trakt match your rewatch progress in Kodi. Episodes watched since the rewatch started are marked watched, and the rest unwatched. Start a rewatch from a show's context menu or on Trakt."
+msgstr "Acara yang sedang Anda tonton ulang di Trakt mengikuti progres tonton ulang Anda di Kodi. Episode yang ditonton sejak tonton ulang dimulai ditandai sebagai ditonton, dan sisanya sebagai belum ditonton. Mulai tonton ulang dari menu konteks acara atau di Trakt."
+
+msgctxt "#32213"
+msgid "Movie sync"
+msgstr "Sinkronisasi film"
+
+msgctxt "#32214"
+msgid "Episode sync"
+msgstr "Sinkronisasi episode"
+
+msgctxt "#32215"
+msgid "Paused at %s"
+msgstr "Dijeda di %s"
+
+msgctxt "#32216"
+msgid "Loading Trakt ratings"
+msgstr "Memuat rating Trakt"
+
+msgctxt "#32217"
+msgid "Watching"
+msgstr "Sedang ditonton"
+
+msgctxt "#32218"
+msgid "The Trakt add-on is also enabled. Both add-ons scrobble and sync with Trakt, so everything is done twice."
+msgstr "Add-on Trakt juga diaktifkan. Kedua add-on melakukan scrobble dan sinkronisasi dengan Trakt, sehingga semuanya dilakukan dua kali."
+
+msgctxt "#32219"
+msgid "Keep both"
+msgstr "Pertahankan keduanya"
+
+msgctxt "#32220"
+msgid "Start rewatch"
+msgstr "Mulai tonton ulang"
+
+msgctxt "#32221"
+msgid "Start a rewatch on Trakt? Your progress starts again, and every episode is marked unwatched in Kodi."
+msgstr "Mulai tonton ulang di Trakt? Progres Anda dimulai lagi dari awal, dan semua episode ditandai belum ditonton di Kodi."
+
+msgctxt "#32222"
+msgid "Rewatch started"
+msgstr "Tonton ulang dimulai"
+
+msgctxt "#32223"
+msgid "Couldn't start rewatch"
+msgstr "Gagal memulai tonton ulang"
+
+msgctxt "#32224"
+msgid "Use the OG Trakt theme"
+msgstr "Gunakan tema OG Trakt"
+
+msgctxt "#32225"
+msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
+msgstr "Menampilkan logo merah Trakt, ikon hati, dan warna sorotan, seperti di og.trakt.tv."

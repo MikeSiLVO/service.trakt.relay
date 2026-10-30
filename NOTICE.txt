@@ -1,0 +1,16 @@
+Trakt Relay
+
+Trakt Relay is a modified version of script.trakt 3.9.0:
+https://github.com/trakt/script.trakt
+
+script.trakt is the work of Trakt.tv, Razzeee, and its contributors and translators.
+Their work is used under the GNU General Public License version 2 only.
+
+The changes from script.trakt 3.9.0 are by MikeSiLVO, starting 2026-09-30. The full change
+history is at https://github.com/MikeSiLVO/service.trakt.relay
+
+Trakt Relay is distributed under the same license, the GNU General Public License version 2
+only. See LICENSE.txt.
+
+The Trakt name and logos are trademarks of Trakt. They are used under Trakt's branding
+guidelines and are not covered by the GPL.

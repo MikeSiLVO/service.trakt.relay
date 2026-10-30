@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>101</defaultcontrol>
+	<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+	<controls>
+		<control type="image">
+			<width>1920</width>
+			<height>1080</height>
+			<texture colordiffuse="B8000000">trakt-relay-white.png</texture>
+		</control>
+		<control type="group">
+			<left>460</left>
+			<top>330</top>
+			<control type="image">
+				<width>1000</width>
+				<height>420</height>
+				<bordersize>2</bordersize>
+				<texture border="16" colordiffuse="FF151418">trakt-relay-panel.png</texture>
+				<bordertexture border="16" colordiffuse="FF2F2D33">trakt-relay-panel.png</bordertexture>
+			</control>
+			<control type="group">
+				<left>40</left>
+				<control type="image">
+					<top>36</top>
+					<width>142</width>
+					<height>40</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[Window.Property(logo)]</texture>
+				</control>
+				<control type="label">
+					<top>114</top>
+					<width>920</width>
+					<height>40</height>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<label>[B]$ADDON[service.trakt.relay 32026][/B]</label>
+				</control>
+				<control type="label" id="100">
+					<top>160</top>
+					<width>920</width>
+					<height>40</height>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<textcolor>FFB8B6BE</textcolor>
+					<scroll>true</scroll>
+				</control>
+			</control>
+			<control type="grouplist">
+				<left>101</left>
+				<top>240</top>
+				<width>798</width>
+				<height>60</height>
+				<orientation>horizontal</orientation>
+				<itemgap>22</itemgap>
+				<control type="togglebutton" id="101">
+					<width>60</width>
+					<height>60</height>
+					<label />
+					<texturefocus colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-heart.png</texturefocus>
+					<texturenofocus colordiffuse="FF2F2D33">trakt-relay-heart.png</texturenofocus>
+					<alttexturenofocus colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-heart.png</alttexturenofocus>
+					<usealttexture>Integer.IsGreater(System.CurrentControlId,101)</usealttexture>
+					<animation effect="zoom" end="125" center="auto" time="100">Focus</animation>
+				</control>
+				<control type="togglebutton" id="102">
+					<width>60</width>
+					<height>60</height>
+					<label />
+					<texturefocus colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-heart.png</texturefocus>
+					<texturenofocus colordiffuse="FF2F2D33">trakt-relay-heart.png</texturenofocus>
+					<alttexturenofocus colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-heart.png</alttexturenofocus>
+					<usealttexture>Integer.IsGreater(System.CurrentControlId,102)</usealttexture>
+					<animation effect="zoom" end="125" center="auto" time="100">Focus</animation>
+				</control>
+				<control type="togglebutton" id="103">
+					<width>60</width>
+					<height>60</height>
+					<label />
+					<texturefocus colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-heart.png</texturefocus>
+					<texturenofocus colordiffuse="FF2F2D33">trakt-relay-heart.png</texturenofocus>
+					<alttexturenofocus colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-heart.png</alttexturenofocus>
+					<usealttexture>Integer.IsGreater(System.CurrentControlId,103)</usealttexture>
+					<animation effect="zoom" end="125" center="auto" time="100">Focus</animation>
+				</control>
+				<control type="togglebutton" id="104">
+					<width>60</width>
+					<height>60</height>
+					<label />
+					<texturefocus colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-heart.png</texturefocus>
+					<texturenofocus colordiffuse="FF2F2D33">trakt-relay-heart.png</texturenofocus>
+					<alttexturenofocus colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-heart.png</alttexturenofocus>
+					<usealttexture>Integer.IsGreater(System.CurrentControlId,104)</usealttexture>
+					<animation effect="zoom" end="125" center="auto" time="100">Focus</animation>
+				</control>
+				<control type="togglebutton" id="105">
+					<width>60</width>
+					<height>60</height>
+					<label />
+					<texturefocus colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-heart.png</texturefocus>
+					<texturenofocus colordiffuse="FF2F2D33">trakt-relay-heart.png</texturenofocus>
+					<alttexturenofocus colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-heart.png</alttexturenofocus>
+					<usealttexture>Integer.IsGreater(System.CurrentControlId,105)</usealttexture>
+					<animation effect="zoom" end="125" center="auto" time="100">Focus</animation>
+				</control>
+				<control type="togglebutton" id="106">
+					<width>60</width>
+					<height>60</height>
+					<label />
+					<texturefocus colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-heart.png</texturefocus>
+					<texturenofocus colordiffuse="FF2F2D33">trakt-relay-heart.png</texturenofocus>
+					<alttexturenofocus colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-heart.png</alttexturenofocus>
+					<usealttexture>Integer.IsGreater(System.CurrentControlId,106)</usealttexture>
+					<animation effect="zoom" end="125" center="auto" time="100">Focus</animation>
+				</control>
+				<control type="togglebutton" id="107">
+					<width>60</width>
+					<height>60</height>
+					<label />
+					<texturefocus colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-heart.png</texturefocus>
+					<texturenofocus colordiffuse="FF2F2D33">trakt-relay-heart.png</texturenofocus>
+					<alttexturenofocus colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-heart.png</alttexturenofocus>
+					<usealttexture>Integer.IsGreater(System.CurrentControlId,107)</usealttexture>
+					<animation effect="zoom" end="125" center="auto" time="100">Focus</animation>
+				</control>
+				<control type="togglebutton" id="108">
+					<width>60</width>
+					<height>60</height>
+					<label />
+					<texturefocus colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-heart.png</texturefocus>
+					<texturenofocus colordiffuse="FF2F2D33">trakt-relay-heart.png</texturenofocus>
+					<alttexturenofocus colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-heart.png</alttexturenofocus>
+					<usealttexture>Integer.IsGreater(System.CurrentControlId,108)</usealttexture>
+					<animation effect="zoom" end="125" center="auto" time="100">Focus</animation>
+				</control>
+				<control type="togglebutton" id="109">
+					<width>60</width>
+					<height>60</height>
+					<label />
+					<texturefocus colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-heart.png</texturefocus>
+					<texturenofocus colordiffuse="FF2F2D33">trakt-relay-heart.png</texturenofocus>
+					<alttexturenofocus colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-heart.png</alttexturenofocus>
+					<usealttexture>Integer.IsGreater(System.CurrentControlId,109)</usealttexture>
+					<animation effect="zoom" end="125" center="auto" time="100">Focus</animation>
+				</control>
+				<control type="button" id="110">
+					<width>60</width>
+					<height>60</height>
+					<label />
+					<texturefocus colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-heart.png</texturefocus>
+					<texturenofocus colordiffuse="FF2F2D33">trakt-relay-heart.png</texturenofocus>
+					<animation effect="zoom" end="125" center="auto" time="100">Focus</animation>
+				</control>
+			</control>
+			<control type="label" id="99">
+				<top>340</top>
+				<width>1000</width>
+				<height>40</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font13</font>
+				<textcolor>FFFFFFFF</textcolor>
+			</control>
+		</control>
+	</controls>
+</window>

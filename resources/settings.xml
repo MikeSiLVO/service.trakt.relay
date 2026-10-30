@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <settings version="1">
-	<section id="script.trakt">
+	<section id="service.trakt.relay">
 		<category id="general" label="32000" help="">
 			<group id="1" label="">
 				<setting id="user" type="string" label="32163" help="">
@@ -12,14 +12,14 @@
 					<enable>false</enable>
 					<level>0</level>
 				</setting>
-				<setting id="Auth_Info" type="action" label="32153" help="32144">
+				<setting id="Auth_Info" type="action" label="32199" help="32144">
 					<constraints>
 						<allowempty>true</allowempty>
 					</constraints>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
-					<data>RunScript(script.trakt, action=auth_info)</data>
+					<data>RunScript(service.trakt.relay, action=auth_info)</data>
 					<level>0</level>
 				</setting>
 				<setting id="authorization" type="string" label="authorization">
@@ -32,12 +32,12 @@
 				</setting>
 			</group>
 			<group id="2" label="">
-				<setting id="proxy_override" type="boolean" label="32187" help="42187">
+				<setting id="proxy_override" type="boolean" label="32187" help="32207">
 					<control type="toggle" />
 					<default>false</default>
 					<level>3</level>
 				</setting>
-				<setting id="proxy_uri" type="string" label="32188" help="42188" parent="proxy_override">
+				<setting id="proxy_uri" type="string" label="32188" help="32208" parent="proxy_override">
 					<constraints>
 						<allowempty>true</allowempty>
 					</constraints>
@@ -48,7 +48,7 @@
 					</dependencies>
 					<level>3</level>
 				</setting>
-				<setting id="proxy_port" type="integer" label="32189" help="42189" parent="proxy_override">
+				<setting id="proxy_port" type="integer" label="32189" help="32209" parent="proxy_override">
 					<constraints>
 						<minimum>0</minimum>
 						<step>1</step>
@@ -61,7 +61,7 @@
 					</dependencies>
 					<level>3</level>
 				</setting>
-				<setting id="proxy_user" type="string" label="32190" help="42190" parent="proxy_override">
+				<setting id="proxy_user" type="string" label="32190" help="32210" parent="proxy_override">
 					<constraints>
 						<allowempty>true</allowempty>
 					</constraints>
@@ -72,7 +72,7 @@
 					</dependencies>
 					<level>3</level>
 				</setting>
-				<setting id="proxy_passwd" type="string" label="32191" help="42191" parent="proxy_override">
+				<setting id="proxy_passwd" type="string" label="32191" help="32211" parent="proxy_override">
 					<constraints>
 						<allowempty>true</allowempty>
 					</constraints>
@@ -87,6 +87,11 @@
 				</setting>
 			</group>
 			<group id="3" label="">
+				<setting id="og_theme" type="boolean" label="32224" help="32225">
+					<control type="toggle" />
+					<default>false</default>
+					<level>0</level>
+				</setting>
 				<setting id="startup_delay" type="integer" label="32003" help="">
 					<constraints>
 						<minimum>0</minimum>
@@ -115,11 +120,24 @@
 					<level>3</level>
 					<visible>false</visible>
 				</setting>
-				<setting id="last_reminder" type="integer" label="last_reminder">
-					<control type="edit" format="integer" />
-					<default>0</default>
+				<setting id="last_activities_all" type="string" label="last_activities_all">
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<control type="edit" format="string" />
+					<default />
 					<enable>false</enable>
-					<level>3</level>
+					<level>4</level>
+					<visible>false</visible>
+				</setting>
+				<setting id="kodi_library_dirty" type="string" label="kodi_library_dirty">
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<control type="edit" format="string" />
+					<default>false</default>
+					<enable>false</enable>
+					<level>4</level>
 					<visible>false</visible>
 				</setting>
 			</group>
@@ -497,12 +515,12 @@
 					<default>0</default>
 					<level>2</level>
 				</setting>
-				<setting id="scrobble_mythtv_pvr" type="boolean" label="32183" help="">
+				<setting id="scrobble_secondary_title" type="boolean" label="32184" help="">
 					<control type="toggle" />
 					<default>false</default>
 					<level>1</level>
 				</setting>
-				<setting id="scrobble_secondary_title" type="boolean" label="32184" help="">
+				<setting id="clear_playback_progress" type="boolean" label="32192" help="">
 					<control type="toggle" />
 					<default>false</default>
 					<level>1</level>
@@ -526,26 +544,31 @@
 					<default>false</default>
 					<level>1</level>
 				</setting>
-				<setting id="trakt_sync_ratings" type="boolean" label="32168" help="">
+				<setting id="sync_ratings_to_kodi" type="boolean" label="32196" help="">
 					<control type="toggle" />
 					<default>true</default>
 					<level>1</level>
 				</setting>
-			</group>
-			<group id="2" label="32046">
-				<setting id="add_movies_to_trakt" type="boolean" label="32047" help="">
-					<control type="toggle" />
-					<default>true</default>
-					<level>1</level>
-				</setting>
-				<setting id="clean_trakt_movies" type="boolean" label="32057" help="">
+				<setting id="sync_ratings_to_trakt" type="boolean" label="32197" help="">
 					<control type="toggle" />
 					<default>false</default>
 					<level>1</level>
 				</setting>
-				<setting id="trakt_movie_playcount" type="boolean" label="32048" help="">
+			</group>
+			<group id="2" label="32046">
+				<setting id="sync_collection_movies_to_trakt" type="boolean" label="32047" help="">
 					<control type="toggle" />
-					<default>true</default>
+					<default>false</default>
+					<level>1</level>
+				</setting>
+				<setting id="sync_clean_collection_movies_to_trakt" type="boolean" label="32057" help="">
+					<control type="toggle" />
+					<default>false</default>
+					<level>1</level>
+				</setting>
+				<setting id="sync_playcount_movies_to_trakt" type="boolean" label="32048" help="">
+					<control type="toggle" />
+					<default>false</default>
 					<level>1</level>
 				</setting>
 				<setting id="kodi_movie_playcount" type="boolean" label="32049" help="">
@@ -560,24 +583,32 @@
 				</setting>
 			</group>
 			<group id="3" label="32050">
-				<setting id="add_episodes_to_trakt" type="boolean" label="32051" help="">
-					<control type="toggle" />
-					<default>true</default>
-					<level>1</level>
-				</setting>
-				<setting id="clean_trakt_episodes" type="boolean" label="32058" help="">
+				<setting id="sync_collection_episodes_to_trakt" type="boolean" label="32051" help="">
 					<control type="toggle" />
 					<default>false</default>
 					<level>1</level>
 				</setting>
-				<setting id="trakt_episode_playcount" type="boolean" label="32052" help="">
+				<setting id="sync_clean_collection_episodes_to_trakt" type="boolean" label="32058" help="">
 					<control type="toggle" />
-					<default>true</default>
+					<default>false</default>
+					<level>1</level>
+				</setting>
+				<setting id="sync_playcount_episodes_to_trakt" type="boolean" label="32052" help="">
+					<control type="toggle" />
+					<default>false</default>
 					<level>1</level>
 				</setting>
 				<setting id="kodi_episode_playcount" type="boolean" label="32053" help="">
 					<control type="toggle" />
 					<default>true</default>
+					<level>1</level>
+				</setting>
+				<setting id="rewatch_aware_sync" type="boolean" label="32193" help="32212" parent="kodi_episode_playcount">
+					<control type="toggle" />
+					<default>true</default>
+					<dependencies>
+						<dependency type="enable" setting="kodi_episode_playcount">true</dependency>
+					</dependencies>
 					<level>1</level>
 				</setting>
 				<setting id="trakt_episode_playback" type="boolean" label="32118" help="">

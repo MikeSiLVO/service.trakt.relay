@@ -1,0 +1,526 @@
+# Kodi Media Center language file
+# Addon Name: Trakt Relay
+# Addon id: service.trakt.relay
+# Addon Provider: MikeSiLVO
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Addons\n"
+"Report-Msgid-Bugs-To: https://github.com/MikeSiLVO/service.trakt.relay/issues\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2022-06-11 11:14+0000\n"
+"Last-Translator: Christian Gade <gade@kodi.tv>\n"
+"Language-Team: Dutch <https://kodi.weblate.cloud/projects/kodi-add-ons-scripts/script-trakt/nl_nl/>\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.12.2\n"
+
+msgctxt "Addon Summary"
+msgid "Scrobbles what you watch in Kodi and syncs your library with Trakt"
+msgstr "Scrobbelt wat je in Kodi kijkt en synchroniseert je bibliotheek met Trakt"
+
+msgctxt "Addon Description"
+msgid "Trakt Relay scrobbles the movies, episodes, live TV and recordings you watch in Kodi to Trakt, and syncs your library with it: collection, watched status, ratings and playback progress, each direction switched on in the settings. It asks for a rating after you watch, and its context menu rates, adds to the watchlist and starts a rewatch of a show. Scrobbles that fail are retried later.[CR][CR]Trakt Relay is a modified version of script.trakt by Trakt.tv, Razzeee and its contributors."
+msgstr "Trakt Relay scrobbelt de films, afleveringen, live-tv en opnames die je in Kodi bekijkt naar Trakt en synchroniseert je bibliotheek ermee: collectie, kijkstatus, waarderingen en afspeelvoortgang, elke richting in te schakelen in de instellingen. Na het kijken vraagt het om een waardering, en via het contextmenu kun je waarderen, aan de kijklijst toevoegen en het herkijken van een serie starten. Mislukte scrobbles worden later opnieuw geprobeerd.[CR][CR]Trakt Relay is een aangepaste versie van script.trakt door Trakt.tv, Razzeee en de bijdragers ervan."
+
+msgctxt "Addon Disclaimer"
+msgid "Trakt Relay is not affiliated with or endorsed by Trakt."
+msgstr "Trakt Relay is niet verbonden aan of goedgekeurd door Trakt."
+
+msgctxt "#32000"
+msgid "General"
+msgstr "Algemeen"
+
+msgctxt "#32003"
+msgid "Startup delay (seconds)"
+msgstr "Opstart vertraging (seconden)"
+
+msgctxt "#32004"
+msgid "Rating"
+msgstr "Beoordeling"
+
+msgctxt "#32005"
+msgid "Rate movies after watching"
+msgstr "Films waarderen na het kijken"
+
+msgctxt "#32006"
+msgid "Rate episodes after watching"
+msgstr "Afleveringen waarderen na het kijken"
+
+msgctxt "#32008"
+msgid "Minimum percent watched before asking"
+msgstr "Minimaal percentage bekeken voordat gevraagd wordt"
+
+msgctxt "#32009"
+msgid "Allow re-rating"
+msgstr "Opnieuw waarderen toestaan"
+
+msgctxt "#32010"
+msgid "Default rating"
+msgstr "Standaardwaardering"
+
+msgctxt "#32011"
+msgid "Scrobbling"
+msgstr "Scrobbling"
+
+msgctxt "#32012"
+msgid "Scrobble movies"
+msgstr "Films scrobblen"
+
+msgctxt "#32013"
+msgid "Scrobble episodes"
+msgstr "Afleveringen scrobblen"
+
+msgctxt "#32014"
+msgid "Show scrobble notifications"
+msgstr "Scrobble-meldingen tonen"
+
+msgctxt "#32015"
+msgid "Watched"
+msgstr "Bekeken"
+
+msgctxt "#32016"
+msgid "Exclusions"
+msgstr "Uitsluitingen"
+
+msgctxt "#32017"
+msgid "Exclude live TV"
+msgstr "Live-TV uitsluiten"
+
+msgctxt "#32018"
+msgid "Exclude HTTP sources"
+msgstr "HTTP-bronnen uitsluiten"
+
+msgctxt "#32019"
+msgid "Exclude path"
+msgstr "Bestandspad uitsluiten"
+
+msgctxt "#32020"
+msgid "Folder, subfolders included"
+msgstr "Map, inclusief submappen"
+
+msgctxt "#32023"
+msgid "Couldn't reach Trakt"
+msgstr "Kan Trakt niet bereiken"
+
+msgctxt "#32026"
+msgid "What did you think?"
+msgstr "Wat vond je er van?"
+
+msgctxt "#32027"
+msgid "Totally Ninja!"
+msgstr "Waanzinnig goed!"
+
+msgctxt "#32028"
+msgid "Weak Sauce :("
+msgstr "Rampzalig"
+
+msgctxt "#32029"
+msgid "Terrible"
+msgstr "Vreselijk"
+
+msgctxt "#32030"
+msgid "Bad"
+msgstr "Slecht"
+
+msgctxt "#32031"
+msgid "Poor"
+msgstr "Zwak"
+
+msgctxt "#32032"
+msgid "Meh"
+msgstr "Matig"
+
+msgctxt "#32033"
+msgid "Fair"
+msgstr "Redelijk"
+
+msgctxt "#32034"
+msgid "Good"
+msgstr "Goed"
+
+msgctxt "#32035"
+msgid "Great"
+msgstr "Geweldig"
+
+msgctxt "#32036"
+msgid "Superb"
+msgstr "Super"
+
+msgctxt "#32037"
+msgid "Unrate this movie"
+msgstr "Waardering van deze film verwijderen"
+
+msgctxt "#32038"
+msgid "Unrate this show"
+msgstr "Waardering van deze serie verwijderen"
+
+msgctxt "#32039"
+msgid "Unrate this episode"
+msgstr "Waardering van deze aflevering verwijderen"
+
+msgctxt "#32040"
+msgid "Rated %i"
+msgstr "Gewaardeerd met %i"
+
+msgctxt "#32041"
+msgid "Already rated %i"
+msgstr "Al gewaardeerd met %i"
+
+msgctxt "#32042"
+msgid "Unrated"
+msgstr "Waardering verwijderd"
+
+msgctxt "#32044"
+msgid "Couldn't rate"
+msgstr "Waarderen mislukt"
+
+msgctxt "#32045"
+msgid "Sync"
+msgstr "Synchronisatie"
+
+msgctxt "#32046"
+msgid "Movies"
+msgstr "Films"
+
+msgctxt "#32047"
+msgid "Add new movies to Trakt collection"
+msgstr "Voeg nieuwe films toe aan je Trakt-collectie"
+
+msgctxt "#32048"
+msgid "Add watched movies to Trakt history"
+msgstr "Voeg bekeken films toe aan je Trakt historie"
+
+msgctxt "#32049"
+msgid "Mark movies from Trakt history as watched in Kodi"
+msgstr "Markeer films van Trakt historie als bekeken in Kodi"
+
+msgctxt "#32050"
+msgid "Episodes"
+msgstr "Afleveringen"
+
+msgctxt "#32051"
+msgid "Add new TV episodes to Trakt collection"
+msgstr "Voeg nieuwe tv afleveringen toe aan je Trakt-collectie"
+
+msgctxt "#32052"
+msgid "Add watched TV episodes to Trakt history"
+msgstr "Voeg bekeken TV afleveringen toe aan je Trakt historie"
+
+msgctxt "#32053"
+msgid "Mark TV episodes from Trakt history as watched in Kodi"
+msgstr "Markeer TV afleveringen uit je Trakt historie als bekeken in kodi"
+
+msgctxt "#32054"
+msgid "Service"
+msgstr "Dienst"
+
+msgctxt "#32055"
+msgid "Sync after a library scan or clean"
+msgstr "Synchroniseren na scannen of opschonen van bibliotheek"
+
+msgctxt "#32056"
+msgid "Show sync notifications"
+msgstr "Toon sync notificaties"
+
+msgctxt "#32057"
+msgid "Remove deleted movies from Trakt collection"
+msgstr "Haal verwijderde films uit je Trakt-collectie"
+
+msgctxt "#32058"
+msgid "Remove deleted TV episodes from Trakt collection"
+msgstr "Haal verwijderde TV-afleveringen uit je Trakt-collectie"
+
+msgctxt "#32060"
+msgid "Hide notifications during playback"
+msgstr "Verberg berichten tijdens het afspelen"
+
+msgctxt "#32061"
+msgid "Started"
+msgstr "Gestart"
+
+msgctxt "#32062"
+msgid "Finished"
+msgstr "Voltooid"
+
+msgctxt "#32063"
+msgid "Adding %i"
+msgstr "%i worden toegevoegd"
+
+msgctxt "#32068"
+msgid "Trakt collection"
+msgstr "Trakt-collectie"
+
+msgctxt "#32071"
+msgid "Trakt history"
+msgstr "Trakt-historie"
+
+msgctxt "#32074"
+msgid "Kodi watched status"
+msgstr "Kodi-kijkstatus"
+
+msgctxt "#32076"
+msgid "Removing %i"
+msgstr "%i worden verwijderd"
+
+msgctxt "#32079"
+msgid "Loading Kodi library"
+msgstr "Kodi-bibliotheek laden"
+
+msgctxt "#32081"
+msgid "Loading Trakt collection"
+msgstr "Trakt-collectie laden"
+
+msgctxt "#32082"
+msgid "Loading Trakt history"
+msgstr "Trakt-historie laden"
+
+msgctxt "#32085"
+msgid "Added %i"
+msgstr "%i toegevoegd"
+
+msgctxt "#32086"
+msgid "Up to date"
+msgstr "Actueel"
+
+msgctxt "#32089"
+msgid "%i of %i"
+msgstr "%i van %i"
+
+msgctxt "#32090"
+msgid "Updated %i"
+msgstr "%i bijgewerkt"
+
+msgctxt "#32092"
+msgid "Removed %i"
+msgstr "%i verwijderd"
+
+msgctxt "#32116"
+msgid "Enable debug mode"
+msgstr "Schakel debug mode in"
+
+msgctxt "#32117"
+msgid "Sync movie playback progress to Kodi"
+msgstr "Synchroniseer film afspeelvoortgang naar Kodi"
+
+msgctxt "#32118"
+msgid "Sync episode playback progress to Kodi"
+msgstr "Synchroniseer afleverings voortgang naar Kodi"
+
+msgctxt "#32122"
+msgid "Loading Trakt playback progress"
+msgstr "Trakt-afspeelvoortgang laden"
+
+msgctxt "#32132"
+msgid "Unrate this season"
+msgstr "Dewaardeer dit seizoen"
+
+msgctxt "#32136"
+msgid "Add to watchlist"
+msgstr "Voeg toe aan kijklijst"
+
+msgctxt "#32137"
+msgid "Rate this movie"
+msgstr "Waardeer deze film"
+
+msgctxt "#32138"
+msgid "Rate this show"
+msgstr "Waardeer deze serie"
+
+msgctxt "#32139"
+msgid "Rate this episode"
+msgstr "Waardeer deze aflevering"
+
+msgctxt "#32143"
+msgid "Sync library"
+msgstr "Bibliotheek synchroniseren"
+
+msgctxt "#32144"
+msgid "Shows a code and a QR code to approve Relay on your Trakt account."
+msgstr "Toont een code en een QR-code om Relay goed te keuren op je Trakt-account."
+
+msgctxt "#32149"
+msgid "Rate this season"
+msgstr "Waardeer dit seizoen"
+
+msgctxt "#32152"
+msgid "Connected to Trakt"
+msgstr "Verbonden met Trakt"
+
+msgctxt "#32163"
+msgid "Connected as"
+msgstr "Verbonden als"
+
+msgctxt "#32164"
+msgid "Fall back to title and year matching"
+msgstr "Terugvallen op titel en jaar"
+
+msgctxt "#32165"
+msgid "Added to watchlist"
+msgstr "Toegevoegd aan kijklijst"
+
+msgctxt "#32166"
+msgid "Couldn't add to watchlist"
+msgstr "Toevoegen aan kijklijst mislukt"
+
+msgctxt "#32167"
+msgid "Scrobble start delay (minutes)"
+msgstr "Scrobble-startvertraging (minuten)"
+
+msgctxt "#32169"
+msgid "Kodi ratings"
+msgstr "Kodi-waarderingen"
+
+msgctxt "#32179"
+msgid "Trakt ratings"
+msgstr "Trakt-waarderingen"
+
+msgctxt "#32184"
+msgid "Retry a failed scrobble by show title search"
+msgstr "Mislukte scrobble opnieuw proberen via zoeken op serietitel"
+
+msgctxt "#32185"
+msgid "Exclude plugins"
+msgstr "Plugins uitsluiten"
+
+msgctxt "#32186"
+msgid "Add-ons can pause scrobbling"
+msgstr "Add-ons kunnen scrobbelen pauzeren"
+
+msgctxt "#32187"
+msgid "Use own proxy"
+msgstr "Eigen proxy gebruiken"
+
+msgctxt "#32188"
+msgid "Proxy address"
+msgstr "Proxyadres"
+
+msgctxt "#32189"
+msgid "Proxy port"
+msgstr "Proxypoort"
+
+msgctxt "#32190"
+msgid "Username"
+msgstr "Gebruikersnaam"
+
+msgctxt "#32191"
+msgid "Password"
+msgstr "Wachtwoord"
+
+msgctxt "#32192"
+msgid "Don't keep playback progress on Trakt"
+msgstr "Afspeelvoortgang niet op Trakt bewaren"
+
+msgctxt "#32193"
+msgid "Respect Trakt rewatch progress"
+msgstr "Herkijkvoortgang van Trakt respecteren"
+
+msgctxt "#32196"
+msgid "Sync ratings from Trakt to Kodi"
+msgstr "Waarderingen synchroniseren van Trakt naar Kodi"
+
+msgctxt "#32197"
+msgid "Sync ratings from Kodi to Trakt"
+msgstr "Waarderingen synchroniseren van Kodi naar Trakt"
+
+msgctxt "#32198"
+msgid "Trakt"
+msgstr "Trakt"
+
+msgctxt "#32199"
+msgid "Connect to Trakt"
+msgstr "Verbinden met Trakt"
+
+msgctxt "#32200"
+msgid "Visit {0}[CR]or scan the QR code, then enter:"
+msgstr "Ga naar {0}[CR]of scan de QR-code en voer dan in:"
+
+msgctxt "#32201"
+msgid "This closes by itself once you approve."
+msgstr "Dit venster sluit vanzelf zodra je toestemming geeft."
+
+msgctxt "#32202"
+msgid "Not connected to Trakt. Connect from the add-on settings."
+msgstr "Niet verbonden met Trakt. Maak verbinding via de add-on-instellingen."
+
+msgctxt "#32206"
+msgid "Kodi resume points"
+msgstr "Kodi-hervatpunten"
+
+msgctxt "#32207"
+msgid "Use the proxy below instead of Kodi's proxy setting."
+msgstr "Gebruik de proxy hieronder in plaats van de proxy-instelling van Kodi."
+
+msgctxt "#32208"
+msgid "Proxy server address, like http://proxy.lan."
+msgstr "Adres van de proxyserver, bijvoorbeeld http://proxy.lan."
+
+msgctxt "#32209"
+msgid "Port of the proxy server."
+msgstr "Poort van de proxyserver."
+
+msgctxt "#32210"
+msgid "Optional user name needed to authenticate with the proxy."
+msgstr "Optionele gebruikersnaam voor authenticatie bij de proxy."
+
+msgctxt "#32211"
+msgid "Optional password needed to authenticate with the proxy."
+msgstr "Optioneel wachtwoord voor authenticatie bij de proxy."
+
+msgctxt "#32212"
+msgid "Shows you are rewatching on Trakt match your rewatch progress in Kodi. Episodes watched since the rewatch started are marked watched, and the rest unwatched. Start a rewatch from a show's context menu or on Trakt."
+msgstr "Series die je op Trakt herkijkt, volgen in Kodi je herkijkvoortgang. Afleveringen die sinds de start van het herkijken bekeken zijn, worden als bekeken gemarkeerd en de rest als niet bekeken. Start het herkijken vanuit het contextmenu van een serie of op Trakt."
+
+msgctxt "#32213"
+msgid "Movie sync"
+msgstr "Films synchroniseren"
+
+msgctxt "#32214"
+msgid "Episode sync"
+msgstr "Afleveringen synchroniseren"
+
+msgctxt "#32215"
+msgid "Paused at %s"
+msgstr "Gepauzeerd op %s"
+
+msgctxt "#32216"
+msgid "Loading Trakt ratings"
+msgstr "Trakt-waarderingen laden"
+
+msgctxt "#32217"
+msgid "Watching"
+msgstr "Aan het kijken"
+
+msgctxt "#32218"
+msgid "The Trakt add-on is also enabled. Both add-ons scrobble and sync with Trakt, so everything is done twice."
+msgstr "De Trakt-add-on is ook ingeschakeld. Beide add-ons scrobbelen en synchroniseren met Trakt, dus alles gebeurt twee keer."
+
+msgctxt "#32219"
+msgid "Keep both"
+msgstr "Beide behouden"
+
+msgctxt "#32220"
+msgid "Start rewatch"
+msgstr "Herkijken starten"
+
+msgctxt "#32221"
+msgid "Start a rewatch on Trakt? Your progress starts again, and every episode is marked unwatched in Kodi."
+msgstr "Herkijken starten op Trakt? Je voortgang begint opnieuw en alle afleveringen worden in Kodi als niet bekeken gemarkeerd."
+
+msgctxt "#32222"
+msgid "Rewatch started"
+msgstr "Herkijken gestart"
+
+msgctxt "#32223"
+msgid "Couldn't start rewatch"
+msgstr "Herkijken starten mislukt"
+
+msgctxt "#32224"
+msgid "Use the OG Trakt theme"
+msgstr "OG Trakt-thema gebruiken"
+
+msgctxt "#32225"
+msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
+msgstr "Toont het rode Trakt-logo, de hartjes en de accentkleuren, zoals op og.trakt.tv."

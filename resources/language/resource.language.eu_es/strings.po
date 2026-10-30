@@ -1,0 +1,525 @@
+# Kodi Media Center language file
+# Addon Name: Trakt Relay
+# Addon id: service.trakt.relay
+# Addon Provider: MikeSiLVO
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Addons\n"
+"Report-Msgid-Bugs-To: https://github.com/MikeSiLVO/service.trakt.relay/issues\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: Basque (http://www.transifex.com/projects/p/xbmc-addons/language/eu/)\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "Addon Summary"
+msgid "Scrobbles what you watch in Kodi and syncs your library with Trakt"
+msgstr "Kodi-n ikusten duzunaren scrobble-a egiten du eta zure liburutegia Trakt-ekin sinkronizatzen du"
+
+msgctxt "Addon Description"
+msgid "Trakt Relay scrobbles the movies, episodes, live TV and recordings you watch in Kodi to Trakt, and syncs your library with it: collection, watched status, ratings and playback progress, each direction switched on in the settings. It asks for a rating after you watch, and its context menu rates, adds to the watchlist and starts a rewatch of a show. Scrobbles that fail are retried later.[CR][CR]Trakt Relay is a modified version of script.trakt by Trakt.tv, Razzeee and its contributors."
+msgstr "Trakt Relay-k Kodi-n ikusten dituzun filmen, atalen, zuzeneko telebistaren eta grabazioen scrobble-a egiten du Trakt-en, eta zure liburutegia harekin sinkronizatzen du: bilduma, ikusitako egoera, balorazioak eta erreprodukzio-aurrerapena, norabide bakoitza ezarpenetan gaituta. Ikusi ondoren balorazioa eskatzen du, eta haren laster-menuak baloratu, ikusteko zerrendara gehitu eta saio baten berriro ikustea has dezake. Huts egiten duten scrobble-ak geroago berriro saiatzen dira.[CR][CR]Trakt Relay Trakt.tv, Razzeee eta haren laguntzaileek egindako script.trakt-en bertsio aldatua da."
+
+msgctxt "Addon Disclaimer"
+msgid "Trakt Relay is not affiliated with or endorsed by Trakt."
+msgstr "Trakt Relay ez dago Trakt-ekin lotuta, ezta Trakt-ek babestuta ere."
+
+msgctxt "#32000"
+msgid "General"
+msgstr "Orokorra"
+
+msgctxt "#32003"
+msgid "Startup delay (seconds)"
+msgstr "Abioko atzerapena (segundoak)"
+
+msgctxt "#32004"
+msgid "Rating"
+msgstr "Balorazioa"
+
+msgctxt "#32005"
+msgid "Rate movies after watching"
+msgstr "Baloratu filmak ikusi ondoren"
+
+msgctxt "#32006"
+msgid "Rate episodes after watching"
+msgstr "Baloratu atalak ikusi ondoren"
+
+msgctxt "#32008"
+msgid "Minimum percent watched before asking"
+msgstr "Galdetu aurretik ikusitako gutxieneko ehunekoa"
+
+msgctxt "#32009"
+msgid "Allow re-rating"
+msgstr "Baimendu berriro baloratzea"
+
+msgctxt "#32010"
+msgid "Default rating"
+msgstr "Balorazio lehenetsia"
+
+msgctxt "#32011"
+msgid "Scrobbling"
+msgstr "Scrobbling-a"
+
+msgctxt "#32012"
+msgid "Scrobble movies"
+msgstr "Egin filmen scrobble-a"
+
+msgctxt "#32013"
+msgid "Scrobble episodes"
+msgstr "Egin atalen scrobble-a"
+
+msgctxt "#32014"
+msgid "Show scrobble notifications"
+msgstr "Erakutsi scrobble-jakinarazpenak"
+
+msgctxt "#32015"
+msgid "Watched"
+msgstr "Ikusita"
+
+msgctxt "#32016"
+msgid "Exclusions"
+msgstr "Salbuespenak"
+
+msgctxt "#32017"
+msgid "Exclude live TV"
+msgstr "Baztertu zuzeneko telebista"
+
+msgctxt "#32018"
+msgid "Exclude HTTP sources"
+msgstr "Baztertu HTTP iturburuak"
+
+msgctxt "#32019"
+msgid "Exclude path"
+msgstr "Baztertu bide-izena"
+
+msgctxt "#32020"
+msgid "Folder, subfolders included"
+msgstr "Karpeta, azpikarpetak barne"
+
+msgctxt "#32023"
+msgid "Couldn't reach Trakt"
+msgstr "Ezin izan da Trakt-era konektatu"
+
+msgctxt "#32026"
+msgid "What did you think?"
+msgstr "Zer iruditu zaizu?"
+
+msgctxt "#32027"
+msgid "Totally Ninja!"
+msgstr "Ninja hutsa!"
+
+msgctxt "#32028"
+msgid "Weak Sauce :("
+msgstr "Ahul samarra :("
+
+msgctxt "#32029"
+msgid "Terrible"
+msgstr "Oso txarra"
+
+msgctxt "#32030"
+msgid "Bad"
+msgstr "Txarra"
+
+msgctxt "#32031"
+msgid "Poor"
+msgstr "Eskasa"
+
+msgctxt "#32032"
+msgid "Meh"
+msgstr "Hala-holakoa"
+
+msgctxt "#32033"
+msgid "Fair"
+msgstr "Egokia"
+
+msgctxt "#32034"
+msgid "Good"
+msgstr "Ona"
+
+msgctxt "#32035"
+msgid "Great"
+msgstr "Oso ona"
+
+msgctxt "#32036"
+msgid "Superb"
+msgstr "Bikaina"
+
+msgctxt "#32037"
+msgid "Unrate this movie"
+msgstr "Kendu film honen balorazioa"
+
+msgctxt "#32038"
+msgid "Unrate this show"
+msgstr "Kendu saio honen balorazioa"
+
+msgctxt "#32039"
+msgid "Unrate this episode"
+msgstr "Kendu atal honen balorazioa"
+
+msgctxt "#32040"
+msgid "Rated %i"
+msgstr "Baloratuta: %i"
+
+msgctxt "#32041"
+msgid "Already rated %i"
+msgstr "Dagoeneko baloratuta: %i"
+
+msgctxt "#32042"
+msgid "Unrated"
+msgstr "Balorazioa kenduta"
+
+msgctxt "#32044"
+msgid "Couldn't rate"
+msgstr "Ezin izan da baloratu"
+
+msgctxt "#32045"
+msgid "Sync"
+msgstr "Sinkronizazioa"
+
+msgctxt "#32046"
+msgid "Movies"
+msgstr "Filmak"
+
+msgctxt "#32047"
+msgid "Add new movies to Trakt collection"
+msgstr "Gehitu film berriak Trakt bildumara"
+
+msgctxt "#32048"
+msgid "Add watched movies to Trakt history"
+msgstr "Gehitu ikusitako filmak Trakt historiara"
+
+msgctxt "#32049"
+msgid "Mark movies from Trakt history as watched in Kodi"
+msgstr "Markatu Trakt historiako filmak ikusita gisa Kodi-n"
+
+msgctxt "#32050"
+msgid "Episodes"
+msgstr "Atalak"
+
+msgctxt "#32051"
+msgid "Add new TV episodes to Trakt collection"
+msgstr "Gehitu telebista atal berriak Trakt bildumara"
+
+msgctxt "#32052"
+msgid "Add watched TV episodes to Trakt history"
+msgstr "Gehitu ikusitako telebista atalak Trakt historiara"
+
+msgctxt "#32053"
+msgid "Mark TV episodes from Trakt history as watched in Kodi"
+msgstr "Markatu Trakt historiako telebista atalak ikusita gisa Kodi-n"
+
+msgctxt "#32054"
+msgid "Service"
+msgstr "Zerbitzua"
+
+msgctxt "#32055"
+msgid "Sync after a library scan or clean"
+msgstr "Sinkronizatu liburutegia eskaneatu edo garbitu ondoren"
+
+msgctxt "#32056"
+msgid "Show sync notifications"
+msgstr "Erakutsi sinkronizazio-jakinarazpenak"
+
+msgctxt "#32057"
+msgid "Remove deleted movies from Trakt collection"
+msgstr "Kendu ezabatutako filmak Trakt bildumatik"
+
+msgctxt "#32058"
+msgid "Remove deleted TV episodes from Trakt collection"
+msgstr "Kendu ezabatutako telebista atalak Trakt bildumatik"
+
+msgctxt "#32060"
+msgid "Hide notifications during playback"
+msgstr "Ezkutatu jakinarazpenak erreprodukzioan zehar"
+
+msgctxt "#32061"
+msgid "Started"
+msgstr "Hasita"
+
+msgctxt "#32062"
+msgid "Finished"
+msgstr "Amaituta"
+
+msgctxt "#32063"
+msgid "Adding %i"
+msgstr "%i gehitzen"
+
+msgctxt "#32068"
+msgid "Trakt collection"
+msgstr "Trakt bilduma"
+
+msgctxt "#32071"
+msgid "Trakt history"
+msgstr "Trakt historia"
+
+msgctxt "#32074"
+msgid "Kodi watched status"
+msgstr "Kodi-ko ikusitako egoera"
+
+msgctxt "#32076"
+msgid "Removing %i"
+msgstr "%i kentzen"
+
+msgctxt "#32079"
+msgid "Loading Kodi library"
+msgstr "Kodi liburutegia kargatzen"
+
+msgctxt "#32081"
+msgid "Loading Trakt collection"
+msgstr "Trakt bilduma kargatzen"
+
+msgctxt "#32082"
+msgid "Loading Trakt history"
+msgstr "Trakt historia kargatzen"
+
+msgctxt "#32085"
+msgid "Added %i"
+msgstr "%i gehituta"
+
+msgctxt "#32086"
+msgid "Up to date"
+msgstr "Egunean"
+
+msgctxt "#32089"
+msgid "%i of %i"
+msgstr "%i/%i"
+
+msgctxt "#32090"
+msgid "Updated %i"
+msgstr "%i eguneratuta"
+
+msgctxt "#32092"
+msgid "Removed %i"
+msgstr "%i kenduta"
+
+msgctxt "#32116"
+msgid "Enable debug mode"
+msgstr "Gaitu arazketa modua"
+
+msgctxt "#32117"
+msgid "Sync movie playback progress to Kodi"
+msgstr "Sinkronizatu filmen erreprodukzio-aurrerapena Kodi-ra"
+
+msgctxt "#32118"
+msgid "Sync episode playback progress to Kodi"
+msgstr "Sinkronizatu atalen erreprodukzio-aurrerapena Kodi-ra"
+
+msgctxt "#32122"
+msgid "Loading Trakt playback progress"
+msgstr "Trakt erreprodukzio-aurrerapena kargatzen"
+
+msgctxt "#32132"
+msgid "Unrate this season"
+msgstr "Kendu denboraldi honen balorazioa"
+
+msgctxt "#32136"
+msgid "Add to watchlist"
+msgstr "Gehitu ikusteko zerrendara"
+
+msgctxt "#32137"
+msgid "Rate this movie"
+msgstr "Baloratu film hau"
+
+msgctxt "#32138"
+msgid "Rate this show"
+msgstr "Baloratu saio hau"
+
+msgctxt "#32139"
+msgid "Rate this episode"
+msgstr "Baloratu atal hau"
+
+msgctxt "#32143"
+msgid "Sync library"
+msgstr "Sinkronizatu liburutegia"
+
+msgctxt "#32144"
+msgid "Shows a code and a QR code to approve Relay on your Trakt account."
+msgstr "Kode bat eta QR kode bat erakusten ditu Relay zure Trakt kontuan onartzeko."
+
+msgctxt "#32149"
+msgid "Rate this season"
+msgstr "Baloratu denboraldi hau"
+
+msgctxt "#32152"
+msgid "Connected to Trakt"
+msgstr "Trakt-era konektatuta"
+
+msgctxt "#32163"
+msgid "Connected as"
+msgstr "Honela konektatuta"
+
+msgctxt "#32164"
+msgid "Fall back to title and year matching"
+msgstr "Erabili izenburu eta urtearen araberako bat-etortzea ordezko gisa"
+
+msgctxt "#32165"
+msgid "Added to watchlist"
+msgstr "Ikusteko zerrendara gehituta"
+
+msgctxt "#32166"
+msgid "Couldn't add to watchlist"
+msgstr "Ezin izan da ikusteko zerrendara gehitu"
+
+msgctxt "#32167"
+msgid "Scrobble start delay (minutes)"
+msgstr "Scrobble-aren hasierako atzerapena (minutuak)"
+
+msgctxt "#32169"
+msgid "Kodi ratings"
+msgstr "Kodi balorazioak"
+
+msgctxt "#32179"
+msgid "Trakt ratings"
+msgstr "Trakt balorazioak"
+
+msgctxt "#32184"
+msgid "Retry a failed scrobble by show title search"
+msgstr "Saiatu berriro huts egindako scrobble-a saioaren izenburua bilatuz"
+
+msgctxt "#32185"
+msgid "Exclude plugins"
+msgstr "Baztertu pluginak"
+
+msgctxt "#32186"
+msgid "Add-ons can pause scrobbling"
+msgstr "Gehigarriek scrobbling-a pausatu dezakete"
+
+msgctxt "#32187"
+msgid "Use own proxy"
+msgstr "Erabili proxy propioa"
+
+msgctxt "#32188"
+msgid "Proxy address"
+msgstr "Proxyaren helbidea"
+
+msgctxt "#32189"
+msgid "Proxy port"
+msgstr "Proxyaren ataka"
+
+msgctxt "#32190"
+msgid "Username"
+msgstr "Erabiltzaile-izena"
+
+msgctxt "#32191"
+msgid "Password"
+msgstr "Pasahitza"
+
+msgctxt "#32192"
+msgid "Don't keep playback progress on Trakt"
+msgstr "Ez gorde erreprodukzio-aurrerapena Trakt-en"
+
+msgctxt "#32193"
+msgid "Respect Trakt rewatch progress"
+msgstr "Errespetatu Trakt-en berriro ikustearen aurrerapena"
+
+msgctxt "#32196"
+msgid "Sync ratings from Trakt to Kodi"
+msgstr "Sinkronizatu balorazioak Trakt-etik Kodi-ra"
+
+msgctxt "#32197"
+msgid "Sync ratings from Kodi to Trakt"
+msgstr "Sinkronizatu balorazioak Kodi-tik Trakt-era"
+
+msgctxt "#32198"
+msgid "Trakt"
+msgstr "Trakt"
+
+msgctxt "#32199"
+msgid "Connect to Trakt"
+msgstr "Konektatu Trakt-era"
+
+msgctxt "#32200"
+msgid "Visit {0}[CR]or scan the QR code, then enter:"
+msgstr "Joan {0} helbidera[CR]edo eskaneatu QR kodea, eta idatzi:"
+
+msgctxt "#32201"
+msgid "This closes by itself once you approve."
+msgstr "Onartu bezain laster berez itxiko da."
+
+msgctxt "#32202"
+msgid "Not connected to Trakt. Connect from the add-on settings."
+msgstr "Ez dago Trakt-era konektatuta. Konektatu gehigarriaren ezarpenetatik."
+
+msgctxt "#32206"
+msgid "Kodi resume points"
+msgstr "Kodi-ko berrekite-puntuak"
+
+msgctxt "#32207"
+msgid "Use the proxy below instead of Kodi's proxy setting."
+msgstr "Erabili beheko proxya Kodi-ren proxy ezarpenaren ordez."
+
+msgctxt "#32208"
+msgid "Proxy server address, like http://proxy.lan."
+msgstr "Proxy zerbitzariaren helbidea, adibidez http://proxy.lan."
+
+msgctxt "#32209"
+msgid "Port of the proxy server."
+msgstr "Proxy zerbitzariaren ataka."
+
+msgctxt "#32210"
+msgid "Optional user name needed to authenticate with the proxy."
+msgstr "Proxyarekin autentifikatzeko erabiltzaile-izena, aukerakoa."
+
+msgctxt "#32211"
+msgid "Optional password needed to authenticate with the proxy."
+msgstr "Proxyarekin autentifikatzeko pasahitza, aukerakoa."
+
+msgctxt "#32212"
+msgid "Shows you are rewatching on Trakt match your rewatch progress in Kodi. Episodes watched since the rewatch started are marked watched, and the rest unwatched. Start a rewatch from a show's context menu or on Trakt."
+msgstr "Trakt-en berriro ikusten ari zaren saioek zure berriro ikustearen aurrerapena islatzen dute Kodi-n. Berriro ikustea hasi zenetik ikusitako atalak ikusita gisa markatzen dira, eta gainerakoak ikusi gabe gisa. Hasi berriro ikustea saio baten testuinguru-menutik edo Trakt-en."
+
+msgctxt "#32213"
+msgid "Movie sync"
+msgstr "Filmen sinkronizazioa"
+
+msgctxt "#32214"
+msgid "Episode sync"
+msgstr "Atalen sinkronizazioa"
+
+msgctxt "#32215"
+msgid "Paused at %s"
+msgstr "Pausatuta: %s"
+
+msgctxt "#32216"
+msgid "Loading Trakt ratings"
+msgstr "Trakt balorazioak kargatzen"
+
+msgctxt "#32217"
+msgid "Watching"
+msgstr "Ikusten"
+
+msgctxt "#32218"
+msgid "The Trakt add-on is also enabled. Both add-ons scrobble and sync with Trakt, so everything is done twice."
+msgstr "Trakt gehigarria ere gaituta dago. Bi gehigarriek scrobble egiten eta sinkronizatzen dute Trakt-ekin, beraz dena bi aldiz egiten da."
+
+msgctxt "#32219"
+msgid "Keep both"
+msgstr "Mantendu biak"
+
+msgctxt "#32220"
+msgid "Start rewatch"
+msgstr "Hasi berriro ikustea"
+
+msgctxt "#32221"
+msgid "Start a rewatch on Trakt? Your progress starts again, and every episode is marked unwatched in Kodi."
+msgstr "Hasi berriro ikustea Trakt-en? Zure aurrerapena hasieratik hasten da, eta atal guztiak ikusi gabe gisa markatzen dira Kodi-n."
+
+msgctxt "#32222"
+msgid "Rewatch started"
+msgstr "Berriro ikustea hasita"
+
+msgctxt "#32223"
+msgid "Couldn't start rewatch"
+msgstr "Ezin izan da berriro ikustea hasi"
+
+msgctxt "#32224"
+msgid "Use the OG Trakt theme"
+msgstr "Erabili OG Trakt gaia"
+
+msgctxt "#32225"
+msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
+msgstr "Trakt-en logo gorria, bihotzak eta nabarmentze-kolorea erakusten ditu, og.trakt.tv webgunean bezala."

@@ -1,0 +1,525 @@
+# Kodi Media Center language file
+# Addon Name: Trakt Relay
+# Addon id: service.trakt.relay
+# Addon Provider: MikeSiLVO
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Addons\n"
+"Report-Msgid-Bugs-To: https://github.com/MikeSiLVO/service.trakt.relay/issues\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: Tamil (India) (http://www.transifex.com/projects/p/xbmc-addons/language/ta_IN/)\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "Addon Summary"
+msgid "Scrobbles what you watch in Kodi and syncs your library with Trakt"
+msgstr "Kodi-இல் நீங்கள் பார்ப்பவற்றை scrobble செய்து, உங்கள் நூலகத்தை Trakt உடன் ஒத்திசைக்கிறது"
+
+msgctxt "Addon Description"
+msgid "Trakt Relay scrobbles the movies, episodes, live TV and recordings you watch in Kodi to Trakt, and syncs your library with it: collection, watched status, ratings and playback progress, each direction switched on in the settings. It asks for a rating after you watch, and its context menu rates, adds to the watchlist and starts a rewatch of a show. Scrobbles that fail are retried later.[CR][CR]Trakt Relay is a modified version of script.trakt by Trakt.tv, Razzeee and its contributors."
+msgstr "Kodi-இல் நீங்கள் பார்க்கும் திரைப்படங்கள், அத்தியாயங்கள், நேரலை தொலைக்காட்சி மற்றும் பதிவுகளை Trakt Relay, Trakt-இல் scrobble செய்து, உங்கள் நூலகத்தை அதனுடன் ஒத்திசைக்கிறது: சேகரிப்பு, பார்த்த நிலை, மதிப்பீடுகள் மற்றும் இயக்க முன்னேற்றம், ஒவ்வொரு திசையையும் அமைப்புகளில் இயக்கலாம். நீங்கள் பார்த்த பிறகு இது மதிப்பீடு கேட்கும், மேலும் இதன் சூழல் மெனு மூலம் மதிப்பிடலாம், பார்க்க வேண்டிய பட்டியலில் சேர்க்கலாம், ஒரு தொடரின் மறுபார்வையைத் தொடங்கலாம். தோல்வியடைந்த scrobble-கள் பின்னர் மீண்டும் முயற்சிக்கப்படும்.[CR][CR]Trakt Relay என்பது Trakt.tv, Razzeee மற்றும் அதன் பங்களிப்பாளர்களின் script.trakt-இன் மாற்றியமைக்கப்பட்ட பதிப்பாகும்."
+
+msgctxt "Addon Disclaimer"
+msgid "Trakt Relay is not affiliated with or endorsed by Trakt."
+msgstr "Trakt Relay-க்கு Trakt உடன் எந்தத் தொடர்பும் இல்லை, Trakt இதை அங்கீகரிக்கவும் இல்லை."
+
+msgctxt "#32000"
+msgid "General"
+msgstr "பொதுவானது"
+
+msgctxt "#32003"
+msgid "Startup delay (seconds)"
+msgstr "தொடக்கத் தாமதம் (விநாடிகள்)"
+
+msgctxt "#32004"
+msgid "Rating"
+msgstr "மதிப்பீடு"
+
+msgctxt "#32005"
+msgid "Rate movies after watching"
+msgstr "பார்த்த பிறகு திரைப்படங்களை மதிப்பிடு"
+
+msgctxt "#32006"
+msgid "Rate episodes after watching"
+msgstr "பார்த்த பிறகு அத்தியாயங்களை மதிப்பிடு"
+
+msgctxt "#32008"
+msgid "Minimum percent watched before asking"
+msgstr "கேட்பதற்கு முன் பார்த்திருக்க வேண்டிய குறைந்தபட்ச சதவீதம்"
+
+msgctxt "#32009"
+msgid "Allow re-rating"
+msgstr "மறுமதிப்பீட்டை அனுமதி"
+
+msgctxt "#32010"
+msgid "Default rating"
+msgstr "இயல்புநிலை மதிப்பீடு"
+
+msgctxt "#32011"
+msgid "Scrobbling"
+msgstr "Scrobbling"
+
+msgctxt "#32012"
+msgid "Scrobble movies"
+msgstr "திரைப்படங்களை scrobble செய்"
+
+msgctxt "#32013"
+msgid "Scrobble episodes"
+msgstr "அத்தியாயங்களை scrobble செய்"
+
+msgctxt "#32014"
+msgid "Show scrobble notifications"
+msgstr "scrobble அறிவிப்புகளைக் காட்டு"
+
+msgctxt "#32015"
+msgid "Watched"
+msgstr "பார்த்தது"
+
+msgctxt "#32016"
+msgid "Exclusions"
+msgstr "விலக்குகள்"
+
+msgctxt "#32017"
+msgid "Exclude live TV"
+msgstr "நேரலை தொலைக்காட்சியை விலக்கு"
+
+msgctxt "#32018"
+msgid "Exclude HTTP sources"
+msgstr "HTTP மூலங்களை விலக்கு"
+
+msgctxt "#32019"
+msgid "Exclude path"
+msgstr "பாதையை விலக்கு"
+
+msgctxt "#32020"
+msgid "Folder, subfolders included"
+msgstr "கோப்புறை, துணைக்கோப்புறைகள் உட்பட"
+
+msgctxt "#32023"
+msgid "Couldn't reach Trakt"
+msgstr "Trakt-ஐ அணுக முடியவில்லை"
+
+msgctxt "#32026"
+msgid "What did you think?"
+msgstr "உங்கள் கருத்து என்ன?"
+
+msgctxt "#32027"
+msgid "Totally Ninja!"
+msgstr "அட்டகாசம்!"
+
+msgctxt "#32028"
+msgid "Weak Sauce :("
+msgstr "சொதப்பல் :("
+
+msgctxt "#32029"
+msgid "Terrible"
+msgstr "மிக மோசம்"
+
+msgctxt "#32030"
+msgid "Bad"
+msgstr "மோசம்"
+
+msgctxt "#32031"
+msgid "Poor"
+msgstr "தரம் குறைவு"
+
+msgctxt "#32032"
+msgid "Meh"
+msgstr "சுமார்"
+
+msgctxt "#32033"
+msgid "Fair"
+msgstr "பரவாயில்லை"
+
+msgctxt "#32034"
+msgid "Good"
+msgstr "நன்று"
+
+msgctxt "#32035"
+msgid "Great"
+msgstr "மிக நன்று"
+
+msgctxt "#32036"
+msgid "Superb"
+msgstr "அருமை"
+
+msgctxt "#32037"
+msgid "Unrate this movie"
+msgstr "இந்தத் திரைப்படத்தின் மதிப்பீட்டை நீக்கு"
+
+msgctxt "#32038"
+msgid "Unrate this show"
+msgstr "இந்தத் தொடரின் மதிப்பீட்டை நீக்கு"
+
+msgctxt "#32039"
+msgid "Unrate this episode"
+msgstr "இந்த அத்தியாயத்தின் மதிப்பீட்டை நீக்கு"
+
+msgctxt "#32040"
+msgid "Rated %i"
+msgstr "மதிப்பிடப்பட்டது: %i"
+
+msgctxt "#32041"
+msgid "Already rated %i"
+msgstr "ஏற்கெனவே மதிப்பிடப்பட்டது: %i"
+
+msgctxt "#32042"
+msgid "Unrated"
+msgstr "மதிப்பீடு நீக்கப்பட்டது"
+
+msgctxt "#32044"
+msgid "Couldn't rate"
+msgstr "மதிப்பிட முடியவில்லை"
+
+msgctxt "#32045"
+msgid "Sync"
+msgstr "ஒத்திசைவு"
+
+msgctxt "#32046"
+msgid "Movies"
+msgstr "திரைப்படங்கள்"
+
+msgctxt "#32047"
+msgid "Add new movies to Trakt collection"
+msgstr "புதிய திரைப்படங்களை Trakt சேகரிப்பில் சேர்"
+
+msgctxt "#32048"
+msgid "Add watched movies to Trakt history"
+msgstr "பார்த்த திரைப்படங்களை Trakt வரலாற்றில் சேர்"
+
+msgctxt "#32049"
+msgid "Mark movies from Trakt history as watched in Kodi"
+msgstr "Trakt வரலாற்றில் உள்ள திரைப்படங்களை Kodi-இல் பார்த்ததாகக் குறி"
+
+msgctxt "#32050"
+msgid "Episodes"
+msgstr "அத்தியாயங்கள்"
+
+msgctxt "#32051"
+msgid "Add new TV episodes to Trakt collection"
+msgstr "புதிய தொலைக்காட்சி அத்தியாயங்களை Trakt சேகரிப்பில் சேர்"
+
+msgctxt "#32052"
+msgid "Add watched TV episodes to Trakt history"
+msgstr "பார்த்த தொலைக்காட்சி அத்தியாயங்களை Trakt வரலாற்றில் சேர்"
+
+msgctxt "#32053"
+msgid "Mark TV episodes from Trakt history as watched in Kodi"
+msgstr "Trakt வரலாற்றில் உள்ள தொலைக்காட்சி அத்தியாயங்களை Kodi-இல் பார்த்ததாகக் குறி"
+
+msgctxt "#32054"
+msgid "Service"
+msgstr "சேவை"
+
+msgctxt "#32055"
+msgid "Sync after a library scan or clean"
+msgstr "நூலக ஸ்கேன் அல்லது சுத்தம் செய்த பிறகு ஒத்திசை"
+
+msgctxt "#32056"
+msgid "Show sync notifications"
+msgstr "ஒத்திசைவு அறிவிப்புகளைக் காட்டு"
+
+msgctxt "#32057"
+msgid "Remove deleted movies from Trakt collection"
+msgstr "நீக்கப்பட்ட திரைப்படங்களை Trakt சேகரிப்பிலிருந்து அகற்று"
+
+msgctxt "#32058"
+msgid "Remove deleted TV episodes from Trakt collection"
+msgstr "நீக்கப்பட்ட தொலைக்காட்சி அத்தியாயங்களை Trakt சேகரிப்பிலிருந்து அகற்று"
+
+msgctxt "#32060"
+msgid "Hide notifications during playback"
+msgstr "இயக்கத்தின்போது அறிவிப்புகளை மறை"
+
+msgctxt "#32061"
+msgid "Started"
+msgstr "தொடங்கியது"
+
+msgctxt "#32062"
+msgid "Finished"
+msgstr "முடிந்தது"
+
+msgctxt "#32063"
+msgid "Adding %i"
+msgstr "%i சேர்க்கப்படுகிறது"
+
+msgctxt "#32068"
+msgid "Trakt collection"
+msgstr "Trakt சேகரிப்பு"
+
+msgctxt "#32071"
+msgid "Trakt history"
+msgstr "Trakt வரலாறு"
+
+msgctxt "#32074"
+msgid "Kodi watched status"
+msgstr "Kodi பார்த்த நிலை"
+
+msgctxt "#32076"
+msgid "Removing %i"
+msgstr "%i அகற்றப்படுகிறது"
+
+msgctxt "#32079"
+msgid "Loading Kodi library"
+msgstr "Kodi நூலகம் ஏற்றப்படுகிறது"
+
+msgctxt "#32081"
+msgid "Loading Trakt collection"
+msgstr "Trakt சேகரிப்பு ஏற்றப்படுகிறது"
+
+msgctxt "#32082"
+msgid "Loading Trakt history"
+msgstr "Trakt வரலாறு ஏற்றப்படுகிறது"
+
+msgctxt "#32085"
+msgid "Added %i"
+msgstr "%i சேர்க்கப்பட்டது"
+
+msgctxt "#32086"
+msgid "Up to date"
+msgstr "புதுப்பித்த நிலையில் உள்ளது"
+
+msgctxt "#32089"
+msgid "%i of %i"
+msgstr "%i/%i"
+
+msgctxt "#32090"
+msgid "Updated %i"
+msgstr "%i புதுப்பிக்கப்பட்டது"
+
+msgctxt "#32092"
+msgid "Removed %i"
+msgstr "%i அகற்றப்பட்டது"
+
+msgctxt "#32116"
+msgid "Enable debug mode"
+msgstr "பிழைத்திருத்தப் பயன்முறையை இயக்கு"
+
+msgctxt "#32117"
+msgid "Sync movie playback progress to Kodi"
+msgstr "திரைப்பட இயக்க முன்னேற்றத்தை Kodi உடன் ஒத்திசை"
+
+msgctxt "#32118"
+msgid "Sync episode playback progress to Kodi"
+msgstr "அத்தியாய இயக்க முன்னேற்றத்தை Kodi உடன் ஒத்திசை"
+
+msgctxt "#32122"
+msgid "Loading Trakt playback progress"
+msgstr "Trakt இயக்க முன்னேற்றம் ஏற்றப்படுகிறது"
+
+msgctxt "#32132"
+msgid "Unrate this season"
+msgstr "இந்தப் பருவத்தின் மதிப்பீட்டை நீக்கு"
+
+msgctxt "#32136"
+msgid "Add to watchlist"
+msgstr "பார்க்க வேண்டிய பட்டியலில் சேர்"
+
+msgctxt "#32137"
+msgid "Rate this movie"
+msgstr "இந்தத் திரைப்படத்தை மதிப்பிடு"
+
+msgctxt "#32138"
+msgid "Rate this show"
+msgstr "இந்தத் தொடரை மதிப்பிடு"
+
+msgctxt "#32139"
+msgid "Rate this episode"
+msgstr "இந்த அத்தியாயத்தை மதிப்பிடு"
+
+msgctxt "#32143"
+msgid "Sync library"
+msgstr "நூலகத்தை ஒத்திசை"
+
+msgctxt "#32144"
+msgid "Shows a code and a QR code to approve Relay on your Trakt account."
+msgstr "உங்கள் Trakt கணக்கில் Relay-க்கு ஒப்புதல் அளிக்க ஒரு குறியீட்டையும் QR குறியீட்டையும் காட்டுகிறது."
+
+msgctxt "#32149"
+msgid "Rate this season"
+msgstr "இந்தப் பருவத்தை மதிப்பிடு"
+
+msgctxt "#32152"
+msgid "Connected to Trakt"
+msgstr "Trakt உடன் இணைக்கப்பட்டது"
+
+msgctxt "#32163"
+msgid "Connected as"
+msgstr "இணைக்கப்பட்ட பயனர்"
+
+msgctxt "#32164"
+msgid "Fall back to title and year matching"
+msgstr "மாற்றாகத் தலைப்பு மற்றும் ஆண்டு மூலம் பொருத்து"
+
+msgctxt "#32165"
+msgid "Added to watchlist"
+msgstr "பார்க்க வேண்டிய பட்டியலில் சேர்க்கப்பட்டது"
+
+msgctxt "#32166"
+msgid "Couldn't add to watchlist"
+msgstr "பார்க்க வேண்டிய பட்டியலில் சேர்க்க முடியவில்லை"
+
+msgctxt "#32167"
+msgid "Scrobble start delay (minutes)"
+msgstr "scrobble தொடக்கத் தாமதம் (நிமிடங்கள்)"
+
+msgctxt "#32169"
+msgid "Kodi ratings"
+msgstr "Kodi மதிப்பீடுகள்"
+
+msgctxt "#32179"
+msgid "Trakt ratings"
+msgstr "Trakt மதிப்பீடுகள்"
+
+msgctxt "#32184"
+msgid "Retry a failed scrobble by show title search"
+msgstr "தோல்வியுற்ற scrobble-ஐத் தொடர் தலைப்பைத் தேடி மீண்டும் முயல்"
+
+msgctxt "#32185"
+msgid "Exclude plugins"
+msgstr "செருகுநிரல்களை விலக்கு"
+
+msgctxt "#32186"
+msgid "Add-ons can pause scrobbling"
+msgstr "துணைநிரல்கள் scrobbling-ஐ இடைநிறுத்தலாம்"
+
+msgctxt "#32187"
+msgid "Use own proxy"
+msgstr "சொந்த ப்ராக்ஸியைப் பயன்படுத்து"
+
+msgctxt "#32188"
+msgid "Proxy address"
+msgstr "ப்ராக்ஸி முகவரி"
+
+msgctxt "#32189"
+msgid "Proxy port"
+msgstr "ப்ராக்ஸி போர்ட்"
+
+msgctxt "#32190"
+msgid "Username"
+msgstr "பயனர்பெயர்"
+
+msgctxt "#32191"
+msgid "Password"
+msgstr "கடவுச்சொல்"
+
+msgctxt "#32192"
+msgid "Don't keep playback progress on Trakt"
+msgstr "இயக்க முன்னேற்றத்தை Trakt-இல் வைத்திருக்க வேண்டாம்"
+
+msgctxt "#32193"
+msgid "Respect Trakt rewatch progress"
+msgstr "Trakt மறுபார்வை முன்னேற்றத்தைப் பின்பற்று"
+
+msgctxt "#32196"
+msgid "Sync ratings from Trakt to Kodi"
+msgstr "Trakt-இலிருந்து Kodi-க்கு மதிப்பீடுகளை ஒத்திசை"
+
+msgctxt "#32197"
+msgid "Sync ratings from Kodi to Trakt"
+msgstr "Kodi-இலிருந்து Trakt-க்கு மதிப்பீடுகளை ஒத்திசை"
+
+msgctxt "#32198"
+msgid "Trakt"
+msgstr "Trakt"
+
+msgctxt "#32199"
+msgid "Connect to Trakt"
+msgstr "Trakt உடன் இணை"
+
+msgctxt "#32200"
+msgid "Visit {0}[CR]or scan the QR code, then enter:"
+msgstr "{0} தளத்திற்குச் செல்லவும்[CR]அல்லது QR குறியீட்டை ஸ்கேன் செய்து, பின்னர் உள்ளிடவும்:"
+
+msgctxt "#32201"
+msgid "This closes by itself once you approve."
+msgstr "நீங்கள் ஒப்புதல் அளித்ததும் இது தானாகவே மூடிவிடும்."
+
+msgctxt "#32202"
+msgid "Not connected to Trakt. Connect from the add-on settings."
+msgstr "Trakt உடன் இணைக்கப்படவில்லை. துணைநிரல் அமைப்புகளிலிருந்து இணைக்கவும்."
+
+msgctxt "#32206"
+msgid "Kodi resume points"
+msgstr "Kodi மீண்டும் தொடங்கும் இடங்கள்"
+
+msgctxt "#32207"
+msgid "Use the proxy below instead of Kodi's proxy setting."
+msgstr "Kodi-இன் ப்ராக்ஸி அமைப்புக்குப் பதிலாகக் கீழே உள்ள ப்ராக்ஸியைப் பயன்படுத்தும்."
+
+msgctxt "#32208"
+msgid "Proxy server address, like http://proxy.lan."
+msgstr "ப்ராக்ஸி சேவையக முகவரி, எடுத்துக்காட்டாக http://proxy.lan."
+
+msgctxt "#32209"
+msgid "Port of the proxy server."
+msgstr "ப்ராக்ஸி சேவையகத்தின் போர்ட்."
+
+msgctxt "#32210"
+msgid "Optional user name needed to authenticate with the proxy."
+msgstr "ப்ராக்ஸியுடன் அங்கீகரிக்கத் தேவையான விருப்பப் பயனர்பெயர்."
+
+msgctxt "#32211"
+msgid "Optional password needed to authenticate with the proxy."
+msgstr "ப்ராக்ஸியுடன் அங்கீகரிக்கத் தேவையான விருப்பக் கடவுச்சொல்."
+
+msgctxt "#32212"
+msgid "Shows you are rewatching on Trakt match your rewatch progress in Kodi. Episodes watched since the rewatch started are marked watched, and the rest unwatched. Start a rewatch from a show's context menu or on Trakt."
+msgstr "Trakt-இல் நீங்கள் மீண்டும் பார்க்கும் தொடர்கள் Kodi-இல் உங்கள் மறுபார்வை முன்னேற்றத்துடன் பொருந்தும். மறுபார்வை தொடங்கியதிலிருந்து பார்த்த அத்தியாயங்கள் பார்த்ததாகவும், மீதமுள்ளவை பார்க்காததாகவும் குறிக்கப்படும். ஒரு தொடரின் சூழல் மெனுவிலிருந்து அல்லது Trakt-இல் மறுபார்வையைத் தொடங்கலாம்."
+
+msgctxt "#32213"
+msgid "Movie sync"
+msgstr "திரைப்பட ஒத்திசைவு"
+
+msgctxt "#32214"
+msgid "Episode sync"
+msgstr "அத்தியாய ஒத்திசைவு"
+
+msgctxt "#32215"
+msgid "Paused at %s"
+msgstr "%s-இல் இடைநிறுத்தப்பட்டது"
+
+msgctxt "#32216"
+msgid "Loading Trakt ratings"
+msgstr "Trakt மதிப்பீடுகள் ஏற்றப்படுகின்றன"
+
+msgctxt "#32217"
+msgid "Watching"
+msgstr "பார்க்கப்படுகிறது"
+
+msgctxt "#32218"
+msgid "The Trakt add-on is also enabled. Both add-ons scrobble and sync with Trakt, so everything is done twice."
+msgstr "Trakt துணைநிரலும் இயக்கப்பட்டுள்ளது. இரண்டு துணைநிரல்களும் Trakt உடன் scrobble செய்து ஒத்திசைக்கின்றன, எனவே அனைத்தும் இரண்டு முறை நடக்கிறது."
+
+msgctxt "#32219"
+msgid "Keep both"
+msgstr "இரண்டையும் வைத்திரு"
+
+msgctxt "#32220"
+msgid "Start rewatch"
+msgstr "மறுபார்வையைத் தொடங்கு"
+
+msgctxt "#32221"
+msgid "Start a rewatch on Trakt? Your progress starts again, and every episode is marked unwatched in Kodi."
+msgstr "Trakt-இல் மறுபார்வையைத் தொடங்கவா? உங்கள் முன்னேற்றம் மீண்டும் தொடக்கத்திலிருந்து தொடங்கும், மேலும் Kodi-இல் ஒவ்வொரு அத்தியாயமும் பார்க்காததாகக் குறிக்கப்படும்."
+
+msgctxt "#32222"
+msgid "Rewatch started"
+msgstr "மறுபார்வை தொடங்கியது"
+
+msgctxt "#32223"
+msgid "Couldn't start rewatch"
+msgstr "மறுபார்வையைத் தொடங்க முடியவில்லை"
+
+msgctxt "#32224"
+msgid "Use the OG Trakt theme"
+msgstr "OG Trakt தீமைப் பயன்படுத்து"
+
+msgctxt "#32225"
+msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
+msgstr "og.trakt.tv-இல் உள்ளதுபோல், Trakt-இன் சிவப்பு லோகோ, இதயங்கள் மற்றும் ஹைலைட் வண்ணங்களைக் காட்டுகிறது."

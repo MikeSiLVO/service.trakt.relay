@@ -1,0 +1,525 @@
+# Kodi Media Center language file
+# Addon Name: Trakt Relay
+# Addon id: service.trakt.relay
+# Addon Provider: MikeSiLVO
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Addons\n"
+"Report-Msgid-Bugs-To: https://github.com/MikeSiLVO/service.trakt.relay/issues\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/xbmc-addons/language/ja/)\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgctxt "Addon Summary"
+msgid "Scrobbles what you watch in Kodi and syncs your library with Trakt"
+msgstr "Kodiで視聴したものをTraktにスクロブルし、ライブラリをTraktと同期します"
+
+msgctxt "Addon Description"
+msgid "Trakt Relay scrobbles the movies, episodes, live TV and recordings you watch in Kodi to Trakt, and syncs your library with it: collection, watched status, ratings and playback progress, each direction switched on in the settings. It asks for a rating after you watch, and its context menu rates, adds to the watchlist and starts a rewatch of a show. Scrobbles that fail are retried later.[CR][CR]Trakt Relay is a modified version of script.trakt by Trakt.tv, Razzeee and its contributors."
+msgstr "Trakt Relayは、Kodiで視聴したムービー、エピソード、ライブTV、録画をTraktにスクロブルし、ライブラリをTraktと同期します。同期するのはコレクション、視聴状態、評価、再生進捗で、それぞれの方向を設定で有効にできます。視聴後には評価を尋ね、コンテキストメニューから評価、ウォッチリストへの追加、番組の再視聴の開始ができます。失敗したスクロブルは後で再試行されます。[CR][CR]Trakt Relayは、Trakt.tv、Razzeeeおよびその貢献者によるscript.traktの改変版です。"
+
+msgctxt "Addon Disclaimer"
+msgid "Trakt Relay is not affiliated with or endorsed by Trakt."
+msgstr "Trakt RelayはTraktと提携しておらず、Traktの承認も受けていません。"
+
+msgctxt "#32000"
+msgid "General"
+msgstr "一般"
+
+msgctxt "#32003"
+msgid "Startup delay (seconds)"
+msgstr "起動遅延 (秒)"
+
+msgctxt "#32004"
+msgid "Rating"
+msgstr "評価"
+
+msgctxt "#32005"
+msgid "Rate movies after watching"
+msgstr "視聴後にムービーを評価"
+
+msgctxt "#32006"
+msgid "Rate episodes after watching"
+msgstr "視聴後にエピソードを評価"
+
+msgctxt "#32008"
+msgid "Minimum percent watched before asking"
+msgstr "評価を尋ねる最低視聴パーセント"
+
+msgctxt "#32009"
+msgid "Allow re-rating"
+msgstr "再評価を許可"
+
+msgctxt "#32010"
+msgid "Default rating"
+msgstr "デフォルトの評価"
+
+msgctxt "#32011"
+msgid "Scrobbling"
+msgstr "スクロブル"
+
+msgctxt "#32012"
+msgid "Scrobble movies"
+msgstr "ムービーをスクロブル"
+
+msgctxt "#32013"
+msgid "Scrobble episodes"
+msgstr "エピソードをスクロブル"
+
+msgctxt "#32014"
+msgid "Show scrobble notifications"
+msgstr "スクロブルの通知を表示"
+
+msgctxt "#32015"
+msgid "Watched"
+msgstr "視聴済み"
+
+msgctxt "#32016"
+msgid "Exclusions"
+msgstr "除外"
+
+msgctxt "#32017"
+msgid "Exclude live TV"
+msgstr "ライブTVを除外"
+
+msgctxt "#32018"
+msgid "Exclude HTTP sources"
+msgstr "HTTPソースを除外"
+
+msgctxt "#32019"
+msgid "Exclude path"
+msgstr "パスを除外"
+
+msgctxt "#32020"
+msgid "Folder, subfolders included"
+msgstr "フォルダー (サブフォルダーを含む)"
+
+msgctxt "#32023"
+msgid "Couldn't reach Trakt"
+msgstr "Traktに接続できませんでした"
+
+msgctxt "#32026"
+msgid "What did you think?"
+msgstr "いかがでしたか？"
+
+msgctxt "#32027"
+msgid "Totally Ninja!"
+msgstr "最高にニンジャ！"
+
+msgctxt "#32028"
+msgid "Weak Sauce :("
+msgstr "がっかり :("
+
+msgctxt "#32029"
+msgid "Terrible"
+msgstr "ひどい"
+
+msgctxt "#32030"
+msgid "Bad"
+msgstr "悪い"
+
+msgctxt "#32031"
+msgid "Poor"
+msgstr "いまいち"
+
+msgctxt "#32032"
+msgid "Meh"
+msgstr "微妙"
+
+msgctxt "#32033"
+msgid "Fair"
+msgstr "まあまあ"
+
+msgctxt "#32034"
+msgid "Good"
+msgstr "良い"
+
+msgctxt "#32035"
+msgid "Great"
+msgstr "とても良い"
+
+msgctxt "#32036"
+msgid "Superb"
+msgstr "素晴らしい"
+
+msgctxt "#32037"
+msgid "Unrate this movie"
+msgstr "このムービーの評価を取り消す"
+
+msgctxt "#32038"
+msgid "Unrate this show"
+msgstr "この番組の評価を取り消す"
+
+msgctxt "#32039"
+msgid "Unrate this episode"
+msgstr "このエピソードの評価を取り消す"
+
+msgctxt "#32040"
+msgid "Rated %i"
+msgstr "評価 %i"
+
+msgctxt "#32041"
+msgid "Already rated %i"
+msgstr "評価済み %i"
+
+msgctxt "#32042"
+msgid "Unrated"
+msgstr "評価を取り消しました"
+
+msgctxt "#32044"
+msgid "Couldn't rate"
+msgstr "評価できませんでした"
+
+msgctxt "#32045"
+msgid "Sync"
+msgstr "同期"
+
+msgctxt "#32046"
+msgid "Movies"
+msgstr "ムービー"
+
+msgctxt "#32047"
+msgid "Add new movies to Trakt collection"
+msgstr "新しいムービーをTraktコレクションに追加"
+
+msgctxt "#32048"
+msgid "Add watched movies to Trakt history"
+msgstr "視聴済みのムービーをTrakt履歴に追加"
+
+msgctxt "#32049"
+msgid "Mark movies from Trakt history as watched in Kodi"
+msgstr "Trakt履歴のムービーをKodiで視聴済みにする"
+
+msgctxt "#32050"
+msgid "Episodes"
+msgstr "エピソード"
+
+msgctxt "#32051"
+msgid "Add new TV episodes to Trakt collection"
+msgstr "新しいTVエピソードをTraktコレクションに追加"
+
+msgctxt "#32052"
+msgid "Add watched TV episodes to Trakt history"
+msgstr "視聴済みのTVエピソードをTrakt履歴に追加"
+
+msgctxt "#32053"
+msgid "Mark TV episodes from Trakt history as watched in Kodi"
+msgstr "Trakt履歴のTVエピソードをKodiで視聴済みにする"
+
+msgctxt "#32054"
+msgid "Service"
+msgstr "サービス"
+
+msgctxt "#32055"
+msgid "Sync after a library scan or clean"
+msgstr "ライブラリのスキャンまたはクリーンアップ後に同期"
+
+msgctxt "#32056"
+msgid "Show sync notifications"
+msgstr "同期の通知を表示"
+
+msgctxt "#32057"
+msgid "Remove deleted movies from Trakt collection"
+msgstr "削除したムービーをTraktコレクションから削除"
+
+msgctxt "#32058"
+msgid "Remove deleted TV episodes from Trakt collection"
+msgstr "削除したTVエピソードをTraktコレクションから削除"
+
+msgctxt "#32060"
+msgid "Hide notifications during playback"
+msgstr "再生中は通知を非表示"
+
+msgctxt "#32061"
+msgid "Started"
+msgstr "開始"
+
+msgctxt "#32062"
+msgid "Finished"
+msgstr "完了"
+
+msgctxt "#32063"
+msgid "Adding %i"
+msgstr "%i 件を追加中"
+
+msgctxt "#32068"
+msgid "Trakt collection"
+msgstr "Traktコレクション"
+
+msgctxt "#32071"
+msgid "Trakt history"
+msgstr "Trakt履歴"
+
+msgctxt "#32074"
+msgid "Kodi watched status"
+msgstr "Kodiの視聴状態"
+
+msgctxt "#32076"
+msgid "Removing %i"
+msgstr "%i 件を削除中"
+
+msgctxt "#32079"
+msgid "Loading Kodi library"
+msgstr "Kodiライブラリを読み込み中"
+
+msgctxt "#32081"
+msgid "Loading Trakt collection"
+msgstr "Traktコレクションを読み込み中"
+
+msgctxt "#32082"
+msgid "Loading Trakt history"
+msgstr "Trakt履歴を読み込み中"
+
+msgctxt "#32085"
+msgid "Added %i"
+msgstr "%i 件を追加しました"
+
+msgctxt "#32086"
+msgid "Up to date"
+msgstr "最新の状態"
+
+msgctxt "#32089"
+msgid "%i of %i"
+msgstr "%i/%i"
+
+msgctxt "#32090"
+msgid "Updated %i"
+msgstr "%i 件を更新しました"
+
+msgctxt "#32092"
+msgid "Removed %i"
+msgstr "%i 件を削除しました"
+
+msgctxt "#32116"
+msgid "Enable debug mode"
+msgstr "デバッグモードを有効にする"
+
+msgctxt "#32117"
+msgid "Sync movie playback progress to Kodi"
+msgstr "ムービーの再生進捗をKodiに同期"
+
+msgctxt "#32118"
+msgid "Sync episode playback progress to Kodi"
+msgstr "エピソードの再生進捗をKodiに同期"
+
+msgctxt "#32122"
+msgid "Loading Trakt playback progress"
+msgstr "Traktの再生進捗を読み込み中"
+
+msgctxt "#32132"
+msgid "Unrate this season"
+msgstr "このシーズンの評価を取り消す"
+
+msgctxt "#32136"
+msgid "Add to watchlist"
+msgstr "ウォッチリストに追加"
+
+msgctxt "#32137"
+msgid "Rate this movie"
+msgstr "このムービーを評価"
+
+msgctxt "#32138"
+msgid "Rate this show"
+msgstr "この番組を評価"
+
+msgctxt "#32139"
+msgid "Rate this episode"
+msgstr "このエピソードを評価"
+
+msgctxt "#32143"
+msgid "Sync library"
+msgstr "ライブラリを同期"
+
+msgctxt "#32144"
+msgid "Shows a code and a QR code to approve Relay on your Trakt account."
+msgstr "TraktアカウントでRelayを承認するためのコードとQRコードを表示します。"
+
+msgctxt "#32149"
+msgid "Rate this season"
+msgstr "このシーズンを評価"
+
+msgctxt "#32152"
+msgid "Connected to Trakt"
+msgstr "Traktに接続しました"
+
+msgctxt "#32163"
+msgid "Connected as"
+msgstr "接続中のアカウント"
+
+msgctxt "#32164"
+msgid "Fall back to title and year matching"
+msgstr "見つからない場合はタイトルと年で照合"
+
+msgctxt "#32165"
+msgid "Added to watchlist"
+msgstr "ウォッチリストに追加しました"
+
+msgctxt "#32166"
+msgid "Couldn't add to watchlist"
+msgstr "ウォッチリストに追加できませんでした"
+
+msgctxt "#32167"
+msgid "Scrobble start delay (minutes)"
+msgstr "スクロブル開始の遅延 (分)"
+
+msgctxt "#32169"
+msgid "Kodi ratings"
+msgstr "Kodiの評価"
+
+msgctxt "#32179"
+msgid "Trakt ratings"
+msgstr "Traktの評価"
+
+msgctxt "#32184"
+msgid "Retry a failed scrobble by show title search"
+msgstr "失敗したスクロブルを番組タイトル検索で再試行"
+
+msgctxt "#32185"
+msgid "Exclude plugins"
+msgstr "プラグインを除外"
+
+msgctxt "#32186"
+msgid "Add-ons can pause scrobbling"
+msgstr "アドオンによるスクロブルの一時停止を許可"
+
+msgctxt "#32187"
+msgid "Use own proxy"
+msgstr "独自のプロキシを使用"
+
+msgctxt "#32188"
+msgid "Proxy address"
+msgstr "プロキシアドレス"
+
+msgctxt "#32189"
+msgid "Proxy port"
+msgstr "プロキシポート"
+
+msgctxt "#32190"
+msgid "Username"
+msgstr "ユーザー名"
+
+msgctxt "#32191"
+msgid "Password"
+msgstr "パスワード"
+
+msgctxt "#32192"
+msgid "Don't keep playback progress on Trakt"
+msgstr "Traktに再生進捗を残さない"
+
+msgctxt "#32193"
+msgid "Respect Trakt rewatch progress"
+msgstr "Traktの再視聴進捗に従う"
+
+msgctxt "#32196"
+msgid "Sync ratings from Trakt to Kodi"
+msgstr "TraktからKodiへ評価を同期"
+
+msgctxt "#32197"
+msgid "Sync ratings from Kodi to Trakt"
+msgstr "KodiからTraktへ評価を同期"
+
+msgctxt "#32198"
+msgid "Trakt"
+msgstr "Trakt"
+
+msgctxt "#32199"
+msgid "Connect to Trakt"
+msgstr "Traktに接続"
+
+msgctxt "#32200"
+msgid "Visit {0}[CR]or scan the QR code, then enter:"
+msgstr "{0} にアクセスするか[CR]QRコードをスキャンして、次のコードを入力してください:"
+
+msgctxt "#32201"
+msgid "This closes by itself once you approve."
+msgstr "承認すると自動的に閉じます。"
+
+msgctxt "#32202"
+msgid "Not connected to Trakt. Connect from the add-on settings."
+msgstr "Traktに接続されていません。アドオンの設定から接続してください。"
+
+msgctxt "#32206"
+msgid "Kodi resume points"
+msgstr "Kodiのレジューム位置"
+
+msgctxt "#32207"
+msgid "Use the proxy below instead of Kodi's proxy setting."
+msgstr "Kodiのプロキシ設定の代わりに、下のプロキシを使用します。"
+
+msgctxt "#32208"
+msgid "Proxy server address, like http://proxy.lan."
+msgstr "プロキシサーバーのアドレス (例: http://proxy.lan)。"
+
+msgctxt "#32209"
+msgid "Port of the proxy server."
+msgstr "プロキシサーバーのポート。"
+
+msgctxt "#32210"
+msgid "Optional user name needed to authenticate with the proxy."
+msgstr "プロキシの認証に使うユーザー名 (任意)。"
+
+msgctxt "#32211"
+msgid "Optional password needed to authenticate with the proxy."
+msgstr "プロキシの認証に使うパスワード (任意)。"
+
+msgctxt "#32212"
+msgid "Shows you are rewatching on Trakt match your rewatch progress in Kodi. Episodes watched since the rewatch started are marked watched, and the rest unwatched. Start a rewatch from a show's context menu or on Trakt."
+msgstr "Traktで再視聴中の番組は、Kodiの視聴状態を再視聴の進捗に合わせます。再視聴の開始後に視聴したエピソードは視聴済み、それ以外は未視聴になります。再視聴は番組のコンテキストメニューまたはTraktで開始できます。"
+
+msgctxt "#32213"
+msgid "Movie sync"
+msgstr "ムービーの同期"
+
+msgctxt "#32214"
+msgid "Episode sync"
+msgstr "エピソードの同期"
+
+msgctxt "#32215"
+msgid "Paused at %s"
+msgstr "%s で一時停止中"
+
+msgctxt "#32216"
+msgid "Loading Trakt ratings"
+msgstr "Traktの評価を読み込み中"
+
+msgctxt "#32217"
+msgid "Watching"
+msgstr "視聴中"
+
+msgctxt "#32218"
+msgid "The Trakt add-on is also enabled. Both add-ons scrobble and sync with Trakt, so everything is done twice."
+msgstr "Traktアドオンも有効になっています。どちらのアドオンもTraktへのスクロブルと同期を行うため、すべてが二重に行われます。"
+
+msgctxt "#32219"
+msgid "Keep both"
+msgstr "両方を残す"
+
+msgctxt "#32220"
+msgid "Start rewatch"
+msgstr "再視聴を開始"
+
+msgctxt "#32221"
+msgid "Start a rewatch on Trakt? Your progress starts again, and every episode is marked unwatched in Kodi."
+msgstr "Traktで再視聴を開始しますか？進捗は最初からになり、Kodiではすべてのエピソードが未視聴になります。"
+
+msgctxt "#32222"
+msgid "Rewatch started"
+msgstr "再視聴を開始しました"
+
+msgctxt "#32223"
+msgid "Couldn't start rewatch"
+msgstr "再視聴を開始できませんでした"
+
+msgctxt "#32224"
+msgid "Use the OG Trakt theme"
+msgstr "OG Traktテーマを使用"
+
+msgctxt "#32225"
+msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
+msgstr "og.trakt.tvと同じように、Traktの赤いロゴ、ハート、ハイライトカラーを表示します。"

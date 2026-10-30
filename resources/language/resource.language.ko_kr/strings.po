@@ -1,0 +1,526 @@
+# Kodi Media Center language file
+# Addon Name: Trakt Relay
+# Addon id: service.trakt.relay
+# Addon Provider: MikeSiLVO
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Addons\n"
+"Report-Msgid-Bugs-To: https://github.com/MikeSiLVO/service.trakt.relay/issues\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2021-12-11 02:53+0000\n"
+"Last-Translator: Minho Park <parkmino@gmail.com>\n"
+"Language-Team: Korean <https://kodi.weblate.cloud/projects/kodi-add-ons-scripts/script-trakt/ko_kr/>\n"
+"Language: ko_KR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.9.1\n"
+
+msgctxt "Addon Summary"
+msgid "Scrobbles what you watch in Kodi and syncs your library with Trakt"
+msgstr "Kodi에서 시청한 내용을 Trakt에 전송하고 라이브러리를 Trakt와 동기화합니다"
+
+msgctxt "Addon Description"
+msgid "Trakt Relay scrobbles the movies, episodes, live TV and recordings you watch in Kodi to Trakt, and syncs your library with it: collection, watched status, ratings and playback progress, each direction switched on in the settings. It asks for a rating after you watch, and its context menu rates, adds to the watchlist and starts a rewatch of a show. Scrobbles that fail are retried later.[CR][CR]Trakt Relay is a modified version of script.trakt by Trakt.tv, Razzeee and its contributors."
+msgstr "Trakt Relay는 Kodi에서 시청한 영화, 에피소드, 라이브 TV, 녹화물의 시청 여부를 Trakt에 전송하고, 컬렉션, 시청 상태, 평점, 재생 진행 상태 등 라이브러리를 Trakt와 동기화합니다. 각 방향은 설정에서 켤 수 있습니다. 시청 후 평점을 물어보며, 컨텍스트 메뉴에서 평가, watchlist에 추가, TV 쇼 다시 보기 시작을 할 수 있습니다. 실패한 시청 여부 전송은 나중에 다시 시도합니다.[CR][CR]Trakt Relay는 Trakt.tv, Razzeee 및 기여자들이 만든 script.trakt의 수정 버전입니다."
+
+msgctxt "Addon Disclaimer"
+msgid "Trakt Relay is not affiliated with or endorsed by Trakt."
+msgstr "Trakt Relay는 Trakt와 제휴 관계가 없으며 Trakt의 보증을 받지 않았습니다."
+
+msgctxt "#32000"
+msgid "General"
+msgstr "일반"
+
+msgctxt "#32003"
+msgid "Startup delay (seconds)"
+msgstr "시작 지연 (초)"
+
+msgctxt "#32004"
+msgid "Rating"
+msgstr "평점"
+
+msgctxt "#32005"
+msgid "Rate movies after watching"
+msgstr "시청 후 영화 평가"
+
+msgctxt "#32006"
+msgid "Rate episodes after watching"
+msgstr "시청 후 에피소드 평가"
+
+msgctxt "#32008"
+msgid "Minimum percent watched before asking"
+msgstr "평가 요청 전 최소 시청 비율"
+
+msgctxt "#32009"
+msgid "Allow re-rating"
+msgstr "다시 평가 허용"
+
+msgctxt "#32010"
+msgid "Default rating"
+msgstr "기본 평점"
+
+msgctxt "#32011"
+msgid "Scrobbling"
+msgstr "시청 여부 전송"
+
+msgctxt "#32012"
+msgid "Scrobble movies"
+msgstr "영화 시청 여부 전송"
+
+msgctxt "#32013"
+msgid "Scrobble episodes"
+msgstr "에피소드 시청 여부 전송"
+
+msgctxt "#32014"
+msgid "Show scrobble notifications"
+msgstr "시청 여부 전송 알림 보기"
+
+msgctxt "#32015"
+msgid "Watched"
+msgstr "시청함"
+
+msgctxt "#32016"
+msgid "Exclusions"
+msgstr "제외"
+
+msgctxt "#32017"
+msgid "Exclude live TV"
+msgstr "TV 시청 제외"
+
+msgctxt "#32018"
+msgid "Exclude HTTP sources"
+msgstr "HTTP 소스 제외"
+
+msgctxt "#32019"
+msgid "Exclude path"
+msgstr "특정 경로 제외"
+
+msgctxt "#32020"
+msgid "Folder, subfolders included"
+msgstr "폴더 (하위 폴더 포함)"
+
+msgctxt "#32023"
+msgid "Couldn't reach Trakt"
+msgstr "Trakt에 연결할 수 없음"
+
+msgctxt "#32026"
+msgid "What did you think?"
+msgstr "귀하의 평가는?"
+
+msgctxt "#32027"
+msgid "Totally Ninja!"
+msgstr "완전 닌자!"
+
+msgctxt "#32028"
+msgid "Weak Sauce :("
+msgstr "최악 :("
+
+msgctxt "#32029"
+msgid "Terrible"
+msgstr "끔찍함"
+
+msgctxt "#32030"
+msgid "Bad"
+msgstr "나쁨"
+
+msgctxt "#32031"
+msgid "Poor"
+msgstr "부족함"
+
+msgctxt "#32032"
+msgid "Meh"
+msgstr "그저 그럼"
+
+msgctxt "#32033"
+msgid "Fair"
+msgstr "괜찮음"
+
+msgctxt "#32034"
+msgid "Good"
+msgstr "좋음"
+
+msgctxt "#32035"
+msgid "Great"
+msgstr "아주 좋음"
+
+msgctxt "#32036"
+msgid "Superb"
+msgstr "훌륭함"
+
+msgctxt "#32037"
+msgid "Unrate this movie"
+msgstr "이 영화를 평가하지 않음"
+
+msgctxt "#32038"
+msgid "Unrate this show"
+msgstr "이 TV 쇼를 평가하지 않음"
+
+msgctxt "#32039"
+msgid "Unrate this episode"
+msgstr "이 에피소드를 평가하지 않음"
+
+msgctxt "#32040"
+msgid "Rated %i"
+msgstr "%i점으로 평가함"
+
+msgctxt "#32041"
+msgid "Already rated %i"
+msgstr "이미 %i점으로 평가함"
+
+msgctxt "#32042"
+msgid "Unrated"
+msgstr "평가 취소됨"
+
+msgctxt "#32044"
+msgid "Couldn't rate"
+msgstr "평가할 수 없음"
+
+msgctxt "#32045"
+msgid "Sync"
+msgstr "동기화"
+
+msgctxt "#32046"
+msgid "Movies"
+msgstr "영화"
+
+msgctxt "#32047"
+msgid "Add new movies to Trakt collection"
+msgstr "Trakt 컬렉션에 새 영화 추가"
+
+msgctxt "#32048"
+msgid "Add watched movies to Trakt history"
+msgstr "Trakt 이력에 시청한 영화 추가"
+
+msgctxt "#32049"
+msgid "Mark movies from Trakt history as watched in Kodi"
+msgstr "Trakt 기록에 있는 영화를 Kodi에 시청함으로 표시"
+
+msgctxt "#32050"
+msgid "Episodes"
+msgstr "에피소드"
+
+msgctxt "#32051"
+msgid "Add new TV episodes to Trakt collection"
+msgstr "Trakt 컬렉션에 새 TV 에피소드 추가"
+
+msgctxt "#32052"
+msgid "Add watched TV episodes to Trakt history"
+msgstr "Trakt 이력에 시청한 TV 에피소드 추가"
+
+msgctxt "#32053"
+msgid "Mark TV episodes from Trakt history as watched in Kodi"
+msgstr "Trakt 기록에 있는 TV 쇼 에피소드를 Kodi에 시청함으로 표시"
+
+msgctxt "#32054"
+msgid "Service"
+msgstr "서비스"
+
+msgctxt "#32055"
+msgid "Sync after a library scan or clean"
+msgstr "라이브러리 스캔 또는 정리 후 동기화"
+
+msgctxt "#32056"
+msgid "Show sync notifications"
+msgstr "동기화 알림 보기"
+
+msgctxt "#32057"
+msgid "Remove deleted movies from Trakt collection"
+msgstr "삭제한 영화를 Trakt 컬렉션에서 지우기"
+
+msgctxt "#32058"
+msgid "Remove deleted TV episodes from Trakt collection"
+msgstr "삭제한 TV 에피소드를 Trakt 컬렉션에서 지우기"
+
+msgctxt "#32060"
+msgid "Hide notifications during playback"
+msgstr "재생 중일 때 알림 숨김"
+
+msgctxt "#32061"
+msgid "Started"
+msgstr "시작됨"
+
+msgctxt "#32062"
+msgid "Finished"
+msgstr "완료됨"
+
+msgctxt "#32063"
+msgid "Adding %i"
+msgstr "%i개 추가 중"
+
+msgctxt "#32068"
+msgid "Trakt collection"
+msgstr "Trakt 컬렉션"
+
+msgctxt "#32071"
+msgid "Trakt history"
+msgstr "Trakt 기록"
+
+msgctxt "#32074"
+msgid "Kodi watched status"
+msgstr "Kodi 시청 상태"
+
+msgctxt "#32076"
+msgid "Removing %i"
+msgstr "%i개 제거 중"
+
+msgctxt "#32079"
+msgid "Loading Kodi library"
+msgstr "Kodi 라이브러리 불러오는 중"
+
+msgctxt "#32081"
+msgid "Loading Trakt collection"
+msgstr "Trakt 컬렉션 불러오는 중"
+
+msgctxt "#32082"
+msgid "Loading Trakt history"
+msgstr "Trakt 기록 불러오는 중"
+
+msgctxt "#32085"
+msgid "Added %i"
+msgstr "%i개 추가됨"
+
+msgctxt "#32086"
+msgid "Up to date"
+msgstr "최신 상태"
+
+msgctxt "#32089"
+msgid "%i of %i"
+msgstr "%i/%i"
+
+msgctxt "#32090"
+msgid "Updated %i"
+msgstr "%i개 업데이트됨"
+
+msgctxt "#32092"
+msgid "Removed %i"
+msgstr "%i개 제거됨"
+
+msgctxt "#32116"
+msgid "Enable debug mode"
+msgstr "디버그 모드 사용"
+
+msgctxt "#32117"
+msgid "Sync movie playback progress to Kodi"
+msgstr "영화 재생 진행 상태를 Kodi로 동기화"
+
+msgctxt "#32118"
+msgid "Sync episode playback progress to Kodi"
+msgstr "에피소드 재생 진행 상태를 Kodi로 싱크"
+
+msgctxt "#32122"
+msgid "Loading Trakt playback progress"
+msgstr "Trakt 재생 진행 상태 불러오는 중"
+
+msgctxt "#32132"
+msgid "Unrate this season"
+msgstr "이 시즌 평가 한 함"
+
+msgctxt "#32136"
+msgid "Add to watchlist"
+msgstr "watchlist에 추가"
+
+msgctxt "#32137"
+msgid "Rate this movie"
+msgstr "이 영화 평가"
+
+msgctxt "#32138"
+msgid "Rate this show"
+msgstr "이 TV 쇼 평가"
+
+msgctxt "#32139"
+msgid "Rate this episode"
+msgstr "이 에피소드 평가"
+
+msgctxt "#32143"
+msgid "Sync library"
+msgstr "라이브러리 동기화"
+
+msgctxt "#32144"
+msgid "Shows a code and a QR code to approve Relay on your Trakt account."
+msgstr "Trakt 계정에서 Relay를 승인할 수 있는 코드와 QR 코드를 표시합니다."
+
+msgctxt "#32149"
+msgid "Rate this season"
+msgstr "이 시즌 평가"
+
+msgctxt "#32152"
+msgid "Connected to Trakt"
+msgstr "Trakt에 연결됨"
+
+msgctxt "#32163"
+msgid "Connected as"
+msgstr "연결된 계정"
+
+msgctxt "#32164"
+msgid "Fall back to title and year matching"
+msgstr "제목과 연도로 대체 일치"
+
+msgctxt "#32165"
+msgid "Added to watchlist"
+msgstr "watchlist에 추가됨"
+
+msgctxt "#32166"
+msgid "Couldn't add to watchlist"
+msgstr "watchlist에 추가할 수 없음"
+
+msgctxt "#32167"
+msgid "Scrobble start delay (minutes)"
+msgstr "시청 여부 전송 시작 지연 (분)"
+
+msgctxt "#32169"
+msgid "Kodi ratings"
+msgstr "Kodi 평점"
+
+msgctxt "#32179"
+msgid "Trakt ratings"
+msgstr "Trakt 평점"
+
+msgctxt "#32184"
+msgid "Retry a failed scrobble by show title search"
+msgstr "실패한 전송을 TV 쇼 제목 검색으로 재시도"
+
+msgctxt "#32185"
+msgid "Exclude plugins"
+msgstr "플러그인 제외"
+
+msgctxt "#32186"
+msgid "Add-ons can pause scrobbling"
+msgstr "애드온이 시청 여부 전송을 일시 중지할 수 있음"
+
+msgctxt "#32187"
+msgid "Use own proxy"
+msgstr "자체 프록시 사용"
+
+msgctxt "#32188"
+msgid "Proxy address"
+msgstr "프록시 주소"
+
+msgctxt "#32189"
+msgid "Proxy port"
+msgstr "프록시 포트"
+
+msgctxt "#32190"
+msgid "Username"
+msgstr "사용자 이름"
+
+msgctxt "#32191"
+msgid "Password"
+msgstr "비밀번호"
+
+msgctxt "#32192"
+msgid "Don't keep playback progress on Trakt"
+msgstr "Trakt에 재생 진행 상태 유지 안 함"
+
+msgctxt "#32193"
+msgid "Respect Trakt rewatch progress"
+msgstr "Trakt 다시 보기 진행 상태 따르기"
+
+msgctxt "#32196"
+msgid "Sync ratings from Trakt to Kodi"
+msgstr "Trakt에서 Kodi로 평점 동기화"
+
+msgctxt "#32197"
+msgid "Sync ratings from Kodi to Trakt"
+msgstr "Kodi에서 Trakt로 평점 동기화"
+
+msgctxt "#32198"
+msgid "Trakt"
+msgstr "Trakt"
+
+msgctxt "#32199"
+msgid "Connect to Trakt"
+msgstr "Trakt에 연결"
+
+msgctxt "#32200"
+msgid "Visit {0}[CR]or scan the QR code, then enter:"
+msgstr "{0}에 방문하거나[CR]QR 코드를 스캔한 다음 입력하세요:"
+
+msgctxt "#32201"
+msgid "This closes by itself once you approve."
+msgstr "승인하면 이 창은 자동으로 닫힙니다."
+
+msgctxt "#32202"
+msgid "Not connected to Trakt. Connect from the add-on settings."
+msgstr "Trakt에 연결되지 않았습니다. 애드온 설정에서 연결하세요."
+
+msgctxt "#32206"
+msgid "Kodi resume points"
+msgstr "Kodi 이어보기 지점"
+
+msgctxt "#32207"
+msgid "Use the proxy below instead of Kodi's proxy setting."
+msgstr "Kodi의 프록시 설정 대신 아래 프록시를 사용합니다."
+
+msgctxt "#32208"
+msgid "Proxy server address, like http://proxy.lan."
+msgstr "프록시 서버 주소입니다. 예: http://proxy.lan."
+
+msgctxt "#32209"
+msgid "Port of the proxy server."
+msgstr "프록시 서버의 포트입니다."
+
+msgctxt "#32210"
+msgid "Optional user name needed to authenticate with the proxy."
+msgstr "프록시로 인증하는 데 필요한 선택적 사용자 이름입니다."
+
+msgctxt "#32211"
+msgid "Optional password needed to authenticate with the proxy."
+msgstr "프록시로 인증하는 데 필요한 선택적 비밀번호입니다."
+
+msgctxt "#32212"
+msgid "Shows you are rewatching on Trakt match your rewatch progress in Kodi. Episodes watched since the rewatch started are marked watched, and the rest unwatched. Start a rewatch from a show's context menu or on Trakt."
+msgstr "Trakt에서 다시 보는 중인 TV 쇼는 Kodi에서 다시 보기 진행 상태와 일치합니다. 다시 보기를 시작한 이후 시청한 에피소드는 시청함으로, 나머지는 시청 안 함으로 표시됩니다. TV 쇼의 컨텍스트 메뉴나 Trakt에서 다시 보기를 시작하세요."
+
+msgctxt "#32213"
+msgid "Movie sync"
+msgstr "영화 동기화"
+
+msgctxt "#32214"
+msgid "Episode sync"
+msgstr "에피소드 동기화"
+
+msgctxt "#32215"
+msgid "Paused at %s"
+msgstr "%s에서 일시 중지됨"
+
+msgctxt "#32216"
+msgid "Loading Trakt ratings"
+msgstr "Trakt 평점 불러오는 중"
+
+msgctxt "#32217"
+msgid "Watching"
+msgstr "시청 중"
+
+msgctxt "#32218"
+msgid "The Trakt add-on is also enabled. Both add-ons scrobble and sync with Trakt, so everything is done twice."
+msgstr "Trakt 애드온도 활성화되어 있습니다. 두 애드온 모두 Trakt에 시청 여부를 전송하고 동기화하므로 모든 작업이 두 번 수행됩니다."
+
+msgctxt "#32219"
+msgid "Keep both"
+msgstr "둘 다 유지"
+
+msgctxt "#32220"
+msgid "Start rewatch"
+msgstr "다시 보기 시작"
+
+msgctxt "#32221"
+msgid "Start a rewatch on Trakt? Your progress starts again, and every episode is marked unwatched in Kodi."
+msgstr "Trakt에서 다시 보기를 시작할까요? 진행 상태가 처음부터 다시 시작되고, Kodi의 모든 에피소드가 시청 안 함으로 표시됩니다."
+
+msgctxt "#32222"
+msgid "Rewatch started"
+msgstr "다시 보기 시작됨"
+
+msgctxt "#32223"
+msgid "Couldn't start rewatch"
+msgstr "다시 보기를 시작할 수 없음"
+
+msgctxt "#32224"
+msgid "Use the OG Trakt theme"
+msgstr "OG Trakt 테마 사용"
+
+msgctxt "#32225"
+msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
+msgstr "og.trakt.tv처럼 Trakt의 빨간 로고, 하트, 강조 색상을 표시합니다."

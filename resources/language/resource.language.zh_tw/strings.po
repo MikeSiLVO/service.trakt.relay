@@ -1,0 +1,525 @@
+# Kodi Media Center language file
+# Addon Name: Trakt Relay
+# Addon id: service.trakt.relay
+# Addon Provider: MikeSiLVO
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Addons\n"
+"Report-Msgid-Bugs-To: https://github.com/MikeSiLVO/service.trakt.relay/issues\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: Chinese (Traditional) (http://www.transifex.com/projects/p/xbmc-addons/language/zh_TW/)\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgctxt "Addon Summary"
+msgid "Scrobbles what you watch in Kodi and syncs your library with Trakt"
+msgstr "記錄您在 Kodi 觀看的內容，並與 Trakt 同步您的媒體櫃"
+
+msgctxt "Addon Description"
+msgid "Trakt Relay scrobbles the movies, episodes, live TV and recordings you watch in Kodi to Trakt, and syncs your library with it: collection, watched status, ratings and playback progress, each direction switched on in the settings. It asks for a rating after you watch, and its context menu rates, adds to the watchlist and starts a rewatch of a show. Scrobbles that fail are retried later.[CR][CR]Trakt Relay is a modified version of script.trakt by Trakt.tv, Razzeee and its contributors."
+msgstr "Trakt Relay 會將您在 Kodi 觀看的影片、單集、直播電視與錄影記錄至 Trakt，並與其同步您的媒體櫃：收藏、觀看狀態、評分與播放進度，每個方向皆可在設定中個別啟用。觀看後會請您評分，其內容選單可評分、加入待看清單及開始重看影集。記錄失敗的播放會稍後重試。[CR][CR]Trakt Relay 是由 Trakt.tv、Razzeee 及其貢獻者所開發之 script.trakt 的修改版本。"
+
+msgctxt "Addon Disclaimer"
+msgid "Trakt Relay is not affiliated with or endorsed by Trakt."
+msgstr "Trakt Relay 與 Trakt 並無關聯，亦未獲 Trakt 認可。"
+
+msgctxt "#32000"
+msgid "General"
+msgstr "一般設定"
+
+msgctxt "#32003"
+msgid "Startup delay (seconds)"
+msgstr "啟動延遲 (秒)"
+
+msgctxt "#32004"
+msgid "Rating"
+msgstr "評分"
+
+msgctxt "#32005"
+msgid "Rate movies after watching"
+msgstr "觀看後為影片評分"
+
+msgctxt "#32006"
+msgid "Rate episodes after watching"
+msgstr "觀看後為單集評分"
+
+msgctxt "#32008"
+msgid "Minimum percent watched before asking"
+msgstr "詢問前的最低觀看百分比"
+
+msgctxt "#32009"
+msgid "Allow re-rating"
+msgstr "允許重新評分"
+
+msgctxt "#32010"
+msgid "Default rating"
+msgstr "預設評分"
+
+msgctxt "#32011"
+msgid "Scrobbling"
+msgstr "播放紀錄"
+
+msgctxt "#32012"
+msgid "Scrobble movies"
+msgstr "記錄影片播放"
+
+msgctxt "#32013"
+msgid "Scrobble episodes"
+msgstr "記錄單集播放"
+
+msgctxt "#32014"
+msgid "Show scrobble notifications"
+msgstr "顯示播放紀錄通知"
+
+msgctxt "#32015"
+msgid "Watched"
+msgstr "已觀看"
+
+msgctxt "#32016"
+msgid "Exclusions"
+msgstr "排除項目"
+
+msgctxt "#32017"
+msgid "Exclude live TV"
+msgstr "排除直播電視"
+
+msgctxt "#32018"
+msgid "Exclude HTTP sources"
+msgstr "排除 HTTP 來源"
+
+msgctxt "#32019"
+msgid "Exclude path"
+msgstr "排除路徑"
+
+msgctxt "#32020"
+msgid "Folder, subfolders included"
+msgstr "資料夾，含子資料夾"
+
+msgctxt "#32023"
+msgid "Couldn't reach Trakt"
+msgstr "無法連線至 Trakt"
+
+msgctxt "#32026"
+msgid "What did you think?"
+msgstr "您覺得如何？"
+
+msgctxt "#32027"
+msgid "Totally Ninja!"
+msgstr "完全忍者級！"
+
+msgctxt "#32028"
+msgid "Weak Sauce :("
+msgstr "有夠弱 :("
+
+msgctxt "#32029"
+msgid "Terrible"
+msgstr "糟透了"
+
+msgctxt "#32030"
+msgid "Bad"
+msgstr "差"
+
+msgctxt "#32031"
+msgid "Poor"
+msgstr "不佳"
+
+msgctxt "#32032"
+msgid "Meh"
+msgstr "普普"
+
+msgctxt "#32033"
+msgid "Fair"
+msgstr "還可以"
+
+msgctxt "#32034"
+msgid "Good"
+msgstr "好"
+
+msgctxt "#32035"
+msgid "Great"
+msgstr "很棒"
+
+msgctxt "#32036"
+msgid "Superb"
+msgstr "極佳"
+
+msgctxt "#32037"
+msgid "Unrate this movie"
+msgstr "取消此影片的評分"
+
+msgctxt "#32038"
+msgid "Unrate this show"
+msgstr "取消此影集的評分"
+
+msgctxt "#32039"
+msgid "Unrate this episode"
+msgstr "取消此單集的評分"
+
+msgctxt "#32040"
+msgid "Rated %i"
+msgstr "已評分 %i"
+
+msgctxt "#32041"
+msgid "Already rated %i"
+msgstr "先前已評分 %i"
+
+msgctxt "#32042"
+msgid "Unrated"
+msgstr "已取消評分"
+
+msgctxt "#32044"
+msgid "Couldn't rate"
+msgstr "無法評分"
+
+msgctxt "#32045"
+msgid "Sync"
+msgstr "同步"
+
+msgctxt "#32046"
+msgid "Movies"
+msgstr "影片"
+
+msgctxt "#32047"
+msgid "Add new movies to Trakt collection"
+msgstr "將新影片加入 Trakt 收藏"
+
+msgctxt "#32048"
+msgid "Add watched movies to Trakt history"
+msgstr "將已觀看影片加入 Trakt 歷史紀錄"
+
+msgctxt "#32049"
+msgid "Mark movies from Trakt history as watched in Kodi"
+msgstr "將 Trakt 歷史紀錄中的影片在 Kodi 標記為已觀看"
+
+msgctxt "#32050"
+msgid "Episodes"
+msgstr "單集"
+
+msgctxt "#32051"
+msgid "Add new TV episodes to Trakt collection"
+msgstr "將新影集單集加入 Trakt 收藏"
+
+msgctxt "#32052"
+msgid "Add watched TV episodes to Trakt history"
+msgstr "將已觀看影集單集加入 Trakt 歷史紀錄"
+
+msgctxt "#32053"
+msgid "Mark TV episodes from Trakt history as watched in Kodi"
+msgstr "將 Trakt 歷史紀錄中的影集單集在 Kodi 標記為已觀看"
+
+msgctxt "#32054"
+msgid "Service"
+msgstr "服務"
+
+msgctxt "#32055"
+msgid "Sync after a library scan or clean"
+msgstr "媒體櫃掃描或清理後同步"
+
+msgctxt "#32056"
+msgid "Show sync notifications"
+msgstr "顯示同步通知"
+
+msgctxt "#32057"
+msgid "Remove deleted movies from Trakt collection"
+msgstr "從 Trakt 收藏移除已刪除的影片"
+
+msgctxt "#32058"
+msgid "Remove deleted TV episodes from Trakt collection"
+msgstr "從 Trakt 收藏移除已刪除的影集單集"
+
+msgctxt "#32060"
+msgid "Hide notifications during playback"
+msgstr "播放時隱藏通知"
+
+msgctxt "#32061"
+msgid "Started"
+msgstr "已開始"
+
+msgctxt "#32062"
+msgid "Finished"
+msgstr "已完成"
+
+msgctxt "#32063"
+msgid "Adding %i"
+msgstr "正在新增 %i"
+
+msgctxt "#32068"
+msgid "Trakt collection"
+msgstr "Trakt 收藏"
+
+msgctxt "#32071"
+msgid "Trakt history"
+msgstr "Trakt 歷史紀錄"
+
+msgctxt "#32074"
+msgid "Kodi watched status"
+msgstr "Kodi 觀看狀態"
+
+msgctxt "#32076"
+msgid "Removing %i"
+msgstr "正在移除 %i"
+
+msgctxt "#32079"
+msgid "Loading Kodi library"
+msgstr "正在載入 Kodi 媒體櫃"
+
+msgctxt "#32081"
+msgid "Loading Trakt collection"
+msgstr "正在載入 Trakt 收藏"
+
+msgctxt "#32082"
+msgid "Loading Trakt history"
+msgstr "正在載入 Trakt 歷史紀錄"
+
+msgctxt "#32085"
+msgid "Added %i"
+msgstr "已新增 %i"
+
+msgctxt "#32086"
+msgid "Up to date"
+msgstr "已是最新"
+
+msgctxt "#32089"
+msgid "%i of %i"
+msgstr "%i/%i"
+
+msgctxt "#32090"
+msgid "Updated %i"
+msgstr "已更新 %i"
+
+msgctxt "#32092"
+msgid "Removed %i"
+msgstr "已移除 %i"
+
+msgctxt "#32116"
+msgid "Enable debug mode"
+msgstr "啟用除錯模式"
+
+msgctxt "#32117"
+msgid "Sync movie playback progress to Kodi"
+msgstr "同步影片播放進度至 Kodi"
+
+msgctxt "#32118"
+msgid "Sync episode playback progress to Kodi"
+msgstr "同步單集播放進度至 Kodi"
+
+msgctxt "#32122"
+msgid "Loading Trakt playback progress"
+msgstr "正在載入 Trakt 播放進度"
+
+msgctxt "#32132"
+msgid "Unrate this season"
+msgstr "取消此季的評分"
+
+msgctxt "#32136"
+msgid "Add to watchlist"
+msgstr "加入待看清單"
+
+msgctxt "#32137"
+msgid "Rate this movie"
+msgstr "為此影片評分"
+
+msgctxt "#32138"
+msgid "Rate this show"
+msgstr "為此影集評分"
+
+msgctxt "#32139"
+msgid "Rate this episode"
+msgstr "為此單集評分"
+
+msgctxt "#32143"
+msgid "Sync library"
+msgstr "同步媒體櫃"
+
+msgctxt "#32144"
+msgid "Shows a code and a QR code to approve Relay on your Trakt account."
+msgstr "顯示代碼與 QR 碼，以在您的 Trakt 帳號核准 Relay。"
+
+msgctxt "#32149"
+msgid "Rate this season"
+msgstr "為此季評分"
+
+msgctxt "#32152"
+msgid "Connected to Trakt"
+msgstr "已連線至 Trakt"
+
+msgctxt "#32163"
+msgid "Connected as"
+msgstr "已連線帳號"
+
+msgctxt "#32164"
+msgid "Fall back to title and year matching"
+msgstr "備用標題與年份比對"
+
+msgctxt "#32165"
+msgid "Added to watchlist"
+msgstr "已加入待看清單"
+
+msgctxt "#32166"
+msgid "Couldn't add to watchlist"
+msgstr "無法加入待看清單"
+
+msgctxt "#32167"
+msgid "Scrobble start delay (minutes)"
+msgstr "播放紀錄開始延遲 (分鐘)"
+
+msgctxt "#32169"
+msgid "Kodi ratings"
+msgstr "Kodi 評分"
+
+msgctxt "#32179"
+msgid "Trakt ratings"
+msgstr "Trakt 評分"
+
+msgctxt "#32184"
+msgid "Retry a failed scrobble by show title search"
+msgstr "以影集標題搜尋重試失敗的播放紀錄"
+
+msgctxt "#32185"
+msgid "Exclude plugins"
+msgstr "排除外掛"
+
+msgctxt "#32186"
+msgid "Add-ons can pause scrobbling"
+msgstr "允許附加元件暫停播放紀錄"
+
+msgctxt "#32187"
+msgid "Use own proxy"
+msgstr "使用自訂代理伺服器"
+
+msgctxt "#32188"
+msgid "Proxy address"
+msgstr "代理伺服器位址"
+
+msgctxt "#32189"
+msgid "Proxy port"
+msgstr "代理伺服器連接埠"
+
+msgctxt "#32190"
+msgid "Username"
+msgstr "用戶名稱"
+
+msgctxt "#32191"
+msgid "Password"
+msgstr "密碼"
+
+msgctxt "#32192"
+msgid "Don't keep playback progress on Trakt"
+msgstr "不在 Trakt 保留播放進度"
+
+msgctxt "#32193"
+msgid "Respect Trakt rewatch progress"
+msgstr "遵循 Trakt 重看進度"
+
+msgctxt "#32196"
+msgid "Sync ratings from Trakt to Kodi"
+msgstr "從 Trakt 同步評分至 Kodi"
+
+msgctxt "#32197"
+msgid "Sync ratings from Kodi to Trakt"
+msgstr "從 Kodi 同步評分至 Trakt"
+
+msgctxt "#32198"
+msgid "Trakt"
+msgstr "Trakt"
+
+msgctxt "#32199"
+msgid "Connect to Trakt"
+msgstr "連線至 Trakt"
+
+msgctxt "#32200"
+msgid "Visit {0}[CR]or scan the QR code, then enter:"
+msgstr "請前往 {0}[CR]或掃描 QR 碼，然後輸入："
+
+msgctxt "#32201"
+msgid "This closes by itself once you approve."
+msgstr "您核准後，此視窗會自動關閉。"
+
+msgctxt "#32202"
+msgid "Not connected to Trakt. Connect from the add-on settings."
+msgstr "尚未連線至 Trakt。請從附加元件設定中連線。"
+
+msgctxt "#32206"
+msgid "Kodi resume points"
+msgstr "Kodi 續播點"
+
+msgctxt "#32207"
+msgid "Use the proxy below instead of Kodi's proxy setting."
+msgstr "使用下方的代理伺服器，而非 Kodi 的代理伺服器設定。"
+
+msgctxt "#32208"
+msgid "Proxy server address, like http://proxy.lan."
+msgstr "代理伺服器位址，例如 http://proxy.lan。"
+
+msgctxt "#32209"
+msgid "Port of the proxy server."
+msgstr "代理伺服器的連接埠。"
+
+msgctxt "#32210"
+msgid "Optional user name needed to authenticate with the proxy."
+msgstr "向代理伺服器驗證時所需的用戶名稱 (選填)。"
+
+msgctxt "#32211"
+msgid "Optional password needed to authenticate with the proxy."
+msgstr "向代理伺服器驗證時所需的密碼 (選填)。"
+
+msgctxt "#32212"
+msgid "Shows you are rewatching on Trakt match your rewatch progress in Kodi. Episodes watched since the rewatch started are marked watched, and the rest unwatched. Start a rewatch from a show's context menu or on Trakt."
+msgstr "您在 Trakt 重看的影集，會在 Kodi 中符合您的重看進度。自重看開始後觀看的單集會標記為已觀看，其餘則標記為未觀看。可從影集的內容選單或在 Trakt 開始重看。"
+
+msgctxt "#32213"
+msgid "Movie sync"
+msgstr "影片同步"
+
+msgctxt "#32214"
+msgid "Episode sync"
+msgstr "單集同步"
+
+msgctxt "#32215"
+msgid "Paused at %s"
+msgstr "已暫停於 %s"
+
+msgctxt "#32216"
+msgid "Loading Trakt ratings"
+msgstr "正在載入 Trakt 評分"
+
+msgctxt "#32217"
+msgid "Watching"
+msgstr "正在觀看"
+
+msgctxt "#32218"
+msgid "The Trakt add-on is also enabled. Both add-ons scrobble and sync with Trakt, so everything is done twice."
+msgstr "Trakt 附加元件也已啟用。兩個附加元件都會記錄播放並與 Trakt 同步，因此所有動作都會執行兩次。"
+
+msgctxt "#32219"
+msgid "Keep both"
+msgstr "兩者皆保留"
+
+msgctxt "#32220"
+msgid "Start rewatch"
+msgstr "開始重看"
+
+msgctxt "#32221"
+msgid "Start a rewatch on Trakt? Your progress starts again, and every episode is marked unwatched in Kodi."
+msgstr "要在 Trakt 開始重看嗎？您的進度將從頭開始，且 Kodi 中的所有單集都會標記為未觀看。"
+
+msgctxt "#32222"
+msgid "Rewatch started"
+msgstr "已開始重看"
+
+msgctxt "#32223"
+msgid "Couldn't start rewatch"
+msgstr "無法開始重看"
+
+msgctxt "#32224"
+msgid "Use the OG Trakt theme"
+msgstr "使用 OG Trakt 主題"
+
+msgctxt "#32225"
+msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
+msgstr "顯示 Trakt 的紅色標誌、愛心與強調色，如同 og.trakt.tv。"

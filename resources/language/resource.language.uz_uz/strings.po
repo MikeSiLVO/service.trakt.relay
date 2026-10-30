@@ -1,0 +1,525 @@
+# Kodi Media Center language file
+# Addon Name: Trakt Relay
+# Addon id: service.trakt.relay
+# Addon Provider: MikeSiLVO
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Addons\n"
+"Report-Msgid-Bugs-To: https://github.com/MikeSiLVO/service.trakt.relay/issues\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: Uzbek (http://www.transifex.com/projects/p/xbmc-addons/language/uz/)\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgctxt "Addon Summary"
+msgid "Scrobbles what you watch in Kodi and syncs your library with Trakt"
+msgstr "Kodida ko'rganlaringizni Traktga skrobbl qiladi va kutubxonangizni Trakt bilan sinxronlaydi"
+
+msgctxt "Addon Description"
+msgid "Trakt Relay scrobbles the movies, episodes, live TV and recordings you watch in Kodi to Trakt, and syncs your library with it: collection, watched status, ratings and playback progress, each direction switched on in the settings. It asks for a rating after you watch, and its context menu rates, adds to the watchlist and starts a rewatch of a show. Scrobbles that fail are retried later.[CR][CR]Trakt Relay is a modified version of script.trakt by Trakt.tv, Razzeee and its contributors."
+msgstr "Trakt Relay Kodida ko'rgan filmlar, qismlar, jonli TV va yozuvlaringizni Traktga skrobbl qiladi hamda kutubxonangizni u bilan sinxronlaydi: kolleksiya, ko'rilganlik holati, baholar va ijro jarayoni, har bir yo'nalish sozlamalarda yoqiladi. Ko'rib bo'lganingizdan so'ng baho so'raydi, kontekst menyusi esa baholaydi, ko'rish ro'yxatiga qo'shadi va serialni qayta ko'rishni boshlaydi. Muvaffaqiyatsiz skrobbllar keyinroq qayta uriniladi.[CR][CR]Trakt Relay Trakt.tv, Razzeee va uning hissa qo'shuvchilari tomonidan yaratilgan script.trakt ning o'zgartirilgan versiyasidir."
+
+msgctxt "Addon Disclaimer"
+msgid "Trakt Relay is not affiliated with or endorsed by Trakt."
+msgstr "Trakt Relay Trakt bilan bog'liq emas va Trakt tomonidan ma'qullanmagan."
+
+msgctxt "#32000"
+msgid "General"
+msgstr "Umumiy"
+
+msgctxt "#32003"
+msgid "Startup delay (seconds)"
+msgstr "Ishga tushishni kechiktirish (soniya)"
+
+msgctxt "#32004"
+msgid "Rating"
+msgstr "Reyting"
+
+msgctxt "#32005"
+msgid "Rate movies after watching"
+msgstr "Ko'rgandan so'ng filmlarni baholash"
+
+msgctxt "#32006"
+msgid "Rate episodes after watching"
+msgstr "Ko'rgandan so'ng qismlarni baholash"
+
+msgctxt "#32008"
+msgid "Minimum percent watched before asking"
+msgstr "So'rashdan oldin ko'rilgan minimal foiz"
+
+msgctxt "#32009"
+msgid "Allow re-rating"
+msgstr "Qayta baholashga ruxsat berish"
+
+msgctxt "#32010"
+msgid "Default rating"
+msgstr "Standart baho"
+
+msgctxt "#32011"
+msgid "Scrobbling"
+msgstr "Skrobbling"
+
+msgctxt "#32012"
+msgid "Scrobble movies"
+msgstr "Filmlarni skrobbl qilish"
+
+msgctxt "#32013"
+msgid "Scrobble episodes"
+msgstr "Qismlarni skrobbl qilish"
+
+msgctxt "#32014"
+msgid "Show scrobble notifications"
+msgstr "Skrobbl bildirishnomalarini ko'rsatish"
+
+msgctxt "#32015"
+msgid "Watched"
+msgstr "Ko'rildi"
+
+msgctxt "#32016"
+msgid "Exclusions"
+msgstr "Istisnolar"
+
+msgctxt "#32017"
+msgid "Exclude live TV"
+msgstr "Jonli TV ni istisno qilish"
+
+msgctxt "#32018"
+msgid "Exclude HTTP sources"
+msgstr "HTTP manbalarini istisno qilish"
+
+msgctxt "#32019"
+msgid "Exclude path"
+msgstr "Yo'lni istisno qilish"
+
+msgctxt "#32020"
+msgid "Folder, subfolders included"
+msgstr "Jild, ichki jildlar bilan birga"
+
+msgctxt "#32023"
+msgid "Couldn't reach Trakt"
+msgstr "Traktga ulanib bo'lmadi"
+
+msgctxt "#32026"
+msgid "What did you think?"
+msgstr "Sizga qanday tuyuldi?"
+
+msgctxt "#32027"
+msgid "Totally Ninja!"
+msgstr "Benazir!"
+
+msgctxt "#32028"
+msgid "Weak Sauce :("
+msgstr "Juda bo'sh :("
+
+msgctxt "#32029"
+msgid "Terrible"
+msgstr "Dahshatli"
+
+msgctxt "#32030"
+msgid "Bad"
+msgstr "Yomon"
+
+msgctxt "#32031"
+msgid "Poor"
+msgstr "Qoniqarsiz"
+
+msgctxt "#32032"
+msgid "Meh"
+msgstr "Shunchaki"
+
+msgctxt "#32033"
+msgid "Fair"
+msgstr "Qoniqarli"
+
+msgctxt "#32034"
+msgid "Good"
+msgstr "Yaxshi"
+
+msgctxt "#32035"
+msgid "Great"
+msgstr "Juda yaxshi"
+
+msgctxt "#32036"
+msgid "Superb"
+msgstr "Ajoyib"
+
+msgctxt "#32037"
+msgid "Unrate this movie"
+msgstr "Bu film bahosini olib tashlash"
+
+msgctxt "#32038"
+msgid "Unrate this show"
+msgstr "Bu serial bahosini olib tashlash"
+
+msgctxt "#32039"
+msgid "Unrate this episode"
+msgstr "Bu qism bahosini olib tashlash"
+
+msgctxt "#32040"
+msgid "Rated %i"
+msgstr "%i baho berildi"
+
+msgctxt "#32041"
+msgid "Already rated %i"
+msgstr "Allaqachon %i baho berilgan"
+
+msgctxt "#32042"
+msgid "Unrated"
+msgstr "Baho olib tashlandi"
+
+msgctxt "#32044"
+msgid "Couldn't rate"
+msgstr "Baholab bo'lmadi"
+
+msgctxt "#32045"
+msgid "Sync"
+msgstr "Sinxronlash"
+
+msgctxt "#32046"
+msgid "Movies"
+msgstr "Filmlar"
+
+msgctxt "#32047"
+msgid "Add new movies to Trakt collection"
+msgstr "Yangi filmlarni Trakt kolleksiyasiga qo'shish"
+
+msgctxt "#32048"
+msgid "Add watched movies to Trakt history"
+msgstr "Ko'rilgan filmlarni Trakt tarixiga qo'shish"
+
+msgctxt "#32049"
+msgid "Mark movies from Trakt history as watched in Kodi"
+msgstr "Trakt tarixidagi filmlarni Kodida ko'rilgan deb belgilash"
+
+msgctxt "#32050"
+msgid "Episodes"
+msgstr "Qismlar"
+
+msgctxt "#32051"
+msgid "Add new TV episodes to Trakt collection"
+msgstr "Yangi serial qismlarini Trakt kolleksiyasiga qo'shish"
+
+msgctxt "#32052"
+msgid "Add watched TV episodes to Trakt history"
+msgstr "Ko'rilgan serial qismlarini Trakt tarixiga qo'shish"
+
+msgctxt "#32053"
+msgid "Mark TV episodes from Trakt history as watched in Kodi"
+msgstr "Trakt tarixidagi serial qismlarini Kodida ko'rilgan deb belgilash"
+
+msgctxt "#32054"
+msgid "Service"
+msgstr "Xizmat"
+
+msgctxt "#32055"
+msgid "Sync after a library scan or clean"
+msgstr "Kutubxona skanerlangan yoki tozalangandan so'ng sinxronlash"
+
+msgctxt "#32056"
+msgid "Show sync notifications"
+msgstr "Sinxronlash bildirishnomalarini ko'rsatish"
+
+msgctxt "#32057"
+msgid "Remove deleted movies from Trakt collection"
+msgstr "O'chirilgan filmlarni Trakt kolleksiyasidan olib tashlash"
+
+msgctxt "#32058"
+msgid "Remove deleted TV episodes from Trakt collection"
+msgstr "O'chirilgan serial qismlarini Trakt kolleksiyasidan olib tashlash"
+
+msgctxt "#32060"
+msgid "Hide notifications during playback"
+msgstr "Ijro vaqtida bildirishnomalarni yashirish"
+
+msgctxt "#32061"
+msgid "Started"
+msgstr "Boshlandi"
+
+msgctxt "#32062"
+msgid "Finished"
+msgstr "Tugadi"
+
+msgctxt "#32063"
+msgid "Adding %i"
+msgstr "%i ta qo'shilmoqda"
+
+msgctxt "#32068"
+msgid "Trakt collection"
+msgstr "Trakt kolleksiyasi"
+
+msgctxt "#32071"
+msgid "Trakt history"
+msgstr "Trakt tarixi"
+
+msgctxt "#32074"
+msgid "Kodi watched status"
+msgstr "Kodi ko'rilganlik holati"
+
+msgctxt "#32076"
+msgid "Removing %i"
+msgstr "%i ta olib tashlanmoqda"
+
+msgctxt "#32079"
+msgid "Loading Kodi library"
+msgstr "Kodi kutubxonasi yuklanmoqda"
+
+msgctxt "#32081"
+msgid "Loading Trakt collection"
+msgstr "Trakt kolleksiyasi yuklanmoqda"
+
+msgctxt "#32082"
+msgid "Loading Trakt history"
+msgstr "Trakt tarixi yuklanmoqda"
+
+msgctxt "#32085"
+msgid "Added %i"
+msgstr "%i ta qo'shildi"
+
+msgctxt "#32086"
+msgid "Up to date"
+msgstr "Yangilangan"
+
+msgctxt "#32089"
+msgid "%i of %i"
+msgstr "%i/%i"
+
+msgctxt "#32090"
+msgid "Updated %i"
+msgstr "%i ta yangilandi"
+
+msgctxt "#32092"
+msgid "Removed %i"
+msgstr "%i ta olib tashlandi"
+
+msgctxt "#32116"
+msgid "Enable debug mode"
+msgstr "Nosozliklarni tuzatish rejimini yoqish"
+
+msgctxt "#32117"
+msgid "Sync movie playback progress to Kodi"
+msgstr "Filmlarning ijro jarayonini Kodiga sinxronlash"
+
+msgctxt "#32118"
+msgid "Sync episode playback progress to Kodi"
+msgstr "Qismlarning ijro jarayonini Kodiga sinxronlash"
+
+msgctxt "#32122"
+msgid "Loading Trakt playback progress"
+msgstr "Trakt ijro jarayoni yuklanmoqda"
+
+msgctxt "#32132"
+msgid "Unrate this season"
+msgstr "Bu mavsum bahosini olib tashlash"
+
+msgctxt "#32136"
+msgid "Add to watchlist"
+msgstr "Ko'rish ro'yxatiga qo'shish"
+
+msgctxt "#32137"
+msgid "Rate this movie"
+msgstr "Bu filmni baholash"
+
+msgctxt "#32138"
+msgid "Rate this show"
+msgstr "Bu serialni baholash"
+
+msgctxt "#32139"
+msgid "Rate this episode"
+msgstr "Bu qismni baholash"
+
+msgctxt "#32143"
+msgid "Sync library"
+msgstr "Kutubxonani sinxronlash"
+
+msgctxt "#32144"
+msgid "Shows a code and a QR code to approve Relay on your Trakt account."
+msgstr "Relayni Trakt hisobingizda tasdiqlash uchun kod va QR kodni ko'rsatadi."
+
+msgctxt "#32149"
+msgid "Rate this season"
+msgstr "Bu mavsumni baholash"
+
+msgctxt "#32152"
+msgid "Connected to Trakt"
+msgstr "Traktga ulandi"
+
+msgctxt "#32163"
+msgid "Connected as"
+msgstr "Ulangan hisob"
+
+msgctxt "#32164"
+msgid "Fall back to title and year matching"
+msgstr "Zaxira sifatida nom va yil bo'yicha moslash"
+
+msgctxt "#32165"
+msgid "Added to watchlist"
+msgstr "Ko'rish ro'yxatiga qo'shildi"
+
+msgctxt "#32166"
+msgid "Couldn't add to watchlist"
+msgstr "Ko'rish ro'yxatiga qo'shib bo'lmadi"
+
+msgctxt "#32167"
+msgid "Scrobble start delay (minutes)"
+msgstr "Skrobbl boshlanishini kechiktirish (daqiqa)"
+
+msgctxt "#32169"
+msgid "Kodi ratings"
+msgstr "Kodi baholari"
+
+msgctxt "#32179"
+msgid "Trakt ratings"
+msgstr "Trakt baholari"
+
+msgctxt "#32184"
+msgid "Retry a failed scrobble by show title search"
+msgstr "Muvaffaqiyatsiz skrobblni serial nomi bo'yicha qidirib qayta urinish"
+
+msgctxt "#32185"
+msgid "Exclude plugins"
+msgstr "Plaginlarni istisno qilish"
+
+msgctxt "#32186"
+msgid "Add-ons can pause scrobbling"
+msgstr "Qo'shimchalar skrobblingni pauza qila oladi"
+
+msgctxt "#32187"
+msgid "Use own proxy"
+msgstr "O'z proksingizdan foydalanish"
+
+msgctxt "#32188"
+msgid "Proxy address"
+msgstr "Proksi manzili"
+
+msgctxt "#32189"
+msgid "Proxy port"
+msgstr "Proksi porti"
+
+msgctxt "#32190"
+msgid "Username"
+msgstr "Foydalanuvchi nomi"
+
+msgctxt "#32191"
+msgid "Password"
+msgstr "Parol"
+
+msgctxt "#32192"
+msgid "Don't keep playback progress on Trakt"
+msgstr "Ijro jarayonini Traktda saqlamaslik"
+
+msgctxt "#32193"
+msgid "Respect Trakt rewatch progress"
+msgstr "Trakt qayta ko'rish jarayonini hisobga olish"
+
+msgctxt "#32196"
+msgid "Sync ratings from Trakt to Kodi"
+msgstr "Baholarni Traktdan Kodiga sinxronlash"
+
+msgctxt "#32197"
+msgid "Sync ratings from Kodi to Trakt"
+msgstr "Baholarni Kodidan Traktga sinxronlash"
+
+msgctxt "#32198"
+msgid "Trakt"
+msgstr "Trakt"
+
+msgctxt "#32199"
+msgid "Connect to Trakt"
+msgstr "Traktga ulanish"
+
+msgctxt "#32200"
+msgid "Visit {0}[CR]or scan the QR code, then enter:"
+msgstr "{0} manziliga kiring[CR]yoki QR kodni skanerlang, so'ng kiriting:"
+
+msgctxt "#32201"
+msgid "This closes by itself once you approve."
+msgstr "Tasdiqlaganingizdan so'ng bu oyna o'zi yopiladi."
+
+msgctxt "#32202"
+msgid "Not connected to Trakt. Connect from the add-on settings."
+msgstr "Traktga ulanmagan. Qo'shimcha sozlamalaridan ulaning."
+
+msgctxt "#32206"
+msgid "Kodi resume points"
+msgstr "Kodi davom ettirish nuqtalari"
+
+msgctxt "#32207"
+msgid "Use the proxy below instead of Kodi's proxy setting."
+msgstr "Kodi proksi sozlamasi o'rniga quyidagi proksidan foydalanish."
+
+msgctxt "#32208"
+msgid "Proxy server address, like http://proxy.lan."
+msgstr "Proksi server manzili, masalan http://proxy.lan."
+
+msgctxt "#32209"
+msgid "Port of the proxy server."
+msgstr "Proksi serverning porti."
+
+msgctxt "#32210"
+msgid "Optional user name needed to authenticate with the proxy."
+msgstr "Proksi orqali autentifikatsiya uchun kerak bo'lgan ixtiyoriy foydalanuvchi nomi."
+
+msgctxt "#32211"
+msgid "Optional password needed to authenticate with the proxy."
+msgstr "Proksi orqali autentifikatsiya uchun kerak bo'lgan ixtiyoriy parol."
+
+msgctxt "#32212"
+msgid "Shows you are rewatching on Trakt match your rewatch progress in Kodi. Episodes watched since the rewatch started are marked watched, and the rest unwatched. Start a rewatch from a show's context menu or on Trakt."
+msgstr "Traktda qayta ko'rayotgan seriallaringiz Kodida qayta ko'rish jarayoningizga mos keladi. Qayta ko'rish boshlanganidan beri ko'rilgan qismlar ko'rilgan, qolganlari esa ko'rilmagan deb belgilanadi. Qayta ko'rishni serialning kontekst menyusidan yoki Traktda boshlang."
+
+msgctxt "#32213"
+msgid "Movie sync"
+msgstr "Filmlarni sinxronlash"
+
+msgctxt "#32214"
+msgid "Episode sync"
+msgstr "Qismlarni sinxronlash"
+
+msgctxt "#32215"
+msgid "Paused at %s"
+msgstr "%s da pauza qilindi"
+
+msgctxt "#32216"
+msgid "Loading Trakt ratings"
+msgstr "Trakt baholari yuklanmoqda"
+
+msgctxt "#32217"
+msgid "Watching"
+msgstr "Ko'rilmoqda"
+
+msgctxt "#32218"
+msgid "The Trakt add-on is also enabled. Both add-ons scrobble and sync with Trakt, so everything is done twice."
+msgstr "Trakt qo'shimchasi ham yoqilgan. Ikkala qo'shimcha ham Traktga skrobbl qiladi va Trakt bilan sinxronlaydi, shuning uchun hammasi ikki marta bajariladi."
+
+msgctxt "#32219"
+msgid "Keep both"
+msgstr "Ikkalasini qoldirish"
+
+msgctxt "#32220"
+msgid "Start rewatch"
+msgstr "Qayta ko'rishni boshlash"
+
+msgctxt "#32221"
+msgid "Start a rewatch on Trakt? Your progress starts again, and every episode is marked unwatched in Kodi."
+msgstr "Traktda qayta ko'rish boshlansinmi? Jarayoningiz boshidan boshlanadi va Kodida barcha qismlar ko'rilmagan deb belgilanadi."
+
+msgctxt "#32222"
+msgid "Rewatch started"
+msgstr "Qayta ko'rish boshlandi"
+
+msgctxt "#32223"
+msgid "Couldn't start rewatch"
+msgstr "Qayta ko'rishni boshlab bo'lmadi"
+
+msgctxt "#32224"
+msgid "Use the OG Trakt theme"
+msgstr "OG Trakt mavzusidan foydalanish"
+
+msgctxt "#32225"
+msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
+msgstr "og.trakt.tv saytidagi kabi Traktning qizil logotipi, yuraklar va ajratish ranglarini ko'rsatadi."

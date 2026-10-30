@@ -1,0 +1,525 @@
+# Kodi Media Center language file
+# Addon Name: Trakt Relay
+# Addon id: service.trakt.relay
+# Addon Provider: MikeSiLVO
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Addons\n"
+"Report-Msgid-Bugs-To: https://github.com/MikeSiLVO/service.trakt.relay/issues\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: Maltese (http://www.transifex.com/projects/p/xbmc-addons/language/mt/)\n"
+"Language: mt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==0 || ( n%100>1 && n%100<11) ? 1 : (n%100>10 && n%100<20 ) ? 2 : 3);\n"
+
+msgctxt "Addon Summary"
+msgid "Scrobbles what you watch in Kodi and syncs your library with Trakt"
+msgstr "Jagħmel scrobble ta' dak li tara f'Kodi u jissinkronizza l-librerija tiegħek ma' Trakt"
+
+msgctxt "Addon Description"
+msgid "Trakt Relay scrobbles the movies, episodes, live TV and recordings you watch in Kodi to Trakt, and syncs your library with it: collection, watched status, ratings and playback progress, each direction switched on in the settings. It asks for a rating after you watch, and its context menu rates, adds to the watchlist and starts a rewatch of a show. Scrobbles that fail are retried later.[CR][CR]Trakt Relay is a modified version of script.trakt by Trakt.tv, Razzeee and its contributors."
+msgstr "Trakt Relay jagħmel scrobble fuq Trakt tal-filmati, l-episodji, it-TV dirett u r-reġistrazzjonijiet li tara f'Kodi, u jissinkronizza l-librerija tiegħek miegħu: kollezzjoni, status ta' x'rajt, ratings u progress tar-riproduzzjoni, b'kull direzzjoni tinxtegħel fis-settings. Jitolbok rating wara li tara, u l-menu tal-kuntest tiegħu jagħti rating, iżid mal-lista ta' x'tara u jibda rewatch ta' programm. L-iscrobbles li jfallu jerġgħu jiġu ppruvati aktar tard.[CR][CR]Trakt Relay hija verżjoni modifikata ta' script.trakt minn Trakt.tv, Razzeee u l-kontributuri tiegħu."
+
+msgctxt "Addon Disclaimer"
+msgid "Trakt Relay is not affiliated with or endorsed by Trakt."
+msgstr "Trakt Relay mhuwiex affiljat ma' Trakt u mhuwiex approvat minn Trakt."
+
+msgctxt "#32000"
+msgid "General"
+msgstr "Ġenerali"
+
+msgctxt "#32003"
+msgid "Startup delay (seconds)"
+msgstr "Dewmien fil-bidu (sekondi)"
+
+msgctxt "#32004"
+msgid "Rating"
+msgstr "Rating"
+
+msgctxt "#32005"
+msgid "Rate movies after watching"
+msgstr "Agħti rating lill-filmati wara li tarahom"
+
+msgctxt "#32006"
+msgid "Rate episodes after watching"
+msgstr "Agħti rating lill-episodji wara li tarahom"
+
+msgctxt "#32008"
+msgid "Minimum percent watched before asking"
+msgstr "Perċentwal minimu ta' kemm rajt qabel ma jistaqsi"
+
+msgctxt "#32009"
+msgid "Allow re-rating"
+msgstr "Ippermetti rating mill-ġdid"
+
+msgctxt "#32010"
+msgid "Default rating"
+msgstr "Rating predefinit"
+
+msgctxt "#32011"
+msgid "Scrobbling"
+msgstr "Scrobbling"
+
+msgctxt "#32012"
+msgid "Scrobble movies"
+msgstr "Agħmel scrobble tal-filmati"
+
+msgctxt "#32013"
+msgid "Scrobble episodes"
+msgstr "Agħmel scrobble tal-episodji"
+
+msgctxt "#32014"
+msgid "Show scrobble notifications"
+msgstr "Uri n-notifiki tal-iscrobble"
+
+msgctxt "#32015"
+msgid "Watched"
+msgstr "Rajt"
+
+msgctxt "#32016"
+msgid "Exclusions"
+msgstr "Esklużjonijiet"
+
+msgctxt "#32017"
+msgid "Exclude live TV"
+msgstr "Eskludi t-TV dirett"
+
+msgctxt "#32018"
+msgid "Exclude HTTP sources"
+msgstr "Eskludi sorsi HTTP"
+
+msgctxt "#32019"
+msgid "Exclude path"
+msgstr "Eskludi mogħdija"
+
+msgctxt "#32020"
+msgid "Folder, subfolders included"
+msgstr "Folder, inklużi s-subfolders"
+
+msgctxt "#32023"
+msgid "Couldn't reach Trakt"
+msgstr "Ma setax jilħaq lil Trakt"
+
+msgctxt "#32026"
+msgid "What did you think?"
+msgstr "X'ħsibt?"
+
+msgctxt "#32027"
+msgid "Totally Ninja!"
+msgstr "Spettakolari!"
+
+msgctxt "#32028"
+msgid "Weak Sauce :("
+msgstr "Dgħajjef ħafna :("
+
+msgctxt "#32029"
+msgid "Terrible"
+msgstr "Terribbli"
+
+msgctxt "#32030"
+msgid "Bad"
+msgstr "Ħażin"
+
+msgctxt "#32031"
+msgid "Poor"
+msgstr "Dgħajjef"
+
+msgctxt "#32032"
+msgid "Meh"
+msgstr "Hekk u hekk"
+
+msgctxt "#32033"
+msgid "Fair"
+msgstr "Aċċettabbli"
+
+msgctxt "#32034"
+msgid "Good"
+msgstr "Tajjeb"
+
+msgctxt "#32035"
+msgid "Great"
+msgstr "Tajjeb ħafna"
+
+msgctxt "#32036"
+msgid "Superb"
+msgstr "Eċċellenti"
+
+msgctxt "#32037"
+msgid "Unrate this movie"
+msgstr "Neħħi r-rating ta' dan il-film"
+
+msgctxt "#32038"
+msgid "Unrate this show"
+msgstr "Neħħi r-rating ta' dan il-programm"
+
+msgctxt "#32039"
+msgid "Unrate this episode"
+msgstr "Neħħi r-rating ta' dan l-episodju"
+
+msgctxt "#32040"
+msgid "Rated %i"
+msgstr "Rating %i"
+
+msgctxt "#32041"
+msgid "Already rated %i"
+msgstr "Diġà ngħata rating %i"
+
+msgctxt "#32042"
+msgid "Unrated"
+msgstr "Rating imneħħi"
+
+msgctxt "#32044"
+msgid "Couldn't rate"
+msgstr "Ma setax jagħti rating"
+
+msgctxt "#32045"
+msgid "Sync"
+msgstr "Sinkronizzazzjoni"
+
+msgctxt "#32046"
+msgid "Movies"
+msgstr "Filmati"
+
+msgctxt "#32047"
+msgid "Add new movies to Trakt collection"
+msgstr "Żid filmati ġodda mal-kollezzjoni ta' Trakt"
+
+msgctxt "#32048"
+msgid "Add watched movies to Trakt history"
+msgstr "Żid il-filmati li rajt mal-istorja ta' Trakt"
+
+msgctxt "#32049"
+msgid "Mark movies from Trakt history as watched in Kodi"
+msgstr "Immarka l-filmati mill-istorja ta' Trakt bħala li rajthom f'Kodi"
+
+msgctxt "#32050"
+msgid "Episodes"
+msgstr "Episodji"
+
+msgctxt "#32051"
+msgid "Add new TV episodes to Trakt collection"
+msgstr "Żid episodji ġodda tat-TV mal-kollezzjoni ta' Trakt"
+
+msgctxt "#32052"
+msgid "Add watched TV episodes to Trakt history"
+msgstr "Żid l-episodji tat-TV li rajt mal-istorja ta' Trakt"
+
+msgctxt "#32053"
+msgid "Mark TV episodes from Trakt history as watched in Kodi"
+msgstr "Immarka l-episodji tat-TV mill-istorja ta' Trakt bħala li rajthom f'Kodi"
+
+msgctxt "#32054"
+msgid "Service"
+msgstr "Servizz"
+
+msgctxt "#32055"
+msgid "Sync after a library scan or clean"
+msgstr "Issinkronizza wara scan jew tindif tal-librerija"
+
+msgctxt "#32056"
+msgid "Show sync notifications"
+msgstr "Uri n-notifiki tas-sinkronizzazzjoni"
+
+msgctxt "#32057"
+msgid "Remove deleted movies from Trakt collection"
+msgstr "Neħħi l-filmati mħassra mill-kollezzjoni ta' Trakt"
+
+msgctxt "#32058"
+msgid "Remove deleted TV episodes from Trakt collection"
+msgstr "Neħħi l-episodji tat-TV imħassra mill-kollezzjoni ta' Trakt"
+
+msgctxt "#32060"
+msgid "Hide notifications during playback"
+msgstr "Aħbi n-notifiki waqt ir-riproduzzjoni"
+
+msgctxt "#32061"
+msgid "Started"
+msgstr "Bdiet"
+
+msgctxt "#32062"
+msgid "Finished"
+msgstr "Spiċċat"
+
+msgctxt "#32063"
+msgid "Adding %i"
+msgstr "Qed iżid %i"
+
+msgctxt "#32068"
+msgid "Trakt collection"
+msgstr "Kollezzjoni ta' Trakt"
+
+msgctxt "#32071"
+msgid "Trakt history"
+msgstr "Storja ta' Trakt"
+
+msgctxt "#32074"
+msgid "Kodi watched status"
+msgstr "Status ta' x'rajt f'Kodi"
+
+msgctxt "#32076"
+msgid "Removing %i"
+msgstr "Qed ineħħi %i"
+
+msgctxt "#32079"
+msgid "Loading Kodi library"
+msgstr "Qed titgħabba l-librerija ta' Kodi"
+
+msgctxt "#32081"
+msgid "Loading Trakt collection"
+msgstr "Qed titgħabba l-kollezzjoni ta' Trakt"
+
+msgctxt "#32082"
+msgid "Loading Trakt history"
+msgstr "Qed titgħabba l-istorja ta' Trakt"
+
+msgctxt "#32085"
+msgid "Added %i"
+msgstr "%i miżjuda"
+
+msgctxt "#32086"
+msgid "Up to date"
+msgstr "Aġġornat"
+
+msgctxt "#32089"
+msgid "%i of %i"
+msgstr "%i minn %i"
+
+msgctxt "#32090"
+msgid "Updated %i"
+msgstr "%i aġġornati"
+
+msgctxt "#32092"
+msgid "Removed %i"
+msgstr "%i mneħħija"
+
+msgctxt "#32116"
+msgid "Enable debug mode"
+msgstr "Attiva l-modalità ta' debug"
+
+msgctxt "#32117"
+msgid "Sync movie playback progress to Kodi"
+msgstr "Issinkronizza l-progress tar-riproduzzjoni tal-filmati ma' Kodi"
+
+msgctxt "#32118"
+msgid "Sync episode playback progress to Kodi"
+msgstr "Issinkronizza l-progress tar-riproduzzjoni tal-episodji ma' Kodi"
+
+msgctxt "#32122"
+msgid "Loading Trakt playback progress"
+msgstr "Qed jitgħabba l-progress tar-riproduzzjoni ta' Trakt"
+
+msgctxt "#32132"
+msgid "Unrate this season"
+msgstr "Neħħi r-rating ta' dan l-istaġun"
+
+msgctxt "#32136"
+msgid "Add to watchlist"
+msgstr "Żid mal-lista ta' x'tara"
+
+msgctxt "#32137"
+msgid "Rate this movie"
+msgstr "Agħti rating lil dan il-film"
+
+msgctxt "#32138"
+msgid "Rate this show"
+msgstr "Agħti rating lil dan il-programm"
+
+msgctxt "#32139"
+msgid "Rate this episode"
+msgstr "Agħti rating lil dan l-episodju"
+
+msgctxt "#32143"
+msgid "Sync library"
+msgstr "Issinkronizza l-librerija"
+
+msgctxt "#32144"
+msgid "Shows a code and a QR code to approve Relay on your Trakt account."
+msgstr "Juri kodiċi u kodiċi QR biex tapprova lil Relay fuq il-kont tiegħek ta' Trakt."
+
+msgctxt "#32149"
+msgid "Rate this season"
+msgstr "Agħti rating lil dan l-istaġun"
+
+msgctxt "#32152"
+msgid "Connected to Trakt"
+msgstr "Konness ma' Trakt"
+
+msgctxt "#32163"
+msgid "Connected as"
+msgstr "Konness bħala"
+
+msgctxt "#32164"
+msgid "Fall back to title and year matching"
+msgstr "Uża t-titlu u s-sena bħala alternattiva"
+
+msgctxt "#32165"
+msgid "Added to watchlist"
+msgstr "Miżjud mal-lista ta' x'tara"
+
+msgctxt "#32166"
+msgid "Couldn't add to watchlist"
+msgstr "Ma setax iżid mal-lista ta' x'tara"
+
+msgctxt "#32167"
+msgid "Scrobble start delay (minutes)"
+msgstr "Dewmien qabel jibda l-iscrobble (minuti)"
+
+msgctxt "#32169"
+msgid "Kodi ratings"
+msgstr "Ratings ta' Kodi"
+
+msgctxt "#32179"
+msgid "Trakt ratings"
+msgstr "Ratings ta' Trakt"
+
+msgctxt "#32184"
+msgid "Retry a failed scrobble by show title search"
+msgstr "Erġa' pprova scrobble li falla billi tfittex it-titlu tal-programm"
+
+msgctxt "#32185"
+msgid "Exclude plugins"
+msgstr "Eskludi l-plugins"
+
+msgctxt "#32186"
+msgid "Add-ons can pause scrobbling"
+msgstr "L-add-ons jistgħu jwaqqfu l-iscrobble temporanjament"
+
+msgctxt "#32187"
+msgid "Use own proxy"
+msgstr "Uża proxy tiegħek"
+
+msgctxt "#32188"
+msgid "Proxy address"
+msgstr "Indirizz tal-proxy"
+
+msgctxt "#32189"
+msgid "Proxy port"
+msgstr "Port tal-proxy"
+
+msgctxt "#32190"
+msgid "Username"
+msgstr "Isem tal-utent"
+
+msgctxt "#32191"
+msgid "Password"
+msgstr "Password"
+
+msgctxt "#32192"
+msgid "Don't keep playback progress on Trakt"
+msgstr "Iżżommx il-progress tar-riproduzzjoni fuq Trakt"
+
+msgctxt "#32193"
+msgid "Respect Trakt rewatch progress"
+msgstr "Irrispetta l-progress tar-rewatch ta' Trakt"
+
+msgctxt "#32196"
+msgid "Sync ratings from Trakt to Kodi"
+msgstr "Issinkronizza r-ratings minn Trakt għal Kodi"
+
+msgctxt "#32197"
+msgid "Sync ratings from Kodi to Trakt"
+msgstr "Issinkronizza r-ratings minn Kodi għal Trakt"
+
+msgctxt "#32198"
+msgid "Trakt"
+msgstr "Trakt"
+
+msgctxt "#32199"
+msgid "Connect to Trakt"
+msgstr "Ikkonnettja ma' Trakt"
+
+msgctxt "#32200"
+msgid "Visit {0}[CR]or scan the QR code, then enter:"
+msgstr "Żur {0}[CR]jew skennja l-kodiċi QR, imbagħad daħħal:"
+
+msgctxt "#32201"
+msgid "This closes by itself once you approve."
+msgstr "Dan jingħalaq waħdu ladarba tapprova."
+
+msgctxt "#32202"
+msgid "Not connected to Trakt. Connect from the add-on settings."
+msgstr "Mhux konness ma' Trakt. Ikkonnettja mis-settings tal-add-on."
+
+msgctxt "#32206"
+msgid "Kodi resume points"
+msgstr "Punti biex tkompli f'Kodi"
+
+msgctxt "#32207"
+msgid "Use the proxy below instead of Kodi's proxy setting."
+msgstr "Uża l-proxy ta' hawn taħt minflok is-setting tal-proxy ta' Kodi."
+
+msgctxt "#32208"
+msgid "Proxy server address, like http://proxy.lan."
+msgstr "Indirizz tas-server tal-proxy, bħal http://proxy.lan."
+
+msgctxt "#32209"
+msgid "Port of the proxy server."
+msgstr "Il-port tas-server tal-proxy."
+
+msgctxt "#32210"
+msgid "Optional user name needed to authenticate with the proxy."
+msgstr "Isem tal-utent mhux obbligatorju meħtieġ għall-awtentikazzjoni mal-proxy."
+
+msgctxt "#32211"
+msgid "Optional password needed to authenticate with the proxy."
+msgstr "Password mhux obbligatorja meħtieġa għall-awtentikazzjoni mal-proxy."
+
+msgctxt "#32212"
+msgid "Shows you are rewatching on Trakt match your rewatch progress in Kodi. Episodes watched since the rewatch started are marked watched, and the rest unwatched. Start a rewatch from a show's context menu or on Trakt."
+msgstr "Il-programmi li qed terġa' tara fuq Trakt jaqblu f'Kodi mal-progress tar-rewatch tiegħek. L-episodji li rajt minn meta beda r-rewatch jiġu mmarkati bħala li rajthom, u l-bqija bħala li ma rajthomx. Ibda rewatch mill-menu tal-kuntest ta' programm jew fuq Trakt."
+
+msgctxt "#32213"
+msgid "Movie sync"
+msgstr "Sinkronizzazzjoni tal-filmati"
+
+msgctxt "#32214"
+msgid "Episode sync"
+msgstr "Sinkronizzazzjoni tal-episodji"
+
+msgctxt "#32215"
+msgid "Paused at %s"
+msgstr "Imwaqqaf f'%s"
+
+msgctxt "#32216"
+msgid "Loading Trakt ratings"
+msgstr "Qed jitgħabbew ir-ratings ta' Trakt"
+
+msgctxt "#32217"
+msgid "Watching"
+msgstr "Qed tara"
+
+msgctxt "#32218"
+msgid "The Trakt add-on is also enabled. Both add-ons scrobble and sync with Trakt, so everything is done twice."
+msgstr "L-add-on Trakt huwa attivat ukoll. Iż-żewġ add-ons jagħmlu scrobble u jissinkronizzaw ma' Trakt, għalhekk kollox isir darbtejn."
+
+msgctxt "#32219"
+msgid "Keep both"
+msgstr "Żomm it-tnejn"
+
+msgctxt "#32220"
+msgid "Start rewatch"
+msgstr "Ibda rewatch"
+
+msgctxt "#32221"
+msgid "Start a rewatch on Trakt? Your progress starts again, and every episode is marked unwatched in Kodi."
+msgstr "Tibda rewatch fuq Trakt? Il-progress tiegħek jerġa' jibda mill-bidu, u kull episodju jiġi mmarkat f'Kodi bħala li ma rajtux."
+
+msgctxt "#32222"
+msgid "Rewatch started"
+msgstr "Ir-rewatch beda"
+
+msgctxt "#32223"
+msgid "Couldn't start rewatch"
+msgstr "Ma setax jibda r-rewatch"
+
+msgctxt "#32224"
+msgid "Use the OG Trakt theme"
+msgstr "Uża t-tema OG Trakt"
+
+msgctxt "#32225"
+msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
+msgstr "Juri l-logo aħmar ta' Trakt, il-qlub u l-kulur tal-enfasi, bħal fuq og.trakt.tv."

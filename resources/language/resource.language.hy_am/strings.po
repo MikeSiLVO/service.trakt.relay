@@ -1,0 +1,525 @@
+# Kodi Media Center language file
+# Addon Name: Trakt Relay
+# Addon id: service.trakt.relay
+# Addon Provider: MikeSiLVO
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Addons\n"
+"Report-Msgid-Bugs-To: https://github.com/MikeSiLVO/service.trakt.relay/issues\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: Armenian (http://www.transifex.com/projects/p/xbmc-addons/language/hy/)\n"
+"Language: hy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "Addon Summary"
+msgid "Scrobbles what you watch in Kodi and syncs your library with Trakt"
+msgstr "Scrobble է անում այն, ինչ դիտում եք Kodi-ում, և համաժամեցնում է ձեր գրադարանը Trakt-ի հետ"
+
+msgctxt "Addon Description"
+msgid "Trakt Relay scrobbles the movies, episodes, live TV and recordings you watch in Kodi to Trakt, and syncs your library with it: collection, watched status, ratings and playback progress, each direction switched on in the settings. It asks for a rating after you watch, and its context menu rates, adds to the watchlist and starts a rewatch of a show. Scrobbles that fail are retried later.[CR][CR]Trakt Relay is a modified version of script.trakt by Trakt.tv, Razzeee and its contributors."
+msgstr "Trakt Relay-ը Trakt-ում scrobble է անում Kodi-ում ձեր դիտած ֆիլմերը, դրվագները, ուղիղ հեռուստատեսությունը և տեսագրությունները, և համաժամեցնում է ձեր գրադարանը նրա հետ՝ հավաքածուն, դիտման կարգավիճակը, գնահատականները և նվագարկման առաջընթացը, ընդ որում յուրաքանչյուր ուղղություն միացվում է կարգավորումներում։ Դիտելուց հետո այն գնահատական է խնդրում, իսկ նրա համատեքստային ընտրացանկը գնահատում է, ավելացնում դիտելու ցուցակին և սկսում սերիալի վերադիտումը։ Ձախողված scrobble-ները ավելի ուշ կրկին փորձարկվում են։[CR][CR]Trakt Relay-ը script.trakt-ի փոփոխված տարբերակն է, որի հեղինակներն են Trakt.tv-ն, Razzeee-ն և նրա մասնակիցները։"
+
+msgctxt "Addon Disclaimer"
+msgid "Trakt Relay is not affiliated with or endorsed by Trakt."
+msgstr "Trakt Relay-ը կապված չէ Trakt-ի հետ և նրա հավանությունը չունի։"
+
+msgctxt "#32000"
+msgid "General"
+msgstr "Գլխավոր"
+
+msgctxt "#32003"
+msgid "Startup delay (seconds)"
+msgstr "Գործարկման հապաղում (վայրկյան)"
+
+msgctxt "#32004"
+msgid "Rating"
+msgstr "Գնահատական"
+
+msgctxt "#32005"
+msgid "Rate movies after watching"
+msgstr "Գնահատել ֆիլմերը դիտելուց հետո"
+
+msgctxt "#32006"
+msgid "Rate episodes after watching"
+msgstr "Գնահատել դրվագները դիտելուց հետո"
+
+msgctxt "#32008"
+msgid "Minimum percent watched before asking"
+msgstr "Դիտման նվազագույն տոկոսը՝ մինչև հարցնելը"
+
+msgctxt "#32009"
+msgid "Allow re-rating"
+msgstr "Թույլատրել վերագնահատումը"
+
+msgctxt "#32010"
+msgid "Default rating"
+msgstr "Լռելյայն գնահատական"
+
+msgctxt "#32011"
+msgid "Scrobbling"
+msgstr "Scrobbling"
+
+msgctxt "#32012"
+msgid "Scrobble movies"
+msgstr "Scrobble անել ֆիլմերը"
+
+msgctxt "#32013"
+msgid "Scrobble episodes"
+msgstr "Scrobble անել դրվագները"
+
+msgctxt "#32014"
+msgid "Show scrobble notifications"
+msgstr "Ցույց տալ scrobble-ի ծանուցումները"
+
+msgctxt "#32015"
+msgid "Watched"
+msgstr "Դիտված"
+
+msgctxt "#32016"
+msgid "Exclusions"
+msgstr "Բացառություններ"
+
+msgctxt "#32017"
+msgid "Exclude live TV"
+msgstr "Բացառել ուղիղ հեռուստատեսությունը"
+
+msgctxt "#32018"
+msgid "Exclude HTTP sources"
+msgstr "Բացառել HTTP աղբյուրները"
+
+msgctxt "#32019"
+msgid "Exclude path"
+msgstr "Բացառել ուղին"
+
+msgctxt "#32020"
+msgid "Folder, subfolders included"
+msgstr "Թղթապանակ՝ ներառյալ ենթաթղթապանակները"
+
+msgctxt "#32023"
+msgid "Couldn't reach Trakt"
+msgstr "Չհաջողվեց կապվել Trakt-ի հետ"
+
+msgctxt "#32026"
+msgid "What did you think?"
+msgstr "Ի՞նչ կարծիքի եք"
+
+msgctxt "#32027"
+msgid "Totally Ninja!"
+msgstr "Ուղղակի կրակ է!"
+
+msgctxt "#32028"
+msgid "Weak Sauce :("
+msgstr "Աղետ է :("
+
+msgctxt "#32029"
+msgid "Terrible"
+msgstr "Սարսափելի"
+
+msgctxt "#32030"
+msgid "Bad"
+msgstr "Վատ"
+
+msgctxt "#32031"
+msgid "Poor"
+msgstr "Թույլ"
+
+msgctxt "#32032"
+msgid "Meh"
+msgstr "Միջակ"
+
+msgctxt "#32033"
+msgid "Fair"
+msgstr "Ընդունելի"
+
+msgctxt "#32034"
+msgid "Good"
+msgstr "Լավ"
+
+msgctxt "#32035"
+msgid "Great"
+msgstr "Շատ լավ"
+
+msgctxt "#32036"
+msgid "Superb"
+msgstr "Գերազանց"
+
+msgctxt "#32037"
+msgid "Unrate this movie"
+msgstr "Հեռացնել այս ֆիլմի գնահատականը"
+
+msgctxt "#32038"
+msgid "Unrate this show"
+msgstr "Հեռացնել այս սերիալի գնահատականը"
+
+msgctxt "#32039"
+msgid "Unrate this episode"
+msgstr "Հեռացնել այս դրվագի գնահատականը"
+
+msgctxt "#32040"
+msgid "Rated %i"
+msgstr "Գնահատվել է %i"
+
+msgctxt "#32041"
+msgid "Already rated %i"
+msgstr "Արդեն գնահատվել է %i"
+
+msgctxt "#32042"
+msgid "Unrated"
+msgstr "Գնահատականը հեռացվեց"
+
+msgctxt "#32044"
+msgid "Couldn't rate"
+msgstr "Չհաջողվեց գնահատել"
+
+msgctxt "#32045"
+msgid "Sync"
+msgstr "Համաժամեցում"
+
+msgctxt "#32046"
+msgid "Movies"
+msgstr "Ֆիլմեր"
+
+msgctxt "#32047"
+msgid "Add new movies to Trakt collection"
+msgstr "Ավելացնել նոր ֆիլմերը Trakt-ի հավաքածուին"
+
+msgctxt "#32048"
+msgid "Add watched movies to Trakt history"
+msgstr "Ավելացնել դիտված ֆիլմերը Trakt-ի պատմությանը"
+
+msgctxt "#32049"
+msgid "Mark movies from Trakt history as watched in Kodi"
+msgstr "Նշել Trakt-ի պատմության ֆիլմերը որպես դիտված Kodi-ում"
+
+msgctxt "#32050"
+msgid "Episodes"
+msgstr "Դրվագներ"
+
+msgctxt "#32051"
+msgid "Add new TV episodes to Trakt collection"
+msgstr "Ավելացնել սերիալների նոր դրվագները Trakt-ի հավաքածուին"
+
+msgctxt "#32052"
+msgid "Add watched TV episodes to Trakt history"
+msgstr "Ավելացնել սերիալների դիտված դրվագները Trakt-ի պատմությանը"
+
+msgctxt "#32053"
+msgid "Mark TV episodes from Trakt history as watched in Kodi"
+msgstr "Նշել Trakt-ի պատմության դրվագները որպես դիտված Kodi-ում"
+
+msgctxt "#32054"
+msgid "Service"
+msgstr "Ծառայություն"
+
+msgctxt "#32055"
+msgid "Sync after a library scan or clean"
+msgstr "Համաժամեցնել գրադարանի սկանավորումից կամ մաքրումից հետո"
+
+msgctxt "#32056"
+msgid "Show sync notifications"
+msgstr "Ցույց տալ համաժամեցման ծանուցումները"
+
+msgctxt "#32057"
+msgid "Remove deleted movies from Trakt collection"
+msgstr "Հեռացնել ջնջված ֆիլմերը Trakt-ի հավաքածուից"
+
+msgctxt "#32058"
+msgid "Remove deleted TV episodes from Trakt collection"
+msgstr "Հեռացնել ջնջված դրվագները Trakt-ի հավաքածուից"
+
+msgctxt "#32060"
+msgid "Hide notifications during playback"
+msgstr "Թաքցնել ծանուցումները նվագարկման ընթացքում"
+
+msgctxt "#32061"
+msgid "Started"
+msgstr "Սկսվեց"
+
+msgctxt "#32062"
+msgid "Finished"
+msgstr "Ավարտվեց"
+
+msgctxt "#32063"
+msgid "Adding %i"
+msgstr "Ավելացվում է %i"
+
+msgctxt "#32068"
+msgid "Trakt collection"
+msgstr "Trakt-ի հավաքածու"
+
+msgctxt "#32071"
+msgid "Trakt history"
+msgstr "Trakt-ի պատմություն"
+
+msgctxt "#32074"
+msgid "Kodi watched status"
+msgstr "Kodi-ի դիտման կարգավիճակ"
+
+msgctxt "#32076"
+msgid "Removing %i"
+msgstr "Հեռացվում է %i"
+
+msgctxt "#32079"
+msgid "Loading Kodi library"
+msgstr "Kodi-ի գրադարանի բեռնում"
+
+msgctxt "#32081"
+msgid "Loading Trakt collection"
+msgstr "Trakt-ի հավաքածուի բեռնում"
+
+msgctxt "#32082"
+msgid "Loading Trakt history"
+msgstr "Trakt-ի պատմության բեռնում"
+
+msgctxt "#32085"
+msgid "Added %i"
+msgstr "Ավելացվեց %i"
+
+msgctxt "#32086"
+msgid "Up to date"
+msgstr "Արդիական է"
+
+msgctxt "#32089"
+msgid "%i of %i"
+msgstr "%i / %i"
+
+msgctxt "#32090"
+msgid "Updated %i"
+msgstr "Թարմացվեց %i"
+
+msgctxt "#32092"
+msgid "Removed %i"
+msgstr "Հեռացվեց %i"
+
+msgctxt "#32116"
+msgid "Enable debug mode"
+msgstr "Միացնել վրիպազերծման ռեժիմը"
+
+msgctxt "#32117"
+msgid "Sync movie playback progress to Kodi"
+msgstr "Համաժամեցնել ֆիլմերի նվագարկման առաջընթացը Kodi-ի հետ"
+
+msgctxt "#32118"
+msgid "Sync episode playback progress to Kodi"
+msgstr "Համաժամեցնել դրվագների նվագարկման առաջընթացը Kodi-ի հետ"
+
+msgctxt "#32122"
+msgid "Loading Trakt playback progress"
+msgstr "Trakt-ի նվագարկման առաջընթացի բեռնում"
+
+msgctxt "#32132"
+msgid "Unrate this season"
+msgstr "Հեռացնել այս եթերաշրջանի գնահատականը"
+
+msgctxt "#32136"
+msgid "Add to watchlist"
+msgstr "Ավելացնել դիտելու ցուցակին"
+
+msgctxt "#32137"
+msgid "Rate this movie"
+msgstr "Գնահատել այս ֆիլմը"
+
+msgctxt "#32138"
+msgid "Rate this show"
+msgstr "Գնահատել այս սերիալը"
+
+msgctxt "#32139"
+msgid "Rate this episode"
+msgstr "Գնահատել այս դրվագը"
+
+msgctxt "#32143"
+msgid "Sync library"
+msgstr "Համաժամեցնել գրադարանը"
+
+msgctxt "#32144"
+msgid "Shows a code and a QR code to approve Relay on your Trakt account."
+msgstr "Ցույց է տալիս կոդ և QR կոդ՝ Relay-ը ձեր Trakt հաշվում հաստատելու համար։"
+
+msgctxt "#32149"
+msgid "Rate this season"
+msgstr "Գնահատել այս եթերաշրջանը"
+
+msgctxt "#32152"
+msgid "Connected to Trakt"
+msgstr "Միացված է Trakt-ին"
+
+msgctxt "#32163"
+msgid "Connected as"
+msgstr "Միացված է որպես"
+
+msgctxt "#32164"
+msgid "Fall back to title and year matching"
+msgstr "Անհրաժեշտության դեպքում համընկնել ըստ վերնագրի և տարվա"
+
+msgctxt "#32165"
+msgid "Added to watchlist"
+msgstr "Ավելացվեց դիտելու ցուցակին"
+
+msgctxt "#32166"
+msgid "Couldn't add to watchlist"
+msgstr "Չհաջողվեց ավելացնել դիտելու ցուցակին"
+
+msgctxt "#32167"
+msgid "Scrobble start delay (minutes)"
+msgstr "Scrobble-ի մեկնարկի հապաղում (րոպե)"
+
+msgctxt "#32169"
+msgid "Kodi ratings"
+msgstr "Kodi-ի գնահատականներ"
+
+msgctxt "#32179"
+msgid "Trakt ratings"
+msgstr "Trakt-ի գնահատականներ"
+
+msgctxt "#32184"
+msgid "Retry a failed scrobble by show title search"
+msgstr "Կրկնել ձախողված scrobble-ը՝ որոնելով սերիալի վերնագրով"
+
+msgctxt "#32185"
+msgid "Exclude plugins"
+msgstr "Բացառել պլագինները"
+
+msgctxt "#32186"
+msgid "Add-ons can pause scrobbling"
+msgstr "Հավելումները կարող են դադար տալ scrobbling-ին"
+
+msgctxt "#32187"
+msgid "Use own proxy"
+msgstr "Օգտագործել սեփական պրոքսի"
+
+msgctxt "#32188"
+msgid "Proxy address"
+msgstr "Պրոքսիի հասցե"
+
+msgctxt "#32189"
+msgid "Proxy port"
+msgstr "Պրոքսիի պորտ"
+
+msgctxt "#32190"
+msgid "Username"
+msgstr "Օգտանուն"
+
+msgctxt "#32191"
+msgid "Password"
+msgstr "Գաղտնաբառ"
+
+msgctxt "#32192"
+msgid "Don't keep playback progress on Trakt"
+msgstr "Չպահել նվագարկման առաջընթացը Trakt-ում"
+
+msgctxt "#32193"
+msgid "Respect Trakt rewatch progress"
+msgstr "Հաշվի առնել Trakt-ի վերադիտման առաջընթացը"
+
+msgctxt "#32196"
+msgid "Sync ratings from Trakt to Kodi"
+msgstr "Համաժամեցնել գնահատականները Trakt-ից Kodi"
+
+msgctxt "#32197"
+msgid "Sync ratings from Kodi to Trakt"
+msgstr "Համաժամեցնել գնահատականները Kodi-ից Trakt"
+
+msgctxt "#32198"
+msgid "Trakt"
+msgstr "Trakt"
+
+msgctxt "#32199"
+msgid "Connect to Trakt"
+msgstr "Միանալ Trakt-ին"
+
+msgctxt "#32200"
+msgid "Visit {0}[CR]or scan the QR code, then enter:"
+msgstr "Այցելեք {0}[CR]կամ սկանավորեք QR կոդը, ապա մուտքագրեք՝"
+
+msgctxt "#32201"
+msgid "This closes by itself once you approve."
+msgstr "Այս պատուհանը ինքնաբերաբար կփակվի, երբ հաստատեք։"
+
+msgctxt "#32202"
+msgid "Not connected to Trakt. Connect from the add-on settings."
+msgstr "Միացված չէ Trakt-ին։ Միացեք հավելման կարգավորումներից։"
+
+msgctxt "#32206"
+msgid "Kodi resume points"
+msgstr "Kodi-ի շարունակման կետեր"
+
+msgctxt "#32207"
+msgid "Use the proxy below instead of Kodi's proxy setting."
+msgstr "Օգտագործել ներքևի պրոքսին Kodi-ի պրոքսիի կարգավորման փոխարեն։"
+
+msgctxt "#32208"
+msgid "Proxy server address, like http://proxy.lan."
+msgstr "Պրոքսի սերվերի հասցեն, օրինակ՝ http://proxy.lan։"
+
+msgctxt "#32209"
+msgid "Port of the proxy server."
+msgstr "Պրոքսի սերվերի պորտը։"
+
+msgctxt "#32210"
+msgid "Optional user name needed to authenticate with the proxy."
+msgstr "Պրոքսիով նույնականացման համար անհրաժեշտ ոչ պարտադիր օգտանուն։"
+
+msgctxt "#32211"
+msgid "Optional password needed to authenticate with the proxy."
+msgstr "Պրոքսիով նույնականացման համար անհրաժեշտ ոչ պարտադիր գաղտնաբառ։"
+
+msgctxt "#32212"
+msgid "Shows you are rewatching on Trakt match your rewatch progress in Kodi. Episodes watched since the rewatch started are marked watched, and the rest unwatched. Start a rewatch from a show's context menu or on Trakt."
+msgstr "Kodi-ում այն սերիալները, որոնք վերադիտում եք Trakt-ում, համապատասխանում են ձեր վերադիտման առաջընթացին։ Վերադիտման սկսվելուց հետո դիտված դրվագները նշվում են որպես դիտված, իսկ մնացածը՝ որպես չդիտված։ Սկսեք վերադիտումը սերիալի համատեքստային ընտրացանկից կամ Trakt-ում։"
+
+msgctxt "#32213"
+msgid "Movie sync"
+msgstr "Ֆիլմերի համաժամեցում"
+
+msgctxt "#32214"
+msgid "Episode sync"
+msgstr "Դրվագների համաժամեցում"
+
+msgctxt "#32215"
+msgid "Paused at %s"
+msgstr "Դադարեցված է %s-ում"
+
+msgctxt "#32216"
+msgid "Loading Trakt ratings"
+msgstr "Trakt-ի գնահատականների բեռնում"
+
+msgctxt "#32217"
+msgid "Watching"
+msgstr "Դիտվում է"
+
+msgctxt "#32218"
+msgid "The Trakt add-on is also enabled. Both add-ons scrobble and sync with Trakt, so everything is done twice."
+msgstr "Trakt հավելումը նույնպես միացված է։ Երկու հավելումներն էլ scrobble են անում և համաժամեցնում Trakt-ի հետ, ուստի ամեն ինչ արվում է երկու անգամ։"
+
+msgctxt "#32219"
+msgid "Keep both"
+msgstr "Պահել երկուսն էլ"
+
+msgctxt "#32220"
+msgid "Start rewatch"
+msgstr "Սկսել վերադիտումը"
+
+msgctxt "#32221"
+msgid "Start a rewatch on Trakt? Your progress starts again, and every episode is marked unwatched in Kodi."
+msgstr "Սկսե՞լ վերադիտումը Trakt-ում։ Ձեր առաջընթացը կսկսվի նորից, և Kodi-ում բոլոր դրվագները կնշվեն որպես չդիտված։"
+
+msgctxt "#32222"
+msgid "Rewatch started"
+msgstr "Վերադիտումը սկսվեց"
+
+msgctxt "#32223"
+msgid "Couldn't start rewatch"
+msgstr "Չհաջողվեց սկսել վերադիտումը"
+
+msgctxt "#32224"
+msgid "Use the OG Trakt theme"
+msgstr "Օգտագործել OG Trakt թեման"
+
+msgctxt "#32225"
+msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
+msgstr "Ցույց է տալիս Trakt-ի կարմիր լոգոն, սրտերը և ընդգծումները, ինչպես og.trakt.tv-ում։"

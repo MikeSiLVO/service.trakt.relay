@@ -1,0 +1,525 @@
+# Kodi Media Center language file
+# Addon Name: Trakt Relay
+# Addon id: service.trakt.relay
+# Addon Provider: MikeSiLVO
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Addons\n"
+"Report-Msgid-Bugs-To: https://github.com/MikeSiLVO/service.trakt.relay/issues\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: Persian (Iran) (http://www.transifex.com/projects/p/xbmc-addons/language/fa_IR/)\n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgctxt "Addon Summary"
+msgid "Scrobbles what you watch in Kodi and syncs your library with Trakt"
+msgstr "آنچه در Kodi تماشا می‌کنید را در Trakt ثبت می‌کند و کتابخانه شما را با Trakt همگام می‌کند"
+
+msgctxt "Addon Description"
+msgid "Trakt Relay scrobbles the movies, episodes, live TV and recordings you watch in Kodi to Trakt, and syncs your library with it: collection, watched status, ratings and playback progress, each direction switched on in the settings. It asks for a rating after you watch, and its context menu rates, adds to the watchlist and starts a rewatch of a show. Scrobbles that fail are retried later.[CR][CR]Trakt Relay is a modified version of script.trakt by Trakt.tv, Razzeee and its contributors."
+msgstr "Trakt Relay فیلم‌ها، قسمت‌ها، تلویزیون زنده و ضبط‌هایی را که در Kodi تماشا می‌کنید در Trakt ثبت می‌کند و کتابخانه شما را با آن همگام می‌کند: مجموعه، وضعیت تماشا، رتبه‌ها و پیشرفت پخش، که هر جهت آن در تنظیمات روشن می‌شود. پس از تماشا رتبه می‌خواهد، و منوی زمینه آن رتبه می‌دهد، به فهرست تماشا می‌افزاید و تماشای دوباره یک سریال را آغاز می‌کند. ثبت‌های ناموفق بعداً دوباره امتحان می‌شوند.[CR][CR]Trakt Relay نسخه‌ای تغییریافته از script.trakt ساخته Trakt.tv، Razzeee و مشارکت‌کنندگان آن است."
+
+msgctxt "Addon Disclaimer"
+msgid "Trakt Relay is not affiliated with or endorsed by Trakt."
+msgstr "Trakt Relay وابسته به Trakt نیست و مورد تأیید آن نیست."
+
+msgctxt "#32000"
+msgid "General"
+msgstr "عمومی"
+
+msgctxt "#32003"
+msgid "Startup delay (seconds)"
+msgstr "تأخیر راه‌اندازی (ثانیه)"
+
+msgctxt "#32004"
+msgid "Rating"
+msgstr "رتبه بندی"
+
+msgctxt "#32005"
+msgid "Rate movies after watching"
+msgstr "رتبه دادن به فیلم‌ها پس از تماشا"
+
+msgctxt "#32006"
+msgid "Rate episodes after watching"
+msgstr "رتبه دادن به قسمت‌ها پس از تماشا"
+
+msgctxt "#32008"
+msgid "Minimum percent watched before asking"
+msgstr "حداقل درصد تماشا پیش از پرسیدن"
+
+msgctxt "#32009"
+msgid "Allow re-rating"
+msgstr "اجازه رتبه‌دهی دوباره"
+
+msgctxt "#32010"
+msgid "Default rating"
+msgstr "رتبه پیش‌فرض"
+
+msgctxt "#32011"
+msgid "Scrobbling"
+msgstr "ثبت تماشا"
+
+msgctxt "#32012"
+msgid "Scrobble movies"
+msgstr "ثبت تماشای فیلم‌ها"
+
+msgctxt "#32013"
+msgid "Scrobble episodes"
+msgstr "ثبت تماشای قسمت‌ها"
+
+msgctxt "#32014"
+msgid "Show scrobble notifications"
+msgstr "نمایش اعلان‌های ثبت تماشا"
+
+msgctxt "#32015"
+msgid "Watched"
+msgstr "تماشا شد"
+
+msgctxt "#32016"
+msgid "Exclusions"
+msgstr "استثناها"
+
+msgctxt "#32017"
+msgid "Exclude live TV"
+msgstr "مستثنی کردن تلویزیون زنده"
+
+msgctxt "#32018"
+msgid "Exclude HTTP sources"
+msgstr "مستثنی کردن منابع HTTP"
+
+msgctxt "#32019"
+msgid "Exclude path"
+msgstr "مستثنی کردن مسیر"
+
+msgctxt "#32020"
+msgid "Folder, subfolders included"
+msgstr "پوشه، همراه با زیرپوشه‌ها"
+
+msgctxt "#32023"
+msgid "Couldn't reach Trakt"
+msgstr "دسترسی به Trakt ممکن نشد"
+
+msgctxt "#32026"
+msgid "What did you think?"
+msgstr "نظرتان چه بود؟"
+
+msgctxt "#32027"
+msgid "Totally Ninja!"
+msgstr "بی‌نظیر!"
+
+msgctxt "#32028"
+msgid "Weak Sauce :("
+msgstr "خیلی ضعیف :("
+
+msgctxt "#32029"
+msgid "Terrible"
+msgstr "افتضاح"
+
+msgctxt "#32030"
+msgid "Bad"
+msgstr "بد"
+
+msgctxt "#32031"
+msgid "Poor"
+msgstr "ضعیف"
+
+msgctxt "#32032"
+msgid "Meh"
+msgstr "نه خوب نه بد"
+
+msgctxt "#32033"
+msgid "Fair"
+msgstr "قابل قبول"
+
+msgctxt "#32034"
+msgid "Good"
+msgstr "خوب"
+
+msgctxt "#32035"
+msgid "Great"
+msgstr "عالی"
+
+msgctxt "#32036"
+msgid "Superb"
+msgstr "فوق‌العاده"
+
+msgctxt "#32037"
+msgid "Unrate this movie"
+msgstr "حذف رتبه این فیلم"
+
+msgctxt "#32038"
+msgid "Unrate this show"
+msgstr "حذف رتبه این سریال"
+
+msgctxt "#32039"
+msgid "Unrate this episode"
+msgstr "حذف رتبه این قسمت"
+
+msgctxt "#32040"
+msgid "Rated %i"
+msgstr "رتبه %i داده شد"
+
+msgctxt "#32041"
+msgid "Already rated %i"
+msgstr "قبلاً رتبه %i داده شده"
+
+msgctxt "#32042"
+msgid "Unrated"
+msgstr "رتبه حذف شد"
+
+msgctxt "#32044"
+msgid "Couldn't rate"
+msgstr "رتبه دادن ممکن نشد"
+
+msgctxt "#32045"
+msgid "Sync"
+msgstr "همگام‌سازی"
+
+msgctxt "#32046"
+msgid "Movies"
+msgstr "فیلم ها"
+
+msgctxt "#32047"
+msgid "Add new movies to Trakt collection"
+msgstr "افزودن فیلم‌های جدید به مجموعه Trakt"
+
+msgctxt "#32048"
+msgid "Add watched movies to Trakt history"
+msgstr "افزودن فیلم‌های تماشاشده به تاریخچه Trakt"
+
+msgctxt "#32049"
+msgid "Mark movies from Trakt history as watched in Kodi"
+msgstr "علامت‌گذاری فیلم‌های تاریخچه Trakt به‌عنوان تماشاشده در Kodi"
+
+msgctxt "#32050"
+msgid "Episodes"
+msgstr "قسمت‌ها"
+
+msgctxt "#32051"
+msgid "Add new TV episodes to Trakt collection"
+msgstr "افزودن قسمت‌های جدید به مجموعه Trakt"
+
+msgctxt "#32052"
+msgid "Add watched TV episodes to Trakt history"
+msgstr "افزودن قسمت‌های تماشاشده به تاریخچه Trakt"
+
+msgctxt "#32053"
+msgid "Mark TV episodes from Trakt history as watched in Kodi"
+msgstr "علامت‌گذاری قسمت‌های تاریخچه Trakt به‌عنوان تماشاشده در Kodi"
+
+msgctxt "#32054"
+msgid "Service"
+msgstr "سرویس"
+
+msgctxt "#32055"
+msgid "Sync after a library scan or clean"
+msgstr "همگام‌سازی پس از اسکن یا پاک‌سازی کتابخانه"
+
+msgctxt "#32056"
+msgid "Show sync notifications"
+msgstr "نمایش اعلان‌های همگام‌سازی"
+
+msgctxt "#32057"
+msgid "Remove deleted movies from Trakt collection"
+msgstr "حذف فیلم‌های پاک‌شده از مجموعه Trakt"
+
+msgctxt "#32058"
+msgid "Remove deleted TV episodes from Trakt collection"
+msgstr "حذف قسمت‌های پاک‌شده از مجموعه Trakt"
+
+msgctxt "#32060"
+msgid "Hide notifications during playback"
+msgstr "پنهان کردن اعلان‌ها هنگام پخش"
+
+msgctxt "#32061"
+msgid "Started"
+msgstr "آغاز شد"
+
+msgctxt "#32062"
+msgid "Finished"
+msgstr "پایان یافت"
+
+msgctxt "#32063"
+msgid "Adding %i"
+msgstr "در حال افزودن %i"
+
+msgctxt "#32068"
+msgid "Trakt collection"
+msgstr "مجموعه Trakt"
+
+msgctxt "#32071"
+msgid "Trakt history"
+msgstr "تاریخچه Trakt"
+
+msgctxt "#32074"
+msgid "Kodi watched status"
+msgstr "وضعیت تماشا در Kodi"
+
+msgctxt "#32076"
+msgid "Removing %i"
+msgstr "در حال حذف %i"
+
+msgctxt "#32079"
+msgid "Loading Kodi library"
+msgstr "در حال بارگذاری کتابخانه Kodi"
+
+msgctxt "#32081"
+msgid "Loading Trakt collection"
+msgstr "در حال بارگذاری مجموعه Trakt"
+
+msgctxt "#32082"
+msgid "Loading Trakt history"
+msgstr "در حال بارگذاری تاریخچه Trakt"
+
+msgctxt "#32085"
+msgid "Added %i"
+msgstr "%i افزوده شد"
+
+msgctxt "#32086"
+msgid "Up to date"
+msgstr "به‌روز است"
+
+msgctxt "#32089"
+msgid "%i of %i"
+msgstr "%i از %i"
+
+msgctxt "#32090"
+msgid "Updated %i"
+msgstr "%i به‌روز شد"
+
+msgctxt "#32092"
+msgid "Removed %i"
+msgstr "%i حذف شد"
+
+msgctxt "#32116"
+msgid "Enable debug mode"
+msgstr "فعال‌سازی حالت اشکال‌زدایی"
+
+msgctxt "#32117"
+msgid "Sync movie playback progress to Kodi"
+msgstr "همگام‌سازی پیشرفت پخش فیلم‌ها با Kodi"
+
+msgctxt "#32118"
+msgid "Sync episode playback progress to Kodi"
+msgstr "همگام‌سازی پیشرفت پخش قسمت‌ها با Kodi"
+
+msgctxt "#32122"
+msgid "Loading Trakt playback progress"
+msgstr "در حال بارگذاری پیشرفت پخش Trakt"
+
+msgctxt "#32132"
+msgid "Unrate this season"
+msgstr "حذف رتبه این فصل"
+
+msgctxt "#32136"
+msgid "Add to watchlist"
+msgstr "افزودن به فهرست تماشا"
+
+msgctxt "#32137"
+msgid "Rate this movie"
+msgstr "رتبه دادن به این فیلم"
+
+msgctxt "#32138"
+msgid "Rate this show"
+msgstr "رتبه دادن به این سریال"
+
+msgctxt "#32139"
+msgid "Rate this episode"
+msgstr "رتبه دادن به این قسمت"
+
+msgctxt "#32143"
+msgid "Sync library"
+msgstr "همگام‌سازی کتابخانه"
+
+msgctxt "#32144"
+msgid "Shows a code and a QR code to approve Relay on your Trakt account."
+msgstr "یک کد و یک کد QR برای تأیید Relay در حساب Trakt شما نشان می‌دهد."
+
+msgctxt "#32149"
+msgid "Rate this season"
+msgstr "رتبه دادن به این فصل"
+
+msgctxt "#32152"
+msgid "Connected to Trakt"
+msgstr "به Trakt متصل شد"
+
+msgctxt "#32163"
+msgid "Connected as"
+msgstr "متصل با نام"
+
+msgctxt "#32164"
+msgid "Fall back to title and year matching"
+msgstr "تطبیق با عنوان و سال در صورت نیاز"
+
+msgctxt "#32165"
+msgid "Added to watchlist"
+msgstr "به فهرست تماشا افزوده شد"
+
+msgctxt "#32166"
+msgid "Couldn't add to watchlist"
+msgstr "افزودن به فهرست تماشا ممکن نشد"
+
+msgctxt "#32167"
+msgid "Scrobble start delay (minutes)"
+msgstr "تأخیر شروع ثبت تماشا (دقیقه)"
+
+msgctxt "#32169"
+msgid "Kodi ratings"
+msgstr "رتبه‌های Kodi"
+
+msgctxt "#32179"
+msgid "Trakt ratings"
+msgstr "رتبه‌های Trakt"
+
+msgctxt "#32184"
+msgid "Retry a failed scrobble by show title search"
+msgstr "تلاش دوباره ثبت ناموفق با جستجوی عنوان سریال"
+
+msgctxt "#32185"
+msgid "Exclude plugins"
+msgstr "مستثنی کردن افزونه‌ها"
+
+msgctxt "#32186"
+msgid "Add-ons can pause scrobbling"
+msgstr "افزونه‌ها می‌توانند ثبت تماشا را مکث کنند"
+
+msgctxt "#32187"
+msgid "Use own proxy"
+msgstr "استفاده از پراکسی خود"
+
+msgctxt "#32188"
+msgid "Proxy address"
+msgstr "نشانی پراکسی"
+
+msgctxt "#32189"
+msgid "Proxy port"
+msgstr "درگاه پراکسی"
+
+msgctxt "#32190"
+msgid "Username"
+msgstr "نام کاربری"
+
+msgctxt "#32191"
+msgid "Password"
+msgstr "گذرواژه"
+
+msgctxt "#32192"
+msgid "Don't keep playback progress on Trakt"
+msgstr "پیشرفت پخش در Trakt نگه داشته نشود"
+
+msgctxt "#32193"
+msgid "Respect Trakt rewatch progress"
+msgstr "رعایت پیشرفت تماشای دوباره در Trakt"
+
+msgctxt "#32196"
+msgid "Sync ratings from Trakt to Kodi"
+msgstr "همگام‌سازی رتبه‌ها از Trakt به Kodi"
+
+msgctxt "#32197"
+msgid "Sync ratings from Kodi to Trakt"
+msgstr "همگام‌سازی رتبه‌ها از Kodi به Trakt"
+
+msgctxt "#32198"
+msgid "Trakt"
+msgstr "Trakt"
+
+msgctxt "#32199"
+msgid "Connect to Trakt"
+msgstr "اتصال به Trakt"
+
+msgctxt "#32200"
+msgid "Visit {0}[CR]or scan the QR code, then enter:"
+msgstr "به {0} بروید[CR]یا کد QR را اسکن کنید و سپس این کد را وارد کنید:"
+
+msgctxt "#32201"
+msgid "This closes by itself once you approve."
+msgstr "پس از تأیید شما، این پنجره خودکار بسته می‌شود."
+
+msgctxt "#32202"
+msgid "Not connected to Trakt. Connect from the add-on settings."
+msgstr "به Trakt متصل نیست. از تنظیمات افزونه متصل شوید."
+
+msgctxt "#32206"
+msgid "Kodi resume points"
+msgstr "نقاط ادامه پخش Kodi"
+
+msgctxt "#32207"
+msgid "Use the proxy below instead of Kodi's proxy setting."
+msgstr "به‌جای تنظیم پراکسی Kodi از پراکسی زیر استفاده شود."
+
+msgctxt "#32208"
+msgid "Proxy server address, like http://proxy.lan."
+msgstr "نشانی سرور پراکسی، مانند http://proxy.lan."
+
+msgctxt "#32209"
+msgid "Port of the proxy server."
+msgstr "درگاه سرور پراکسی."
+
+msgctxt "#32210"
+msgid "Optional user name needed to authenticate with the proxy."
+msgstr "نام کاربری اختیاری برای احراز هویت در پراکسی."
+
+msgctxt "#32211"
+msgid "Optional password needed to authenticate with the proxy."
+msgstr "گذرواژه اختیاری برای احراز هویت در پراکسی."
+
+msgctxt "#32212"
+msgid "Shows you are rewatching on Trakt match your rewatch progress in Kodi. Episodes watched since the rewatch started are marked watched, and the rest unwatched. Start a rewatch from a show's context menu or on Trakt."
+msgstr "در Kodi، سریال‌هایی که در Trakt دوباره تماشا می‌کنید با پیشرفت تماشای دوباره شما هماهنگ می‌شوند. قسمت‌هایی که از آغاز تماشای دوباره دیده شده‌اند به‌عنوان تماشاشده و بقیه به‌عنوان تماشانشده علامت‌گذاری می‌شوند. تماشای دوباره را از منوی زمینه سریال یا در Trakt آغاز کنید."
+
+msgctxt "#32213"
+msgid "Movie sync"
+msgstr "همگام‌سازی فیلم‌ها"
+
+msgctxt "#32214"
+msgid "Episode sync"
+msgstr "همگام‌سازی قسمت‌ها"
+
+msgctxt "#32215"
+msgid "Paused at %s"
+msgstr "مکث در %s"
+
+msgctxt "#32216"
+msgid "Loading Trakt ratings"
+msgstr "در حال بارگذاری رتبه‌های Trakt"
+
+msgctxt "#32217"
+msgid "Watching"
+msgstr "در حال تماشا"
+
+msgctxt "#32218"
+msgid "The Trakt add-on is also enabled. Both add-ons scrobble and sync with Trakt, so everything is done twice."
+msgstr "افزونه Trakt هم فعال است. هر دو افزونه تماشا را ثبت و با Trakt همگام‌سازی می‌کنند، بنابراین همه‌چیز دو بار انجام می‌شود."
+
+msgctxt "#32219"
+msgid "Keep both"
+msgstr "حفظ هر دو"
+
+msgctxt "#32220"
+msgid "Start rewatch"
+msgstr "آغاز تماشای دوباره"
+
+msgctxt "#32221"
+msgid "Start a rewatch on Trakt? Your progress starts again, and every episode is marked unwatched in Kodi."
+msgstr "تماشای دوباره در Trakt آغاز شود؟ پیشرفت شما از نو شروع می‌شود و همه قسمت‌ها در Kodi به‌عنوان تماشانشده علامت‌گذاری می‌شوند."
+
+msgctxt "#32222"
+msgid "Rewatch started"
+msgstr "تماشای دوباره آغاز شد"
+
+msgctxt "#32223"
+msgid "Couldn't start rewatch"
+msgstr "آغاز تماشای دوباره ممکن نشد"
+
+msgctxt "#32224"
+msgid "Use the OG Trakt theme"
+msgstr "استفاده از تم OG Trakt"
+
+msgctxt "#32225"
+msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
+msgstr "لوگوی قرمز Trakt، قلب‌ها و رنگ‌های برجسته را همانند og.trakt.tv نشان می‌دهد."

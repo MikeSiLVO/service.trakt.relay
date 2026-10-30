@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">201</defaultcontrol>
+	<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+	<controls>
+		<control type="image">
+			<width>1920</width>
+			<height>1080</height>
+			<texture colordiffuse="B8000000">trakt-relay-white.png</texture>
+		</control>
+		<control type="group">
+			<left>440</left>
+			<top>240</top>
+			<control type="image">
+				<width>1040</width>
+				<height>600</height>
+				<texture border="16" colordiffuse="FF2F2D33">trakt-relay-panel.png</texture>
+			</control>
+			<control type="image">
+				<left>2</left>
+				<top>2</top>
+				<width>1036</width>
+				<height>596</height>
+				<texture border="16" colordiffuse="FF151418">trakt-relay-panel.png</texture>
+			</control>
+			<control type="group">
+				<left>40</left>
+				<control type="image">
+					<top>40</top>
+					<width>170</width>
+					<height>48</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[Window.Property(logo)]</texture>
+				</control>
+				<control type="label">
+					<top>132</top>
+					<width>580</width>
+					<height>40</height>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<label>[B]$ADDON[service.trakt.relay 32199][/B]</label>
+				</control>
+				<control type="label" id="203">
+					<top>190</top>
+					<width>580</width>
+					<height>90</height>
+					<wrapmultiline>true</wrapmultiline>
+					<font>font13</font>
+					<textcolor>FFB8B6BE</textcolor>
+				</control>
+				<control type="image">
+					<top>300</top>
+					<width>580</width>
+					<height>110</height>
+					<texture border="16" colordiffuse="FF201E23">trakt-relay-panel.png</texture>
+				</control>
+				<control type="label" id="204">
+					<top>300</top>
+					<width>580</width>
+					<height>110</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<textcolor>FFFFFFFF</textcolor>
+				</control>
+				<control type="label">
+					<top>446</top>
+					<width>580</width>
+					<height>40</height>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<textcolor>FF96949C</textcolor>
+					<label>$ADDON[service.trakt.relay 32201]</label>
+				</control>
+				<control type="button" id="201">
+					<top>508</top>
+					<width>240</width>
+					<height>64</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<focusedcolor>FFFFFFFF</focusedcolor>
+					<label>$LOCALIZE[222]</label>
+					<texturefocus border="16" colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-panel.png</texturefocus>
+					<texturenofocus border="16" colordiffuse="FF2F2D33">trakt-relay-panel.png</texturenofocus>
+					<onright>202</onright>
+					<onclick>Back</onclick>
+				</control>
+				<control type="button" id="202">
+					<left>260</left>
+					<top>508</top>
+					<width>240</width>
+					<height>64</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<focusedcolor>FFFFFFFF</focusedcolor>
+					<label>$LOCALIZE[5]</label>
+					<texturefocus border="16" colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-panel.png</texturefocus>
+					<texturenofocus border="16" colordiffuse="FF2F2D33">trakt-relay-panel.png</texturenofocus>
+					<onleft>201</onleft>
+				</control>
+			</control>
+			<control type="image">
+				<left>660</left>
+				<top>70</top>
+				<width>340</width>
+				<height>340</height>
+				<texture>trakt-relay-qr.png</texture>
+			</control>
+		</control>
+	</controls>
+</window>

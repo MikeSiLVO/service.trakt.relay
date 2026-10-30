@@ -1,0 +1,526 @@
+# Kodi Media Center language file
+# Addon Name: Trakt Relay
+# Addon id: service.trakt.relay
+# Addon Provider: MikeSiLVO
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Addons\n"
+"Report-Msgid-Bugs-To: https://github.com/MikeSiLVO/service.trakt.relay/issues\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2023-02-24 20:52+0000\n"
+"Last-Translator: rimasx <riks_12@hot.ee>\n"
+"Language-Team: Estonian <https://kodi.weblate.cloud/projects/kodi-add-ons-scripts/script-trakt/et_ee/>\n"
+"Language: et_EE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.15.2\n"
+
+msgctxt "Addon Summary"
+msgid "Scrobbles what you watch in Kodi and syncs your library with Trakt"
+msgstr "Talletab Kodis vaadatu Trakti ja sünkroonib sinu teegi Traktiga"
+
+msgctxt "Addon Description"
+msgid "Trakt Relay scrobbles the movies, episodes, live TV and recordings you watch in Kodi to Trakt, and syncs your library with it: collection, watched status, ratings and playback progress, each direction switched on in the settings. It asks for a rating after you watch, and its context menu rates, adds to the watchlist and starts a rewatch of a show. Scrobbles that fail are retried later.[CR][CR]Trakt Relay is a modified version of script.trakt by Trakt.tv, Razzeee and its contributors."
+msgstr "Trakt Relay talletab Kodis vaadatud filmid, episoodid, telesaated ja salvestised Trakti ning sünkroonib sinu teegi sellega: kogu, vaatamise oleku, hinded ja taasesituse edenemise, kusjuures iga suund lülitatakse sisse seadetes. Pärast vaatamist küsib see hinnet ning selle kontekstimenüüst saab hinnata, lisada jälgimisloendisse ja alustada sarja uuesti vaatamist. Ebaõnnestunud talletusi proovitakse hiljem uuesti.[CR][CR]Trakt Relay on muudetud versioon lisast script.trakt, mille autorid on Trakt.tv, Razzeee ja selle kaastöötajad."
+
+msgctxt "Addon Disclaimer"
+msgid "Trakt Relay is not affiliated with or endorsed by Trakt."
+msgstr "Trakt Relay ei ole Traktiga seotud ega Trakti poolt heaks kiidetud."
+
+msgctxt "#32000"
+msgid "General"
+msgstr "Üldine"
+
+msgctxt "#32003"
+msgid "Startup delay (seconds)"
+msgstr "Viiteaeg käivitamisel (sekundites)"
+
+msgctxt "#32004"
+msgid "Rating"
+msgstr "Hinne"
+
+msgctxt "#32005"
+msgid "Rate movies after watching"
+msgstr "Hinda filme pärast vaatamist"
+
+msgctxt "#32006"
+msgid "Rate episodes after watching"
+msgstr "Hinda episoode pärast vaatamist"
+
+msgctxt "#32008"
+msgid "Minimum percent watched before asking"
+msgstr "Minimaalne vaadatud protsent enne küsimist"
+
+msgctxt "#32009"
+msgid "Allow re-rating"
+msgstr "Luba uuesti hindamine"
+
+msgctxt "#32010"
+msgid "Default rating"
+msgstr "Vaikehinne"
+
+msgctxt "#32011"
+msgid "Scrobbling"
+msgstr "Sünkroonimine"
+
+msgctxt "#32012"
+msgid "Scrobble movies"
+msgstr "Talleta filmid"
+
+msgctxt "#32013"
+msgid "Scrobble episodes"
+msgstr "Talleta episoodid"
+
+msgctxt "#32014"
+msgid "Show scrobble notifications"
+msgstr "Kuva talletamise märguanded"
+
+msgctxt "#32015"
+msgid "Watched"
+msgstr "Vaadatud"
+
+msgctxt "#32016"
+msgid "Exclusions"
+msgstr "Erandid"
+
+msgctxt "#32017"
+msgid "Exclude live TV"
+msgstr "Telesaateid ei sünkrooni"
+
+msgctxt "#32018"
+msgid "Exclude HTTP sources"
+msgstr "HTTP allikaid ei sünkrooni"
+
+msgctxt "#32019"
+msgid "Exclude path"
+msgstr "Asukohta ei sünkrooni"
+
+msgctxt "#32020"
+msgid "Folder, subfolders included"
+msgstr "Kaust koos alamkaustadega"
+
+msgctxt "#32023"
+msgid "Couldn't reach Trakt"
+msgstr "Traktiga ei saanud ühendust"
+
+msgctxt "#32026"
+msgid "What did you think?"
+msgstr "Mida sina arvad?"
+
+msgctxt "#32027"
+msgid "Totally Ninja!"
+msgstr "Suurepärane!"
+
+msgctxt "#32028"
+msgid "Weak Sauce :("
+msgstr "Odav rämps :("
+
+msgctxt "#32029"
+msgid "Terrible"
+msgstr "Kohutav"
+
+msgctxt "#32030"
+msgid "Bad"
+msgstr "Halb"
+
+msgctxt "#32031"
+msgid "Poor"
+msgstr "Nõrk"
+
+msgctxt "#32032"
+msgid "Meh"
+msgstr "Keskpärane"
+
+msgctxt "#32033"
+msgid "Fair"
+msgstr "Pole viga"
+
+msgctxt "#32034"
+msgid "Good"
+msgstr "Hea"
+
+msgctxt "#32035"
+msgid "Great"
+msgstr "Väga hea"
+
+msgctxt "#32036"
+msgid "Superb"
+msgstr "Ülihea"
+
+msgctxt "#32037"
+msgid "Unrate this movie"
+msgstr "Eemalda filmi hinne"
+
+msgctxt "#32038"
+msgid "Unrate this show"
+msgstr "Eemalda sarja hinne"
+
+msgctxt "#32039"
+msgid "Unrate this episode"
+msgstr "Eemalda episoodi hinne"
+
+msgctxt "#32040"
+msgid "Rated %i"
+msgstr "Hinnatud %i"
+
+msgctxt "#32041"
+msgid "Already rated %i"
+msgstr "Juba hinnatud %i"
+
+msgctxt "#32042"
+msgid "Unrated"
+msgstr "Hinne eemaldatud"
+
+msgctxt "#32044"
+msgid "Couldn't rate"
+msgstr "Hindamine ebaõnnestus"
+
+msgctxt "#32045"
+msgid "Sync"
+msgstr "Sünkroonimine"
+
+msgctxt "#32046"
+msgid "Movies"
+msgstr "Filmid"
+
+msgctxt "#32047"
+msgid "Add new movies to Trakt collection"
+msgstr "Lisa uusi filme Trakti kogusse"
+
+msgctxt "#32048"
+msgid "Add watched movies to Trakt history"
+msgstr "Lisa vaadatud filmid Trakti ajalukku"
+
+msgctxt "#32049"
+msgid "Mark movies from Trakt history as watched in Kodi"
+msgstr "Märgi filmid Trakti ajaloost Kodis vaadatuks"
+
+msgctxt "#32050"
+msgid "Episodes"
+msgstr "Episoodid"
+
+msgctxt "#32051"
+msgid "Add new TV episodes to Trakt collection"
+msgstr "Lisa Trakti kogusse uusi episoode"
+
+msgctxt "#32052"
+msgid "Add watched TV episodes to Trakt history"
+msgstr "Lisa vaadatud episoodid Trakti ajalukku"
+
+msgctxt "#32053"
+msgid "Mark TV episodes from Trakt history as watched in Kodi"
+msgstr "Märgi episoodid Trakti ajaloost Kodis vaadatuks"
+
+msgctxt "#32054"
+msgid "Service"
+msgstr "Teenus"
+
+msgctxt "#32055"
+msgid "Sync after a library scan or clean"
+msgstr "Sünkrooni pärast teegi skannimist või puhastamist"
+
+msgctxt "#32056"
+msgid "Show sync notifications"
+msgstr "Kuva sünkroonimise märguanded"
+
+msgctxt "#32057"
+msgid "Remove deleted movies from Trakt collection"
+msgstr "Eemalda kustutatud filmid Trakti kogumikust"
+
+msgctxt "#32058"
+msgid "Remove deleted TV episodes from Trakt collection"
+msgstr "Eemalda kustutatud episoodid Trakti kogumikust"
+
+msgctxt "#32060"
+msgid "Hide notifications during playback"
+msgstr "Peida märguanded taasesituse ajal"
+
+msgctxt "#32061"
+msgid "Started"
+msgstr "Alustatud"
+
+msgctxt "#32062"
+msgid "Finished"
+msgstr "Lõpetatud"
+
+msgctxt "#32063"
+msgid "Adding %i"
+msgstr "Lisatakse %i"
+
+msgctxt "#32068"
+msgid "Trakt collection"
+msgstr "Trakti kogu"
+
+msgctxt "#32071"
+msgid "Trakt history"
+msgstr "Trakti ajalugu"
+
+msgctxt "#32074"
+msgid "Kodi watched status"
+msgstr "Kodi vaatamise olek"
+
+msgctxt "#32076"
+msgid "Removing %i"
+msgstr "Eemaldatakse %i"
+
+msgctxt "#32079"
+msgid "Loading Kodi library"
+msgstr "Kodi teegi laadimine"
+
+msgctxt "#32081"
+msgid "Loading Trakt collection"
+msgstr "Trakti kogu laadimine"
+
+msgctxt "#32082"
+msgid "Loading Trakt history"
+msgstr "Trakti ajaloo laadimine"
+
+msgctxt "#32085"
+msgid "Added %i"
+msgstr "Lisatud %i"
+
+msgctxt "#32086"
+msgid "Up to date"
+msgstr "Ajakohane"
+
+msgctxt "#32089"
+msgid "%i of %i"
+msgstr "%i/%i"
+
+msgctxt "#32090"
+msgid "Updated %i"
+msgstr "Uuendatud %i"
+
+msgctxt "#32092"
+msgid "Removed %i"
+msgstr "Eemaldatud %i"
+
+msgctxt "#32116"
+msgid "Enable debug mode"
+msgstr "Luba silumine"
+
+msgctxt "#32117"
+msgid "Sync movie playback progress to Kodi"
+msgstr "Sünkrooni filmide edenemine Kodiga"
+
+msgctxt "#32118"
+msgid "Sync episode playback progress to Kodi"
+msgstr "Sünkrooni episoodide edenemine Kodiga"
+
+msgctxt "#32122"
+msgid "Loading Trakt playback progress"
+msgstr "Trakti taasesituse edenemise laadimine"
+
+msgctxt "#32132"
+msgid "Unrate this season"
+msgstr "Eemalda hooaja hinne"
+
+msgctxt "#32136"
+msgid "Add to watchlist"
+msgstr "Lisa jälgimisloendisse"
+
+msgctxt "#32137"
+msgid "Rate this movie"
+msgstr "Hinda film"
+
+msgctxt "#32138"
+msgid "Rate this show"
+msgstr "Hinda sari"
+
+msgctxt "#32139"
+msgid "Rate this episode"
+msgstr "Hinda episood"
+
+msgctxt "#32143"
+msgid "Sync library"
+msgstr "Sünkrooni teek"
+
+msgctxt "#32144"
+msgid "Shows a code and a QR code to approve Relay on your Trakt account."
+msgstr "Kuvab koodi ja QR-koodi, et kinnitada Relay oma Trakti kontol."
+
+msgctxt "#32149"
+msgid "Rate this season"
+msgstr "Hinda hooaeg"
+
+msgctxt "#32152"
+msgid "Connected to Trakt"
+msgstr "Traktiga ühendatud"
+
+msgctxt "#32163"
+msgid "Connected as"
+msgstr "Ühendatud kasutajana"
+
+msgctxt "#32164"
+msgid "Fall back to title and year matching"
+msgstr "Kasuta varuvariandina pealkirja ja aasta järgi sobitamist"
+
+msgctxt "#32165"
+msgid "Added to watchlist"
+msgstr "Lisatud jälgimisloendisse"
+
+msgctxt "#32166"
+msgid "Couldn't add to watchlist"
+msgstr "Jälgimisloendisse lisamine ebaõnnestus"
+
+msgctxt "#32167"
+msgid "Scrobble start delay (minutes)"
+msgstr "Talletamise alustamise viivitus (minutites)"
+
+msgctxt "#32169"
+msgid "Kodi ratings"
+msgstr "Kodi hinded"
+
+msgctxt "#32179"
+msgid "Trakt ratings"
+msgstr "Trakti hinded"
+
+msgctxt "#32184"
+msgid "Retry a failed scrobble by show title search"
+msgstr "Proovi ebaõnnestunud talletust uuesti sarja pealkirja otsinguga"
+
+msgctxt "#32185"
+msgid "Exclude plugins"
+msgstr "Pluginaid ei kaasata"
+
+msgctxt "#32186"
+msgid "Add-ons can pause scrobbling"
+msgstr "Lisamoodulid võivad talletamise peatada"
+
+msgctxt "#32187"
+msgid "Use own proxy"
+msgstr "Kasuta oma puhverserverit"
+
+msgctxt "#32188"
+msgid "Proxy address"
+msgstr "Puhverserveri aadress"
+
+msgctxt "#32189"
+msgid "Proxy port"
+msgstr "Port"
+
+msgctxt "#32190"
+msgid "Username"
+msgstr "Kasutajanimi"
+
+msgctxt "#32191"
+msgid "Password"
+msgstr "Parool"
+
+msgctxt "#32192"
+msgid "Don't keep playback progress on Trakt"
+msgstr "Ära hoia taasesituse edenemist Traktis"
+
+msgctxt "#32193"
+msgid "Respect Trakt rewatch progress"
+msgstr "Arvesta Trakti uuesti vaatamise edenemist"
+
+msgctxt "#32196"
+msgid "Sync ratings from Trakt to Kodi"
+msgstr "Sünkrooni hinded Traktist Kodisse"
+
+msgctxt "#32197"
+msgid "Sync ratings from Kodi to Trakt"
+msgstr "Sünkrooni hinded Kodist Trakti"
+
+msgctxt "#32198"
+msgid "Trakt"
+msgstr "Trakt"
+
+msgctxt "#32199"
+msgid "Connect to Trakt"
+msgstr "Ühenda Traktiga"
+
+msgctxt "#32200"
+msgid "Visit {0}[CR]or scan the QR code, then enter:"
+msgstr "Ava {0}[CR]või skanni QR-kood ja sisesta seejärel:"
+
+msgctxt "#32201"
+msgid "This closes by itself once you approve."
+msgstr "See sulgub ise, kui oled kinnitanud."
+
+msgctxt "#32202"
+msgid "Not connected to Trakt. Connect from the add-on settings."
+msgstr "Traktiga pole ühendatud. Ühenda lisamooduli seadetest."
+
+msgctxt "#32206"
+msgid "Kodi resume points"
+msgstr "Kodi jätkamiskohad"
+
+msgctxt "#32207"
+msgid "Use the proxy below instead of Kodi's proxy setting."
+msgstr "Kasuta allolevat puhverserverit Kodi puhverserveri seade asemel."
+
+msgctxt "#32208"
+msgid "Proxy server address, like http://proxy.lan."
+msgstr "Puhverserveri aadress, nt http://proxy.lan."
+
+msgctxt "#32209"
+msgid "Port of the proxy server."
+msgstr "Puhverserveri port."
+
+msgctxt "#32210"
+msgid "Optional user name needed to authenticate with the proxy."
+msgstr "Puhverserveri abil autentimiseks vajalik valikuline kasutajanimi."
+
+msgctxt "#32211"
+msgid "Optional password needed to authenticate with the proxy."
+msgstr "Puhverserveri abil autentimiseks vajalik valikuline parool."
+
+msgctxt "#32212"
+msgid "Shows you are rewatching on Trakt match your rewatch progress in Kodi. Episodes watched since the rewatch started are marked watched, and the rest unwatched. Start a rewatch from a show's context menu or on Trakt."
+msgstr "Sarjad, mida Traktis uuesti vaatad, järgivad Kodis sinu uuesti vaatamise edenemist. Pärast uuesti vaatamise algust vaadatud episoodid märgitakse vaadatuks ja ülejäänud vaatamata. Alusta uuesti vaatamist sarja kontekstimenüüst või Traktis."
+
+msgctxt "#32213"
+msgid "Movie sync"
+msgstr "Filmide sünkroonimine"
+
+msgctxt "#32214"
+msgid "Episode sync"
+msgstr "Episoodide sünkroonimine"
+
+msgctxt "#32215"
+msgid "Paused at %s"
+msgstr "Peatatud %s juures"
+
+msgctxt "#32216"
+msgid "Loading Trakt ratings"
+msgstr "Trakti hinnete laadimine"
+
+msgctxt "#32217"
+msgid "Watching"
+msgstr "Vaatamisel"
+
+msgctxt "#32218"
+msgid "The Trakt add-on is also enabled. Both add-ons scrobble and sync with Trakt, so everything is done twice."
+msgstr "Trakti lisamoodul on samuti lubatud. Mõlemad lisamoodulid talletavad ja sünkroonivad Traktiga, nii et kõike tehakse kaks korda."
+
+msgctxt "#32219"
+msgid "Keep both"
+msgstr "Jäta mõlemad"
+
+msgctxt "#32220"
+msgid "Start rewatch"
+msgstr "Alusta uuesti vaatamist"
+
+msgctxt "#32221"
+msgid "Start a rewatch on Trakt? Your progress starts again, and every episode is marked unwatched in Kodi."
+msgstr "Kas alustada Traktis uuesti vaatamist? Sinu edenemine algab otsast ja kõik episoodid märgitakse Kodis vaatamata."
+
+msgctxt "#32222"
+msgid "Rewatch started"
+msgstr "Uuesti vaatamine alustatud"
+
+msgctxt "#32223"
+msgid "Couldn't start rewatch"
+msgstr "Uuesti vaatamise alustamine ebaõnnestus"
+
+msgctxt "#32224"
+msgid "Use the OG Trakt theme"
+msgstr "Kasuta teemat OG Trakt"
+
+msgctxt "#32225"
+msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
+msgstr "Kuvab Trakti punase logo, südamed ja esiletõstmised nagu saidil og.trakt.tv."

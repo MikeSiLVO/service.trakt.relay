@@ -1,0 +1,525 @@
+# Kodi Media Center language file
+# Addon Name: Trakt Relay
+# Addon id: service.trakt.relay
+# Addon Provider: MikeSiLVO
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Addons\n"
+"Report-Msgid-Bugs-To: https://github.com/MikeSiLVO/service.trakt.relay/issues\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: Thai (http://www.transifex.com/projects/p/xbmc-addons/language/th/)\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgctxt "Addon Summary"
+msgid "Scrobbles what you watch in Kodi and syncs your library with Trakt"
+msgstr "สครอบเบิลสิ่งที่คุณดูใน Kodi และซิงค์คลังสื่อของคุณกับ Trakt"
+
+msgctxt "Addon Description"
+msgid "Trakt Relay scrobbles the movies, episodes, live TV and recordings you watch in Kodi to Trakt, and syncs your library with it: collection, watched status, ratings and playback progress, each direction switched on in the settings. It asks for a rating after you watch, and its context menu rates, adds to the watchlist and starts a rewatch of a show. Scrobbles that fail are retried later.[CR][CR]Trakt Relay is a modified version of script.trakt by Trakt.tv, Razzeee and its contributors."
+msgstr "Trakt Relay สครอบเบิลภาพยนตร์ ตอน ทีวีสด และรายการที่บันทึกไว้ที่คุณดูใน Kodi ไปยัง Trakt และซิงค์คลังสื่อของคุณกับ Trakt ได้แก่ คอลเลกชัน สถานะดูแล้ว เรตติ้ง และความคืบหน้าการเล่น โดยเปิดใช้แต่ละทิศทางได้ในการตั้งค่า หลังจากดูจบจะขอให้คุณให้เรตติ้ง และเมนูบริบทใช้ให้เรตติ้ง เพิ่มลงในรายการที่อยากดู และเริ่มดูรายการทีวีซ้ำได้ สครอบเบิลที่ล้มเหลวจะถูกลองใหม่ภายหลัง[CR][CR]Trakt Relay เป็นเวอร์ชันดัดแปลงของ script.trakt โดย Trakt.tv, Razzeee และผู้ร่วมพัฒนา"
+
+msgctxt "Addon Disclaimer"
+msgid "Trakt Relay is not affiliated with or endorsed by Trakt."
+msgstr "Trakt Relay ไม่มีส่วนเกี่ยวข้องกับ Trakt และไม่ได้รับการรับรองจาก Trakt"
+
+msgctxt "#32000"
+msgid "General"
+msgstr "ทั่วไป"
+
+msgctxt "#32003"
+msgid "Startup delay (seconds)"
+msgstr "หน่วงเวลาเริ่มต้น (วินาที)"
+
+msgctxt "#32004"
+msgid "Rating"
+msgstr "เรตติ้ง"
+
+msgctxt "#32005"
+msgid "Rate movies after watching"
+msgstr "ให้เรตติ้งภาพยนตร์หลังดูจบ"
+
+msgctxt "#32006"
+msgid "Rate episodes after watching"
+msgstr "ให้เรตติ้งตอนหลังดูจบ"
+
+msgctxt "#32008"
+msgid "Minimum percent watched before asking"
+msgstr "เปอร์เซ็นต์การดูขั้นต่ำก่อนถาม"
+
+msgctxt "#32009"
+msgid "Allow re-rating"
+msgstr "อนุญาตให้ให้เรตติ้งซ้ำ"
+
+msgctxt "#32010"
+msgid "Default rating"
+msgstr "เรตติ้งเริ่มต้น"
+
+msgctxt "#32011"
+msgid "Scrobbling"
+msgstr "สครอบเบิล"
+
+msgctxt "#32012"
+msgid "Scrobble movies"
+msgstr "สครอบเบิลภาพยนตร์"
+
+msgctxt "#32013"
+msgid "Scrobble episodes"
+msgstr "สครอบเบิลตอน"
+
+msgctxt "#32014"
+msgid "Show scrobble notifications"
+msgstr "แสดงการแจ้งเตือนการสครอบเบิล"
+
+msgctxt "#32015"
+msgid "Watched"
+msgstr "ดูแล้ว"
+
+msgctxt "#32016"
+msgid "Exclusions"
+msgstr "การยกเว้น"
+
+msgctxt "#32017"
+msgid "Exclude live TV"
+msgstr "ยกเว้นทีวีสด"
+
+msgctxt "#32018"
+msgid "Exclude HTTP sources"
+msgstr "ยกเว้นแหล่งที่มา HTTP"
+
+msgctxt "#32019"
+msgid "Exclude path"
+msgstr "ยกเว้นพาธ"
+
+msgctxt "#32020"
+msgid "Folder, subfolders included"
+msgstr "โฟลเดอร์ รวมโฟลเดอร์ย่อย"
+
+msgctxt "#32023"
+msgid "Couldn't reach Trakt"
+msgstr "ไม่สามารถติดต่อ Trakt ได้"
+
+msgctxt "#32026"
+msgid "What did you think?"
+msgstr "คุณคิดว่าเป็นอย่างไร?"
+
+msgctxt "#32027"
+msgid "Totally Ninja!"
+msgstr "สุดยอดนินจา!"
+
+msgctxt "#32028"
+msgid "Weak Sauce :("
+msgstr "ห่วยแตก :("
+
+msgctxt "#32029"
+msgid "Terrible"
+msgstr "แย่มาก"
+
+msgctxt "#32030"
+msgid "Bad"
+msgstr "แย่"
+
+msgctxt "#32031"
+msgid "Poor"
+msgstr "ไม่ค่อยดี"
+
+msgctxt "#32032"
+msgid "Meh"
+msgstr "เฉยๆ"
+
+msgctxt "#32033"
+msgid "Fair"
+msgstr "ปกติ"
+
+msgctxt "#32034"
+msgid "Good"
+msgstr "ดี"
+
+msgctxt "#32035"
+msgid "Great"
+msgstr "ดีมาก"
+
+msgctxt "#32036"
+msgid "Superb"
+msgstr "ยอดเยี่ยม"
+
+msgctxt "#32037"
+msgid "Unrate this movie"
+msgstr "ลบเรตติ้งของภาพยนตร์นี้"
+
+msgctxt "#32038"
+msgid "Unrate this show"
+msgstr "ลบเรตติ้งของรายการนี้"
+
+msgctxt "#32039"
+msgid "Unrate this episode"
+msgstr "ลบเรตติ้งของตอนนี้"
+
+msgctxt "#32040"
+msgid "Rated %i"
+msgstr "ให้เรตติ้ง %i แล้ว"
+
+msgctxt "#32041"
+msgid "Already rated %i"
+msgstr "ให้เรตติ้ง %i ไว้แล้ว"
+
+msgctxt "#32042"
+msgid "Unrated"
+msgstr "ลบเรตติ้งแล้ว"
+
+msgctxt "#32044"
+msgid "Couldn't rate"
+msgstr "ไม่สามารถให้เรตติ้งได้"
+
+msgctxt "#32045"
+msgid "Sync"
+msgstr "ซิงค์"
+
+msgctxt "#32046"
+msgid "Movies"
+msgstr "ภาพยนตร์"
+
+msgctxt "#32047"
+msgid "Add new movies to Trakt collection"
+msgstr "เพิ่มภาพยนตร์ใหม่ลงในคอลเลกชัน Trakt"
+
+msgctxt "#32048"
+msgid "Add watched movies to Trakt history"
+msgstr "เพิ่มภาพยนตร์ที่ดูแล้วลงในประวัติ Trakt"
+
+msgctxt "#32049"
+msgid "Mark movies from Trakt history as watched in Kodi"
+msgstr "ทำเครื่องหมายภาพยนตร์จากประวัติ Trakt ว่าดูแล้วใน Kodi"
+
+msgctxt "#32050"
+msgid "Episodes"
+msgstr "ตอน"
+
+msgctxt "#32051"
+msgid "Add new TV episodes to Trakt collection"
+msgstr "เพิ่มตอนใหม่ของรายการทีวีลงในคอลเลกชัน Trakt"
+
+msgctxt "#32052"
+msgid "Add watched TV episodes to Trakt history"
+msgstr "เพิ่มตอนของรายการทีวีที่ดูแล้วลงในประวัติ Trakt"
+
+msgctxt "#32053"
+msgid "Mark TV episodes from Trakt history as watched in Kodi"
+msgstr "ทำเครื่องหมายตอนของรายการทีวีจากประวัติ Trakt ว่าดูแล้วใน Kodi"
+
+msgctxt "#32054"
+msgid "Service"
+msgstr "บริการ"
+
+msgctxt "#32055"
+msgid "Sync after a library scan or clean"
+msgstr "ซิงค์หลังสแกนหรือล้างคลังสื่อ"
+
+msgctxt "#32056"
+msgid "Show sync notifications"
+msgstr "แสดงการแจ้งเตือนการซิงค์"
+
+msgctxt "#32057"
+msgid "Remove deleted movies from Trakt collection"
+msgstr "ลบภาพยนตร์ที่ถูกลบแล้วออกจากคอลเลกชัน Trakt"
+
+msgctxt "#32058"
+msgid "Remove deleted TV episodes from Trakt collection"
+msgstr "ลบตอนของรายการทีวีที่ถูกลบแล้วออกจากคอลเลกชัน Trakt"
+
+msgctxt "#32060"
+msgid "Hide notifications during playback"
+msgstr "ซ่อนการแจ้งเตือนระหว่างการเล่น"
+
+msgctxt "#32061"
+msgid "Started"
+msgstr "เริ่มแล้ว"
+
+msgctxt "#32062"
+msgid "Finished"
+msgstr "เสร็จสิ้น"
+
+msgctxt "#32063"
+msgid "Adding %i"
+msgstr "กำลังเพิ่ม %i"
+
+msgctxt "#32068"
+msgid "Trakt collection"
+msgstr "คอลเลกชัน Trakt"
+
+msgctxt "#32071"
+msgid "Trakt history"
+msgstr "ประวัติ Trakt"
+
+msgctxt "#32074"
+msgid "Kodi watched status"
+msgstr "สถานะดูแล้วของ Kodi"
+
+msgctxt "#32076"
+msgid "Removing %i"
+msgstr "กำลังลบ %i"
+
+msgctxt "#32079"
+msgid "Loading Kodi library"
+msgstr "กำลังโหลดคลังสื่อ Kodi"
+
+msgctxt "#32081"
+msgid "Loading Trakt collection"
+msgstr "กำลังโหลดคอลเลกชัน Trakt"
+
+msgctxt "#32082"
+msgid "Loading Trakt history"
+msgstr "กำลังโหลดประวัติ Trakt"
+
+msgctxt "#32085"
+msgid "Added %i"
+msgstr "เพิ่มแล้ว %i"
+
+msgctxt "#32086"
+msgid "Up to date"
+msgstr "เป็นปัจจุบันแล้ว"
+
+msgctxt "#32089"
+msgid "%i of %i"
+msgstr "%i จาก %i"
+
+msgctxt "#32090"
+msgid "Updated %i"
+msgstr "อัปเดตแล้ว %i"
+
+msgctxt "#32092"
+msgid "Removed %i"
+msgstr "ลบแล้ว %i"
+
+msgctxt "#32116"
+msgid "Enable debug mode"
+msgstr "เปิดใช้โหมดดีบัก"
+
+msgctxt "#32117"
+msgid "Sync movie playback progress to Kodi"
+msgstr "ซิงค์ความคืบหน้าการเล่นภาพยนตร์ไปยัง Kodi"
+
+msgctxt "#32118"
+msgid "Sync episode playback progress to Kodi"
+msgstr "ซิงค์ความคืบหน้าการเล่นตอนไปยัง Kodi"
+
+msgctxt "#32122"
+msgid "Loading Trakt playback progress"
+msgstr "กำลังโหลดความคืบหน้าการเล่นจาก Trakt"
+
+msgctxt "#32132"
+msgid "Unrate this season"
+msgstr "ลบเรตติ้งของซีซันนี้"
+
+msgctxt "#32136"
+msgid "Add to watchlist"
+msgstr "เพิ่มลงในรายการที่อยากดู"
+
+msgctxt "#32137"
+msgid "Rate this movie"
+msgstr "ให้เรตติ้งภาพยนตร์นี้"
+
+msgctxt "#32138"
+msgid "Rate this show"
+msgstr "ให้เรตติ้งรายการนี้"
+
+msgctxt "#32139"
+msgid "Rate this episode"
+msgstr "ให้เรตติ้งตอนนี้"
+
+msgctxt "#32143"
+msgid "Sync library"
+msgstr "ซิงค์คลังสื่อ"
+
+msgctxt "#32144"
+msgid "Shows a code and a QR code to approve Relay on your Trakt account."
+msgstr "แสดงรหัสและคิวอาร์โค้ดเพื่ออนุมัติ Relay ในบัญชี Trakt ของคุณ"
+
+msgctxt "#32149"
+msgid "Rate this season"
+msgstr "ให้เรตติ้งซีซันนี้"
+
+msgctxt "#32152"
+msgid "Connected to Trakt"
+msgstr "เชื่อมต่อกับ Trakt แล้ว"
+
+msgctxt "#32163"
+msgid "Connected as"
+msgstr "เชื่อมต่อในชื่อ"
+
+msgctxt "#32164"
+msgid "Fall back to title and year matching"
+msgstr "ใช้การจับคู่ด้วยชื่อเรื่องและปีเป็นทางเลือกสำรอง"
+
+msgctxt "#32165"
+msgid "Added to watchlist"
+msgstr "เพิ่มลงในรายการที่อยากดูแล้ว"
+
+msgctxt "#32166"
+msgid "Couldn't add to watchlist"
+msgstr "ไม่สามารถเพิ่มลงในรายการที่อยากดูได้"
+
+msgctxt "#32167"
+msgid "Scrobble start delay (minutes)"
+msgstr "หน่วงเวลาเริ่มสครอบเบิล (นาที)"
+
+msgctxt "#32169"
+msgid "Kodi ratings"
+msgstr "เรตติ้ง Kodi"
+
+msgctxt "#32179"
+msgid "Trakt ratings"
+msgstr "เรตติ้ง Trakt"
+
+msgctxt "#32184"
+msgid "Retry a failed scrobble by show title search"
+msgstr "ลองสครอบเบิลที่ล้มเหลวใหม่ด้วยการค้นหาชื่อรายการ"
+
+msgctxt "#32185"
+msgid "Exclude plugins"
+msgstr "ยกเว้นปลั๊กอิน"
+
+msgctxt "#32186"
+msgid "Add-ons can pause scrobbling"
+msgstr "ส่วนเสริมสามารถหยุดการสครอบเบิลชั่วคราวได้"
+
+msgctxt "#32187"
+msgid "Use own proxy"
+msgstr "ใช้พร็อกซีของตนเอง"
+
+msgctxt "#32188"
+msgid "Proxy address"
+msgstr "ที่อยู่พร็อกซี"
+
+msgctxt "#32189"
+msgid "Proxy port"
+msgstr "พอร์ตพร็อกซี"
+
+msgctxt "#32190"
+msgid "Username"
+msgstr "ชื่อผู้ใช้"
+
+msgctxt "#32191"
+msgid "Password"
+msgstr "รหัสผ่าน"
+
+msgctxt "#32192"
+msgid "Don't keep playback progress on Trakt"
+msgstr "ไม่เก็บความคืบหน้าการเล่นไว้บน Trakt"
+
+msgctxt "#32193"
+msgid "Respect Trakt rewatch progress"
+msgstr "ใช้ความคืบหน้าการดูซ้ำของ Trakt"
+
+msgctxt "#32196"
+msgid "Sync ratings from Trakt to Kodi"
+msgstr "ซิงค์เรตติ้งจาก Trakt ไปยัง Kodi"
+
+msgctxt "#32197"
+msgid "Sync ratings from Kodi to Trakt"
+msgstr "ซิงค์เรตติ้งจาก Kodi ไปยัง Trakt"
+
+msgctxt "#32198"
+msgid "Trakt"
+msgstr "Trakt"
+
+msgctxt "#32199"
+msgid "Connect to Trakt"
+msgstr "เชื่อมต่อกับ Trakt"
+
+msgctxt "#32200"
+msgid "Visit {0}[CR]or scan the QR code, then enter:"
+msgstr "ไปที่ {0}[CR]หรือสแกนคิวอาร์โค้ด แล้วป้อน:"
+
+msgctxt "#32201"
+msgid "This closes by itself once you approve."
+msgstr "หน้าต่างนี้จะปิดเองเมื่อคุณอนุมัติ"
+
+msgctxt "#32202"
+msgid "Not connected to Trakt. Connect from the add-on settings."
+msgstr "ยังไม่ได้เชื่อมต่อกับ Trakt เชื่อมต่อได้จากการตั้งค่าส่วนเสริม"
+
+msgctxt "#32206"
+msgid "Kodi resume points"
+msgstr "จุดเล่นต่อของ Kodi"
+
+msgctxt "#32207"
+msgid "Use the proxy below instead of Kodi's proxy setting."
+msgstr "ใช้พร็อกซีด้านล่างแทนการตั้งค่าพร็อกซีของ Kodi"
+
+msgctxt "#32208"
+msgid "Proxy server address, like http://proxy.lan."
+msgstr "ที่อยู่พร็อกซีเซิร์ฟเวอร์ เช่น http://proxy.lan"
+
+msgctxt "#32209"
+msgid "Port of the proxy server."
+msgstr "พอร์ตของพร็อกซีเซิร์ฟเวอร์"
+
+msgctxt "#32210"
+msgid "Optional user name needed to authenticate with the proxy."
+msgstr "ชื่อผู้ใช้สำหรับยืนยันตัวตนกับพร็อกซี (ไม่บังคับ)"
+
+msgctxt "#32211"
+msgid "Optional password needed to authenticate with the proxy."
+msgstr "รหัสผ่านสำหรับยืนยันตัวตนกับพร็อกซี (ไม่บังคับ)"
+
+msgctxt "#32212"
+msgid "Shows you are rewatching on Trakt match your rewatch progress in Kodi. Episodes watched since the rewatch started are marked watched, and the rest unwatched. Start a rewatch from a show's context menu or on Trakt."
+msgstr "รายการที่คุณกำลังดูซ้ำบน Trakt จะตรงกับความคืบหน้าการดูซ้ำของคุณใน Kodi ตอนที่ดูตั้งแต่เริ่มดูซ้ำจะถูกทำเครื่องหมายว่าดูแล้ว และตอนที่เหลือว่ายังไม่ได้ดู เริ่มดูซ้ำได้จากเมนูบริบทของรายการหรือบน Trakt"
+
+msgctxt "#32213"
+msgid "Movie sync"
+msgstr "การซิงค์ภาพยนตร์"
+
+msgctxt "#32214"
+msgid "Episode sync"
+msgstr "การซิงค์ตอน"
+
+msgctxt "#32215"
+msgid "Paused at %s"
+msgstr "หยุดชั่วคราวที่ %s"
+
+msgctxt "#32216"
+msgid "Loading Trakt ratings"
+msgstr "กำลังโหลดเรตติ้ง Trakt"
+
+msgctxt "#32217"
+msgid "Watching"
+msgstr "กำลังดู"
+
+msgctxt "#32218"
+msgid "The Trakt add-on is also enabled. Both add-ons scrobble and sync with Trakt, so everything is done twice."
+msgstr "ส่วนเสริม Trakt ก็เปิดใช้อยู่เช่นกัน ส่วนเสริมทั้งสองตัวสครอบเบิลและซิงค์กับ Trakt ทุกอย่างจึงทำงานซ้ำสองครั้ง"
+
+msgctxt "#32219"
+msgid "Keep both"
+msgstr "เก็บไว้ทั้งคู่"
+
+msgctxt "#32220"
+msgid "Start rewatch"
+msgstr "เริ่มดูซ้ำ"
+
+msgctxt "#32221"
+msgid "Start a rewatch on Trakt? Your progress starts again, and every episode is marked unwatched in Kodi."
+msgstr "เริ่มดูซ้ำบน Trakt หรือไม่? ความคืบหน้าของคุณจะเริ่มใหม่ และทุกตอนจะถูกทำเครื่องหมายว่ายังไม่ได้ดูใน Kodi"
+
+msgctxt "#32222"
+msgid "Rewatch started"
+msgstr "เริ่มดูซ้ำแล้ว"
+
+msgctxt "#32223"
+msgid "Couldn't start rewatch"
+msgstr "ไม่สามารถเริ่มดูซ้ำได้"
+
+msgctxt "#32224"
+msgid "Use the OG Trakt theme"
+msgstr "ใช้ธีม OG Trakt"
+
+msgctxt "#32225"
+msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
+msgstr "แสดงโลโก้สีแดง หัวใจ และสีไฮไลต์ของ Trakt เหมือนใน og.trakt.tv"

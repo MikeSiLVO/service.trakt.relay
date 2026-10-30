@@ -1,131 +1,50 @@
-[![Build Status](https://travis-ci.org/trakt/script.trakt.svg?branch=main)](https://travis-ci.org/trakt/script.trakt)
-[![Coverage Status](https://coveralls.io/repos/github/trakt/script.trakt/badge.svg)](https://coveralls.io/github/trakt/script.trakt)
+# Trakt Relay
 
-# Trakt.tv scrobbler and library sync
+Trakt Relay scrobbles what you watch in Kodi to [Trakt](https://trakt.tv) and syncs your library with it. It runs on Kodi 21 (Omega) and later.
 
-### Table of Contents
+## What it does
 
-- [What is Trakt?](#what-is-trakt)
-- [What can this addon do?](#what-can-this-addon-do)
-- [What can be scrobbled??](#what-can-be-scrobbled)
-- [Installation](#installation)
-- [Problems?](#problems)
-  - ["I found something that doesn't work"](#i-found-something-that-doesnt-work)
-  - [Creating logfiles](#creating-logfiles)
-  - [Invoke sync via JSON-RPC](#invoke-sync-via-jsonrpc)
-- [Contribute](#contribute)
-  - [Pull requests](#pull-requests)
-  - [Translations](#translations)
-- [Thanks](#thanks)
+- Scrobbles movies, episodes, live TV and recordings as you watch them.
+- Syncs your collection, watched status, ratings and playback progress. Each direction is switched on in the settings.
+- Asks for a rating after you watch, when that is switched on.
+- Adds a Trakt entry to the context menu: rate, add to the watchlist, sync a show's watched status from Trakt, or sync the whole library.
+- Sends a finished play to Trakt later when Trakt can't be reached at the time.
 
-### What is Trakt?
+## Getting started
 
-Automatically scrobble all TV episodes and movies you are watching to Trakt.tv! Keep a comprehensive history of everything you've watched and be part of a global community of TV and movie enthusiasts. Sign up for a free account at [Trakt.tv](http://trakt.tv) and get a ton of features:
+Install Trakt Relay from the Kodi add-on repository. Betas come first through [repository.silvo](https://mikesilvo.github.io/repository.silvo/).
 
-- Automatically scrobble what you're watching
-- [Mobile apps](http://trakt.tv/downloads) for iPhone, iPad, Android, and Windows Phone
-- Share what you're watching (in real time) and rating to facebook and twitter
-- Personalized calendar so you never miss a TV show
-- Follow your friends and people you're interesed in
-- Use watchlists so you don't forget what to watch
-- Track your media collections and impress your friends
-- Create custom lists around any topics you choose
-- Easily track your TV show progress across all seasons and episodes
-- Track your progress against industry lists such as the IMDb Top 250
-- Discover new shows and movies based on your viewing habits
-- Widgets for your forum signature
+Until your Trakt account is connected, each Kodi start shows a code and a QR code to connect it. Approve it at [trakt.tv/activate](https://trakt.tv/activate) and the dialog closes by itself. You can also connect from the add-on settings.
 
-### What can this addon do?
+## What gets recognized
 
-- Automatically scrobble TV episodes and movies you are watching
-- Sync your TV episode and movie collections to Trakt (manually or triggered by a library update)
-- Keep watched statuses synced between Kodi and Trakt
-- Rate movies and episodes after watching them
-- Custom skin/keymap actions for toggling watched status, and rating (tagging and listing disabled for now)
+Library items are matched by the IMDb, TMDB and TVDB ids your scrapers give them. Streams from other add-ons are recognized from the season, episode, title and year the add-on sets, or from ids it passes.
 
-### What can be scrobbled?
+For add-on developers, Trakt Relay reads the same properties as script.trakt:
 
-This plugin will scrobble local media and most remote streaming content. Local media should be played in Kodi library mode. Trakt will attempt to identify the media through different third party IDs available from the metadata. TV shows are identified by TVDb ID or IMDb ID. Movies are identified by TMDb ID or IMDb ID. This allows Trakt to match the correct show or movie more accurately, regardless of the title. The best supported and recommended configuration is to use [TVDb](http://thetvdb.com/) (for tv shows) and [TMDb](http://themoviedb.org) (for movies) as your scrapers.
+| Property | Where | Effect |
+|---|---|---|
+| `script.trakt.ids` | Home window property | JSON ids for the playing item, like `{"tmdb": 550}` |
+| `script.trakt.exclude` | ListItem property | The item is never scrobbled |
+| `script.trakt.paused` | Home window property | `true` pauses scrobbling while "Add-ons can pause scrobbling" is on |
 
-Remote streaming content will scrobble assuming the metadata is correctly set in Kodi. Add-ons that stream content need to correctly identify TV episodes and movies with as much metadata as possible for Trakt to know what you're watching.
-
-### Installation
-
-If your not a developer, you should only install this from the official Kodi repo via Kodi itself. If you are a dev, here is how you install the dev version:
-
-1. Download the zip ([download it here](../../zipball/main))
-2. Install script.trakt by zip. Go to _Settings_ > _Add-ons_ > _Install from zip file_ > Choose the just downloaded zip
-3. Navigate to _Settings_ > _Add-ons_ > _Enabled add-ons_ > _Services_ > **Trakt**
-4. Select _Trakt_ and go to **Configure**
-5. Get your **PIN** [here](http://www.trakt.tv/pin/999) and enter it, change any other settings as needed
-6. Select **OK** to save your settings
-7. Watch _something_ and see it show up on Trakt.tv!
-
-or
-
-1. Clone this repository (or [download it here](../../zipball/main)) into a folder called **script.trakt** inside your Kodi **addons** folder
-2. Start Kodi (or restart if its already running)
-3. Make sure you have the modules Trakt and dateutil installed. Check under _Settings_ > _Add-ons_ > _Get Add-ons_ > _All Add-ons_ > _Add-on libraries_ (restart if you had to install these)
-4. Navigate to _Settings_ > _Add-ons_ > _Enabled add-ons_ > _Services_ > **Trakt**
-5. Select _Trakt_ and go to **Configure**
-6. Get your **PIN** [here](http://www.trakt.tv/pin/999) and enter it, change any other settings as needed
-7. Select **OK** to save your settings
-8. Watch _something_ and see it show up on Trakt.tv!
-
-Please note that _something_ does not cover all Kodi possible streaming sources. Local files and strm files scrapped to your library should be OK, however generic third party streaming addons can fail. It is up to the developers of these addons to be supported by this plugin. Please take a look https://github.com/trakt/script.trakt/wiki/Providing-id's-to-facilitate-scrobbling
-
-### Problems?
-
-#### "I found something that doesn't work"
-
-- Search the issues on github to see if it has already been reported, if so add your information there.
-- If not, create a new issue and provide as much data about your system as possible, a logfile will also be needed.
-
-#### Creating logfiles
-
-- To create a logfile, enable the debug setting in Kodi AND script.trakt, otherwise the logfile won't show any data from script.trakt. Check the [Kodi documentation](http://kodi.wiki/view/Log_file) if you don't know where your logfile can be found.
-
-#### Invoke sync via jsonrpc
-
-Save this as `kodi-trakt-update.sh`
+## Running a sync from outside Kodi
 
 ```bash
-#!/bin/sh
-
-# url to kodi jsonrpc
-url=http://localhost:8080/jsonrpc
-
-# https://github.com/trakt/script.trakt/issues/192#issuecomment-70359374
-request='{
-        "jsonrpc":"2.0",
-        "method":"Addons.ExecuteAddon",
-        "params":{
-                "addonid":"script.trakt",
-                "params":{
-                        "action":"sync",
-                        "silent":"False"
-                }
-        },
-        "id":1
-}'
-
-exec curl -sSLf --include --header 'content-type: application/json;' --request POST --data-binary "$request" "$url"
+curl -s -H 'Content-Type: application/json' http://localhost:8080/jsonrpc -d '{
+  "jsonrpc": "2.0", "id": 1, "method": "Addons.ExecuteAddon",
+  "params": {"addonid": "service.trakt.relay",
+             "params": {"action": "sync", "silent": "true", "library": "movies"}}}'
 ```
 
-### Contribute
+`silent` hides the progress dialog, and `library` limits the sync to `movies` or `episodes`. Leave either out for the defaults: the dialog shows and both are synced.
 
-#### Pull requests
+## Problems
 
-- Please don't add pull requests for translation updates these have to go work their way through the translation workflow (see [Translations](#translations))
+Report problems on the [issue tracker](https://github.com/MikeSiLVO/service.trakt.relay/issues) with a debug log. Turn on debug logging in Kodi and "Enable debug mode" in Trakt Relay's settings first, then reproduce the problem.
 
-#### Translations
+## Credits and license
 
-Translation for this add-on is done via WebLate @ https://kodi.weblate.cloud/
-If you are interested in helping translate this add-on, you can find out how to register @ https://forum.kodi.tv/showthread.php?tid=363132
+Trakt Relay is a modified version of [script.trakt](https://github.com/trakt/script.trakt) 3.9.0 by Trakt.tv, Razzeee and its contributors and translators. It is distributed under the GNU General Public License version 2 only; see [LICENSE.txt](LICENSE.txt) and [NOTICE.txt](NOTICE.txt).
 
-Please do not open pull requests for translations, these will be closed as they cannot be reviewed by the language teams.
-
-### Thanks
-
-- Special thanks to all who contribute to this plugin! Check the commit history and changelog to see these talented developers.
-- Special thanks to fuzeman for [trakt.py](https://github.com/fuzeman/trakt.py).
+Trakt Relay is not affiliated with or endorsed by Trakt. The Trakt name and logos are trademarks of Trakt.

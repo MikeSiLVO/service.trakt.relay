@@ -1,0 +1,526 @@
+# Kodi Media Center language file
+# Addon Name: Trakt Relay
+# Addon id: service.trakt.relay
+# Addon Provider: MikeSiLVO
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Addons\n"
+"Report-Msgid-Bugs-To: https://github.com/MikeSiLVO/service.trakt.relay/issues\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2025-08-28 22:31+0000\n"
+"Last-Translator: SecularSteve <fairfull.playing@gmail.com>\n"
+"Language-Team: Bosnian (Bosnia and Herzegovina) <https://kodi.weblate.cloud/projects/kodi-add-ons-scripts/script-trakt/bs_ba/>\n"
+"Language: bs_BA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.13\n"
+
+msgctxt "Addon Summary"
+msgid "Scrobbles what you watch in Kodi and syncs your library with Trakt"
+msgstr "Skrobluje ono što gledate u Kodiju i sinhronizira vašu biblioteku s Traktom"
+
+msgctxt "Addon Description"
+msgid "Trakt Relay scrobbles the movies, episodes, live TV and recordings you watch in Kodi to Trakt, and syncs your library with it: collection, watched status, ratings and playback progress, each direction switched on in the settings. It asks for a rating after you watch, and its context menu rates, adds to the watchlist and starts a rewatch of a show. Scrobbles that fail are retried later.[CR][CR]Trakt Relay is a modified version of script.trakt by Trakt.tv, Razzeee and its contributors."
+msgstr "Trakt Relay skrobluje na Trakt filmove, epizode, TV uživo i snimke koje gledate u Kodiju i sinhronizira vašu biblioteku s njim: kolekciju, status gledanja, ocjene i napredak reprodukcije, a svaki smjer se uključuje u postavkama. Nakon gledanja traži ocjenu, a njegov kontekstni meni ocjenjuje, dodaje na listu za praćenje i pokreće ponovno gledanje emisije. Neuspjela skroblanja ponovo se pokušavaju kasnije.[CR][CR]Trakt Relay je izmijenjena verzija dodatka script.trakt autora Trakt.tv, Razzeee i njegovih saradnika."
+
+msgctxt "Addon Disclaimer"
+msgid "Trakt Relay is not affiliated with or endorsed by Trakt."
+msgstr "Trakt Relay nije povezan s Traktom niti ga Trakt podržava."
+
+msgctxt "#32000"
+msgid "General"
+msgstr "Općenito"
+
+msgctxt "#32003"
+msgid "Startup delay (seconds)"
+msgstr "Kašnjenje pokretanja (sekunde)"
+
+msgctxt "#32004"
+msgid "Rating"
+msgstr "Ocjena"
+
+msgctxt "#32005"
+msgid "Rate movies after watching"
+msgstr "Ocijeni filmove nakon gledanja"
+
+msgctxt "#32006"
+msgid "Rate episodes after watching"
+msgstr "Ocijeni epizode nakon gledanja"
+
+msgctxt "#32008"
+msgid "Minimum percent watched before asking"
+msgstr "Minimalni postotak gledanja prije pitanja"
+
+msgctxt "#32009"
+msgid "Allow re-rating"
+msgstr "Dozvoli ponovno ocjenjivanje"
+
+msgctxt "#32010"
+msgid "Default rating"
+msgstr "Zadana ocjena"
+
+msgctxt "#32011"
+msgid "Scrobbling"
+msgstr "Skroblanje"
+
+msgctxt "#32012"
+msgid "Scrobble movies"
+msgstr "Scrobble filmovi"
+
+msgctxt "#32013"
+msgid "Scrobble episodes"
+msgstr "Skrobluj epizode"
+
+msgctxt "#32014"
+msgid "Show scrobble notifications"
+msgstr "Prikaži obavještenja o skroblanju"
+
+msgctxt "#32015"
+msgid "Watched"
+msgstr "Pogledano"
+
+msgctxt "#32016"
+msgid "Exclusions"
+msgstr "Izuzeća"
+
+msgctxt "#32017"
+msgid "Exclude live TV"
+msgstr "Isključi TV uživo"
+
+msgctxt "#32018"
+msgid "Exclude HTTP sources"
+msgstr "Isključi HTTP izvore"
+
+msgctxt "#32019"
+msgid "Exclude path"
+msgstr "Isključi put"
+
+msgctxt "#32020"
+msgid "Folder, subfolders included"
+msgstr "Folder, uključujući podfoldere"
+
+msgctxt "#32023"
+msgid "Couldn't reach Trakt"
+msgstr "Nije moguće pristupiti Traktu"
+
+msgctxt "#32026"
+msgid "What did you think?"
+msgstr "Šta si mislio/mislila?"
+
+msgctxt "#32027"
+msgid "Totally Ninja!"
+msgstr "Pravi Ninja!"
+
+msgctxt "#32028"
+msgid "Weak Sauce :("
+msgstr "Očaj :("
+
+msgctxt "#32029"
+msgid "Terrible"
+msgstr "Strašno"
+
+msgctxt "#32030"
+msgid "Bad"
+msgstr "Loše"
+
+msgctxt "#32031"
+msgid "Poor"
+msgstr "Slabo"
+
+msgctxt "#32032"
+msgid "Meh"
+msgstr "Tako-tako"
+
+msgctxt "#32033"
+msgid "Fair"
+msgstr "Pristojno"
+
+msgctxt "#32034"
+msgid "Good"
+msgstr "Dobro"
+
+msgctxt "#32035"
+msgid "Great"
+msgstr "Odlično"
+
+msgctxt "#32036"
+msgid "Superb"
+msgstr "Izvrsno"
+
+msgctxt "#32037"
+msgid "Unrate this movie"
+msgstr "Poništi ocjenu ovog filma"
+
+msgctxt "#32038"
+msgid "Unrate this show"
+msgstr "Poništi ocjenu ove emisije"
+
+msgctxt "#32039"
+msgid "Unrate this episode"
+msgstr "Poništi ocjenu ove epizode"
+
+msgctxt "#32040"
+msgid "Rated %i"
+msgstr "Ocijenjeno %i"
+
+msgctxt "#32041"
+msgid "Already rated %i"
+msgstr "Već ocijenjeno %i"
+
+msgctxt "#32042"
+msgid "Unrated"
+msgstr "Ocjena poništena"
+
+msgctxt "#32044"
+msgid "Couldn't rate"
+msgstr "Ocjenjivanje nije uspjelo"
+
+msgctxt "#32045"
+msgid "Sync"
+msgstr "Sinhronizacija"
+
+msgctxt "#32046"
+msgid "Movies"
+msgstr "Filmovi"
+
+msgctxt "#32047"
+msgid "Add new movies to Trakt collection"
+msgstr "Dodajte nove filmove u Trakt kolekciju"
+
+msgctxt "#32048"
+msgid "Add watched movies to Trakt history"
+msgstr "Dodajte gledane filmove u Trakt historiju"
+
+msgctxt "#32049"
+msgid "Mark movies from Trakt history as watched in Kodi"
+msgstr "Označi filmove iz Trakt historije kao gledane u Kodiju"
+
+msgctxt "#32050"
+msgid "Episodes"
+msgstr "Epizode"
+
+msgctxt "#32051"
+msgid "Add new TV episodes to Trakt collection"
+msgstr "Dodajte nove TV epizode u Trakt kolekciju"
+
+msgctxt "#32052"
+msgid "Add watched TV episodes to Trakt history"
+msgstr "Dodajte gledane TV epizode u Trakt historiju"
+
+msgctxt "#32053"
+msgid "Mark TV episodes from Trakt history as watched in Kodi"
+msgstr "Označi TV epizode iz Trakt historije kao gledane u Kodiju"
+
+msgctxt "#32054"
+msgid "Service"
+msgstr "Usluge"
+
+msgctxt "#32055"
+msgid "Sync after a library scan or clean"
+msgstr "Sinhroniziraj nakon skeniranja ili čišćenja biblioteke"
+
+msgctxt "#32056"
+msgid "Show sync notifications"
+msgstr "Prikaži obavještenja o sinhronizaciji"
+
+msgctxt "#32057"
+msgid "Remove deleted movies from Trakt collection"
+msgstr "Uklonite izbrisane filmove iz Trakt kolekcije"
+
+msgctxt "#32058"
+msgid "Remove deleted TV episodes from Trakt collection"
+msgstr "Uklonite izbrisane TV epizode iz Trakt kolekcije"
+
+msgctxt "#32060"
+msgid "Hide notifications during playback"
+msgstr "Sakrij obavještenja tokom reprodukcije"
+
+msgctxt "#32061"
+msgid "Started"
+msgstr "Pokrenuto"
+
+msgctxt "#32062"
+msgid "Finished"
+msgstr "Završeno"
+
+msgctxt "#32063"
+msgid "Adding %i"
+msgstr "Dodavanje %i"
+
+msgctxt "#32068"
+msgid "Trakt collection"
+msgstr "Trakt kolekcija"
+
+msgctxt "#32071"
+msgid "Trakt history"
+msgstr "Trakt historija"
+
+msgctxt "#32074"
+msgid "Kodi watched status"
+msgstr "Kodi status gledanja"
+
+msgctxt "#32076"
+msgid "Removing %i"
+msgstr "Uklanjanje %i"
+
+msgctxt "#32079"
+msgid "Loading Kodi library"
+msgstr "Učitavanje Kodi biblioteke"
+
+msgctxt "#32081"
+msgid "Loading Trakt collection"
+msgstr "Učitavanje Trakt kolekcije"
+
+msgctxt "#32082"
+msgid "Loading Trakt history"
+msgstr "Učitavanje Trakt historije"
+
+msgctxt "#32085"
+msgid "Added %i"
+msgstr "Dodano %i"
+
+msgctxt "#32086"
+msgid "Up to date"
+msgstr "Ažurno"
+
+msgctxt "#32089"
+msgid "%i of %i"
+msgstr "%i od %i"
+
+msgctxt "#32090"
+msgid "Updated %i"
+msgstr "Ažurirano %i"
+
+msgctxt "#32092"
+msgid "Removed %i"
+msgstr "Uklonjeno %i"
+
+msgctxt "#32116"
+msgid "Enable debug mode"
+msgstr "Omogući način rada za otklanjanje grešaka"
+
+msgctxt "#32117"
+msgid "Sync movie playback progress to Kodi"
+msgstr "Sinhronizujte napredak reprodukcije filma sa Kodi-jem"
+
+msgctxt "#32118"
+msgid "Sync episode playback progress to Kodi"
+msgstr "Sinhronizacija napretka reprodukcije epizode sa Kodi-jem"
+
+msgctxt "#32122"
+msgid "Loading Trakt playback progress"
+msgstr "Učitavanje Trakt napretka reprodukcije"
+
+msgctxt "#32132"
+msgid "Unrate this season"
+msgstr "Ne ocjenjuj ovu sezonu"
+
+msgctxt "#32136"
+msgid "Add to watchlist"
+msgstr "Dodaj na listu za praćenje"
+
+msgctxt "#32137"
+msgid "Rate this movie"
+msgstr "Ocijenite ovaj film"
+
+msgctxt "#32138"
+msgid "Rate this show"
+msgstr "Ocijenite ovu emisiju"
+
+msgctxt "#32139"
+msgid "Rate this episode"
+msgstr "Ocijenite ovu epizodu"
+
+msgctxt "#32143"
+msgid "Sync library"
+msgstr "Sinhroniziraj biblioteku"
+
+msgctxt "#32144"
+msgid "Shows a code and a QR code to approve Relay on your Trakt account."
+msgstr "Prikazuje kod i QR kod za odobravanje Relaya na vašem Trakt računu."
+
+msgctxt "#32149"
+msgid "Rate this season"
+msgstr "Ocijenite ovu sezonu"
+
+msgctxt "#32152"
+msgid "Connected to Trakt"
+msgstr "Povezano s Traktom"
+
+msgctxt "#32163"
+msgid "Connected as"
+msgstr "Povezano kao"
+
+msgctxt "#32164"
+msgid "Fall back to title and year matching"
+msgstr "Rezervno podudaranje po naslovu i godini"
+
+msgctxt "#32165"
+msgid "Added to watchlist"
+msgstr "Dodano na listu za praćenje"
+
+msgctxt "#32166"
+msgid "Couldn't add to watchlist"
+msgstr "Dodavanje na listu za praćenje nije uspjelo"
+
+msgctxt "#32167"
+msgid "Scrobble start delay (minutes)"
+msgstr "Kašnjenje početka skroblanja (minute)"
+
+msgctxt "#32169"
+msgid "Kodi ratings"
+msgstr "Kodi ocjene"
+
+msgctxt "#32179"
+msgid "Trakt ratings"
+msgstr "Trakt ocjene"
+
+msgctxt "#32184"
+msgid "Retry a failed scrobble by show title search"
+msgstr "Ponovi neuspjelo skroblanje pretragom naslova emisije"
+
+msgctxt "#32185"
+msgid "Exclude plugins"
+msgstr "Isključi dodatke"
+
+msgctxt "#32186"
+msgid "Add-ons can pause scrobbling"
+msgstr "Dodaci mogu pauzirati skroblanje"
+
+msgctxt "#32187"
+msgid "Use own proxy"
+msgstr "Koristi vlastiti proxy"
+
+msgctxt "#32188"
+msgid "Proxy address"
+msgstr "Adresa proxyja"
+
+msgctxt "#32189"
+msgid "Proxy port"
+msgstr "Proxy port"
+
+msgctxt "#32190"
+msgid "Username"
+msgstr "Korisničko ime"
+
+msgctxt "#32191"
+msgid "Password"
+msgstr "Lozinka"
+
+msgctxt "#32192"
+msgid "Don't keep playback progress on Trakt"
+msgstr "Ne čuvaj napredak reprodukcije na Traktu"
+
+msgctxt "#32193"
+msgid "Respect Trakt rewatch progress"
+msgstr "Poštuj Trakt napredak ponovnog gledanja"
+
+msgctxt "#32196"
+msgid "Sync ratings from Trakt to Kodi"
+msgstr "Sinhroniziraj ocjene iz Trakta u Kodi"
+
+msgctxt "#32197"
+msgid "Sync ratings from Kodi to Trakt"
+msgstr "Sinhroniziraj ocjene iz Kodija u Trakt"
+
+msgctxt "#32198"
+msgid "Trakt"
+msgstr "Trakt"
+
+msgctxt "#32199"
+msgid "Connect to Trakt"
+msgstr "Poveži se s Traktom"
+
+msgctxt "#32200"
+msgid "Visit {0}[CR]or scan the QR code, then enter:"
+msgstr "Posjetite {0}[CR]ili skenirajte QR kod, zatim unesite:"
+
+msgctxt "#32201"
+msgid "This closes by itself once you approve."
+msgstr "Ovo se zatvara samo čim odobrite."
+
+msgctxt "#32202"
+msgid "Not connected to Trakt. Connect from the add-on settings."
+msgstr "Niste povezani s Traktom. Povežite se u postavkama dodatka."
+
+msgctxt "#32206"
+msgid "Kodi resume points"
+msgstr "Kodi tačke nastavka"
+
+msgctxt "#32207"
+msgid "Use the proxy below instead of Kodi's proxy setting."
+msgstr "Koristi donji proxy umjesto postavke proxyja u Kodiju."
+
+msgctxt "#32208"
+msgid "Proxy server address, like http://proxy.lan."
+msgstr "Adresa proxy servera, npr. http://proxy.lan."
+
+msgctxt "#32209"
+msgid "Port of the proxy server."
+msgstr "Port proxy servera."
+
+msgctxt "#32210"
+msgid "Optional user name needed to authenticate with the proxy."
+msgstr "Opcionalno korisničko ime potrebno za autentifikaciju s proxyjem."
+
+msgctxt "#32211"
+msgid "Optional password needed to authenticate with the proxy."
+msgstr "Za autentifikaciju s proxyjem potrebna je opcionalna lozinka."
+
+msgctxt "#32212"
+msgid "Shows you are rewatching on Trakt match your rewatch progress in Kodi. Episodes watched since the rewatch started are marked watched, and the rest unwatched. Start a rewatch from a show's context menu or on Trakt."
+msgstr "Emisije koje ponovo gledate na Traktu usklađuju se u Kodiju s vašim napretkom ponovnog gledanja. Epizode gledane od početka ponovnog gledanja označavaju se kao gledane, a ostale kao negledane. Ponovno gledanje pokrenite iz kontekstnog menija emisije ili na Traktu."
+
+msgctxt "#32213"
+msgid "Movie sync"
+msgstr "Sinhronizacija filmova"
+
+msgctxt "#32214"
+msgid "Episode sync"
+msgstr "Sinhronizacija epizoda"
+
+msgctxt "#32215"
+msgid "Paused at %s"
+msgstr "Pauzirano na %s"
+
+msgctxt "#32216"
+msgid "Loading Trakt ratings"
+msgstr "Učitavanje Trakt ocjena"
+
+msgctxt "#32217"
+msgid "Watching"
+msgstr "Gleda se"
+
+msgctxt "#32218"
+msgid "The Trakt add-on is also enabled. Both add-ons scrobble and sync with Trakt, so everything is done twice."
+msgstr "Dodatak Trakt je također omogućen. Oba dodatka skrobluju i sinhroniziraju s Traktom, pa se sve radi dvaput."
+
+msgctxt "#32219"
+msgid "Keep both"
+msgstr "Zadrži oba"
+
+msgctxt "#32220"
+msgid "Start rewatch"
+msgstr "Pokreni ponovno gledanje"
+
+msgctxt "#32221"
+msgid "Start a rewatch on Trakt? Your progress starts again, and every episode is marked unwatched in Kodi."
+msgstr "Pokrenuti ponovno gledanje na Traktu? Vaš napredak počinje ispočetka, a sve epizode se u Kodiju označavaju kao negledane."
+
+msgctxt "#32222"
+msgid "Rewatch started"
+msgstr "Ponovno gledanje pokrenuto"
+
+msgctxt "#32223"
+msgid "Couldn't start rewatch"
+msgstr "Pokretanje ponovnog gledanja nije uspjelo"
+
+msgctxt "#32224"
+msgid "Use the OG Trakt theme"
+msgstr "Koristi OG Trakt temu"
+
+msgctxt "#32225"
+msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
+msgstr "Prikazuje crveni Trakt logo, srca i boju isticanja, kao na og.trakt.tv."

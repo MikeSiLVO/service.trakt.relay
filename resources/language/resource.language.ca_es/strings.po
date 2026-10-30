@@ -1,0 +1,525 @@
+# Kodi Media Center language file
+# Addon Name: Trakt Relay
+# Addon id: service.trakt.relay
+# Addon Provider: MikeSiLVO
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Addons\n"
+"Report-Msgid-Bugs-To: https://github.com/MikeSiLVO/service.trakt.relay/issues\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: Catalan (http://www.transifex.com/projects/p/xbmc-addons/language/ca/)\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "Addon Summary"
+msgid "Scrobbles what you watch in Kodi and syncs your library with Trakt"
+msgstr "Fa scrobble del que mireu a Kodi i sincronitza la vostra biblioteca amb Trakt"
+
+msgctxt "Addon Description"
+msgid "Trakt Relay scrobbles the movies, episodes, live TV and recordings you watch in Kodi to Trakt, and syncs your library with it: collection, watched status, ratings and playback progress, each direction switched on in the settings. It asks for a rating after you watch, and its context menu rates, adds to the watchlist and starts a rewatch of a show. Scrobbles that fail are retried later.[CR][CR]Trakt Relay is a modified version of script.trakt by Trakt.tv, Razzeee and its contributors."
+msgstr "Trakt Relay fa scrobble a Trakt de les pel·lícules, els episodis, la TV en directe i els enregistraments que mireu a Kodi, i hi sincronitza la vostra biblioteca: col·lecció, estat de vist, valoracions i progrés de reproducció, cada sentit activat a la configuració. Demana una valoració després de mirar, i el seu menú contextual valora, afegeix a la llista de seguiment i inicia el revisionat d'una sèrie. Els scrobbles que fallen es tornen a intentar més tard.[CR][CR]Trakt Relay és una versió modificada de script.trakt de Trakt.tv, Razzeee i els seus col·laboradors."
+
+msgctxt "Addon Disclaimer"
+msgid "Trakt Relay is not affiliated with or endorsed by Trakt."
+msgstr "Trakt Relay no està afiliat a Trakt ni avalat per Trakt."
+
+msgctxt "#32000"
+msgid "General"
+msgstr "General"
+
+msgctxt "#32003"
+msgid "Startup delay (seconds)"
+msgstr "Retard d'inici (segons)"
+
+msgctxt "#32004"
+msgid "Rating"
+msgstr "Valoració"
+
+msgctxt "#32005"
+msgid "Rate movies after watching"
+msgstr "Valora les pel·lícules després de veure-les"
+
+msgctxt "#32006"
+msgid "Rate episodes after watching"
+msgstr "Valora els episodis després de veure'ls"
+
+msgctxt "#32008"
+msgid "Minimum percent watched before asking"
+msgstr "Percentatge mínim vist abans de preguntar"
+
+msgctxt "#32009"
+msgid "Allow re-rating"
+msgstr "Permet tornar a valorar"
+
+msgctxt "#32010"
+msgid "Default rating"
+msgstr "Valoració per defecte"
+
+msgctxt "#32011"
+msgid "Scrobbling"
+msgstr "Scrobbling"
+
+msgctxt "#32012"
+msgid "Scrobble movies"
+msgstr "Fes scrobble de les pel·lícules"
+
+msgctxt "#32013"
+msgid "Scrobble episodes"
+msgstr "Fes scrobble dels episodis"
+
+msgctxt "#32014"
+msgid "Show scrobble notifications"
+msgstr "Mostra les notificacions de scrobble"
+
+msgctxt "#32015"
+msgid "Watched"
+msgstr "Vist"
+
+msgctxt "#32016"
+msgid "Exclusions"
+msgstr "Exclusions"
+
+msgctxt "#32017"
+msgid "Exclude live TV"
+msgstr "Exclou la TV en directe"
+
+msgctxt "#32018"
+msgid "Exclude HTTP sources"
+msgstr "Exclou les fonts HTTP"
+
+msgctxt "#32019"
+msgid "Exclude path"
+msgstr "Exclou el camí"
+
+msgctxt "#32020"
+msgid "Folder, subfolders included"
+msgstr "Carpeta, subcarpetes incloses"
+
+msgctxt "#32023"
+msgid "Couldn't reach Trakt"
+msgstr "No s'ha pogut connectar amb Trakt"
+
+msgctxt "#32026"
+msgid "What did you think?"
+msgstr "Què te n'ha semblat?"
+
+msgctxt "#32027"
+msgid "Totally Ninja!"
+msgstr "Totalment ninja!"
+
+msgctxt "#32028"
+msgid "Weak Sauce :("
+msgstr "Fluixet :("
+
+msgctxt "#32029"
+msgid "Terrible"
+msgstr "Terrible"
+
+msgctxt "#32030"
+msgid "Bad"
+msgstr "Dolent"
+
+msgctxt "#32031"
+msgid "Poor"
+msgstr "Pobre"
+
+msgctxt "#32032"
+msgid "Meh"
+msgstr "Ni fu ni fa"
+
+msgctxt "#32033"
+msgid "Fair"
+msgstr "Acceptable"
+
+msgctxt "#32034"
+msgid "Good"
+msgstr "Bo"
+
+msgctxt "#32035"
+msgid "Great"
+msgstr "Molt bo"
+
+msgctxt "#32036"
+msgid "Superb"
+msgstr "Excel·lent"
+
+msgctxt "#32037"
+msgid "Unrate this movie"
+msgstr "Elimina la valoració d'aquesta pel·lícula"
+
+msgctxt "#32038"
+msgid "Unrate this show"
+msgstr "Elimina la valoració d'aquesta sèrie"
+
+msgctxt "#32039"
+msgid "Unrate this episode"
+msgstr "Elimina la valoració d'aquest episodi"
+
+msgctxt "#32040"
+msgid "Rated %i"
+msgstr "Valorat amb %i"
+
+msgctxt "#32041"
+msgid "Already rated %i"
+msgstr "Ja valorat amb %i"
+
+msgctxt "#32042"
+msgid "Unrated"
+msgstr "Valoració eliminada"
+
+msgctxt "#32044"
+msgid "Couldn't rate"
+msgstr "No s'ha pogut valorar"
+
+msgctxt "#32045"
+msgid "Sync"
+msgstr "Sincronització"
+
+msgctxt "#32046"
+msgid "Movies"
+msgstr "Pel·lícules"
+
+msgctxt "#32047"
+msgid "Add new movies to Trakt collection"
+msgstr "Afegeix les pel·lícules noves a la col·lecció de Trakt"
+
+msgctxt "#32048"
+msgid "Add watched movies to Trakt history"
+msgstr "Afegeix les pel·lícules vistes a l'historial de Trakt"
+
+msgctxt "#32049"
+msgid "Mark movies from Trakt history as watched in Kodi"
+msgstr "Marca com a vistes a Kodi les pel·lícules de l'historial de Trakt"
+
+msgctxt "#32050"
+msgid "Episodes"
+msgstr "Episodis"
+
+msgctxt "#32051"
+msgid "Add new TV episodes to Trakt collection"
+msgstr "Afegeix els episodis de TV nous a la col·lecció de Trakt"
+
+msgctxt "#32052"
+msgid "Add watched TV episodes to Trakt history"
+msgstr "Afegeix els episodis de TV vistos a l'historial de Trakt"
+
+msgctxt "#32053"
+msgid "Mark TV episodes from Trakt history as watched in Kodi"
+msgstr "Marca com a vistos a Kodi els episodis de TV de l'historial de Trakt"
+
+msgctxt "#32054"
+msgid "Service"
+msgstr "Servei"
+
+msgctxt "#32055"
+msgid "Sync after a library scan or clean"
+msgstr "Sincronitza després d'escanejar o netejar la biblioteca"
+
+msgctxt "#32056"
+msgid "Show sync notifications"
+msgstr "Mostra les notificacions de sincronització"
+
+msgctxt "#32057"
+msgid "Remove deleted movies from Trakt collection"
+msgstr "Elimina de la col·lecció de Trakt les pel·lícules suprimides"
+
+msgctxt "#32058"
+msgid "Remove deleted TV episodes from Trakt collection"
+msgstr "Elimina de la col·lecció de Trakt els episodis de TV suprimits"
+
+msgctxt "#32060"
+msgid "Hide notifications during playback"
+msgstr "Amaga les notificacions durant la reproducció"
+
+msgctxt "#32061"
+msgid "Started"
+msgstr "Iniciat"
+
+msgctxt "#32062"
+msgid "Finished"
+msgstr "Acabat"
+
+msgctxt "#32063"
+msgid "Adding %i"
+msgstr "S'estan afegint %i"
+
+msgctxt "#32068"
+msgid "Trakt collection"
+msgstr "Col·lecció de Trakt"
+
+msgctxt "#32071"
+msgid "Trakt history"
+msgstr "Historial de Trakt"
+
+msgctxt "#32074"
+msgid "Kodi watched status"
+msgstr "Estat de vist de Kodi"
+
+msgctxt "#32076"
+msgid "Removing %i"
+msgstr "S'estan eliminant %i"
+
+msgctxt "#32079"
+msgid "Loading Kodi library"
+msgstr "S'està carregant la biblioteca de Kodi"
+
+msgctxt "#32081"
+msgid "Loading Trakt collection"
+msgstr "S'està carregant la col·lecció de Trakt"
+
+msgctxt "#32082"
+msgid "Loading Trakt history"
+msgstr "S'està carregant l'historial de Trakt"
+
+msgctxt "#32085"
+msgid "Added %i"
+msgstr "S'han afegit %i"
+
+msgctxt "#32086"
+msgid "Up to date"
+msgstr "Al dia"
+
+msgctxt "#32089"
+msgid "%i of %i"
+msgstr "%i de %i"
+
+msgctxt "#32090"
+msgid "Updated %i"
+msgstr "S'han actualitzat %i"
+
+msgctxt "#32092"
+msgid "Removed %i"
+msgstr "S'han eliminat %i"
+
+msgctxt "#32116"
+msgid "Enable debug mode"
+msgstr "Activa el mode de depuració"
+
+msgctxt "#32117"
+msgid "Sync movie playback progress to Kodi"
+msgstr "Sincronitza el progrés de reproducció de les pel·lícules amb Kodi"
+
+msgctxt "#32118"
+msgid "Sync episode playback progress to Kodi"
+msgstr "Sincronitza el progrés de reproducció dels episodis amb Kodi"
+
+msgctxt "#32122"
+msgid "Loading Trakt playback progress"
+msgstr "S'està carregant el progrés de reproducció de Trakt"
+
+msgctxt "#32132"
+msgid "Unrate this season"
+msgstr "Elimina la valoració d'aquesta temporada"
+
+msgctxt "#32136"
+msgid "Add to watchlist"
+msgstr "Afegeix a la llista de seguiment"
+
+msgctxt "#32137"
+msgid "Rate this movie"
+msgstr "Valora aquesta pel·lícula"
+
+msgctxt "#32138"
+msgid "Rate this show"
+msgstr "Valora aquesta sèrie"
+
+msgctxt "#32139"
+msgid "Rate this episode"
+msgstr "Valora aquest episodi"
+
+msgctxt "#32143"
+msgid "Sync library"
+msgstr "Sincronitza la biblioteca"
+
+msgctxt "#32144"
+msgid "Shows a code and a QR code to approve Relay on your Trakt account."
+msgstr "Mostra un codi i un codi QR per aprovar Relay al vostre compte de Trakt."
+
+msgctxt "#32149"
+msgid "Rate this season"
+msgstr "Valora aquesta temporada"
+
+msgctxt "#32152"
+msgid "Connected to Trakt"
+msgstr "Connectat a Trakt"
+
+msgctxt "#32163"
+msgid "Connected as"
+msgstr "Connectat com a"
+
+msgctxt "#32164"
+msgid "Fall back to title and year matching"
+msgstr "Recorre a la coincidència per títol i any"
+
+msgctxt "#32165"
+msgid "Added to watchlist"
+msgstr "Afegit a la llista de seguiment"
+
+msgctxt "#32166"
+msgid "Couldn't add to watchlist"
+msgstr "No s'ha pogut afegir a la llista de seguiment"
+
+msgctxt "#32167"
+msgid "Scrobble start delay (minutes)"
+msgstr "Retard d'inici del scrobble (minuts)"
+
+msgctxt "#32169"
+msgid "Kodi ratings"
+msgstr "Valoracions de Kodi"
+
+msgctxt "#32179"
+msgid "Trakt ratings"
+msgstr "Valoracions de Trakt"
+
+msgctxt "#32184"
+msgid "Retry a failed scrobble by show title search"
+msgstr "Reintenta un scrobble fallit cercant pel títol de la sèrie"
+
+msgctxt "#32185"
+msgid "Exclude plugins"
+msgstr "Exclou els connectors"
+
+msgctxt "#32186"
+msgid "Add-ons can pause scrobbling"
+msgstr "Els complements poden pausar el scrobbling"
+
+msgctxt "#32187"
+msgid "Use own proxy"
+msgstr "Utilitza un servidor intermediari propi"
+
+msgctxt "#32188"
+msgid "Proxy address"
+msgstr "Adreça del servidor intermediari"
+
+msgctxt "#32189"
+msgid "Proxy port"
+msgstr "Port del servidor intermediari"
+
+msgctxt "#32190"
+msgid "Username"
+msgstr "Nom d'usuari"
+
+msgctxt "#32191"
+msgid "Password"
+msgstr "Contrasenya"
+
+msgctxt "#32192"
+msgid "Don't keep playback progress on Trakt"
+msgstr "No conservis el progrés de reproducció a Trakt"
+
+msgctxt "#32193"
+msgid "Respect Trakt rewatch progress"
+msgstr "Respecta el progrés de revisionat de Trakt"
+
+msgctxt "#32196"
+msgid "Sync ratings from Trakt to Kodi"
+msgstr "Sincronitza les valoracions de Trakt a Kodi"
+
+msgctxt "#32197"
+msgid "Sync ratings from Kodi to Trakt"
+msgstr "Sincronitza les valoracions de Kodi a Trakt"
+
+msgctxt "#32198"
+msgid "Trakt"
+msgstr "Trakt"
+
+msgctxt "#32199"
+msgid "Connect to Trakt"
+msgstr "Connecta amb Trakt"
+
+msgctxt "#32200"
+msgid "Visit {0}[CR]or scan the QR code, then enter:"
+msgstr "Visiteu {0}[CR]o escanegeu el codi QR i, després, introduïu:"
+
+msgctxt "#32201"
+msgid "This closes by itself once you approve."
+msgstr "Això es tancarà sol un cop ho aproveu."
+
+msgctxt "#32202"
+msgid "Not connected to Trakt. Connect from the add-on settings."
+msgstr "No connectat a Trakt. Connecteu-vos des de la configuració del complement."
+
+msgctxt "#32206"
+msgid "Kodi resume points"
+msgstr "Punts de represa de Kodi"
+
+msgctxt "#32207"
+msgid "Use the proxy below instead of Kodi's proxy setting."
+msgstr "Utilitza el servidor intermediari següent en lloc del de la configuració de Kodi."
+
+msgctxt "#32208"
+msgid "Proxy server address, like http://proxy.lan."
+msgstr "Adreça del servidor intermediari, com ara http://proxy.lan."
+
+msgctxt "#32209"
+msgid "Port of the proxy server."
+msgstr "Port del servidor intermediari."
+
+msgctxt "#32210"
+msgid "Optional user name needed to authenticate with the proxy."
+msgstr "Nom d'usuari opcional necessari per autenticar-se amb el servidor intermediari."
+
+msgctxt "#32211"
+msgid "Optional password needed to authenticate with the proxy."
+msgstr "Contrasenya opcional necessària per autenticar-se amb el servidor intermediari."
+
+msgctxt "#32212"
+msgid "Shows you are rewatching on Trakt match your rewatch progress in Kodi. Episodes watched since the rewatch started are marked watched, and the rest unwatched. Start a rewatch from a show's context menu or on Trakt."
+msgstr "Les sèries que esteu tornant a veure a Trakt coincideixen a Kodi amb el vostre progrés de revisionat. Els episodis vistos des que va començar el revisionat es marquen com a vistos, i la resta com a no vistos. Inicieu un revisionat des del menú contextual d'una sèrie o a Trakt."
+
+msgctxt "#32213"
+msgid "Movie sync"
+msgstr "Sincronització de pel·lícules"
+
+msgctxt "#32214"
+msgid "Episode sync"
+msgstr "Sincronització d'episodis"
+
+msgctxt "#32215"
+msgid "Paused at %s"
+msgstr "En pausa al %s"
+
+msgctxt "#32216"
+msgid "Loading Trakt ratings"
+msgstr "S'estan carregant les valoracions de Trakt"
+
+msgctxt "#32217"
+msgid "Watching"
+msgstr "Mirant"
+
+msgctxt "#32218"
+msgid "The Trakt add-on is also enabled. Both add-ons scrobble and sync with Trakt, so everything is done twice."
+msgstr "El complement Trakt també està activat. Tots dos complements fan scrobble i sincronitzen amb Trakt, de manera que tot es fa dues vegades."
+
+msgctxt "#32219"
+msgid "Keep both"
+msgstr "Mantén-los tots dos"
+
+msgctxt "#32220"
+msgid "Start rewatch"
+msgstr "Inicia el revisionat"
+
+msgctxt "#32221"
+msgid "Start a rewatch on Trakt? Your progress starts again, and every episode is marked unwatched in Kodi."
+msgstr "Voleu iniciar un revisionat a Trakt? El vostre progrés torna a començar i tots els episodis es marquen com a no vistos a Kodi."
+
+msgctxt "#32222"
+msgid "Rewatch started"
+msgstr "Revisionat iniciat"
+
+msgctxt "#32223"
+msgid "Couldn't start rewatch"
+msgstr "No s'ha pogut iniciar el revisionat"
+
+msgctxt "#32224"
+msgid "Use the OG Trakt theme"
+msgstr "Utilitza el tema OG Trakt"
+
+msgctxt "#32225"
+msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
+msgstr "Mostra el logotip vermell de Trakt, els cors i els ressaltats, com a og.trakt.tv."

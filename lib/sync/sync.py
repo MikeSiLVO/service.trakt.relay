@@ -1,0 +1,224 @@
+"""One Kodi and Trakt sync run, and the thread that runs it."""
+
+import threading
+import logging
+from typing import Any
+
+import xbmc
+import xbmcgui
+from lib.sync import episodes
+from lib.sync import movies
+
+from lib.trakt import shared
+from lib.kodi.settings import get_setting, get_setting_bool, get_string, set_setting
+from lib.kodi.utilities import notify
+
+logger = logging.getLogger(__name__)
+
+
+class Sync:
+    """Kodi and Trakt sync of movies then episodes, skipped when not manual and nothing changed."""
+
+    def __init__(self, manual: bool = False, silent: bool = False, library: str = "all",
+                 api: Any = None) -> None:
+        self.api = api
+        self.progress = xbmcgui.DialogProgress()
+        self.manual = manual
+        self.show_progress = manual and not silent
+        self.library = library
+        if manual and silent:
+            logger.debug("Sync is being run silently.")
+        self.sync_on_update = get_setting_bool('sync_on_update')
+        self.notify = get_setting_bool('show_sync_notifications')
+        self.notify_during_playback = not get_setting_bool("hide_notifications_playback")
+
+    def _enabled(self, media_type: str) -> bool:
+        """True when any sync of the media type is on."""
+        return (
+            self._collection_enabled(media_type)
+            or self._watched_enabled(media_type)
+            or self._playback_enabled(media_type)
+            or self._ratings_enabled()
+        )
+
+    def _playback_enabled(self, media_type: str) -> bool:
+        """True when Trakt's paused progress is copied to Kodi for the media type."""
+        if media_type == 'movies':
+            return get_setting_bool('trakt_movie_playback')
+        else:
+            return get_setting_bool('trakt_episode_playback')
+
+    def _collection_enabled(self, media_type: str) -> bool:
+        """True when the media type's Trakt collection is added to or cleaned."""
+        if media_type == 'movies':
+            return (get_setting_bool('sync_collection_movies_to_trakt')
+                    or get_setting_bool('sync_clean_collection_movies_to_trakt'))
+        else:
+            return (get_setting_bool('sync_collection_episodes_to_trakt')
+                    or get_setting_bool('sync_clean_collection_episodes_to_trakt'))
+
+    def _ratings_enabled(self) -> bool:
+        """True when ratings sync is on in either direction."""
+        return (get_setting_bool('sync_ratings_to_trakt')
+                or get_setting_bool('sync_ratings_to_kodi'))
+
+    def _watched_enabled(self, media_type: str) -> bool:
+        """True when watched state syncs in either direction for the media type."""
+        if media_type == 'movies':
+            return (get_setting_bool('sync_playcount_movies_to_trakt')
+                    or get_setting_bool('kodi_movie_playcount'))
+        else:
+            return (get_setting_bool('sync_playcount_episodes_to_trakt')
+                    or get_setting_bool('kodi_episode_playcount'))
+
+    @property
+    def should_notify(self) -> bool:
+        """True when a background sync notifies its start and finish."""
+        return (
+            not self.manual
+            and self.sync_on_update
+            and self.notify
+            and (self.notify_during_playback or not xbmc.Player().isPlayingVideo())
+        )
+
+    def run(self) -> None:
+        """Run movie then episode sync and save last activity; background runs skip if unchanged."""
+        logger.info("Starting synchronization with Trakt.tv")
+
+        if not self.manual and self._can_skip():
+            logger.info("[Sync] No changes on Trakt or Kodi since last sync, skipping.")
+            return
+
+        if self._enabled('movies'):
+            if self.library in ["all", "movies"]:
+                self._run_half(movies.MovieSync(self), 32213)
+            else:
+                logger.debug(
+                    "Movie sync is being skipped for this manual sync.")
+        else:
+            logger.debug("Movie sync is disabled, skipping.")
+
+        if self._enabled('episodes'):
+            if self.library in ["all", "episodes"]:
+                if not (self._enabled('movies') and self.is_canceled()):
+                    self._run_half(episodes.EpisodeSync(self), 32214)
+                else:
+                    logger.debug(
+                        "Episode sync is being skipped because movie sync was canceled.")
+            else:
+                logger.debug(
+                    "Episode sync is being skipped for this manual sync.")
+        else:
+            logger.debug("Episode sync is disabled, skipping.")
+
+        self._save_last_activities()
+        logger.info("[Sync] Finished synchronization with Trakt.tv")
+
+    def _run_half(self, half: Any, heading_id: int) -> None:
+        """Run a sync half in its progress dialog, notifying its start and, if done, its finish."""
+        heading = get_string(heading_id)
+        if self.should_notify:
+            notify(heading, get_string(32061))
+        if self.show_progress:
+            self.progress.create(heading, "")
+        finished = half.run()
+        if finished:
+            self.update_progress(100, line1=get_string(32062))
+        if self.show_progress:
+            self.progress.close()
+        if finished and self.should_notify:
+            notify(heading, get_string(32062))
+
+    def _can_skip(self) -> bool:
+        """True when the Kodi library is clean and Trakt's last activity matches the cached one."""
+        if get_setting_bool("kodi_library_dirty"):
+            logger.debug("[Sync] Kodi library is dirty, cannot skip sync.")
+            return False
+
+        try:
+            activities = self.api.get_last_activities()
+        except Exception as ex:
+            logger.debug("[Sync] Failed to fetch last_activities: %s" % ex)
+            return False
+
+        if not activities or "all" not in activities:
+            logger.debug("[Sync] Invalid last_activities response, cannot skip sync.")
+            return False
+
+        cached = get_setting("last_activities_all")
+        current = activities["all"]
+
+        if not cached:
+            logger.debug("[Sync] No cached last_activities, running full sync.")
+            return False
+
+        if current == cached:
+            logger.debug("[Sync] last_activities unchanged (%s), skipping sync." % current)
+            return True
+
+        logger.debug("[Sync] last_activities changed (cached=%s, current=%s)." % (cached, current))
+        return False
+
+    def _save_last_activities(self) -> None:
+        """Save Trakt's last activity if read, and clear the dirty flag unless the call raises."""
+        try:
+            activities = self.api.get_last_activities()
+        except Exception as ex:
+            logger.debug("[Sync] Failed to fetch last_activities for caching: %s" % ex)
+            return
+
+        if activities and "all" in activities:
+            set_setting("last_activities_all", activities["all"])
+            logger.debug("[Sync] Cached last_activities: %s" % activities["all"])
+
+        set_setting("kodi_library_dirty", "false")
+
+    def is_canceled(self) -> bool:
+        """True when the user canceled the progress dialog."""
+        if self.show_progress:
+            try:
+                if self.progress.iscanceled():
+                    logger.debug("Sync was canceled by user.")
+                    return True
+            except RuntimeError:
+                pass
+        return False
+
+    def update_progress(
+        self, percent: int, line1: str = "", line2: str = "", line3: str = ""
+    ) -> None:
+        """Update the progress dialog's percent and lines, when one is showing."""
+        if self.show_progress:
+            self.progress.update(percent, "%s\n%s\n%s" % (line1, line2, line3))
+
+    def update_count(self, done: int, total: int, from_percent: int, to_percent: int,
+                     step_id: int) -> None:
+        """Update the progress dialog with the step's name, its count so far and a matching bar."""
+        percent = from_percent + (to_percent - from_percent) * done // total
+        self.update_progress(
+            percent, line1=get_string(step_id), line2=get_string(32089) % (done, total))
+
+
+class SyncThread(threading.Thread):
+    """Thread running one sync with the options it was made with."""
+
+    _manual: bool = False
+    _silent: bool = False
+    _library: str = "all"
+
+    def __init__(self, manual: bool = False, silent: bool = False, library: str = "all") -> None:
+        threading.Thread.__init__(self)
+        self.name = "trakt-sync"
+        self._manual = manual
+        self._silent = silent
+        self._library = library
+
+    def run(self) -> None:
+        """Run one sync with the options the thread was created with."""
+        sync = Sync(
+            manual=self._manual,
+            silent=self._silent,
+            library=self._library,
+            api=shared.api,
+        )
+        sync.run()

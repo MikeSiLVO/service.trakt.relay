@@ -1,0 +1,526 @@
+# Kodi Media Center language file
+# Addon Name: Trakt Relay
+# Addon id: service.trakt.relay
+# Addon Provider: MikeSiLVO
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Addons\n"
+"Report-Msgid-Bugs-To: https://github.com/MikeSiLVO/service.trakt.relay/issues\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2025-04-24 13:47+0000\n"
+"Last-Translator: Daniel Nylander <daniel@danielnylander.se>\n"
+"Language-Team: Swedish <https://kodi.weblate.cloud/projects/kodi-add-ons-scripts/script-trakt/sv_se/>\n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.11\n"
+
+msgctxt "Addon Summary"
+msgid "Scrobbles what you watch in Kodi and syncs your library with Trakt"
+msgstr "Skrobblar det du tittar på i Kodi och synkroniserar ditt bibliotek med Trakt"
+
+msgctxt "Addon Description"
+msgid "Trakt Relay scrobbles the movies, episodes, live TV and recordings you watch in Kodi to Trakt, and syncs your library with it: collection, watched status, ratings and playback progress, each direction switched on in the settings. It asks for a rating after you watch, and its context menu rates, adds to the watchlist and starts a rewatch of a show. Scrobbles that fail are retried later.[CR][CR]Trakt Relay is a modified version of script.trakt by Trakt.tv, Razzeee and its contributors."
+msgstr "Trakt Relay skrobblar filmerna, avsnitten, live-TV och inspelningarna du tittar på i Kodi till Trakt och synkroniserar ditt bibliotek med det: samling, sedd-status, betyg och uppspelningsförlopp, där varje riktning slås på i inställningarna. Det ber om ett betyg när du har tittat, och dess snabbmeny betygsätter, lägger till i bevakningslistan och startar en omtittning av en serie. Skrobblingar som misslyckas försöks igen senare.[CR][CR]Trakt Relay är en modifierad version av script.trakt av Trakt.tv, Razzeee och dess bidragsgivare."
+
+msgctxt "Addon Disclaimer"
+msgid "Trakt Relay is not affiliated with or endorsed by Trakt."
+msgstr "Trakt Relay är inte knutet till eller godkänt av Trakt."
+
+msgctxt "#32000"
+msgid "General"
+msgstr "Allmänt"
+
+msgctxt "#32003"
+msgid "Startup delay (seconds)"
+msgstr "Startfördröjning (sekunder)"
+
+msgctxt "#32004"
+msgid "Rating"
+msgstr "Betyg"
+
+msgctxt "#32005"
+msgid "Rate movies after watching"
+msgstr "Betygsätt filmer efter tittning"
+
+msgctxt "#32006"
+msgid "Rate episodes after watching"
+msgstr "Betygsätt avsnitt efter tittning"
+
+msgctxt "#32008"
+msgid "Minimum percent watched before asking"
+msgstr "Minsta andel sedd innan fråga (procent)"
+
+msgctxt "#32009"
+msgid "Allow re-rating"
+msgstr "Tillåt ändrat betyg"
+
+msgctxt "#32010"
+msgid "Default rating"
+msgstr "Ursprungsbetyg"
+
+msgctxt "#32011"
+msgid "Scrobbling"
+msgstr "Skrobbling"
+
+msgctxt "#32012"
+msgid "Scrobble movies"
+msgstr "Skrobbla filmer"
+
+msgctxt "#32013"
+msgid "Scrobble episodes"
+msgstr "Skrobbla avsnitt"
+
+msgctxt "#32014"
+msgid "Show scrobble notifications"
+msgstr "Visa skrobblingsmeddelanden"
+
+msgctxt "#32015"
+msgid "Watched"
+msgstr "Sedd"
+
+msgctxt "#32016"
+msgid "Exclusions"
+msgstr "Undantag"
+
+msgctxt "#32017"
+msgid "Exclude live TV"
+msgstr "Exkludera Live TV"
+
+msgctxt "#32018"
+msgid "Exclude HTTP sources"
+msgstr "Exkludera HTTP-källor"
+
+msgctxt "#32019"
+msgid "Exclude path"
+msgstr "Exkludera sökväg"
+
+msgctxt "#32020"
+msgid "Folder, subfolders included"
+msgstr "Mapp, inklusive undermappar"
+
+msgctxt "#32023"
+msgid "Couldn't reach Trakt"
+msgstr "Kunde inte nå Trakt"
+
+msgctxt "#32026"
+msgid "What did you think?"
+msgstr "Vad tyckte du?"
+
+msgctxt "#32027"
+msgid "Totally Ninja!"
+msgstr "Totalt Ninja!"
+
+msgctxt "#32028"
+msgid "Weak Sauce :("
+msgstr "Bottennapp :("
+
+msgctxt "#32029"
+msgid "Terrible"
+msgstr "Hemsk"
+
+msgctxt "#32030"
+msgid "Bad"
+msgstr "Eländig"
+
+msgctxt "#32031"
+msgid "Poor"
+msgstr "Dåligt"
+
+msgctxt "#32032"
+msgid "Meh"
+msgstr "Sådär"
+
+msgctxt "#32033"
+msgid "Fair"
+msgstr "Medel"
+
+msgctxt "#32034"
+msgid "Good"
+msgstr "Schyst"
+
+msgctxt "#32035"
+msgid "Great"
+msgstr "Bra"
+
+msgctxt "#32036"
+msgid "Superb"
+msgstr "Utmärkt"
+
+msgctxt "#32037"
+msgid "Unrate this movie"
+msgstr "Ta bort betyg för denna film"
+
+msgctxt "#32038"
+msgid "Unrate this show"
+msgstr "Ta bort betyg för denna serie"
+
+msgctxt "#32039"
+msgid "Unrate this episode"
+msgstr "Ta bort betyg för detta avsnitt"
+
+msgctxt "#32040"
+msgid "Rated %i"
+msgstr "Betyg %i"
+
+msgctxt "#32041"
+msgid "Already rated %i"
+msgstr "Redan betygsatt %i"
+
+msgctxt "#32042"
+msgid "Unrated"
+msgstr "Betyg borttaget"
+
+msgctxt "#32044"
+msgid "Couldn't rate"
+msgstr "Kunde inte betygsätta"
+
+msgctxt "#32045"
+msgid "Sync"
+msgstr "Synkronisering"
+
+msgctxt "#32046"
+msgid "Movies"
+msgstr "Filmer"
+
+msgctxt "#32047"
+msgid "Add new movies to Trakt collection"
+msgstr "Lägg till nya filmer till samlingen på Trakt"
+
+msgctxt "#32048"
+msgid "Add watched movies to Trakt history"
+msgstr "Uppdatera Trakt-historik med sedda filmer"
+
+msgctxt "#32049"
+msgid "Mark movies from Trakt history as watched in Kodi"
+msgstr "Markera filmer från Trakt-historik som sedda i Kodi"
+
+msgctxt "#32050"
+msgid "Episodes"
+msgstr "Avsnitt"
+
+msgctxt "#32051"
+msgid "Add new TV episodes to Trakt collection"
+msgstr "Lägg till nya TV-avsnitt till samlingen på Trakt"
+
+msgctxt "#32052"
+msgid "Add watched TV episodes to Trakt history"
+msgstr "Uppdatera Trakt-historik med sedda TV-avsnitt"
+
+msgctxt "#32053"
+msgid "Mark TV episodes from Trakt history as watched in Kodi"
+msgstr "Markera TV-avsnitt från Trakt-historik som sedda i Kodi"
+
+msgctxt "#32054"
+msgid "Service"
+msgstr "Tjänst"
+
+msgctxt "#32055"
+msgid "Sync after a library scan or clean"
+msgstr "Synkronisera efter skanning eller rensning av biblioteket"
+
+msgctxt "#32056"
+msgid "Show sync notifications"
+msgstr "Visa synkroniseringsmeddelanden"
+
+msgctxt "#32057"
+msgid "Remove deleted movies from Trakt collection"
+msgstr "Ta bort raderade filmer från samlingen på Trakt"
+
+msgctxt "#32058"
+msgid "Remove deleted TV episodes from Trakt collection"
+msgstr "Ta bort raderade TV-avsnitt från samlingen på Trakt"
+
+msgctxt "#32060"
+msgid "Hide notifications during playback"
+msgstr "Dölj notifieringar vid uppspelning"
+
+msgctxt "#32061"
+msgid "Started"
+msgstr "Startad"
+
+msgctxt "#32062"
+msgid "Finished"
+msgstr "Klar"
+
+msgctxt "#32063"
+msgid "Adding %i"
+msgstr "Lägger till %i"
+
+msgctxt "#32068"
+msgid "Trakt collection"
+msgstr "Samling på Trakt"
+
+msgctxt "#32071"
+msgid "Trakt history"
+msgstr "Trakt-historik"
+
+msgctxt "#32074"
+msgid "Kodi watched status"
+msgstr "Sedd-status i Kodi"
+
+msgctxt "#32076"
+msgid "Removing %i"
+msgstr "Tar bort %i"
+
+msgctxt "#32079"
+msgid "Loading Kodi library"
+msgstr "Läser in Kodi-biblioteket"
+
+msgctxt "#32081"
+msgid "Loading Trakt collection"
+msgstr "Läser in samlingen på Trakt"
+
+msgctxt "#32082"
+msgid "Loading Trakt history"
+msgstr "Läser in Trakt-historiken"
+
+msgctxt "#32085"
+msgid "Added %i"
+msgstr "Lade till %i"
+
+msgctxt "#32086"
+msgid "Up to date"
+msgstr "Aktuell"
+
+msgctxt "#32089"
+msgid "%i of %i"
+msgstr "%i av %i"
+
+msgctxt "#32090"
+msgid "Updated %i"
+msgstr "Uppdaterade %i"
+
+msgctxt "#32092"
+msgid "Removed %i"
+msgstr "Tog bort %i"
+
+msgctxt "#32116"
+msgid "Enable debug mode"
+msgstr "Aktivera felsökningsläge"
+
+msgctxt "#32117"
+msgid "Sync movie playback progress to Kodi"
+msgstr "Synkronisera uppspelningsförlopp för film till Kodi"
+
+msgctxt "#32118"
+msgid "Sync episode playback progress to Kodi"
+msgstr "Synkronisera uppspelningsförlopp för avsnitt till Kodi"
+
+msgctxt "#32122"
+msgid "Loading Trakt playback progress"
+msgstr "Läser in uppspelningsförlopp från Trakt"
+
+msgctxt "#32132"
+msgid "Unrate this season"
+msgstr "Ta bort betyg för denna säsong"
+
+msgctxt "#32136"
+msgid "Add to watchlist"
+msgstr "Lägg till i bevakningslista"
+
+msgctxt "#32137"
+msgid "Rate this movie"
+msgstr "Betygsätt denna film"
+
+msgctxt "#32138"
+msgid "Rate this show"
+msgstr "Betygsätt denna tv-serie"
+
+msgctxt "#32139"
+msgid "Rate this episode"
+msgstr "Betygsätt detta avsnitt"
+
+msgctxt "#32143"
+msgid "Sync library"
+msgstr "Synkronisera bibliotek"
+
+msgctxt "#32144"
+msgid "Shows a code and a QR code to approve Relay on your Trakt account."
+msgstr "Visar en kod och en QR-kod för att godkänna Relay på ditt Trakt-konto."
+
+msgctxt "#32149"
+msgid "Rate this season"
+msgstr "Betygsätt denna säsong"
+
+msgctxt "#32152"
+msgid "Connected to Trakt"
+msgstr "Ansluten till Trakt"
+
+msgctxt "#32163"
+msgid "Connected as"
+msgstr "Ansluten som"
+
+msgctxt "#32164"
+msgid "Fall back to title and year matching"
+msgstr "Matcha på titel och år som reserv"
+
+msgctxt "#32165"
+msgid "Added to watchlist"
+msgstr "Tillagd i bevakningslistan"
+
+msgctxt "#32166"
+msgid "Couldn't add to watchlist"
+msgstr "Kunde inte lägga till i bevakningslistan"
+
+msgctxt "#32167"
+msgid "Scrobble start delay (minutes)"
+msgstr "Fördröjning innan skrobbling startar (minuter)"
+
+msgctxt "#32169"
+msgid "Kodi ratings"
+msgstr "Betyg i Kodi"
+
+msgctxt "#32179"
+msgid "Trakt ratings"
+msgstr "Betyg på Trakt"
+
+msgctxt "#32184"
+msgid "Retry a failed scrobble by show title search"
+msgstr "Försök igen med misslyckad skrobbling via sökning på serietitel"
+
+msgctxt "#32185"
+msgid "Exclude plugins"
+msgstr "Exkludera tillägg"
+
+msgctxt "#32186"
+msgid "Add-ons can pause scrobbling"
+msgstr "Tillägg kan pausa skrobbling"
+
+msgctxt "#32187"
+msgid "Use own proxy"
+msgstr "Använd egen proxy"
+
+msgctxt "#32188"
+msgid "Proxy address"
+msgstr "Proxyadress"
+
+msgctxt "#32189"
+msgid "Proxy port"
+msgstr "Proxyport"
+
+msgctxt "#32190"
+msgid "Username"
+msgstr "Användarnamn"
+
+msgctxt "#32191"
+msgid "Password"
+msgstr "Lösenord"
+
+msgctxt "#32192"
+msgid "Don't keep playback progress on Trakt"
+msgstr "Behåll inte uppspelningsförlopp på Trakt"
+
+msgctxt "#32193"
+msgid "Respect Trakt rewatch progress"
+msgstr "Följ omtittningsförlopp på Trakt"
+
+msgctxt "#32196"
+msgid "Sync ratings from Trakt to Kodi"
+msgstr "Synkronisera betyg från Trakt till Kodi"
+
+msgctxt "#32197"
+msgid "Sync ratings from Kodi to Trakt"
+msgstr "Synkronisera betyg från Kodi till Trakt"
+
+msgctxt "#32198"
+msgid "Trakt"
+msgstr "Trakt"
+
+msgctxt "#32199"
+msgid "Connect to Trakt"
+msgstr "Anslut till Trakt"
+
+msgctxt "#32200"
+msgid "Visit {0}[CR]or scan the QR code, then enter:"
+msgstr "Besök {0}[CR]eller skanna QR-koden och ange sedan:"
+
+msgctxt "#32201"
+msgid "This closes by itself once you approve."
+msgstr "Detta stängs automatiskt när du har godkänt."
+
+msgctxt "#32202"
+msgid "Not connected to Trakt. Connect from the add-on settings."
+msgstr "Inte ansluten till Trakt. Anslut från tilläggets inställningar."
+
+msgctxt "#32206"
+msgid "Kodi resume points"
+msgstr "Återupptagningspunkter i Kodi"
+
+msgctxt "#32207"
+msgid "Use the proxy below instead of Kodi's proxy setting."
+msgstr "Använd proxyn nedan i stället för Kodis proxyinställning."
+
+msgctxt "#32208"
+msgid "Proxy server address, like http://proxy.lan."
+msgstr "Proxyserverns adress, till exempel http://proxy.lan."
+
+msgctxt "#32209"
+msgid "Port of the proxy server."
+msgstr "Port för proxyservern."
+
+msgctxt "#32210"
+msgid "Optional user name needed to authenticate with the proxy."
+msgstr "Valfritt användarnamn som behövs för att autentisera med proxytjänsten."
+
+msgctxt "#32211"
+msgid "Optional password needed to authenticate with the proxy."
+msgstr "Valfritt lösenord som behövs för att autentisera med proxytjänsten."
+
+msgctxt "#32212"
+msgid "Shows you are rewatching on Trakt match your rewatch progress in Kodi. Episodes watched since the rewatch started are marked watched, and the rest unwatched. Start a rewatch from a show's context menu or on Trakt."
+msgstr "Serier som du tittar om på Trakt följer ditt omtittningsförlopp i Kodi. Avsnitt som setts sedan omtittningen började markeras som sedda och resten som osedda. Starta en omtittning från en series snabbmeny eller på Trakt."
+
+msgctxt "#32213"
+msgid "Movie sync"
+msgstr "Filmsynkronisering"
+
+msgctxt "#32214"
+msgid "Episode sync"
+msgstr "Avsnittssynkronisering"
+
+msgctxt "#32215"
+msgid "Paused at %s"
+msgstr "Pausad vid %s"
+
+msgctxt "#32216"
+msgid "Loading Trakt ratings"
+msgstr "Läser in betyg från Trakt"
+
+msgctxt "#32217"
+msgid "Watching"
+msgstr "Tittar"
+
+msgctxt "#32218"
+msgid "The Trakt add-on is also enabled. Both add-ons scrobble and sync with Trakt, so everything is done twice."
+msgstr "Tillägget Trakt är också aktiverat. Båda tilläggen skrobblar och synkroniserar med Trakt, så allt görs två gånger."
+
+msgctxt "#32219"
+msgid "Keep both"
+msgstr "Behåll båda"
+
+msgctxt "#32220"
+msgid "Start rewatch"
+msgstr "Starta omtittning"
+
+msgctxt "#32221"
+msgid "Start a rewatch on Trakt? Your progress starts again, and every episode is marked unwatched in Kodi."
+msgstr "Starta en omtittning på Trakt? Ditt förlopp börjar om och alla avsnitt markeras som osedda i Kodi."
+
+msgctxt "#32222"
+msgid "Rewatch started"
+msgstr "Omtittning startad"
+
+msgctxt "#32223"
+msgid "Couldn't start rewatch"
+msgstr "Kunde inte starta omtittning"
+
+msgctxt "#32224"
+msgid "Use the OG Trakt theme"
+msgstr "Använd OG Trakt-temat"
+
+msgctxt "#32225"
+msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
+msgstr "Visar Trakts röda logotyp, hjärtan och accentfärger, som på og.trakt.tv."

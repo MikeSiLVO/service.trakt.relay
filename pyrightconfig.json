@@ -1,0 +1,12 @@
+{
+  "include": ["lib", "service.py", "script.py", "context.py", "tests"],
+  "exclude": ["**/__pycache__", "**/.pytest_cache", ".venv"],
+  "pythonVersion": "3.8",
+  "pythonPlatform": "All",
+  "typeCheckingMode": "basic",
+  "reportMissingTypeStubs": "none",
+  "reportFunctionMemberAccess": "none",
+  "reportAttributeAccessIssue": "warning",
+  "venvPath": ".",
+  "venv": ".venv"
+}
