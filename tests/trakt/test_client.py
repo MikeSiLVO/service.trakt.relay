@@ -1,7 +1,10 @@
+import http.client
 import logging
 import urllib.error
 from email.message import Message
 from unittest import mock
+
+import pytest
 
 from lib.trakt.client import TraktClient
 
@@ -68,6 +71,31 @@ def test_network_error_returns_none():
         result = client.request("GET", "/users/settings")
 
     assert result is None
+
+
+@pytest.mark.parametrize("open_error, body", [
+    (ConnectionResetError("reset"), None),
+    (http.client.RemoteDisconnected("closed"), None),
+    (None, http.client.IncompleteRead(b'{"ok"')),
+    (None, b"<html>blocked</html>"),
+])
+def test_broken_reply_returns_none(open_error, body):
+    """A reset, a cut-off reply or a non-JSON body returns None instead of raising."""
+    client = TraktClient("id", "ua")
+    response = mock.Mock()
+    response.__enter__ = mock.Mock(return_value=response)
+    response.__exit__ = mock.Mock(return_value=None)
+    if isinstance(body, Exception):
+        response.read.side_effect = body
+    else:
+        response.read.return_value = body
+    opener = mock.Mock()
+    opener.open = mock.Mock(side_effect=open_error, return_value=response)
+
+    with mock.patch("lib.trakt.client.urllib.request.build_opener", return_value=opener):
+        assert client.request("POST", "/scrobble/stop", {}) is None
+        assert client.request("POST", "/scrobble/stop", {}, include_error_code=True) == (
+            None, None)
 
 
 def test_error_code_caller_gets_the_status_unlogged(caplog):

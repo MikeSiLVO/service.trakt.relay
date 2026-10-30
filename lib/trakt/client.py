@@ -1,5 +1,5 @@
+import http.client
 import logging
-import socket
 import time
 from json import dumps, loads
 from typing import Any, Dict, Optional
@@ -87,7 +87,7 @@ class TraktClient:
                 return None, exc.code
             logger.debug("Trakt request failed: %s %s -> %s" % (method, path, exc.code))
             return None
-        except (urllib.error.URLError, TimeoutError, socket.timeout) as exc:
+        except (OSError, http.client.HTTPException, ValueError) as exc:
             logger.debug("Trakt request failed: %s %s -> %s" % (method, path, exc))
             if include_error_code:
                 return None, None
