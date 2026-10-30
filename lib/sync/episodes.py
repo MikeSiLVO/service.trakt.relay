@@ -11,11 +11,12 @@ from lib.sync.compare import (
     episodes_to_mark_watched,
     episodes_to_unwatch,
     count_episodes,
+    needs_resume,
     sanitize_shows,
 )
 from lib.service.queue import ScrobbleQueue
 from lib.kodi.client import batch_request, request
-from lib.kodi.library import to_trakt_items
+from lib.kodi.library import get_play_states, to_trakt_items
 from lib.kodi.settings import get_setting_bool, get_string
 
 logger = logging.getLogger(__name__)
@@ -423,8 +424,16 @@ class EpisodeSync:
                 restrict=True,
                 playback=True,
             )
+            paused = [
+                (show, season, episode)
+                for show in kodi_shows_update["shows"]
+                for season in show["seasons"]
+                for episode in season["episodes"]
+            ]
+            states = get_play_states("episode", [e["ids"]["episodeid"] for _, _, e in paused])
+            paused = [item for item, state in zip(paused, states) if needs_resume(item[2], state)]
 
-            if len(kodi_shows_update["shows"]) == 0:
+            if not paused:
                 self.sync.update_progress(
                     to_percent,
                     line1=get_string(32206),
@@ -433,36 +442,29 @@ class EpisodeSync:
                 logger.debug("[Episodes Sync] Kodi episode progress is up to date.")
                 return
 
-            logger.debug(
-                "[Episodes Sync] %i show(s) shows are missing progress in Kodi"
-                % len(kodi_shows_update["shows"])
-            )
-            for s in [
-                "%s" % self._describe(s)
-                for s in kodi_shows_update["shows"]
-            ]:
-                logger.debug("[Episodes Sync] Episodes updated: %s" % s)
+            logger.debug("[Episodes Sync] %i episode(s) are missing progress in Kodi" % len(paused))
+            for show, season, episode in paused:
+                logger.debug("[Episodes Sync] Episode updated: %s S%02dE%02d"
+                             % (show["title"], season["number"], episode["number"]))
 
             self.sync.update_progress(from_percent, line1=get_string(32206))
             episodes = []
-            for show in kodi_shows_update["shows"]:
-                for season in show["seasons"]:
-                    for episode in season["episodes"]:
-                        if not episode["runtime"]:
-                            summary = self.sync.api.get_episode_summary(
-                                show["ids"]["trakt"],
-                                season["number"],
-                                episode["number"],
-                                extended="full",
-                            )
-                            episode["runtime"] = (summary.to_dict().get("runtime") or 0) * 60
-                        episodes.append(
-                            {
-                                "episodeid": episode["ids"]["episodeid"],
-                                "progress": episode["progress"],
-                                "runtime": episode["runtime"],
-                            }
-                        )
+            for show, season, episode in paused:
+                if not episode["runtime"]:
+                    summary = self.sync.api.get_episode_summary(
+                        show["ids"]["trakt"],
+                        season["number"],
+                        episode["number"],
+                        extended="full",
+                    )
+                    episode["runtime"] = (summary.to_dict().get("runtime") or 0) * 60
+                episodes.append(
+                    {
+                        "episodeid": episode["ids"]["episodeid"],
+                        "progress": episode["progress"],
+                        "runtime": episode["runtime"],
+                    }
+                )
 
             chunksize = 50
             chunked_episodes = utilities.chunks(

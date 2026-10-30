@@ -60,6 +60,7 @@ def test_progress_skips_a_movie_whose_runtime_cannot_be_found():
     kodi = [dict(HEAT, runtime=0)]
     with mock.patch.object(movies_module, "get_setting_bool", return_value=True), \
             mock.patch.object(movies_module, "get_string", return_value=Text()), \
+            mock.patch.object(movies_module, "get_play_states", return_value=[None]), \
             mock.patch.object(movies_module, "batch_request") as batch:
         MovieSync(sync)._set_kodi_progress(paused, kodi, 81, 91)
     batch.assert_not_called()

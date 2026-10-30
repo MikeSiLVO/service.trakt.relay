@@ -1,9 +1,11 @@
 """Comparisons of Kodi and Trakt items, finding what one side lacks or has different."""
 
 import logging
-from typing import List, Dict, Union
+from typing import List, Dict, Optional, Union
 
-from lib.media.dates import utc_to_local
+import dateutil.parser
+
+from lib.media.dates import local_to_utc, utc_to_local
 from lib.media.match import build_media_index, find_in_index
 
 
@@ -415,6 +417,21 @@ def movies_to_mark_watched(
                 "lastplayed": utc_to_local(last_watched_at),
             })
     return updates
+
+
+def needs_resume(item: Dict, kodi_state: Optional[Dict]) -> bool:
+    """True when Trakt's paused point differs from Kodi's resume and is newer than its last play."""
+    if not kodi_state:
+        return True
+    resume = kodi_state.get("resume") or {}
+    if resume.get("total"):
+        kodi_progress = resume.get("position", 0) * 100 / resume["total"]
+        if abs(kodi_progress - item.get("progress", 0)) < 1:
+            return False
+    lastplayed = local_to_utc(kodi_state.get("lastplayed"))
+    paused_at = item.get("paused_at")
+    return not (lastplayed and paused_at
+                and dateutil.parser.parse(lastplayed) > dateutil.parser.parse(paused_at))
 
 
 def count_episodes(shows: Union[Dict, List]) -> int:

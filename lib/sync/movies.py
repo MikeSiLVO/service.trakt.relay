@@ -4,9 +4,9 @@ import logging
 from typing import Dict, List, Optional, Any
 
 from lib.media import utilities
-from lib.sync.compare import compare_movies, movies_to_mark_watched, sanitize_movies
+from lib.sync.compare import compare_movies, movies_to_mark_watched, needs_resume, sanitize_movies
 from lib.kodi.client import batch_request, request
-from lib.kodi.library import to_trakt_items
+from lib.kodi.library import get_play_states, to_trakt_items
 from lib.kodi.settings import get_setting_bool, get_string
 
 logger = logging.getLogger(__name__)
@@ -295,6 +295,11 @@ class MovieSync:
                 restrict=True,
                 playback=True,
             )
+            states = get_play_states("movie", [m["movieid"] for m in kodi_movies_to_update])
+            kodi_movies_to_update = [
+                movie for movie, state in zip(kodi_movies_to_update, states)
+                if needs_resume(movie, state)
+            ]
             if len(kodi_movies_to_update) == 0:
                 self.sync.update_progress(
                     to_percent, line1=get_string(32206), line2=get_string(32086)

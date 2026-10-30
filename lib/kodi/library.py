@@ -4,7 +4,7 @@ from lib.media.dates import local_to_utc
 from lib.media.ids import guess_ids
 from lib.kodi.utilities import is_excluded
 
-from lib.kodi.client import request
+from lib.kodi.client import batch_request, request
 
 logger = logging.getLogger(__name__)
 
@@ -202,6 +202,14 @@ def get_episode_details(episode_id: int, properties: List) -> Optional[Dict]:
         episode["show_ids"] = show_data["uniqueid"]
     episode["year"] = show_data["year"]
     return episode
+
+
+def get_play_states(media_type: str, ids: List[int]) -> List[Optional[Dict]]:
+    """Get each movie's or episode's resume point and last play in id order, None if unreadable."""
+    key = media_type + "id"
+    method = "VideoLibrary.Get%sDetails" % media_type.capitalize()
+    results = batch_request(method, [{key: i, "properties": ["resume", "lastplayed"]} for i in ids])
+    return [(result or {}).get(media_type + "details") for result in results]
 
 
 def get_movie_details(movie_id: int, properties: List) -> Optional[Dict]:

@@ -9,6 +9,7 @@ from lib.sync.compare import (
     count_episodes,
     episodes_to_unwatch,
     movies_to_mark_watched,
+    needs_resume,
     sanitize_movies,
     sanitize_shows,
 )
@@ -150,6 +151,21 @@ def test_compare_shows_rating_rated_in_the_source(match_title_year):
     expected = load_fixture("compare_shows_compared_batman.json")
 
     assert compare_shows(local, remote, match_title_year) == expected
+
+
+PAUSED = {"progress": 40.0, "paused_at": "2026-10-29T20:00:00.000Z"}
+
+
+@pytest.mark.parametrize("state, needed", [
+    (None, True),
+    ({"resume": {"position": 0, "total": 0}, "lastplayed": ""}, True),
+    ({"resume": {"position": 2405, "total": 6000}, "lastplayed": ""}, False),
+    ({"resume": {"position": 600, "total": 6000}, "lastplayed": "2026-10-28 12:00:00"}, True),
+    ({"resume": {"position": 0, "total": 0}, "lastplayed": "2026-10-30 12:00:00"}, False),
+])
+def test_resume_is_set_only_when_trakts_is_new_to_kodi(state, needed):
+    """Trakt's paused point is set unless Kodi already resumes there or played the item since."""
+    assert needs_resume(PAUSED, state) is needed
 
 
 def _rated_show(ratings):
