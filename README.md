@@ -7,7 +7,7 @@ Trakt Relay scrobbles what you watch in Kodi to [Trakt](https://trakt.tv) and sy
 - Scrobbles movies, episodes, live TV and recordings as you watch them.
 - Syncs your collection, watched status, ratings and playback progress. Each direction is switched on in the settings.
 - Asks for a rating after you watch, when that is switched on.
-- Adds a Trakt entry to the context menu: rate, add to the watchlist, sync a show's watched status from Trakt, or sync the whole library.
+- Adds a Trakt entry to the context menu: rate, add to the watchlist, start a rewatch of a show, or sync the whole library.
 - Sends a finished play to Trakt later when Trakt can't be reached at the time.
 
 ## Getting started
