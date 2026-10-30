@@ -152,6 +152,43 @@ def test_compare_shows_rating_rated_in_the_source(match_title_year):
     assert compare_shows(local, remote, match_title_year) == expected
 
 
+def _rated_show(ratings):
+    """A show in compare form with each (season, episode) rated as given, 0 for unrated."""
+    seasons = {}
+    for (season, number), rating in ratings.items():
+        seasons.setdefault(season, []).append(
+            {"number": number, "ids": {"tvdb": season * 100 + number}, "rating": rating})
+    return {"title": "Lost", "year": 2004, "ids": {"tvdb": 73739},
+            "seasons": [{"number": s, "episodes": eps} for s, eps in seasons.items()]}
+
+
+def _rated_episodes(result):
+    """The (season, episode, rating) of every episode in a compare result."""
+    return [(season["number"], episode["number"], episode["rating"])
+            for show in result["shows"] for season in show["seasons"]
+            for episode in season["episodes"]]
+
+
+def test_compare_episodes_rating_lists_rated_episodes_the_target_lacks():
+    """Rated episodes the target lacks are listed, in a season it has and in one it lacks."""
+    kodi = {"shows": [_rated_show({(1, 1): 8, (1, 2): 7, (1, 3): 0, (2, 1): 9})]}
+    trakt = {"shows": [_rated_show({(1, 1): 8})]}
+
+    result = compare_episodes(kodi, trakt, True, rating=True)
+
+    assert _rated_episodes(result) == [(1, 2, 7), (2, 1, 9)]
+
+
+def test_compare_episodes_rating_restricted_lists_only_episodes_the_target_has():
+    """A restricted rating compare lists differing episodes the target has and nothing else."""
+    trakt = {"shows": [_rated_show({(1, 1): 9, (1, 2): 7, (2, 1): 6})]}
+    kodi = {"shows": [_rated_show({(1, 1): 8})]}
+
+    result = compare_episodes(trakt, kodi, True, restrict=True, rating=True)
+
+    assert _rated_episodes(result) == [(1, 1, 9)]
+
+
 @TITLE_MATCHING
 def test_compare_episodes_with_every_episode_on_both_sides(match_title_year):
     """Episodes both sides have give nothing to add."""

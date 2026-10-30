@@ -403,11 +403,7 @@ class MovieSync:
         self, trakt_movies: List[Dict], kodi_movies: List[Dict], from_percent: int, to_percent: int
     ) -> None:
         """Sync movie ratings to Trakt and to Kodi, each direction when its setting is on."""
-        if (
-            get_setting_bool("sync_ratings_to_trakt")
-            and trakt_movies
-            and not self.sync.is_canceled()
-        ):
+        if get_setting_bool("sync_ratings_to_trakt") and not self.sync.is_canceled():
             trakt_movies_to_update = compare_movies(
                 kodi_movies,
                 trakt_movies,

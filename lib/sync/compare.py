@@ -193,35 +193,30 @@ def compare_episodes(
                                     ]
                                 season_diff[season] = eps
                         elif rating:
-                            t = list(set(a).intersection(set(b)))
-                            if len(t) > 0:
-                                eps = {}
-                                for ep in t:
-                                    source_rating = a[ep].get("rating", 0)
-                                    target_rating = target_seasons[season][ep].get("rating", 0)
-                                    if source_rating and source_rating != target_rating:
-                                        eps[ep] = _copy_episode(a[ep])
-                                        eps[ep]["rating"] = source_rating
-                                        if (
-                                            "episodeid"
-                                            in target_seasons[season][ep]["ids"]
-                                        ):
-                                            eps[ep]["ids"][
-                                                "episodeid"
-                                            ] = target_seasons[season][ep]["ids"][
-                                                "episodeid"
-                                            ]
-                                if len(eps) > 0:
-                                    season_diff[season] = eps
+                            eps = {}
+                            for ep in set(a).intersection(set(b)):
+                                source_rating = a[ep].get("rating", 0)
+                                if source_rating and source_rating != b[ep].get("rating", 0):
+                                    eps[ep] = _copy_episode(a[ep])
+                                    eps[ep]["rating"] = source_rating
+                                    if "episodeid" in b[ep]["ids"]:
+                                        eps[ep]["ids"]["episodeid"] = b[ep]["ids"]["episodeid"]
+                            if not restrict:
+                                eps.update(
+                                    {ep: _copy_episode(a[ep]) for ep in diff if a[ep].get("rating")}
+                                )
+                            if eps:
+                                season_diff[season] = eps
                         elif diff and not restrict:
                             season_diff[season] = {ep: _copy_episode(a[ep]) for ep in diff}
-                    else:
-                        if not restrict and not rating:
-                            if len(a) > 0:
-                                season_diff[season] = {
-                                    ep_num: _copy_episode(ep)
-                                    for ep_num, ep in a.items()
-                                }
+                    elif not restrict:
+                        missing = {
+                            ep_num: _copy_episode(ep)
+                            for ep_num, ep in a.items()
+                            if not rating or ep.get("rating")
+                        }
+                        if missing:
+                            season_diff[season] = missing
                 if len(season_diff) > 0:
                     show = {
                         "title": source_show["title"],

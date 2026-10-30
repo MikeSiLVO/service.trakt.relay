@@ -42,6 +42,17 @@ def test_failed_history_write_is_counted(caplog):
     assert "1 error(s)" in caplog.text
 
 
+def test_ratings_reach_trakt_with_no_movies_there():
+    """Kodi movie ratings go to Trakt even when the account has no movies there yet."""
+    sync = mock.Mock()
+    sync.is_canceled.return_value = False
+    with mock.patch.object(movies_module, "get_setting_bool",
+                           side_effect=lambda name: name == "sync_ratings_to_trakt"), \
+            mock.patch.object(movies_module, "get_string", return_value=Text()):
+        MovieSync(sync)._sync_ratings([], [dict(HEAT, rating=8)], 92, 99)
+    sync.api.add_ratings.assert_called_once()
+
+
 def test_progress_skips_a_movie_whose_runtime_cannot_be_found():
     """A paused movie with no runtime in Kodi or on Trakt is skipped without raising."""
     sync = mock.Mock()
