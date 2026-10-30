@@ -79,9 +79,10 @@ def test_sync_skips_while_one_runs():
     sync_thread.assert_not_called()
 
 
-def _retry(pending, result, history=()):
+def _retry(pending, result, history=(), exiting=False):
     """Retry queued stops against stubbed Trakt history calls; return the api and queue."""
     svc = service.Service.__new__(service.Service)
+    svc.monitor = mock.Mock(**{"abortRequested.return_value": exiting})
     svc.scrobbler = mock.Mock()
     queue = svc.scrobbler.scrobble_queue
     queue.get_pending.return_value = pending
@@ -140,6 +141,13 @@ def test_retry_waits_when_the_history_cannot_be_read():
     queue.increment_retry.assert_called_once_with(7)
 
 
+def test_retry_stops_once_kodi_exits():
+    """Kodi exiting stops the retry pass before its next queued stop."""
+    api, queue = _retry([EPISODE], {"added": {"episodes": 1}}, exiting=True)
+    api.get_history.assert_not_called()
+    queue.remove.assert_not_called()
+
+
 def _service():
     """A service ready to dispatch, and the mock standing in for its dispatch."""
     svc = service.Service()
@@ -176,7 +184,30 @@ def test_event_queued_during_a_dispatch_waits_its_turn():
 def test_hooks_pick_up_a_video_already_playing(playing):
     """Starting the hooks mid-playback holds a start for the playing video, as Kodi sends none."""
     svc = service.Service()
-    with mock.patch.object(service, "Monitor"), mock.patch.object(service, "Player") as player:
+    with mock.patch.object(service, "Monitor"), mock.patch.object(service, "Player") as player, \
+            mock.patch.object(service.shared, "api", mock.Mock()):
         player.return_value.isPlayingVideo.return_value = playing
         svc._start_hooks()
     assert player.return_value.onAVStarted.called is playing
+
+
+def test_hooks_give_the_trakt_client_the_service_monitor():
+    """The Trakt client gets the service's monitor, to stop its waits once Kodi exits."""
+    svc = service.Service()
+    api = mock.Mock()
+    with mock.patch.object(service, "Monitor") as monitor, mock.patch.object(service, "Player"), \
+            mock.patch.object(service.shared, "api", api):
+        svc._start_hooks()
+    assert api.client.monitor is monitor.return_value
+
+
+def test_exit_during_the_startup_delay_ends_the_run():
+    """Kodi exiting during the startup delay ends the run before anything is set up."""
+    svc = service.Service()
+    with mock.patch.object(service, "get_setting_int", return_value=5), \
+            mock.patch.object(service, "xbmc") as kodi, \
+            mock.patch.object(service, "TraktAPI") as api:
+        kodi.Monitor.return_value.waitForAbort.return_value = True
+        svc.run()
+    kodi.Monitor.return_value.waitForAbort.assert_called_once_with(5)
+    api.assert_not_called()

@@ -59,6 +59,41 @@ def test_rate_limit_is_waited_out_and_resent_once():
     assert opener.open.call_count == 2
 
 
+def _rate_limited(retry_after):
+    """A 429 carrying the given Retry-After."""
+    headers = Message()
+    headers["Retry-After"] = retry_after
+    return urllib.error.HTTPError(
+        "https://api.trakt.tv/sync/history", 429, "Too Many Requests", headers, None)
+
+
+def test_rate_limit_wait_ends_when_kodi_exits():
+    """A rate-limit wait cut short by Kodi exiting sends no retry and returns None."""
+    client = TraktClient("id", "ua")
+    client.monitor = mock.Mock(**{"waitForAbort.return_value": True})
+    opener = mock.Mock(**{"open.side_effect": [_rate_limited("30")]})
+
+    with mock.patch("lib.trakt.client.urllib.request.build_opener", return_value=opener):
+        assert client.request("POST", "/sync/history", {}) is None
+    client.monitor.waitForAbort.assert_called_once_with(30)
+    assert opener.open.call_count == 1
+
+
+def test_zero_rate_limit_wait_never_waits_for_exit():
+    """A Retry-After of 0 retries at once, since waitForAbort(0) would wait until Kodi exits."""
+    client = TraktClient("id", "ua")
+    client.monitor = mock.Mock()
+    response = mock.Mock()
+    response.__enter__ = mock.Mock(return_value=response)
+    response.__exit__ = mock.Mock(return_value=None)
+    response.read.return_value = b'{"ok": true}'
+    opener = mock.Mock(**{"open.side_effect": [_rate_limited("0"), response]})
+
+    with mock.patch("lib.trakt.client.urllib.request.build_opener", return_value=opener):
+        assert client.request("POST", "/sync/history", {}) == {"ok": True}
+    client.monitor.waitForAbort.assert_not_called()
+
+
 def test_network_error_returns_none():
     """A network error returns None instead of raising."""
     client = TraktClient("id", "ua")

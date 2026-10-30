@@ -51,6 +51,10 @@ class TraktAPI:
         """True when an OAuth token is held."""
         return bool(self.authorization)
 
+    def _exiting(self) -> bool:
+        """True when Kodi is exiting, by the monitor the service hands the client."""
+        return self.client.monitor is not None and self.client.monitor.abortRequested()
+
     def _check_error(self, code: int) -> None:
         """Check a Trakt error status, notifying once a session that the account is locked."""
         if code == 423 and not self._locked.is_set():
@@ -183,11 +187,13 @@ class TraktAPI:
         limit: int = 100,
         params: Optional[Dict] = None,
     ) -> Optional[List]:
-        """GET every page of a paginated endpoint as one list, or None when a page fails."""
+        """GET every page of a paginated endpoint as one list; None on a failed page or exit."""
         results = []
         page = 1
         page_count = 1
         while page <= page_count:
+            if self._exiting():
+                return None
             query = {"page": page, "limit": limit}
             if params:
                 query.update(params)
@@ -219,10 +225,12 @@ class TraktAPI:
         return results
 
     def _get_all_ratings(self, media_type: str) -> Optional[List]:
-        """Get the user's ratings of one item type, four pages at a time; None if a page fails."""
+        """Get the user's ratings of one type, four pages at once; None on a failed page or exit."""
         path = "/users/me/ratings/%s" % media_type
 
         def page(number: int) -> Any:
+            if self._exiting():
+                return None
             query = {"page": number, "limit": RATINGS_PAGE_SIZE}
             return self._get(
                 self.client.build_path(path, query),

@@ -609,6 +609,16 @@ def test_watchlist_add_over_the_limit_reads_it(settings, result):
     assert api.add_to_watchlist({"movies": [{"ids": {"tmdb": 949}}]}) == result
 
 
+def test_paged_get_stops_once_kodi_exits():
+    """A paged GET returns None without another request once Kodi starts exiting."""
+    api = TraktAPI.__new__(TraktAPI)
+    api.client = mock.Mock()
+    api.client.monitor.abortRequested.return_value = True
+
+    assert api._get_all_pages("/sync/watched/shows", authorized=True) is None
+    api.client.request.assert_not_called()
+
+
 def test_locked_account_is_notified_once():
     """Trakt's 423 for a locked account notifies once a session, and other errors never."""
     api = TraktAPI.__new__(TraktAPI)

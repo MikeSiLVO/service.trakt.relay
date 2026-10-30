@@ -112,7 +112,7 @@ class Service:
             logger.exception("Dispatch failed: %s" % data)
 
     def _retry_failed_scrobbles(self) -> None:
-        """Retry queued stops as history adds; drop any Trakt has or can't match; stop on error."""
+        """Retry queued stops in history; drop played or unmatched ones; stop on error or exit."""
         if self.scrobbler is None or not shared.api.connected:
             return
         try:
@@ -123,6 +123,8 @@ class Service:
 
             logger.info("%d pending scrobble(s) to retry" % len(pending))
             for item in pending:
+                if self.monitor.abortRequested():
+                    return
                 played = _in_history(item)
                 if played is None:
                     queue.increment_retry(item["id"])
@@ -172,7 +174,8 @@ class Service:
         startup_delay = get_setting_int("startup_delay")
         if startup_delay:
             logger.debug("Delaying startup by %d seconds." % startup_delay)
-            xbmc.sleep(startup_delay * 1000)
+            if xbmc.Monitor().waitForAbort(startup_delay):
+                return
 
         logger.debug("Service thread starting.")
 
@@ -210,8 +213,9 @@ class Service:
             self.sync_thread.join()
 
     def _start_hooks(self) -> None:
-        """Start the monitor and player hooks, holding a start for a video already playing."""
+        """Start the monitor, shared with Trakt, and player hooks; hold a playing video's start."""
         self.monitor = Monitor(action=self._enqueue)
+        shared.api.client.monitor = self.monitor
         self.player = Player(action=self._enqueue)
         if self.player.isPlayingVideo():
             logger.info("Picking up the video already playing")

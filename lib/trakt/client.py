@@ -16,6 +16,7 @@ class TraktClient:
     api_url = "https://api.trakt.tv"
     max_retry_after = 60
     on_error: Optional[Callable[[int], None]] = None
+    monitor: Any = None
 
     def __init__(self, client_id: str, user_agent: str, proxy_url: Optional[str] = None) -> None:
         self.client_id = client_id
@@ -71,17 +72,17 @@ class TraktClient:
                         "Trakt rate limit reached: retrying %s %s after %s seconds"
                         % (method, path, retry_after)
                     )
-                    time.sleep(retry_after)
-                    return self.request(
-                        method,
-                        path,
-                        body,
-                        authorization=authorization,
-                        timeout=timeout,
-                        retry=False,
-                        include_headers=include_headers,
-                        include_error_code=include_error_code,
-                    )
+                    if not self._wait(retry_after):
+                        return self.request(
+                            method,
+                            path,
+                            body,
+                            authorization=authorization,
+                            timeout=timeout,
+                            retry=False,
+                            include_headers=include_headers,
+                            include_error_code=include_error_code,
+                        )
             if self.on_error is not None:
                 self.on_error(exc.code)
             if exc.code == 401 and authorization and authorization.get("refresh_token"):
@@ -95,6 +96,14 @@ class TraktClient:
             if include_error_code:
                 return None, None
             return None
+
+    def _wait(self, seconds: int) -> bool:
+        """Wait out a delay, True when Kodi starts exiting first."""
+        # waitForAbort(0) waits until Kodi exits
+        if self.monitor is None or seconds <= 0:
+            time.sleep(max(seconds, 0))
+            return False
+        return self.monitor.waitForAbort(seconds)
 
     def _retry_after(self, exc: urllib.error.HTTPError) -> Optional[int]:
         """Read a 429's Retry-After seconds, or None when absent, negative or over the cap."""
