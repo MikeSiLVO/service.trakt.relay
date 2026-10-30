@@ -523,3 +523,15 @@ msgstr "استفاده از تم OG Trakt"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "لوگوی قرمز Trakt، قلب‌ها و رنگ‌های برجسته را همانند og.trakt.tv نشان می‌دهد."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "همگام‌سازی %i مورد ممکن نشد"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "حساب Trakt شما قفل شده است. با پشتیبانی Trakt تماس بگیرید."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "فهرست تماشا به سقف %i مورد رسید"

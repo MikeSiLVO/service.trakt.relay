@@ -524,3 +524,15 @@ msgstr "የ OG Trakt ገጽታን ተጠቀም"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "እንደ og.trakt.tv የ Trakt ቀይ አርማን፣ ልቦችን እና የማድመቂያ ቀለሙን ያሳያል።"
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "%i ንጥሎችን ማመሳሰል አልተቻለም"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "የ Trakt መለያዎ ተቆልፏል። የ Trakt ድጋፍን ያነጋግሩ።"
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "የመመልከቻ ዝርዝር ገደብ %i ላይ ተደርሷል"

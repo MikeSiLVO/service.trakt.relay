@@ -523,3 +523,15 @@ msgstr "Uża t-tema OG Trakt"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "Juri l-logo aħmar ta' Trakt, il-qlub u l-kulur tal-enfasi, bħal fuq og.trakt.tv."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "%i ma setgħux jiġu sinkronizzati"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "Il-kont tiegħek ta' Trakt huwa msakkar. Ikkuntattja l-appoġġ ta' Trakt."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "Intlaħaq il-limitu ta' %i tal-lista ta' x'tara"

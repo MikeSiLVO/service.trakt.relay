@@ -524,3 +524,15 @@ msgstr "Përdor temën OG Trakt"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "Shfaq logon e kuqe të Trakt, zemrat dhe theksimet, si në og.trakt.tv."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "%i elemente nuk u sinkronizuan"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "Llogaria juaj Trakt është e bllokuar. Kontaktoni mbështetjen e Trakt."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "U arrit kufiri i listës së shikimit: %i"

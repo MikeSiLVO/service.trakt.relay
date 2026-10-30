@@ -523,3 +523,15 @@ msgstr "使用 OG Trakt 主題"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "顯示 Trakt 的紅色標誌、愛心與強調色，如同 og.trakt.tv。"
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "%i 個項目無法同步"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "您的 Trakt 帳號已被鎖定。請聯絡 Trakt 支援團隊。"
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "已達待看清單上限 %i 項"

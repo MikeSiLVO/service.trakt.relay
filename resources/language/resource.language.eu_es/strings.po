@@ -523,3 +523,15 @@ msgstr "Erabili OG Trakt gaia"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "Trakt-en logo gorria, bihotzak eta nabarmentze-kolorea erakusten ditu, og.trakt.tv webgunean bezala."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "Ezin izan dira %i elementu sinkronizatu"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "Zure Trakt kontua blokeatuta dago. Jarri harremanetan Trakt-en laguntza-zerbitzuarekin."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "Ikusteko zerrendaren %i elementuko mugara iritsi da"

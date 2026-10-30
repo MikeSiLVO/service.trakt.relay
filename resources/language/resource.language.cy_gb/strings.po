@@ -523,3 +523,15 @@ msgstr "Defnyddio thema OG Trakt"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "Yn dangos logo coch Trakt, y calonnau a'r lliw amlygu, fel ar og.trakt.tv."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "Methu cysoni %i"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "Mae eich cyfrif Trakt wedi'i gloi. Cysylltwch â chymorth Trakt."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "Wedi cyrraedd terfyn y rhestr wylio o %i"

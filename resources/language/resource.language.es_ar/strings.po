@@ -523,3 +523,15 @@ msgstr "Usar el tema OG Trakt"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "Muestra el logo rojo de Trakt, los corazones y los resaltados, como en og.trakt.tv."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "No se pudieron sincronizar %i"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "Tu cuenta de Trakt está bloqueada. Comunicate con el soporte de Trakt."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "Se alcanzó el límite de %i elementos de la lista de seguimiento"

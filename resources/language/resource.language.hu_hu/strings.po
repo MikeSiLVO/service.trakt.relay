@@ -524,3 +524,15 @@ msgstr "OG Trakt téma használata"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "Megjeleníti a Trakt piros logóját, a szíveket és a kiemeléseket, mint az og.trakt.tv oldalon."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "%i elemet nem sikerült szinkronizálni"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "A Trakt fiókod zárolva van. Fordulj a Trakt ügyfélszolgálatához."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "Elérted a figyelőlista %i elemes korlátját"

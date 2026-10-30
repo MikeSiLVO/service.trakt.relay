@@ -523,3 +523,15 @@ msgstr "Uzi la etoson OG Trakt"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "Montras la ruĝan emblemon, korojn kaj elstarigojn de Trakt, kiel ĉe og.trakt.tv."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "Ne eblis sinkronigi %i"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "Via Trakt-konto estas ŝlosita. Kontaktu la subtenon de Trakt."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "Spektolista limo de %i atingita"

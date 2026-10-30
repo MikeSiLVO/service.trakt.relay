@@ -524,3 +524,15 @@ msgstr "OG Trakt థీమ్‌ను ఉపయోగించు"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "og.trakt.tv లో లాగా Trakt ఎరుపు లోగో, హృదయాలు మరియు హైలైట్‌లను చూపుతుంది."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "%i అంశాలను సమకాలీకరించలేకపోయింది"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "మీ Trakt ఖాతా లాక్ చేయబడింది. Trakt మద్దతును సంప్రదించండి."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "వాచ్‌లిస్ట్ పరిమితి %i కి చేరుకుంది"

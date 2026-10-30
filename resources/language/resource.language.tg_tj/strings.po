@@ -524,3 +524,15 @@ msgstr "Истифодаи мавзӯи OG Trakt"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "Логотипи сурхи Trakt, дилҳо ва ранги таъкидро мисли og.trakt.tv нишон медиҳад."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "Ҳамоҳангсозии %i унсур муяссар нашуд"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "Ҳисоби Trakt-и шумо баста шудааст. Ба хадамоти дастгирии Trakt муроҷиат кунед."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "Ба ҳадди рӯйхати тамошо расид: %i"

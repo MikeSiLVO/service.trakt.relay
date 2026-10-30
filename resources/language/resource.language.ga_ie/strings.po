@@ -524,3 +524,15 @@ msgstr "Úsáid an téama OG Trakt"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "Taispeánann sé lógó dearg Trakt, na croíthe agus na dathanna aibhsithe, mar atá ar og.trakt.tv."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "Níorbh fhéidir %i a shioncrónú"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "Tá do chuntas Trakt faoi ghlas. Déan teagmháil le tacaíocht Trakt."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "Tá teorainn an liosta faire sroichte: %i"

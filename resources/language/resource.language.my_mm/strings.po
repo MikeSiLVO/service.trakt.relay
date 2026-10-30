@@ -523,3 +523,15 @@ msgstr "OG Trakt အပြင်အဆင် သုံးရန်"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "og.trakt.tv ကဲ့သို့ Trakt ၏ အနီရောင် လိုဂို၊ နှလုံးပုံများနှင့် အသားပေးအရောင်များကို ပြသည်။"
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "အရာ %i ခုကို ထပ်တူပြု၍ မရပါ"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "သင့် Trakt အကောင့်ကို လော့ခ်ချထားသည်။ Trakt အကူအညီဌာနကို ဆက်သွယ်ပါ။"
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "ကြည့်ရန်စာရင်း ကန့်သတ်ချက် %i ခု ပြည့်သွားပြီ"

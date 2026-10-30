@@ -524,3 +524,15 @@ msgstr "Gamitin ang temang OG Trakt"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "Nagpapakita ng pulang logo ng Trakt, mga puso at mga highlight, gaya ng sa og.trakt.tv."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "Hindi ma-sync ang %i item"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "Naka-lock ang iyong Trakt account. Makipag-ugnayan sa support ng Trakt."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "Naabot na ang limitasyon ng watchlist na %i"

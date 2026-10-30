@@ -524,3 +524,15 @@ msgstr "OG Trakt 테마 사용"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "og.trakt.tv처럼 Trakt의 빨간 로고, 하트, 강조 색상을 표시합니다."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "%i개 항목을 동기화할 수 없음"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "Trakt 계정이 잠겨 있습니다. Trakt 지원팀에 문의하세요."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "watchlist 한도 %i개에 도달함"

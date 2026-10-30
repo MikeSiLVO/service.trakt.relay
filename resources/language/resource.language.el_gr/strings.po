@@ -523,3 +523,15 @@ msgstr "Χρήση του θέματος OG Trakt"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "Εμφανίζει το κόκκινο λογότυπο, τις καρδιές και το χρώμα επισήμανσης του Trakt, όπως στο og.trakt.tv."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "Αδυναμία συγχρονισμού: %i"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "Ο λογαριασμός σας στο Trakt είναι κλειδωμένος. Επικοινωνήστε με την υποστήριξη του Trakt."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "Η λίστα παρακολούθησης έφτασε το όριο των %i"

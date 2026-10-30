@@ -524,3 +524,15 @@ msgstr "Folosește tema OG Trakt"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "Afișează sigla roșie Trakt, inimile și culoarea de evidențiere, ca pe og.trakt.tv."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "Elemente care nu au putut fi sincronizate: %i"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "Contul tău Trakt este blocat. Contactează asistența Trakt."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "Limita listei de vizionat a fost atinsă: %i"

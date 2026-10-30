@@ -523,3 +523,15 @@ msgstr "OG Trakt தீமைப் பயன்படுத்து"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "og.trakt.tv-இல் உள்ளதுபோல், Trakt-இன் சிவப்பு லோகோ, இதயங்கள் மற்றும் ஹைலைட் வண்ணங்களைக் காட்டுகிறது."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "%i உருப்படிகளை ஒத்திசைக்க முடியவில்லை"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "உங்கள் Trakt கணக்கு பூட்டப்பட்டுள்ளது. Trakt ஆதரவைத் தொடர்புகொள்ளவும்."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "பார்க்க வேண்டிய பட்டியலின் வரம்பான %i எட்டப்பட்டது"

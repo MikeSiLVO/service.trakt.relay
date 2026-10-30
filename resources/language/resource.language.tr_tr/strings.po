@@ -524,3 +524,15 @@ msgstr "OG Trakt temasını kullan"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "og.trakt.tv'deki gibi Trakt'ın kırmızı logosunu, kalplerini ve vurgularını gösterir."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "%i eşitlenemedi"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "Trakt hesabınız kilitli. Trakt destek ekibiyle iletişime geçin."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "İzleme listesi sınırına ulaşıldı: %i"

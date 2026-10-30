@@ -524,3 +524,15 @@ msgstr "Dùng chủ đề OG Trakt"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "Hiện logo đỏ, biểu tượng trái tim và màu nhấn của Trakt, như trên og.trakt.tv."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "Không thể đồng bộ %i mục"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "Tài khoản Trakt của bạn đã bị khóa. Hãy liên hệ bộ phận hỗ trợ của Trakt."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "Đã đạt giới hạn %i mục của danh sách muốn xem"

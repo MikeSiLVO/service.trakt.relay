@@ -524,3 +524,15 @@ msgstr "OG Trakt-thema gebruiken"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "Toont het rode Trakt-logo, de hartjes en de accentkleuren, zoals op og.trakt.tv."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "%i items konden niet worden gesynchroniseerd"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "Je Trakt-account is vergrendeld. Neem contact op met de Trakt-ondersteuning."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "Kijklijstlimiet van %i bereikt"

@@ -523,3 +523,15 @@ msgstr "OG Trakt загвар ашиглах"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "og.trakt.tv дээрх шиг Trakt-ийн улаан лого, зүрх болон тодотголыг харуулна."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "Синхрончилж чадсангүй: %i"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "Таны Trakt бүртгэл түгжигдсэн байна. Trakt-ийн тусламжийн албатай холбогдоно уу."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "Үзэх жагсаалтын хязгаарт хүрлээ: %i"

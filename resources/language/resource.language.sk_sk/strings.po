@@ -524,3 +524,15 @@ msgstr "Použiť tému OG Trakt"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "Zobrazí červené logo Trakt, srdiečka a farbu zvýraznenia ako na og.trakt.tv."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "Nepodarilo sa synchronizovať: %i"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "Váš Trakt účet je zamknutý. Kontaktujte podporu Trakt."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "Dosiahnutý limit zoznamu na pozretie: %i"

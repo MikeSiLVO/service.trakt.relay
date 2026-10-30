@@ -524,3 +524,15 @@ msgstr "Naudoti OG Trakt temą"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "Rodo raudoną Trakt logotipą, širdeles ir paryškinimo spalvą, kaip og.trakt.tv svetainėje."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "Nepavyko sinchronizuoti elementų: %i"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "Jūsų Trakt paskyra užrakinta. Susisiekite su Trakt pagalbos tarnyba."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "Pasiektas peržiūros sąrašo limitas: %i"

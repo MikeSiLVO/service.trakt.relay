@@ -523,3 +523,15 @@ msgstr "Brúka OG Trakt-temað"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "Vísir reyða Trakt-logoið, hjørtuni og framhevingarnar, sum á og.trakt.tv."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "%i lutir kundu ikki samstillast"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "Trakt-kontan hjá tær er læst. Set teg í samband við Trakt-stuðulin."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "Hyggjulistin hevur rokkið markið á %i"

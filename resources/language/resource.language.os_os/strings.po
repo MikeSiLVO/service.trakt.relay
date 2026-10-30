@@ -524,3 +524,15 @@ msgstr "OG Trakt темӕ пайдагӕнын"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "Равдисы Trakt-ы сырх логотип, зӕрдӕтӕ ӕмӕ рухс хуызтӕ, og.trakt.tv-йы куыд ис, афтӕ."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "%i синхронизаци кӕнӕн нӕ уыд"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "Дӕ Trakt аккаунт ӕхгӕд у. Бадзур Trakt-ы ӕххуысы службӕмӕ."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "Кӕсинаг номхыгъды арӕнмӕ бахӕццӕ: %i"

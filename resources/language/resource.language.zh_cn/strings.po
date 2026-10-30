@@ -524,3 +524,15 @@ msgstr "使用OG Trakt主题"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "显示Trakt的红色徽标、爱心和强调色，与og.trakt.tv一致。"
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "%i项无法同步"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "您的Trakt帐户已被锁定。请联系Trakt支持团队。"
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "待看列表已达上限（%i项）"

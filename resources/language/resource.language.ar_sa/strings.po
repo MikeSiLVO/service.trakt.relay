@@ -524,3 +524,15 @@ msgstr "استخدام سمة OG Trakt"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "يعرض شعار Trakt الأحمر والقلوب وألوان التمييز، كما في og.trakt.tv."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "تعذرت مزامنة %i"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "حسابك على Trakt مقفل. تواصل مع دعم Trakt."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "تم بلوغ حد قائمة المشاهدة البالغ %i"

@@ -523,3 +523,15 @@ msgstr "Guna tema OG Trakt"
 msgctxt "#32225"
 msgid "Shows Trakt's red logo, hearts and highlights, as on og.trakt.tv."
 msgstr "Menunjukkan logo merah Trakt, ikon hati dan warna serlahan, seperti di og.trakt.tv."
+
+msgctxt "#32226"
+msgid "%i couldn't be synced"
+msgstr "%i item tidak dapat disegerak"
+
+msgctxt "#32227"
+msgid "Your Trakt account is locked. Contact Trakt support."
+msgstr "Akaun Trakt anda dikunci. Hubungi sokongan Trakt."
+
+msgctxt "#32228"
+msgid "Watchlist limit of %i reached"
+msgstr "Had senarai tontonan %i telah dicapai"
