@@ -516,7 +516,7 @@ def test_request_refreshes_token_and_resends():
     """A 401 refreshes the token once and resends the call with the new one."""
     api = _expired_api()
     fresh = {"access_token": "new", "refresh_token": "next"}
-    api.client.request = mock.Mock(side_effect=[_unauthorized(), fresh, {"added": 1}])
+    api.client.request = mock.Mock(side_effect=[_unauthorized(), (fresh, None), {"added": 1}])
 
     result = api._request("POST", "/sync/history", body={"movies": []}, authorized=True)
 
@@ -541,9 +541,43 @@ def test_request_returns_none_when_resend_still_unauthorized():
     """A resend that still gets a 401 returns None instead of raising."""
     api = _expired_api()
     fresh = {"access_token": "new", "refresh_token": "next"}
-    api.client.request = mock.Mock(side_effect=[_unauthorized(), fresh, _unauthorized()])
+    api.client.request = mock.Mock(side_effect=[_unauthorized(), (fresh, None), _unauthorized()])
 
     assert api._request("GET", "/users/settings", authorized=True) is None
+
+
+def test_refused_refresh_drops_the_token():
+    """A refresh Trakt refuses drops the token and the stored username."""
+    api = _expired_api()
+    api.client.request = mock.Mock(side_effect=[_unauthorized(), (None, 400)])
+
+    with mock.patch("lib.trakt.api.set_setting") as set_setting:
+        assert api._request("POST", "/scrobble/stop", authorized=True) is None
+
+    assert not api.connected
+    set_setting.assert_has_calls([mock.call("authorization", ""), mock.call("user", "")])
+
+
+def test_failed_refresh_keeps_the_token():
+    """A refresh that fails without Trakt's refusal keeps the token for the next try."""
+    api = _expired_api()
+    api.client.request = mock.Mock(side_effect=[_unauthorized(), (None, None)])
+
+    with mock.patch("lib.trakt.api.set_setting") as set_setting:
+        assert api._request("POST", "/scrobble/stop", authorized=True) is None
+
+    assert api.connected
+    set_setting.assert_not_called()
+
+
+def test_refresh_after_another_thread_dropped_the_token_fails():
+    """A waiting refresh fails without a request once another thread dropped the token."""
+    api = _expired_api()
+    stale = {"access_token": "expired", "refresh_token": "refresh"}
+    api.authorization = None
+
+    assert api._refresh_token(stale) is False
+    cast(mock.Mock, api.client.request).assert_not_called()
 
 
 def _polling_api(*replies):

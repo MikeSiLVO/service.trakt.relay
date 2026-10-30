@@ -122,11 +122,11 @@ class TraktAPI:
             return None
 
     def _refresh_token(self, stale: Dict) -> bool:
-        """Refresh the token unless another thread already replaced it; True when one is fresh."""
+        """Refresh token unless another thread did; refusal drops it and username. True if fresh."""
         with self._refresh_lock:
             if self.authorization != stale:
-                return True
-            refreshed = self.client.request(
+                return self.authorization is not None
+            refreshed, error_code = self.client.request(
                 "POST",
                 "/oauth/token",
                 {
@@ -136,7 +136,15 @@ class TraktAPI:
                     "grant_type": "refresh_token",
                 },
                 timeout=90,
+                include_error_code=True,
             )
+            # 400 is invalid_grant, a dead token; any other failure may be transient
+            if error_code == 400:
+                logger.warning("Trakt refused the token refresh; connect again")
+                self.authorization = None
+                set_setting("authorization", "")
+                set_setting("user", "")
+                return False
             if not refreshed:
                 return False
             self._save_token(refreshed)
