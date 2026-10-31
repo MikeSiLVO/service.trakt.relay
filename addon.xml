@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="service.trakt.relay" name="Trakt Relay" version="1.0.0~beta1" provider-name="MikeSiLVO">
+<addon id="service.trakt.relay" name="Trakt Relay" version="1.0.0~beta2" provider-name="MikeSiLVO">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.dateutil" version="2.8.1"/>
@@ -21,7 +21,21 @@
         <license>GPL-2.0-only</license>
         <forum>https://forum.kodi.tv/showthread.php?tid=389542</forum>
         <source>https://github.com/MikeSiLVO/service.trakt.relay</source>
-        <news>First release, a fork of script.trakt 3.9.0.</news>
+        <news>1.0.0~beta2
+- Watched status and ratings sync Off, Trakt to Kodi, Kodi to Trakt or Both ways; collection Off, Add or Add and remove
+- Every sync starts Off, so beta 1 testers choose again in the new setup dialog, shown after connecting and under Choose what to sync
+- Trakt to Kodi makes Kodi match Trakt, play counts and dates included, and asks before unwatching or clearing more than 20 items
+- Syncs send in chunks and show what Trakt took and what failed
+- Notify a locked Trakt account and a full watchlist
+- Fix a sync cut short letting later background syncs skip changes
+
+- Fixes for bugs carried over from script.trakt:
+  - Plugin exclusions ignored during playback
+  - Rating prompt lost after a failed start scrobble
+  - Trakt resume points replacing newer progress in Kodi
+  - A movie matching another of the same title by title alone
+  - Kodi waiting on a running sync at exit
+        </news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
