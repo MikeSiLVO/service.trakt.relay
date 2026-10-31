@@ -625,9 +625,21 @@ msgid "Save and sync"
 msgstr "ذخیره و همگام‌سازی"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "%i مورد در Kodi برای هماهنگی با Trakt به‌عنوان تماشانشده علامت‌گذاری شود؟"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "%i فیلم در Kodi به‌عنوان تماشانشده علامت‌گذاری شود تا با Trakt یکسان شود؟"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "%i رتبه در Kodi برای هماهنگی با Trakt پاک شود؟"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "%i رتبه فیلم در Kodi پاک شود تا با Trakt یکسان شود؟"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "%i قسمت در Kodi به‌عنوان تماشانشده علامت‌گذاری شود تا با Trakt یکسان شود؟"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "%i رتبه سریال در Kodi پاک شود تا با Trakt یکسان شود؟"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "%i رتبه قسمت در Kodi پاک شود تا با Trakt یکسان شود؟"

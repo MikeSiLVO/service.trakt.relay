@@ -625,9 +625,21 @@ msgid "Save and sync"
 msgstr "Cadw a chysoni"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "Nodi %i eitem fel heb eu gwylio yn Kodi i gyfateb i Trakt?"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "Nodi %i o ffilmiau fel heb eu gwylio yn Kodi i gyfateb i Trakt?"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "Clirio %i gradd yn Kodi i gyfateb i Trakt?"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "Clirio %i o raddau ffilmiau yn Kodi i gyfateb i Trakt?"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "Nodi %i o benodau fel heb eu gwylio yn Kodi i gyfateb i Trakt?"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "Clirio %i o raddau rhaglenni yn Kodi i gyfateb i Trakt?"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "Clirio %i o raddau penodau yn Kodi i gyfateb i Trakt?"

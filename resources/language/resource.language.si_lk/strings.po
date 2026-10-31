@@ -626,9 +626,21 @@ msgid "Save and sync"
 msgstr "සුරකින්න සහ සමමුහුර්ත කරන්න"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "Trakt හා ගැළපීමට Kodi හි අයිතම %i ක් නොනැරඹූ ලෙස සලකුණු කරන්නද?"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "Trakt හා ගැළපීමට Kodi හි චිත්‍රපට %iක් නොනැරඹූ ලෙස සලකුණු කරන්නද?"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "Trakt හා ගැළපීමට Kodi හි ශ්‍රේණිගත කිරීම් %i ක් මකන්නද?"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "Trakt හා ගැළපීමට Kodi හි චිත්‍රපට %iක ශ්‍රේණිගත කිරීම් මකා දමන්නද?"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "Trakt හා ගැළපීමට Kodi හි කථාංග %iක් නොනැරඹූ ලෙස සලකුණු කරන්නද?"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "Trakt හා ගැළපීමට Kodi හි කතාමාලා %iක ශ්‍රේණිගත කිරීම් මකා දමන්නද?"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "Trakt හා ගැළපීමට Kodi හි කථාංග %iක ශ්‍රේණිගත කිරීම් මකා දමන්නද?"

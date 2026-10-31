@@ -64,7 +64,7 @@ def test_trakt_to_kodi_mirrors_with_rewatches_and_confirms_its_unwatches():
     run = _mark(direction=TRAKT_TO_KODI)
     run.mark.assert_not_called()
     assert run.mirror.call_args.args[4] is True
-    run.sync.confirm_removals.assert_called_once_with([UNWATCH], 32264)
+    run.sync.confirm_removals.assert_called_once_with([UNWATCH], 32266)
     assert run.written == [UNWATCH]
 
 

@@ -626,9 +626,21 @@ msgid "Save and sync"
 msgstr "Sačuvaj i sinhroniziraj"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "Označiti %i stavki u Kodiju kao negledane radi usklađivanja s Traktom?"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "Označiti %i filmova u Kodiju kao negledane radi usklađivanja s Traktom?"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "Obrisati %i ocjena u Kodiju radi usklađivanja s Traktom?"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "Obrisati ocjene %i filmova u Kodiju radi usklađivanja s Traktom?"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "Označiti %i epizoda u Kodiju kao negledane radi usklađivanja s Traktom?"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "Obrisati ocjene %i emisija u Kodiju radi usklađivanja s Traktom?"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "Obrisati ocjene %i epizoda u Kodiju radi usklađivanja s Traktom?"

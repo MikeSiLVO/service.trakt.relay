@@ -626,9 +626,21 @@ msgid "Save and sync"
 msgstr "Tiaki me te tukutahi"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "Me tohu %i tūemi kia kore e mātakitakina i Kodi kia ōrite ki a Trakt?"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "Me tohu ngā kiriata e %i kia kore e mātakitakina i Kodi, kia ōrite ki a Trakt?"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "Me ūkui %i whakatauranga i Kodi kia ōrite ki a Trakt?"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "Me ūkui ngā whakatauranga o ngā kiriata e %i i Kodi, kia ōrite ki a Trakt?"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "Me tohu ngā wāhanga e %i kia kore e mātakitakina i Kodi, kia ōrite ki a Trakt?"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "Me ūkui ngā whakatauranga o ngā hōtaka e %i i Kodi, kia ōrite ki a Trakt?"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "Me ūkui ngā whakatauranga o ngā wāhanga e %i i Kodi, kia ōrite ki a Trakt?"

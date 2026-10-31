@@ -625,9 +625,21 @@ msgid "Save and sync"
 msgstr "บันทึกและซิงค์"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "ทำเครื่องหมาย %i รายการใน Kodi ว่ายังไม่ได้ดูเพื่อให้ตรงกับ Trakt หรือไม่?"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "ทำเครื่องหมายภาพยนตร์ %i เรื่องว่ายังไม่ได้ดูใน Kodi ให้ตรงกับ Trakt หรือไม่?"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "ลบเรตติ้ง %i รายการใน Kodi เพื่อให้ตรงกับ Trakt หรือไม่?"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "ลบเรตติ้งของภาพยนตร์ %i รายการใน Kodi ให้ตรงกับ Trakt หรือไม่?"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "ทำเครื่องหมายตอน %i ตอนว่ายังไม่ได้ดูใน Kodi ให้ตรงกับ Trakt หรือไม่?"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "ลบเรตติ้งของรายการ %i รายการใน Kodi ให้ตรงกับ Trakt หรือไม่?"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "ลบเรตติ้งของตอน %i รายการใน Kodi ให้ตรงกับ Trakt หรือไม่?"

@@ -626,9 +626,21 @@ msgid "Save and sync"
 msgstr "సేవ్ చేసి సమకాలీకరించు"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "Trakt కి సరిపోయేలా Kodi లో %i అంశాలను చూడనివిగా గుర్తించాలా?"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "Trakt కి సరిపోయేలా Kodi లో %i సినిమాలను చూడనివిగా గుర్తించాలా?"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "Trakt కి సరిపోయేలా Kodi లో %i రేటింగ్‌లను క్లియర్ చేయాలా?"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "Trakt కి సరిపోయేలా Kodi లో %i సినిమా రేటింగ్‌లను క్లియర్ చేయాలా?"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "Trakt కి సరిపోయేలా Kodi లో %i ఎపిసోడ్‌లను చూడనివిగా గుర్తించాలా?"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "Trakt కి సరిపోయేలా Kodi లో %i షో రేటింగ్‌లను క్లియర్ చేయాలా?"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "Trakt కి సరిపోయేలా Kodi లో %i ఎపిసోడ్ రేటింగ్‌లను క్లియర్ చేయాలా?"

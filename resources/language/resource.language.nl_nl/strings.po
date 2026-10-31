@@ -626,9 +626,21 @@ msgid "Save and sync"
 msgstr "Opslaan en synchroniseren"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "%i items in Kodi als niet bekeken markeren zodat ze overeenkomen met Trakt?"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "%i films in Kodi als niet bekeken markeren om Trakt te volgen?"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "%i waarderingen in Kodi wissen zodat ze overeenkomen met Trakt?"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "%i filmwaarderingen in Kodi wissen om Trakt te volgen?"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "%i afleveringen in Kodi als niet bekeken markeren om Trakt te volgen?"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "%i seriewaarderingen in Kodi wissen om Trakt te volgen?"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "%i afleveringswaarderingen in Kodi wissen om Trakt te volgen?"

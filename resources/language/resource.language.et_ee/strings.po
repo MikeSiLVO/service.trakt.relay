@@ -626,9 +626,21 @@ msgid "Save and sync"
 msgstr "Salvesta ja sünkrooni"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "Kas märkida Kodis %i üksust vaatamata, et see vastaks Traktile?"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "Kas märkida Kodis %i filmi vaatamata, et see vastaks Traktile?"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "Kas kustutada Kodis %i hinnet, et see vastaks Traktile?"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "Kas kustutada Kodis %i filmi hinnet, et see vastaks Traktile?"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "Kas märkida Kodis %i episoodi vaatamata, et see vastaks Traktile?"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "Kas kustutada Kodis %i sarja hinnet, et see vastaks Traktile?"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "Kas kustutada Kodis %i episoodi hinnet, et see vastaks Traktile?"

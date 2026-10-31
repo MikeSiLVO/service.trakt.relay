@@ -625,9 +625,21 @@ msgid "Save and sync"
 msgstr "सहेजें और सिंक करें"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "Trakt से मेल खाने के लिए Kodi में %i आइटम अनदेखे के रूप में चिह्नित करें?"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "Trakt से मेल खाने के लिए Kodi में %i फ़िल्मों को अनदेखे के रूप में चिह्नित करें?"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "Trakt से मेल खाने के लिए Kodi में %i रेटिंग साफ़ करें?"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "Trakt से मेल खाने के लिए Kodi में %i फ़िल्म रेटिंग साफ़ करें?"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "Trakt से मेल खाने के लिए Kodi में %i एपिसोड को अनदेखे के रूप में चिह्नित करें?"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "Trakt से मेल खाने के लिए Kodi में %i शो रेटिंग साफ़ करें?"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "Trakt से मेल खाने के लिए Kodi में %i एपिसोड रेटिंग साफ़ करें?"

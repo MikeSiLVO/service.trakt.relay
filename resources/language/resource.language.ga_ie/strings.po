@@ -626,9 +626,21 @@ msgid "Save and sync"
 msgstr "Sábháil agus sioncrónaigh"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "An marcálfar %i mír mar neamhfhéachta in Kodi chun Trakt a mheaitseáil?"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "An marcálfar %i scannán mar neamhfhéachta in Kodi chun Trakt a mheaitseáil?"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "An nglanfar %i rátáil in Kodi chun Trakt a mheaitseáil?"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "An nglanfar rátálacha %i scannán in Kodi chun Trakt a mheaitseáil?"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "An marcálfar %i eipeasóid mar neamhfhéachta in Kodi chun Trakt a mheaitseáil?"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "An nglanfar rátálacha %i seó in Kodi chun Trakt a mheaitseáil?"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "An nglanfar rátálacha %i eipeasóid in Kodi chun Trakt a mheaitseáil?"

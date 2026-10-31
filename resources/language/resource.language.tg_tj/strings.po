@@ -626,9 +626,21 @@ msgid "Save and sync"
 msgstr "Захира ва ҳамоҳанг кардан"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "%i унсур дар Kodi барои мувофиқат ба Trakt ҳамчун тамошонашуда қайд карда шаванд?"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "%i филм дар Kodi ҳамчун тамошонашуда қайд карда шавад, то ба Trakt мувофиқ бошад?"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "%i баҳо дар Kodi барои мувофиқат ба Trakt тоза карда шаванд?"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "Баҳоҳои %i филм дар Kodi тоза карда шаванд, то ба Trakt мувофиқ бошад?"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "%i қисм дар Kodi ҳамчун тамошонашуда қайд карда шавад, то ба Trakt мувофиқ бошад?"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "Баҳоҳои %i намоиш дар Kodi тоза карда шаванд, то ба Trakt мувофиқ бошад?"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "Баҳоҳои %i қисм дар Kodi тоза карда шаванд, то ба Trakt мувофиқ бошад?"

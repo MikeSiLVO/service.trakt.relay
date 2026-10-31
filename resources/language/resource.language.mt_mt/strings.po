@@ -625,9 +625,21 @@ msgid "Save and sync"
 msgstr "Salva u ssinkronizza"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "Timmarka %i oġġetti f'Kodi bħala li ma rajthomx biex jaqblu ma' Trakt?"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "Timmarka %i film f'Kodi bħala li ma rajthomx, biex jaqbel ma' Trakt?"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "Tħassar %i ratings f'Kodi biex jaqblu ma' Trakt?"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "Tħassar ir-ratings ta' %i film f'Kodi biex jaqbel ma' Trakt?"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "Timmarka %i episodju f'Kodi bħala li ma rajthomx, biex jaqbel ma' Trakt?"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "Tħassar ir-ratings ta' %i programm f'Kodi biex jaqbel ma' Trakt?"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "Tħassar ir-ratings ta' %i episodju f'Kodi biex jaqbel ma' Trakt?"

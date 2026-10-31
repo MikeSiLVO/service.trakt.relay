@@ -378,7 +378,7 @@ class EpisodeSync:
         if unwatches and len(ScrobbleQueue()):
             logger.info("[Episodes Sync] Unwatching waits for failed scrobbles to be retried")
         else:
-            episodes += self.sync.confirm_removals(unwatches, 32264)
+            episodes += self.sync.confirm_removals(unwatches, 32266)
 
         if len(episodes) == 0:
             self.sync.update_progress(
@@ -537,7 +537,7 @@ class EpisodeSync:
                 cleared = [dict(show, rating=0) for show in compare_shows(
                     kodi_shows, trakt_shows, fallback, unrated_only=True)["shows"]
                     if has_id(show)]
-                kodi_shows_update["shows"] += self.sync.confirm_removals(cleared, 32265)
+                kodi_shows_update["shows"] += self.sync.confirm_removals(cleared, 32267)
 
             if len(kodi_shows_update["shows"]) == 0:
                 self.sync.update_progress(
@@ -617,7 +617,7 @@ class EpisodeSync:
                         season["episodes"] = [dict(ep, rating=0) for ep in season["episodes"]]
                 if self.sync.confirm_removals(
                         [ep for show in cleared for season in show["seasons"]
-                         for ep in season["episodes"]], 32265):
+                         for ep in season["episodes"]], 32268):
                     kodi_shows_update["shows"] += cleared
             if len(kodi_shows_update["shows"]) == 0:
                 self.sync.update_progress(

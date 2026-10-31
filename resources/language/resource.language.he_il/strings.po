@@ -625,9 +625,21 @@ msgid "Save and sync"
 msgstr "שמור וסנכרן"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "לסמן %i פריטים כלא נצפו ב-Kodi כדי להתאים ל-Trakt?"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "לסמן %i סרטים כלא נצפו ב-Kodi כדי להתאים ל-Trakt?"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "למחוק %i דירוגים ב-Kodi כדי להתאים ל-Trakt?"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "למחוק %i דירוגי סרטים ב-Kodi כדי להתאים ל-Trakt?"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "לסמן %i פרקים כלא נצפו ב-Kodi כדי להתאים ל-Trakt?"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "למחוק %i דירוגי סדרות ב-Kodi כדי להתאים ל-Trakt?"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "למחוק %i דירוגי פרקים ב-Kodi כדי להתאים ל-Trakt?"

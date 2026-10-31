@@ -625,9 +625,21 @@ msgid "Save and sync"
 msgstr "Desa i sincronitza"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "Voleu marcar %i elements com a no vistos a Kodi perquè coincideixin amb Trakt?"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "Voleu marcar %i pel·lícules com a no vistes a Kodi per coincidir amb Trakt?"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "Voleu esborrar %i valoracions a Kodi perquè coincideixin amb Trakt?"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "Voleu esborrar %i valoracions de pel·lícules a Kodi per coincidir amb Trakt?"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "Voleu marcar %i episodis com a no vistos a Kodi per coincidir amb Trakt?"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "Voleu esborrar %i valoracions de sèries a Kodi per coincidir amb Trakt?"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "Voleu esborrar %i valoracions d'episodis a Kodi per coincidir amb Trakt?"

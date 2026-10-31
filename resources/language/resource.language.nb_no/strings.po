@@ -625,9 +625,21 @@ msgid "Save and sync"
 msgstr "Lagre og synkroniser"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "Merke %i elementer som usett i Kodi for å samsvare med Trakt?"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "Merke %i filmer som usett i Kodi for å samsvare med Trakt?"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "Fjerne %i vurderinger i Kodi for å samsvare med Trakt?"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "Fjerne %i filmvurderinger i Kodi for å samsvare med Trakt?"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "Merke %i episoder som usett i Kodi for å samsvare med Trakt?"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "Fjerne %i serievurderinger i Kodi for å samsvare med Trakt?"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "Fjerne %i episodevurderinger i Kodi for å samsvare med Trakt?"

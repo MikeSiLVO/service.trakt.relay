@@ -625,9 +625,21 @@ msgid "Save and sync"
 msgstr "儲存並同步"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "要在 Kodi 中將 %i 個項目標記為未觀看，以符合 Trakt 嗎？"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "要在 Kodi 中將 %i 部影片標記為未觀看，以與 Trakt 一致嗎？"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "要在 Kodi 中清除 %i 個評分，以符合 Trakt 嗎？"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "要在 Kodi 中清除 %i 個影片評分，以與 Trakt 一致嗎？"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "要在 Kodi 中將 %i 個單集標記為未觀看，以與 Trakt 一致嗎？"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "要在 Kodi 中清除 %i 個影集評分，以與 Trakt 一致嗎？"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "要在 Kodi 中清除 %i 個單集評分，以與 Trakt 一致嗎？"

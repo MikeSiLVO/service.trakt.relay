@@ -626,9 +626,21 @@ msgid "Save and sync"
 msgstr "Kaydet ve eşitle"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "Trakt ile eşleşmesi için Kodi'deki %i öğe izlenmedi olarak işaretlensin mi?"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "Trakt ile eşleşmesi için Kodi'de %i film izlenmedi olarak işaretlensin mi?"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "Trakt ile eşleşmesi için Kodi'deki %i derecelendirme silinsin mi?"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "Trakt ile eşleşmesi için Kodi'de %i film derecelendirmesi silinsin mi?"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "Trakt ile eşleşmesi için Kodi'de %i bölüm izlenmedi olarak işaretlensin mi?"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "Trakt ile eşleşmesi için Kodi'de %i dizi derecelendirmesi silinsin mi?"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "Trakt ile eşleşmesi için Kodi'de %i bölüm derecelendirmesi silinsin mi?"

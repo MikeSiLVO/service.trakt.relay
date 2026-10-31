@@ -626,9 +626,21 @@ msgid "Save and sync"
 msgstr "Бахъахъхъӕнын ӕмӕ синхронизаци кӕнын"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "Kodi-йы %i элементы нӕакастыл банысан кӕнын, Trakt-имӕ ӕмхуызон куыд уой, афтӕ?"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "Kodi-йы %i фильмы нӕакастыл банысан кӕнын, цӕмӕй Trakt-имӕ ӕмхуызон уа?"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "Kodi-йы %i рейтинджы айсын, Trakt-имӕ ӕмхуызон куыд уой, афтӕ?"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "Kodi-йы фильмты %i рейтинджы айсын, цӕмӕй Trakt-имӕ ӕмхуызон уа?"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "Kodi-йы %i эпизоды нӕакастыл банысан кӕнын, цӕмӕй Trakt-имӕ ӕмхуызон уа?"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "Kodi-йы сериалты %i рейтинджы айсын, цӕмӕй Trakt-имӕ ӕмхуызон уа?"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "Kodi-йы эпизодты %i рейтинджы айсын, цӕмӕй Trakt-имӕ ӕмхуызон уа?"

@@ -626,9 +626,21 @@ msgid "Save and sync"
 msgstr "Ruaj dhe sinkronizo"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "Të shënohen %i elemente si të papara në Kodi për t'u përputhur me Trakt?"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "Të shënohen %i filma si të paparë në Kodi për t'u përputhur me Trakt?"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "Të fshihen %i vlerësime në Kodi për t'u përputhur me Trakt?"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "Të fshihen %i vlerësime filmash në Kodi për t'u përputhur me Trakt?"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "Të shënohen %i episode si të papara në Kodi për t'u përputhur me Trakt?"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "Të fshihen %i vlerësime serialesh në Kodi për t'u përputhur me Trakt?"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "Të fshihen %i vlerësime episodesh në Kodi për t'u përputhur me Trakt?"

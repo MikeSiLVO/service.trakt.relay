@@ -626,9 +626,21 @@ msgid "Save and sync"
 msgstr "Salva e sincronizza"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "Segnare %i elementi come non visti in Kodi per allinearli a Trakt?"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "Segnare %i film come non visti in Kodi per allinearlo a Trakt?"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "Cancellare %i valutazioni in Kodi per allinearle a Trakt?"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "Cancellare %i valutazioni di film in Kodi per allinearlo a Trakt?"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "Segnare %i episodi come non visti in Kodi per allinearlo a Trakt?"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "Cancellare %i valutazioni di programmi in Kodi per allinearlo a Trakt?"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "Cancellare %i valutazioni di episodi in Kodi per allinearlo a Trakt?"

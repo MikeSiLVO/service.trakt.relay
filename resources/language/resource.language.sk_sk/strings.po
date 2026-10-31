@@ -626,9 +626,21 @@ msgid "Save and sync"
 msgstr "Uložiť a synchronizovať"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "Označiť v Kodi položky ako nepozreté (%i), aby zodpovedali Trakt?"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "Označiť %i filmov v Kodi ako nepozreté na zosúladenie s Trakt?"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "Vymazať v Kodi hodnotenia (%i), aby zodpovedali Trakt?"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "Vymazať %i hodnotení filmov v Kodi na zosúladenie s Trakt?"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "Označiť %i epizód v Kodi ako nepozreté na zosúladenie s Trakt?"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "Vymazať %i hodnotení seriálov v Kodi na zosúladenie s Trakt?"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "Vymazať %i hodnotení epizód v Kodi na zosúladenie s Trakt?"

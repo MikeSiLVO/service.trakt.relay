@@ -625,9 +625,21 @@ msgid "Save and sync"
 msgstr "Хадгалаад синхрончлох"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "Trakt-тай тааруулахын тулд Kodi-д %i зүйлийг үзээгүй болгох уу?"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "Trakt-тай тааруулахын тулд Kodi-д %i киног үзээгүй гэж тэмдэглэх үү?"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "Trakt-тай тааруулахын тулд Kodi-д %i үнэлгээг арилгах уу?"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "Trakt-тай тааруулахын тулд Kodi-д %i киноны үнэлгээг арилгах уу?"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "Trakt-тай тааруулахын тулд Kodi-д %i ангийг үзээгүй гэж тэмдэглэх үү?"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "Trakt-тай тааруулахын тулд Kodi-д %i цувралын үнэлгээг арилгах уу?"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "Trakt-тай тааруулахын тулд Kodi-д %i ангийн үнэлгээг арилгах уу?"

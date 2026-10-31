@@ -625,9 +625,21 @@ msgid "Save and sync"
 msgstr "Saglabāt un sinhronizēt"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "Atzīmēt %i vienumus Kodi kā nenoskatītus, lai atbilstu Trakt?"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "Atzīmēt %i filmas Kodi kā nenoskatītas, lai atbilstu Trakt?"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "Notīrīt %i reitingus Kodi, lai atbilstu Trakt?"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "Notīrīt %i filmu reitingus Kodi, lai atbilstu Trakt?"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "Atzīmēt %i sērijas Kodi kā nenoskatītas, lai atbilstu Trakt?"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "Notīrīt %i seriālu reitingus Kodi, lai atbilstu Trakt?"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "Notīrīt %i sēriju reitingus Kodi, lai atbilstu Trakt?"

@@ -625,9 +625,21 @@ msgid "Save and sync"
 msgstr "Αποθήκευση και συγχρονισμός"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "Σήμανση %i στοιχείων ως μη προβεβλημένων στο Kodi για ταύτιση με το Trakt;"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "Σήμανση %i ταινιών ως μη προβεβλημένων στο Kodi για ταύτιση με το Trakt;"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "Διαγραφή %i αξιολογήσεων στο Kodi για ταύτιση με το Trakt;"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "Διαγραφή %i αξιολογήσεων ταινιών στο Kodi για ταύτιση με το Trakt;"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "Σήμανση %i επεισοδίων ως μη προβεβλημένων στο Kodi για ταύτιση με το Trakt;"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "Διαγραφή %i αξιολογήσεων σειρών στο Kodi για ταύτιση με το Trakt;"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "Διαγραφή %i αξιολογήσεων επεισοδίων στο Kodi για ταύτιση με το Trakt;"

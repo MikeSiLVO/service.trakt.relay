@@ -626,9 +626,21 @@ msgid "Save and sync"
 msgstr "Запази и синхронизирай"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "Да се маркират ли %i елемента като неизгледани в Kodi, за да съвпаднат с Trakt?"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "Да се маркират ли %i филма като неизгледани в Kodi за съответствие с Trakt?"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "Да се изчистят ли %i оценки в Kodi, за да съвпаднат с Trakt?"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "Да се изчистят ли %i оценки на филми в Kodi за съответствие с Trakt?"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "Да се маркират ли %i епизода като неизгледани в Kodi за съответствие с Trakt?"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "Да се изчистят ли %i оценки на сериали в Kodi за съответствие с Trakt?"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "Да се изчистят ли %i оценки на епизоди в Kodi за съответствие с Trakt?"

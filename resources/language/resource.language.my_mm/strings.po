@@ -625,9 +625,21 @@ msgid "Save and sync"
 msgstr "သိမ်းပြီး ထပ်တူပြုရန်"
 
 msgctxt "#32264"
-msgid "Unwatch %i items in Kodi to match Trakt?"
-msgstr "Trakt နှင့် ကိုက်ညီစေရန် Kodi တွင် အရာ %i ခုကို မကြည့်ရသေးအဖြစ် မှတ်မလား။"
+msgid "Unwatch %i movies in Kodi to match Trakt?"
+msgstr "Trakt နှင့် ကိုက်ညီစေရန် Kodi တွင် ရုပ်ရှင် %i ကားကို မကြည့်ရသေးအဖြစ် မှတ်မလား။"
 
 msgctxt "#32265"
-msgid "Clear %i ratings in Kodi to match Trakt?"
-msgstr "Trakt နှင့် ကိုက်ညီစေရန် Kodi တွင် အဆင့်သတ်မှတ်မှု %i ခုကို ရှင်းလင်းမလား။"
+msgid "Clear %i movie ratings in Kodi to match Trakt?"
+msgstr "Trakt နှင့် ကိုက်ညီစေရန် Kodi တွင် ရုပ်ရှင် အဆင့်သတ်မှတ်မှု %i ခုကို ရှင်းလင်းမလား။"
+
+msgctxt "#32266"
+msgid "Unwatch %i episodes in Kodi to match Trakt?"
+msgstr "Trakt နှင့် ကိုက်ညီစေရန် Kodi တွင် အပိုင်း %i ပိုင်းကို မကြည့်ရသေးအဖြစ် မှတ်မလား။"
+
+msgctxt "#32267"
+msgid "Clear %i show ratings in Kodi to match Trakt?"
+msgstr "Trakt နှင့် ကိုက်ညီစေရန် Kodi တွင် ရှိုး အဆင့်သတ်မှတ်မှု %i ခုကို ရှင်းလင်းမလား။"
+
+msgctxt "#32268"
+msgid "Clear %i episode ratings in Kodi to match Trakt?"
+msgstr "Trakt နှင့် ကိုက်ညီစေရန် Kodi တွင် အပိုင်း အဆင့်သတ်မှတ်မှု %i ခုကို ရှင်းလင်းမလား။"
