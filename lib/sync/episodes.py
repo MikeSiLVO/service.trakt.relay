@@ -29,9 +29,11 @@ class EpisodeSync:
     """Episode half of a sync, each step run when its setting is on."""
 
     sync: Any
+    files: Dict[int, str]
 
     def __init__(self, sync: Any) -> None:
         self.sync = sync
+        self.files = {}
 
     def run(self) -> bool:
         """Run each episode step; False when Kodi has no shows or either side fails to load."""
@@ -90,7 +92,7 @@ class EpisodeSync:
         return True
 
     def _load_kodi(self) -> Tuple[Optional[Dict], Optional[Dict]]:
-        """Load Kodi's shows, all and watched episodes; None if empty, unreadable or canceled."""
+        """Load Kodi's shows, all and watched episodes, noting files; None if empty or cut short."""
         self.sync.update_progress(1, line1=get_string(32079))
 
         logger.debug("[Episodes Sync] Getting show data from Kodi")
@@ -164,6 +166,7 @@ class EpisodeSync:
             if "tvshowid" in kodi_show:
                 del kodi_show["tvshowid"]
 
+            self.files.update((ep["episodeid"], ep["file"]) for ep in data["episodes"])
             show_watched = dict(show)
             data2 = copy.deepcopy(data)
             show["seasons"] = to_trakt_items(data)
@@ -362,14 +365,16 @@ class EpisodeSync:
         fallback = get_setting_bool("scrobble_fallback")
         if get_setting_int("sync_watched_episodes") == TRAKT_TO_KODI:
             episodes, unwatches = episodes_to_mirror(
-                trakt_shows, kodi_shows_collected, fallback, trakt_progress or {}, rewatches)
+                trakt_shows, kodi_shows_collected, fallback, trakt_progress or {}, rewatches,
+                self.files)
         else:
             episodes = episodes_to_mark_watched(
-                trakt_shows, kodi_shows_collected, fallback, apply_rewatch_filter=rewatches)
+                trakt_shows, kodi_shows_collected, fallback, apply_rewatch_filter=rewatches,
+                files=self.files)
             # a play that never reached Trakt would look unplayed there
             scrobbled = get_setting_bool("scrobble_episode")
             unwatches = episodes_to_unwatch(
-                trakt_shows, kodi_shows, fallback) if rewatches and scrobbled else []
+                trakt_shows, kodi_shows, fallback, self.files) if rewatches and scrobbled else []
         if unwatches and len(ScrobbleQueue()):
             logger.info("[Episodes Sync] Unwatching waits for failed scrobbles to be retried")
         else:

@@ -7,6 +7,7 @@ from lib.sync.compare import (
     compare_movies,
     compare_shows,
     count_episodes,
+    episodes_to_mark_watched,
     episodes_to_mirror,
     episodes_to_unwatch,
     movies_to_mark_watched,
@@ -395,3 +396,48 @@ def test_episode_mirror_leaves_a_show_without_ids_watched():
     """Episodes of a Kodi show without ids are never unwatched, whatever Trakt lacks."""
     kodi = _lost([{"number": 1, "plays": 1, "ids": {"episodeid": 11}}], ids={})
     assert episodes_to_mirror({"shows": []}, kodi, True, {}, True) == ([], [])
+
+
+ONE_FILE = {11: "100.mkv", 12: "100.mkv"}
+LATER = "2026-10-02T00:21:00.000Z"
+PARTS = [{"number": 1, "plays": 1, "last_watched_at": WATCHED},
+         {"number": 2, "plays": 2, "last_watched_at": LATER}]
+
+
+def _parts(plays, watched_at):
+    """Kodi's S01E01 and E02 with the same plays and last play, as parts of one file have."""
+    return _lost([{"number": n, "plays": plays, "watched_at": watched_at,
+                   "ids": {"episodeid": 10 + n}} for n in (1, 2)])
+
+
+def test_mirror_gives_parts_of_a_file_their_most_plays_and_latest_play():
+    """Episodes in one file take their parts' most plays and latest play, then stay as they are."""
+    updates, _ = episodes_to_mirror(_lost(PARTS), _parts(1, KODI_WATCHED), True, {}, False,
+                                    ONE_FILE)
+    assert updates == [{"episodeid": n, "playcount": 2, "lastplayed": utc_to_local(LATER)}
+                       for n in (11, 12)]
+    current = _parts(2, "2026-10-02 00:21:00+00:00")
+    assert episodes_to_mirror(_lost(PARTS), current, True, {}, False, ONE_FILE) == ([], [])
+
+
+def test_mirror_keeps_a_file_watched_while_trakt_played_any_part():
+    """A part Trakt never played stays watched while its file holds one Trakt played."""
+    kodi = _parts(1, KODI_WATCHED)
+    assert episodes_to_mirror(_lost(PARTS[:1]), kodi, True, {}, False, ONE_FILE) == ([], [])
+    _, unwatches = episodes_to_mirror(_lost(PARTS[:1]), kodi, True, {}, False)
+    assert [u["episodeid"] for u in unwatches] == [12]
+
+
+def test_rewatch_keeps_a_file_watched_while_any_part_was_played_since():
+    """A part played only before the rewatch stays watched while its file holds one played since."""
+    trakt = _lost(REWATCH_PLAYS, reset_at="2026-10-01T00:00:00.000Z")
+    kodi = _parts(1, KODI_WATCHED)
+    assert episodes_to_unwatch(trakt, kodi, True, ONE_FILE) == []
+    assert [u["episodeid"] for u in episodes_to_unwatch(trakt, kodi, True)] == [12]
+
+
+def test_marking_gives_parts_of_a_file_their_most_plays_and_latest_play():
+    """Both ways raises each part of a file to its parts' most plays, dated by the latest play."""
+    updates = episodes_to_mark_watched(_lost(PARTS), _parts(0, None), True, files=ONE_FILE)
+    assert updates == [{"episodeid": n, "playcount": 2, "lastplayed": utc_to_local(LATER)}
+                       for n in (11, 12)]

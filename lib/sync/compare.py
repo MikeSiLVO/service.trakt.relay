@@ -289,8 +289,10 @@ def episodes_to_mark_watched(
     kodi_shows_collected: Dict,
     match_title_year: bool,
     apply_rewatch_filter: bool = False,
+    files: Optional[Dict[int, str]] = None,
 ) -> List[Dict]:
-    """List Kodi episode updates for each copy Trakt has more plays of, rewatch-aware when asked."""
+    """List Kodi episode updates for each file Trakt has more plays of, rewatch-aware when asked."""
+    files = files or {}
     updates: List[Dict] = []
     show_index = build_media_index(kodi_shows_collected.get("shows", []))
     for trakt_show in trakt_shows.get("shows", []):
@@ -309,6 +311,7 @@ def episodes_to_mark_watched(
                     continue
                 kodi_eps_by_key.setdefault((season_num, ep_num), []).append(ep)
 
+        targets = {}
         for trakt_season in trakt_show.get("seasons", []) or []:
             season_num = trakt_season.get("number")
             for trakt_ep in trakt_season.get("episodes", []) or []:
@@ -320,23 +323,33 @@ def episodes_to_mark_watched(
                     continue
                 key = (season_num, trakt_ep.get("number"))
                 for kodi_ep in kodi_eps_by_key.get(key, []):
-                    if (kodi_ep.get("plays", 0) or 0) >= trakt_plays:
-                        continue
                     episodeid = kodi_ep.get("ids", {}).get("episodeid")
-                    if episodeid is None:
-                        continue
+                    if episodeid is not None:
+                        targets[episodeid] = (trakt_plays, ep_watched_at)
+
+        merged = _merge_by_file(targets, files)
+        for kodi_eps in kodi_eps_by_key.values():
+            for kodi_ep in kodi_eps:
+                episodeid = kodi_ep.get("ids", {}).get("episodeid")
+                target = merged.get(files.get(episodeid, episodeid))
+                if episodeid is None or not target:
+                    continue
+                plays, watched_at = target
+                if (kodi_ep.get("plays", 0) or 0) < plays:
                     updates.append({
                         "episodeid": episodeid,
-                        "playcount": trakt_plays,
-                        "lastplayed": utc_to_local(ep_watched_at),
+                        "playcount": plays,
+                        "lastplayed": utc_to_local(watched_at),
                     })
     return updates
 
 
 def episodes_to_unwatch(
-    trakt_shows: Dict, kodi_shows_watched: Dict, match_title_year: bool
+    trakt_shows: Dict, kodi_shows_watched: Dict, match_title_year: bool,
+    files: Optional[Dict[int, str]] = None
 ) -> List[Dict]:
-    """List Kodi updates unwatching episodes Trakt played before a rewatch and not since."""
+    """List Kodi updates unwatching episodes of files Trakt played only before a rewatch."""
+    files = files or {}
     updates: List[Dict] = []
     show_index = build_media_index(kodi_shows_watched.get("shows", []))
     for trakt_show in trakt_shows.get("shows", []):
@@ -349,15 +362,22 @@ def episodes_to_unwatch(
             for season in trakt_show.get("seasons", []) or []
             for ep in season.get("episodes", []) or []
         }
+        stale = []
+        kept = set()
         for season in kodi_show.get("seasons", []) or []:
             for ep in season.get("episodes", []) or []:
                 watched_at = last_played.get((season.get("number"), ep.get("number")))
                 episodeid = ep.get("ids", {}).get("episodeid")
-                # one Trakt never played goes to its history this sync
-                if episodeid is None or watched_at is None:
+                if episodeid is None:
                     continue
-                if watched_at < reset_at:
-                    updates.append({"episodeid": episodeid, "playcount": 0, "lastplayed": ""})
+                file = files.get(episodeid, episodeid)
+                # one Trakt never played goes to its history this sync
+                if watched_at is None or watched_at >= reset_at:
+                    kept.add(file)
+                else:
+                    stale.append((episodeid, file))
+        updates +=[{"episodeid": episodeid, "playcount": 0, "lastplayed": ""}
+                    for episodeid, file in stale if file not in kept]
     return updates
 
 
@@ -454,9 +474,11 @@ def movies_to_mirror(
 
 
 def episodes_to_mirror(
-    trakt_shows: Dict, kodi_shows: Dict, match_title_year: bool, paused: Dict, rewatches: bool
+    trakt_shows: Dict, kodi_shows: Dict, match_title_year: bool, paused: Dict, rewatches: bool,
+    files: Optional[Dict[int, str]] = None
 ) -> Tuple[List[Dict], List[Dict]]:
-    """List Kodi episode updates to Trakt's plays and last play, plus unwatches of ones it lacks."""
+    """List Kodi episode updates to Trakt's plays and last play by file, unwatching the rest."""
+    files = files or {}
     index = build_media_index(trakt_shows.get("shows", []))
     paused_at = {
         ((show.get("ids") or {}).get("trakt"), season.get("number"), ep.get("number")):
@@ -477,22 +499,41 @@ def episodes_to_mirror(
                 before = reset_at and (ep.get("last_watched_at") or "") < reset_at
                 if ep.get("plays") and not before:
                     played[(season.get("number"), ep.get("number"))] = ep
-        for season in kodi_show.get("seasons", []) or []:
-            for ep in season.get("episodes", []) or []:
-                episodeid = ep.get("ids", {}).get("episodeid")
-                if episodeid is None:
-                    continue
-                key = (season.get("number"), ep.get("number"))
-                trakt_ep = played.get(key)
-                if trakt_ep:
-                    last = _latest(trakt_ep.get("last_watched_at"), paused_at.get((show_id,) + key))
-                    if ep.get("plays") != trakt_ep["plays"] or not _same_time(
-                            ep.get("watched_at"), last):
-                        updates.append({"episodeid": episodeid, "playcount": trakt_ep["plays"],
-                                        "lastplayed": utc_to_local(last)})
-                elif ep.get("plays") and has_id(kodi_show):
-                    unwatches.append({"episodeid": episodeid, "playcount": 0, "lastplayed": ""})
+        episodes = [(season.get("number"), ep)
+                    for season in kodi_show.get("seasons", []) or []
+                    for ep in season.get("episodes", []) or []
+                    if ep.get("ids", {}).get("episodeid") is not None]
+        targets = {}
+        for season_num, ep in episodes:
+            key = (season_num, ep.get("number"))
+            trakt_ep = played.get(key)
+            if trakt_ep:
+                targets[ep["ids"]["episodeid"]] = (trakt_ep["plays"], _latest(
+                    trakt_ep.get("last_watched_at"), paused_at.get((show_id,) + key)))
+        merged = _merge_by_file(targets, files)
+        for _, ep in episodes:
+            episodeid = ep["ids"]["episodeid"]
+            target = merged.get(files.get(episodeid, episodeid))
+            if target:
+                plays, last = target
+                if ep.get("plays") != plays or not _same_time(ep.get("watched_at"), last):
+                    updates.append({"episodeid": episodeid, "playcount": plays,
+                                    "lastplayed": utc_to_local(last)})
+            elif ep.get("plays") and has_id(kodi_show):
+                unwatches.append({"episodeid": episodeid, "playcount": 0, "lastplayed": ""})
     return updates, unwatches
+
+
+def _merge_by_file(targets: Dict[int, Tuple[int, Optional[str]]], files: Dict[int, str]) -> Dict:
+    """Merge episode targets by Kodi file, keeping the most plays and latest play of its parts."""
+    merged: Dict = {}
+    for episodeid, (plays, last) in targets.items():
+        # Kodi keeps one play count and last play per file, shared by every episode in it
+        key = files.get(episodeid, episodeid)
+        if key in merged:
+            plays, last = max(plays, merged[key][0]), _latest(last, merged[key][1])
+        merged[key] = (plays, last)
+    return merged
 
 
 def _latest(*times: Optional[str]) -> Optional[str]:
