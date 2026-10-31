@@ -3,7 +3,7 @@ import re
 import xml.etree.ElementTree as ET
 from unittest import mock
 
-from lib.dialogs import auth, rating
+from lib.dialogs import auth, rating, setup
 from lib.kodi import utilities
 
 SKIN = os.path.join(os.path.dirname(os.path.dirname(__file__)), "resources", "skins", "Default")
@@ -28,6 +28,14 @@ def test_auth_dialog_has_its_controls_and_textures():
     """The auth XML has both labels the code fills, its Settings button and textures that exist."""
     ids, textures = _parse(auth.AUTH_XML)
     assert {auth.INSTRUCTION_LABEL, auth.CODE_LABEL, auth.SETTINGS_BUTTON} <= ids
+    assert textures and all(os.path.isfile(os.path.join(SKIN, "media", t)) for t in textures)
+
+
+def test_setup_dialog_has_its_controls_and_textures():
+    """The setup XML has every choice, the description label, both saves, textures that exist."""
+    ids, textures = _parse(setup.SETUP_XML)
+    controls = {setup.DESCRIPTION_LABEL, setup.SAVE, setup.SAVE_AND_SYNC}
+    assert set(setup.DESCRIPTIONS) | controls <= ids
     assert textures and all(os.path.isfile(os.path.join(SKIN, "media", t)) for t in textures)
 
 

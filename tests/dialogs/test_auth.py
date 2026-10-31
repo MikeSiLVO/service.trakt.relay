@@ -27,27 +27,31 @@ def _connect(code, approve, settings=False):
             mock.patch.object(auth, "notify") as notify, \
             mock.patch.object(auth, "show_settings") as show_settings, \
             mock.patch.object(auth, "get_setting", return_value="mikesilvo"), \
-            mock.patch.object(auth, "get_string", side_effect=str):
+            mock.patch.object(auth, "get_string", side_effect=str), \
+            mock.patch.object(auth.setup, "offer") as offer:
         connected = auth.connect()
+    dialog.offer = offer
     return connected, dialog, notify, show_settings
 
 
 def test_approved_code_closes_the_dialog_and_connects():
-    """An approved code closes the dialog, connects and confirms it with the account name."""
+    """An approved code closes the dialog, connects, confirms the account and offers the setup."""
     connected, dialog, notify, show_settings = _connect(CODE, approve=True)
     assert connected is True
     assert dialog.code == "5055CC52"
     dialog.close.assert_called_once_with()
     notify.assert_called_once_with("32152", "mikesilvo", 3000)
+    dialog.offer.assert_called_once_with()
     show_settings.assert_not_called()
 
 
 def test_refused_code_closes_the_dialog_without_connecting():
-    """A refused or expired code closes the dialog and leaves Relay unconnected."""
+    """A refused or expired code closes the dialog and leaves Relay unconnected, with no setup."""
     connected, dialog, notify, show_settings = _connect(CODE, approve=False)
     assert connected is False
     dialog.close.assert_called_once_with()
     notify.assert_not_called()
+    dialog.offer.assert_not_called()
     show_settings.assert_not_called()
 
 
@@ -78,22 +82,25 @@ def test_not_connected_notice_shows_once_per_session():
     notify.assert_called_once()
 
 
-def _prompt(conditions, skins=("estuary", "estuary"), connected=False):
-    """Tick the connect prompt per idle condition; return it and the patched connect."""
+def _prompt(conditions, skins=("estuary", "estuary"), connected=False, saved=True):
+    """Tick the connect prompt per idle condition; return it and the patched connect and setup."""
     xbmc = mock.Mock()
     xbmc.getCondVisibility.side_effect = list(conditions)
     xbmc.getSkinDir.side_effect = list(skins)
     with mock.patch.object(auth, "xbmc", xbmc), \
             mock.patch("lib.kodi.utilities.xbmc", xbmc), \
             mock.patch.object(auth.shared, "api", mock.Mock(connected=connected)), \
+            mock.patch.object(auth, "get_setting_bool", return_value=saved), \
+            mock.patch.object(auth.setup, "offer") as offer, \
             mock.patch.object(auth, "connect", return_value=False) as connect:
         prompt = auth.ConnectPrompt()
         for _ in conditions:
             prompt.tick()
+    connect.offer = offer
     return prompt, connect
 
 
-def test_prompt_waits_for_three_unbroken_seconds():
+def test_prompt_waits_for_three_idle_ticks_in_a_row():
     """The connect dialog shows once condition holds 3 ticks running; a break resets the count."""
     _, connect = _prompt([True, True, False, True, True])
     connect.assert_not_called()
@@ -109,6 +116,15 @@ def test_prompt_closed_by_a_skin_switch_stays_pending():
 
 
 def test_prompt_skipped_once_connected():
-    """A connected Relay never shows the connect dialog."""
+    """A connected Relay with the setup saved shows neither dialog."""
     _, connect = _prompt([True] * 3, connected=True)
     connect.assert_not_called()
+    connect.offer.assert_not_called()
+
+
+def test_prompt_offers_the_setup_once_a_session_until_it_is_saved():
+    """A connected Relay with the sync setup never saved offers it once after the idle wait."""
+    prompt, connect = _prompt([True] * 3, connected=True, saved=False)
+    connect.assert_not_called()
+    connect.offer.assert_called_once_with()
+    assert not prompt.pending

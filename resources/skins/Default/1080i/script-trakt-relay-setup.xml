@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">10</defaultcontrol>
+	<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+	<controls>
+		<control type="image">
+			<width>1920</width>
+			<height>1080</height>
+			<texture colordiffuse="B8000000">trakt-relay-white.png</texture>
+		</control>
+		<control type="group">
+			<left>240</left>
+			<top>62</top>
+			<control type="image">
+				<width>1440</width>
+				<height>956</height>
+				<texture border="16" colordiffuse="FF2F2D33">trakt-relay-panel.png</texture>
+			</control>
+			<control type="image">
+				<left>2</left>
+				<top>2</top>
+				<width>1436</width>
+				<height>952</height>
+				<texture border="16" colordiffuse="FF151418">trakt-relay-panel.png</texture>
+			</control>
+			<control type="group">
+				<left>40</left>
+				<control type="image">
+					<top>40</top>
+					<width>170</width>
+					<height>48</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[Window.Property(logo)]</texture>
+				</control>
+				<control type="label">
+					<top>112</top>
+					<width>1360</width>
+					<height>40</height>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<label>[B]$ADDON[service.trakt.relay 32229][/B]</label>
+				</control>
+				<control type="label">
+					<top>152</top>
+					<width>1360</width>
+					<height>84</height>
+					<wrapmultiline>true</wrapmultiline>
+					<font>font13</font>
+					<textcolor>FFB8B6BE</textcolor>
+					<label>$ADDON[service.trakt.relay 32249]</label>
+				</control>
+				<control type="image">
+					<top>244</top>
+					<width>1360</width>
+					<height>2</height>
+					<texture colordiffuse="FF2F2D33">trakt-relay-white.png</texture>
+				</control>
+				<control type="label">
+					<top>256</top>
+					<width>1360</width>
+					<height>36</height>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<label>$ADDON[service.trakt.relay 32235]</label>
+				</control>
+				<control type="grouplist" id="10">
+					<top>296</top>
+					<width>1360</width>
+					<height>56</height>
+					<orientation>horizontal</orientation>
+					<itemgap>16</itemgap>
+					<ondown>20</ondown>
+					<control type="togglebutton" id="100">
+						<width>328</width>
+						<height>56</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font13</font>
+						<textoffsetx>10</textoffsetx>
+						<textcolor>FFB8B6BE</textcolor>
+						<focusedcolor>FFFFFFFF</focusedcolor>
+						<label>$ADDON[service.trakt.relay 32237]</label>
+						<texturefocus border="16" colordiffuse="FF56545C">trakt-relay-panel.png</texturefocus>
+						<texturenofocus border="16" colordiffuse="FF2F2D33">trakt-relay-panel.png</texturenofocus>
+						<alttexturefocus border="16" colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-panel.png</alttexturefocus>
+						<alttexturenofocus border="16" colordiffuse="$INFO[Window.Property(selected)]">trakt-relay-panel.png</alttexturenofocus>
+						<usealttexture>String.IsEqual(Window.Property(watched),0)</usealttexture>
+					</control>
+					<control type="togglebutton" id="101">
+						<width>328</width>
+						<height>56</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font13</font>
+						<textoffsetx>10</textoffsetx>
+						<textcolor>FFB8B6BE</textcolor>
+						<focusedcolor>FFFFFFFF</focusedcolor>
+						<label>$ADDON[service.trakt.relay 32238]</label>
+						<texturefocus border="16" colordiffuse="FF56545C">trakt-relay-panel.png</texturefocus>
+						<texturenofocus border="16" colordiffuse="FF2F2D33">trakt-relay-panel.png</texturenofocus>
+						<alttexturefocus border="16" colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-panel.png</alttexturefocus>
+						<alttexturenofocus border="16" colordiffuse="$INFO[Window.Property(selected)]">trakt-relay-panel.png</alttexturenofocus>
+						<usealttexture>String.IsEqual(Window.Property(watched),1)</usealttexture>
+					</control>
+					<control type="togglebutton" id="102">
+						<width>328</width>
+						<height>56</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font13</font>
+						<textoffsetx>10</textoffsetx>
+						<textcolor>FFB8B6BE</textcolor>
+						<focusedcolor>FFFFFFFF</focusedcolor>
+						<label>$ADDON[service.trakt.relay 32239]</label>
+						<texturefocus border="16" colordiffuse="FF56545C">trakt-relay-panel.png</texturefocus>
+						<texturenofocus border="16" colordiffuse="FF2F2D33">trakt-relay-panel.png</texturenofocus>
+						<alttexturefocus border="16" colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-panel.png</alttexturefocus>
+						<alttexturenofocus border="16" colordiffuse="$INFO[Window.Property(selected)]">trakt-relay-panel.png</alttexturenofocus>
+						<usealttexture>String.IsEqual(Window.Property(watched),2)</usealttexture>
+					</control>
+					<control type="togglebutton" id="103">
+						<width>328</width>
+						<height>56</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font13</font>
+						<textoffsetx>10</textoffsetx>
+						<textcolor>FFB8B6BE</textcolor>
+						<focusedcolor>FFFFFFFF</focusedcolor>
+						<label>$ADDON[service.trakt.relay 32240]</label>
+						<texturefocus border="16" colordiffuse="FF56545C">trakt-relay-panel.png</texturefocus>
+						<texturenofocus border="16" colordiffuse="FF2F2D33">trakt-relay-panel.png</texturenofocus>
+						<alttexturefocus border="16" colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-panel.png</alttexturefocus>
+						<alttexturenofocus border="16" colordiffuse="$INFO[Window.Property(selected)]">trakt-relay-panel.png</alttexturenofocus>
+						<usealttexture>String.IsEqual(Window.Property(watched),3)</usealttexture>
+					</control>
+				</control>
+				<control type="label">
+					<top>364</top>
+					<width>1360</width>
+					<height>36</height>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<label>$ADDON[service.trakt.relay 32241]</label>
+				</control>
+				<control type="grouplist" id="20">
+					<top>404</top>
+					<width>1360</width>
+					<height>56</height>
+					<orientation>horizontal</orientation>
+					<itemgap>16</itemgap>
+					<onup>10</onup>
+					<ondown>30</ondown>
+					<control type="togglebutton" id="200">
+						<width>328</width>
+						<height>56</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font13</font>
+						<textoffsetx>10</textoffsetx>
+						<textcolor>FFB8B6BE</textcolor>
+						<focusedcolor>FFFFFFFF</focusedcolor>
+						<label>$ADDON[service.trakt.relay 32237]</label>
+						<texturefocus border="16" colordiffuse="FF56545C">trakt-relay-panel.png</texturefocus>
+						<texturenofocus border="16" colordiffuse="FF2F2D33">trakt-relay-panel.png</texturenofocus>
+						<alttexturefocus border="16" colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-panel.png</alttexturefocus>
+						<alttexturenofocus border="16" colordiffuse="$INFO[Window.Property(selected)]">trakt-relay-panel.png</alttexturenofocus>
+						<usealttexture>String.IsEqual(Window.Property(ratings),0)</usealttexture>
+					</control>
+					<control type="togglebutton" id="201">
+						<width>328</width>
+						<height>56</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font13</font>
+						<textoffsetx>10</textoffsetx>
+						<textcolor>FFB8B6BE</textcolor>
+						<focusedcolor>FFFFFFFF</focusedcolor>
+						<label>$ADDON[service.trakt.relay 32238]</label>
+						<texturefocus border="16" colordiffuse="FF56545C">trakt-relay-panel.png</texturefocus>
+						<texturenofocus border="16" colordiffuse="FF2F2D33">trakt-relay-panel.png</texturenofocus>
+						<alttexturefocus border="16" colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-panel.png</alttexturefocus>
+						<alttexturenofocus border="16" colordiffuse="$INFO[Window.Property(selected)]">trakt-relay-panel.png</alttexturenofocus>
+						<usealttexture>String.IsEqual(Window.Property(ratings),1)</usealttexture>
+					</control>
+					<control type="togglebutton" id="202">
+						<width>328</width>
+						<height>56</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font13</font>
+						<textoffsetx>10</textoffsetx>
+						<textcolor>FFB8B6BE</textcolor>
+						<focusedcolor>FFFFFFFF</focusedcolor>
+						<label>$ADDON[service.trakt.relay 32239]</label>
+						<texturefocus border="16" colordiffuse="FF56545C">trakt-relay-panel.png</texturefocus>
+						<texturenofocus border="16" colordiffuse="FF2F2D33">trakt-relay-panel.png</texturenofocus>
+						<alttexturefocus border="16" colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-panel.png</alttexturefocus>
+						<alttexturenofocus border="16" colordiffuse="$INFO[Window.Property(selected)]">trakt-relay-panel.png</alttexturenofocus>
+						<usealttexture>String.IsEqual(Window.Property(ratings),2)</usealttexture>
+					</control>
+					<control type="togglebutton" id="203">
+						<width>328</width>
+						<height>56</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font13</font>
+						<textoffsetx>10</textoffsetx>
+						<textcolor>FFB8B6BE</textcolor>
+						<focusedcolor>FFFFFFFF</focusedcolor>
+						<label>$ADDON[service.trakt.relay 32240]</label>
+						<texturefocus border="16" colordiffuse="FF56545C">trakt-relay-panel.png</texturefocus>
+						<texturenofocus border="16" colordiffuse="FF2F2D33">trakt-relay-panel.png</texturenofocus>
+						<alttexturefocus border="16" colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-panel.png</alttexturefocus>
+						<alttexturenofocus border="16" colordiffuse="$INFO[Window.Property(selected)]">trakt-relay-panel.png</alttexturenofocus>
+						<usealttexture>String.IsEqual(Window.Property(ratings),3)</usealttexture>
+					</control>
+				</control>
+				<control type="label">
+					<top>472</top>
+					<width>1360</width>
+					<height>36</height>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<label>$ADDON[service.trakt.relay 32244]</label>
+				</control>
+				<control type="grouplist" id="30">
+					<top>512</top>
+					<width>1360</width>
+					<height>56</height>
+					<orientation>horizontal</orientation>
+					<itemgap>16</itemgap>
+					<onup>20</onup>
+					<ondown>40</ondown>
+					<control type="togglebutton" id="300">
+						<width>328</width>
+						<height>56</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font13</font>
+						<textoffsetx>10</textoffsetx>
+						<textcolor>FFB8B6BE</textcolor>
+						<focusedcolor>FFFFFFFF</focusedcolor>
+						<label>$ADDON[service.trakt.relay 32237]</label>
+						<texturefocus border="16" colordiffuse="FF56545C">trakt-relay-panel.png</texturefocus>
+						<texturenofocus border="16" colordiffuse="FF2F2D33">trakt-relay-panel.png</texturenofocus>
+						<alttexturefocus border="16" colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-panel.png</alttexturefocus>
+						<alttexturenofocus border="16" colordiffuse="$INFO[Window.Property(selected)]">trakt-relay-panel.png</alttexturenofocus>
+						<usealttexture>String.IsEqual(Window.Property(resume),0)</usealttexture>
+					</control>
+					<control type="togglebutton" id="301">
+						<width>328</width>
+						<height>56</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font13</font>
+						<textoffsetx>10</textoffsetx>
+						<textcolor>FFB8B6BE</textcolor>
+						<focusedcolor>FFFFFFFF</focusedcolor>
+						<label>$ADDON[service.trakt.relay 32250]</label>
+						<texturefocus border="16" colordiffuse="FF56545C">trakt-relay-panel.png</texturefocus>
+						<texturenofocus border="16" colordiffuse="FF2F2D33">trakt-relay-panel.png</texturenofocus>
+						<alttexturefocus border="16" colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-panel.png</alttexturefocus>
+						<alttexturenofocus border="16" colordiffuse="$INFO[Window.Property(selected)]">trakt-relay-panel.png</alttexturenofocus>
+						<usealttexture>String.IsEqual(Window.Property(resume),1)</usealttexture>
+					</control>
+				</control>
+				<control type="label">
+					<top>580</top>
+					<width>1360</width>
+					<height>36</height>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<label>$ADDON[service.trakt.relay 32055]</label>
+				</control>
+				<control type="grouplist" id="40">
+					<top>620</top>
+					<width>1360</width>
+					<height>56</height>
+					<orientation>horizontal</orientation>
+					<itemgap>16</itemgap>
+					<onup>30</onup>
+					<ondown>50</ondown>
+					<control type="togglebutton" id="400">
+						<width>328</width>
+						<height>56</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font13</font>
+						<textoffsetx>10</textoffsetx>
+						<textcolor>FFB8B6BE</textcolor>
+						<focusedcolor>FFFFFFFF</focusedcolor>
+						<label>$ADDON[service.trakt.relay 32237]</label>
+						<texturefocus border="16" colordiffuse="FF56545C">trakt-relay-panel.png</texturefocus>
+						<texturenofocus border="16" colordiffuse="FF2F2D33">trakt-relay-panel.png</texturenofocus>
+						<alttexturefocus border="16" colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-panel.png</alttexturefocus>
+						<alttexturenofocus border="16" colordiffuse="$INFO[Window.Property(selected)]">trakt-relay-panel.png</alttexturenofocus>
+						<usealttexture>String.IsEqual(Window.Property(scan),0)</usealttexture>
+					</control>
+					<control type="togglebutton" id="401">
+						<width>328</width>
+						<height>56</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font13</font>
+						<textoffsetx>10</textoffsetx>
+						<textcolor>FFB8B6BE</textcolor>
+						<focusedcolor>FFFFFFFF</focusedcolor>
+						<label>$ADDON[service.trakt.relay 32250]</label>
+						<texturefocus border="16" colordiffuse="FF56545C">trakt-relay-panel.png</texturefocus>
+						<texturenofocus border="16" colordiffuse="FF2F2D33">trakt-relay-panel.png</texturenofocus>
+						<alttexturefocus border="16" colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-panel.png</alttexturefocus>
+						<alttexturenofocus border="16" colordiffuse="$INFO[Window.Property(selected)]">trakt-relay-panel.png</alttexturenofocus>
+						<usealttexture>String.IsEqual(Window.Property(scan),1)</usealttexture>
+					</control>
+				</control>
+				<control type="image">
+					<top>688</top>
+					<width>1360</width>
+					<height>2</height>
+					<texture colordiffuse="FF2F2D33">trakt-relay-white.png</texture>
+				</control>
+				<control type="label" id="600">
+					<top>700</top>
+					<width>1360</width>
+					<height>126</height>
+					<wrapmultiline>true</wrapmultiline>
+					<font>font13</font>
+					<textcolor>FF96949C</textcolor>
+				</control>
+				<control type="grouplist" id="50">
+					<top>852</top>
+					<width>1360</width>
+					<height>64</height>
+					<orientation>horizontal</orientation>
+					<itemgap>16</itemgap>
+					<onup>40</onup>
+					<control type="button" id="501">
+						<width min="328">auto</width>
+						<height>64</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textoffsetx>24</textoffsetx>
+						<font>font13</font>
+						<textcolor>FFFFFFFF</textcolor>
+						<focusedcolor>FFFFFFFF</focusedcolor>
+						<label>$ADDON[service.trakt.relay 32263]</label>
+						<texturefocus border="16" colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-panel.png</texturefocus>
+						<texturenofocus border="16" colordiffuse="FF2F2D33">trakt-relay-panel.png</texturenofocus>
+					</control>
+					<control type="button" id="502">
+						<width min="328">auto</width>
+						<height>64</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textoffsetx>24</textoffsetx>
+						<font>font13</font>
+						<textcolor>FFFFFFFF</textcolor>
+						<focusedcolor>FFFFFFFF</focusedcolor>
+						<label>$LOCALIZE[190]</label>
+						<texturefocus border="16" colordiffuse="$INFO[Window.Property(accent)]">trakt-relay-panel.png</texturefocus>
+						<texturenofocus border="16" colordiffuse="FF2F2D33">trakt-relay-panel.png</texturenofocus>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

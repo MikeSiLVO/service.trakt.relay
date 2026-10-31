@@ -7,7 +7,7 @@ from typing import Deque, Dict, Optional
 import dateutil.parser
 import xbmc
 
-from lib.dialogs import auth
+from lib.dialogs import auth, setup
 from lib.dialogs.conflict import ConflictWarning
 from lib.media.match import build_media_index, find_in_index
 from lib.trakt import shared
@@ -53,7 +53,7 @@ class Service:
             self._dispatching = False
 
     def _dispatch(self, data: Dict) -> None:
-        """Dispatch a queued event; if not connected, starts only notify, scripts connect first."""
+        """Dispatch queued event; unconnected, starts only notify, script actions connect first."""
         if self.scrobbler is None:
             return
         try:
@@ -106,6 +106,8 @@ class Service:
             elif action == "auth_info":
                 xbmc.executebuiltin("Dialog.Close(all, true)")
                 auth.connect()
+            elif action == "syncsetup":
+                setup.run()
             else:
                 logger.debug("Unknown dispatch action, '%s'." % action)
         except Exception:

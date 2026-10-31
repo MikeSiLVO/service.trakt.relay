@@ -35,6 +35,14 @@ def test_unconnected_script_action_runs_only_once_connected():
     actions.rate_manually.assert_not_called()
 
 
+def test_sync_setup_opens_without_connecting():
+    """The sync setup opens without asking to connect while Relay is not connected."""
+    with mock.patch.object(service.setup, "run") as run:
+        _, _, auth = _dispatch("syncsetup", connected=False)
+    run.assert_called_once_with()
+    auth.connect.assert_not_called()
+
+
 def test_connected_events_run_without_asking():
     """A connected Relay runs events straight away."""
     scrobbler, _, auth = _dispatch("started", connected=True)

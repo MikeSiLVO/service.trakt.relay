@@ -7,8 +7,9 @@ from typing import cast
 import xbmc
 import xbmcgui
 
+from lib.dialogs import setup
 from lib.kodi.client import ADDON
-from lib.kodi.settings import get_setting, get_string, show_settings
+from lib.kodi.settings import get_setting, get_setting_bool, get_string, show_settings
 from lib.kodi.utilities import count_idle, notify, set_theme
 from lib.trakt import shared
 
@@ -45,7 +46,7 @@ class DeviceAuthDialog(xbmcgui.WindowXMLDialog):
 
 
 def connect() -> bool:
-    """Connect by device code until approved, refused, expired or closed; open settings if asked."""
+    """Connect until approved, refused, expired or closed; offer setup or open settings if asked."""
     api = shared.api
     code = api.request_device_code()
     if not code:
@@ -71,6 +72,7 @@ def connect() -> bool:
     stop.set()
     if approved.is_set():
         notify(get_string(32152), get_setting("user"), 3000)
+        setup.offer()
     elif dialog.open_settings:
         show_settings()
     return api.connected
@@ -84,22 +86,27 @@ def notify_not_connected() -> None:
 
 
 class ConnectPrompt:
-    """Connect dialog shown once a session while not connected, after Kodi idles for 3 seconds."""
+    """Connect dialog once a session, or sync setup when connected, after 3 idle ticks in a row."""
 
     def __init__(self) -> None:
         self.held = 0
         self.pending = True
 
     def tick(self) -> None:
-        """Count idle ticks and show the connect dialog on the third in a row."""
-        if not self.pending or shared.api.connected:
+        """Count idle ticks and on the third show the connect dialog, or the setup if connected."""
+        if shared.api.connected and get_setting_bool("sync_setup_saved"):
+            self.pending = False
+        if not self.pending:
             return
         self.held = count_idle(self.held)
         if self.held < 3:
             return
         self.held = 0
         skin = xbmc.getSkinDir()
+        if shared.api.connected:
+            setup.offer()
+        else:
+            connect()
         # a skin switch closes the dialog the same way Back does
-        if not connect() and xbmc.getSkinDir() != skin:
-            return
-        self.pending = False
+        if xbmc.getSkinDir() == skin:
+            self.pending = False

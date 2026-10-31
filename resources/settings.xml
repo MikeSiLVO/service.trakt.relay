@@ -130,6 +130,12 @@
 					<level>4</level>
 					<visible>false</visible>
 				</setting>
+				<setting id="sync_setup_saved" type="boolean" label="sync_setup_saved">
+					<control type="toggle" />
+					<default>false</default>
+					<level>4</level>
+					<visible>false</visible>
+				</setting>
 				<setting id="kodi_library_dirty" type="string" label="kodi_library_dirty">
 					<constraints>
 						<allowempty>true</allowempty>
@@ -524,6 +530,16 @@
 		</category>
 		<category id="synchronize" label="32045" help="">
 			<group id="1" label="">
+				<setting id="sync_setup" type="action" label="32229" help="32230">
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<control type="button" format="action">
+						<close>true</close>
+					</control>
+					<data>RunScript(service.trakt.relay, action=syncsetup)</data>
+					<level>0</level>
+				</setting>
 				<setting id="sync_on_update" type="boolean" label="32055" help="32231">
 					<control type="toggle" />
 					<default>false</default>

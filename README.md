@@ -16,6 +16,8 @@ Install Trakt Relay from the Kodi add-on repository. Betas come first through [r
 
 Until your Trakt account is connected, each Kodi start shows a code and a QR code to connect it. Approve it at [trakt.tv/activate](https://trakt.tv/activate) and the dialog closes by itself. You can also connect from the add-on settings.
 
+Once connected, Relay asks what to sync, and every sync stays off until you choose. "Choose what to sync" in the add-on settings opens the same choices again.
+
 ## What gets recognized
 
 Library items are matched by the IMDb, TMDB and TVDB ids your scrapers give them. Streams from other add-ons are recognized from the season, episode, title and year the add-on sets, or from ids it passes.
