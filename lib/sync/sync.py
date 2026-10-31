@@ -79,16 +79,17 @@ class Sync:
         )
 
     def run(self) -> None:
-        """Run movie then episode sync and save last activity; background runs skip if unchanged."""
+        """Run movie then episode sync; skip unchanged background runs; cache only complete runs."""
         logger.info("Starting synchronization with Trakt.tv")
 
         if not self.manual and self._can_skip():
             logger.info("[Sync] No changes on Trakt or Kodi since last sync, skipping.")
             return
 
+        complete = self.library == "all"
         if self._enabled('movies'):
             if self.library in ["all", "movies"]:
-                self._run_half(movies.MovieSync(self), 32213)
+                complete = self._run_half(movies.MovieSync(self), 32213) and complete
             else:
                 logger.debug(
                     "Movie sync is being skipped for this manual sync.")
@@ -98,7 +99,7 @@ class Sync:
         if self._enabled('episodes'):
             if self.library in ["all", "episodes"]:
                 if not (self._enabled('movies') and self.is_canceled()):
-                    self._run_half(episodes.EpisodeSync(self), 32214)
+                    complete = self._run_half(episodes.EpisodeSync(self), 32214) and complete
                 else:
                     logger.debug(
                         "Episode sync is being skipped because movie sync was canceled.")
@@ -108,11 +109,15 @@ class Sync:
         else:
             logger.debug("Episode sync is disabled, skipping.")
 
-        self._save_last_activities()
+        if complete and not self.is_canceled():
+            self._save_last_activities()
+        else:
+            # what this run left undone must not look unchanged to the next background run
+            set_setting("kodi_library_dirty", "true")
         logger.info("[Sync] Finished synchronization with Trakt.tv")
 
-    def _run_half(self, half: Any, heading_id: int) -> None:
-        """Run a sync half in its progress dialog, notifying its start and its end or failures."""
+    def _run_half(self, half: Any, heading_id: int) -> bool:
+        """Run a half in a progress dialog, notifying start, end or failures; True if finished."""
         heading = get_string(heading_id)
         if self.should_notify:
             notify(heading, get_string(32061))
@@ -131,6 +136,7 @@ class Sync:
             notify(heading, get_string(32226) % failed)
         elif finished and self.should_notify:
             notify(heading, get_string(32062))
+        return finished
 
     def _can_skip(self) -> bool:
         """True when the Kodi library is clean and Trakt's last activity matches the cached one."""

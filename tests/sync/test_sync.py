@@ -33,6 +33,25 @@ def _half(sync, finished, failed=0):
     return [c.args[:2] for c in notify.call_args_list]
 
 
+@pytest.mark.parametrize("library, finished, canceled, saved", [
+    ("all", True, False, True), ("all", True, True, False),
+    ("all", False, False, False), ("movies", True, False, False)])
+def test_only_a_finished_full_run_is_cached(library, finished, canceled, saved):
+    """Only a run finishing both halves caches Trakt's activity; any other marks Kodi dirty."""
+    sync = _sync(manual=True)
+    sync.library = library
+    with mock.patch.object(sync, "_enabled", return_value=True), \
+            mock.patch.object(sync, "_run_half", return_value=finished), \
+            mock.patch.object(sync, "is_canceled", return_value=canceled), \
+            mock.patch.object(sync, "_save_last_activities") as save, \
+            mock.patch.object(sync_module, "set_setting") as set_setting, \
+            mock.patch.object(sync_module.movies, "MovieSync"), \
+            mock.patch.object(sync_module.episodes, "EpisodeSync"):
+        sync.run()
+    assert save.called is saved
+    assert set_setting.called is not saved
+
+
 @pytest.mark.parametrize("count, manual, agreed, kept", [
     (20, False, False, 20), (21, True, True, 21), (21, True, False, 0), (21, False, True, 0)])
 def test_more_than_20_removals_need_a_yes_in_a_sync_showing_progress(count, manual, agreed, kept):
